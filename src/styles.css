@@ -190,17 +190,30 @@ main {
 
 .img-main{
     margin-left: 35px;
-    border: 1px solid yellow;
+    border :none;
     width: 200px;
     display: flex;
     flex-direction: column;
+    background-color: white;
 }
 .img-main img {
     width: 100%;
 }
 
 .img-main h4 {
-    padding: 10px;
+    padding: 3px 10px;
+}
+
+.img-main h3 {
+    font-size: 14px;
+    padding: 0 10px;
+    font-weight: 300;
+}
+
+.img-main p {
+    font-size: 12px;
+    font-weight: 300;
+    padding:  10px;
 }
 /* media query */
 @media screen and (min-width : 2048px) {

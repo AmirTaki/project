@@ -177,7 +177,7 @@ header{
 /* MAIN */
 main {
     height: 500px;
-    background-color: blue;
+    background-color: rgb(29, 2, 183);
     margin: 0 20px;
 }
 .title-main{
@@ -185,16 +185,25 @@ main {
 }
 .title-main h3 {
     margin: 10px;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .img-main{
     margin-left: 35px;
-    border :none;
-    width: 200px;
+    border :1px solid white;
+    width: 180px;
     display: flex;
     flex-direction: column;
     background-color: white;
+}
+.img-main:hover {
+    border: 1px solid gray;
+    cursor: pointer;
+}
+.main-img-div{
+    width: 100%;
+    height: 178px;
+    background-color: yellow;
 }
 .img-main img {
     width: 100%;
@@ -202,6 +211,7 @@ main {
 
 .img-main h4 {
     padding: 3px 10px;
+    font-size: 15px;
 }
 
 .img-main h3 {

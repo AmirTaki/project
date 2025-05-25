@@ -274,6 +274,11 @@ main {
 .button-scroll a:hover{
     background-color: rgb(235, 235, 235);
 }
+/* scroll-img */
+.scroll-img{
+    background-color: red;
+    display: flex;
+}
 
 /* media query */
 @media screen and (min-width : 2048px) {

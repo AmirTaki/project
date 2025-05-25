@@ -5,9 +5,15 @@
 
 }
 
+/* HEADER  */
+
+header{
+
+}
 .header-top {
     position: fixed;
     width: 100%;
+    top : 0;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -81,4 +87,18 @@
 .header-search div {
     margin-right: 10px;
     margin-left: 4px;
+}
+
+/* BETTWEN HEADER & MAIN */
+.header-main {
+    background-color: red;
+    height: 700px;
+    display: flex;
+    /* padding-top: 510px; */
+    margin-top: 135px;
+    flex-flow: column nowrap;
+}
+.header-main-up{
+    height: 30px;
+    background-color: green;
 }

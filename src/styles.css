@@ -249,11 +249,30 @@ main {
     padding: 30px 0
 }
 .button-scroll button {
-    margin-right: 5px ;
+    margin-right: 3px ;
     padding: 5px 10px;
     font-size: 13px;
     font-weight: 200;
-    width: 100px;
+    width: 90px;
+    transition: background-color .5s;
+}
+.button-scroll button:hover {
+    cursor: pointer;
+    background-color: rgb(225, 225, 225);
+}
+.button-scroll a {
+    float: right;
+    text-decoration: none;
+    color : black;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 5px 2px;
+    border-bottom: 1px solid black;
+
+}
+.button-scroll a:hover{
+    background-color: rgb(235, 235, 235);
 }
 
 /* media query */

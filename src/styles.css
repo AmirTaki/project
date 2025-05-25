@@ -188,13 +188,16 @@ main {
     font-size: 30px;
 }
 
-.img-main{
+.main-base {
     margin-left: 35px;
+}
+.img-main{
     border :1px solid white;
     width: 180px;
     display: flex;
     flex-direction: column;
     background-color: white;
+    
 }
 .img-main:hover {
     border: 1px solid gray;

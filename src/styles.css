@@ -112,10 +112,28 @@ header{
 }
 
 .header-img {
-    height: 200px;
+    height: 400px;
+    position: relative;
 }
 .header-img img {
     width: 100%;
     height: 400px;
     object-fit: cover;
+}
+.header-img h1 {
+    position: absolute;
+    color : white;
+    top : 14px;
+    left : 25px;
+    letter-spacing: 4px;
+}
+
+.header-img h4 {
+    position: relative;
+    color : black;
+    left : 70px;
+    top : 270px;
+    background-color: white;
+    display: inline;
+    padding: 5px 10px;
 }

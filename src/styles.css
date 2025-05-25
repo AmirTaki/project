@@ -132,8 +132,36 @@ header{
     position: relative;
     color : black;
     left : 70px;
-    top : 270px;
+    top : 240px;
     background-color: white;
     display: inline;
     padding: 5px 10px;
+}
+.header-img p {
+    position: relative;
+    color : black;
+    background-color: white;
+    width: 250px;
+    left : 70px;
+    top : 260px;
+    line-height: 20px;
+    padding: 5px 10px;
+    font-weight: 100;
+    font-size: 12px;
+}
+.header-img ul {
+    width: 400px;
+    display: flex;
+    flex-flow:  row wrap;
+    position: absolute;
+    left : 70px;
+    top : 325px;
+    gap: 10px;
+}
+.header-img ul li {
+    background-color: white;
+    list-style-type: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+   
 }

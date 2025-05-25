@@ -37,3 +37,13 @@
     margin-right: 14px;
     list-style-type: none;
 }
+
+.header-down {
+    background-color: aqua;
+    height: 60px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: end;
+    padding: 5px 15px;
+}

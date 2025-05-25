@@ -178,6 +178,7 @@ header{
 main {
     height: 500px;
     background-color: blue;
+    margin: 0 20px;
 }
 .title-main{
     padding: 13px 25px;
@@ -185,6 +186,21 @@ main {
 .title-main h3 {
     margin: 10px;
     font-size: 25px;
+}
+
+.img-main{
+    margin-left: 35px;
+    border: 1px solid yellow;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.img-main img {
+    width: 100%;
+}
+
+.img-main h4 {
+    padding: 10px;
 }
 /* media query */
 @media screen and (min-width : 2048px) {

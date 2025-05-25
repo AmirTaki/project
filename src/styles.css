@@ -245,7 +245,7 @@ main {
     display: flex;
     flex-flow: column nowrap;
     background-color: cadetblue;
-    height: 500px;
+    
     padding: 30px 0
 }
 .button-scroll button {
@@ -281,6 +281,21 @@ main {
     flex-flow: row nowrap;
     overflow-x: scroll;
     padding: 25px 0 ;
+}
+
+.scroll-img::-webkit-scrollbar {
+    width : 5px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 80%);
+}
+.scroll-img::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 2%);
+}
+.scroll-img::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(0, 0%, 0%);
+    cursor: pointer;
 }
 .scroll-img .img-main{
  margin-right: 8px;

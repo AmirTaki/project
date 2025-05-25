@@ -197,7 +197,8 @@ main {
     display: flex;
     flex-direction: column;
     background-color: white;
-    
+    position: relative;
+
 }
 .img-main:hover {
     border: 1px solid gray;
@@ -227,6 +228,16 @@ main {
     font-size: 12px;
     font-weight: 300;
     padding:  10px;
+}
+
+.img-main i {
+    position: absolute;
+    top : 15px;
+    right: 15px;
+}
+.img-main i:hover {
+    cursor: pointer;
+    color:  gray;
 }
 /* media query */
 @media screen and (min-width : 2048px) {

@@ -320,50 +320,14 @@ main {
 .video-main {
     background-color: greenyellow;
     display: flex;
-    flex-wrap: wrap nowrap;
+    flex-wrap: row nowrap;
     margin: 10px 0;
-}
-.video-box {
-    background-color: rgb(113, 113, 240);
-    display: flex;
-    flex-flow: column nowrap;
-    width: 35%;
-    border: 1px solid red;
-    padding: 10px;
-    justify-content: center;
-}
-.video-box:hover {
-    cursor: pointer;
-}
-video{
-    width:100%;
+    /* overflow-x: scroll; */
+} .img-main {
+    margin-right: 10px;
 }
 
-.video-box div h4 {
-    font-size: 15px;
-    padding:  4px ;
-    font-weight: 500;
-    letter-spacing: 1px;
-}
-.video-box div p {
-    font-size: 12px;
-    font-weight: 100;
-    padding: 7px 4px;
-}
-.video-box div a {
-    text-decoration: none;
-    color :black;
-    font-size: 15px;
-    margin-top: 4px;
-    margin-left: 4px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    padding-bottom: 2px;
-    border-bottom: 1px solid black;
-}
-.video-box div a:hover {
-    background-color: rgb(225, 225, 225);
-}
+
 /* media query */
 @media screen and (min-width : 2048px) {
     body {
@@ -376,7 +340,7 @@ video{
 
     }
     main {
-        width: 80%;
+        width: 90%;
         margin: auto;
     }
     img {

@@ -275,7 +275,7 @@ main {
 }
 /* scroll-img */
 .scroll-img{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(220, 0, 0);
     display: flex;
     flex-flow: row nowrap;
     overflow-x: scroll;
@@ -316,6 +316,21 @@ main {
     opacity: 1;
     cursor: pointer;
 }
+/* video-main */
+.video-main {
+    background-color: greenyellow;
+    height: 500px;
+}
+.video-box {
+    background-color: blue;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 200px;
+    height: 200px;
+}
+video{
+    width:150px;
+}
 /* media query */
 @media screen and (min-width : 2048px) {
     body {
@@ -330,5 +345,8 @@ main {
     main {
         width: 80%;
         margin: auto;
+    }
+    img {
+        width: 100%;
     }
 }

@@ -276,8 +276,15 @@ main {
 }
 /* scroll-img */
 .scroll-img{
-    background-color: red;
+    background-color: rgb(255, 0, 0);
     display: flex;
+    flex-flow: row nowrap;
+    overflow-x: scroll;
+    padding: 10px;
+}
+.scroll-img .img-main{
+ margin-right: 4px;
+
 }
 
 /* media query */

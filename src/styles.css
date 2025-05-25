@@ -11,3 +11,29 @@
     display: flex;
     flex-flow: column nowrap;
 }
+.header-up{
+    background-color: black;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-top h3 {
+    color: white;
+}
+
+.header-meddle{
+    padding-top: 4px;
+    background-color: yellow;
+    height: 30px;
+}
+.header-meddle ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 30px;
+}
+.header-meddle ul li {
+    margin-right: 14px;
+    list-style-type: none;
+}

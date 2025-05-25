@@ -38,6 +38,11 @@
     list-style-type: none;
 }
 
+.header-meddle ul li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+} 
+
 .header-down {
     background-color: aqua;
     height: 60px;
@@ -45,8 +50,24 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: end;
-    padding: 5px 15px;
+    padding: 0px 15px;
 }
 .header-icon {
     font-size: 50px;
+}
+
+.header-item ul{
+    display: flex;
+}
+
+.header-item ul li {
+    padding-bottom: 9px;
+    border: 1px silver solid;
+    margin-right: 16px;
+    list-style-type: none; 
+}
+
+.header-item ul li:hover {
+    cursor: pointer;
+    border-bottom: 3px solid black;
 }

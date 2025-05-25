@@ -93,9 +93,9 @@ header{
 .header-main {
     background-color: red;
     display: flex;
-    /* padding-top: 510px; */
     margin-top: 135px;
     flex-flow: column nowrap;
+    width: 100%;
 }
 .header-main-up{
     height: 40px;
@@ -171,4 +171,18 @@ header{
     padding: 5px 10px;
     margin-right: 10px;
    
+}
+
+
+/* media query */
+@media screen and (min-width : 2048px) {
+    body {
+        zoom : 1.4
+    }
+    .header-main {
+        margin: auto;
+        width: 90%;
+        margin-top: 4.7%;
+
+    }
 }

@@ -179,7 +179,13 @@ main {
     height: 500px;
     background-color: blue;
 }
-
+.title-main{
+    padding: 13px 25px;
+}
+.title-main h3 {
+    margin: 10px;
+    font-size: 25px;
+}
 /* media query */
 @media screen and (min-width : 2048px) {
     body {

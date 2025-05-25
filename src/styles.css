@@ -319,21 +319,24 @@ main {
 /* video-main */
 .video-main {
     background-color: greenyellow;
-    height: 500px;
+    display: flex;
+    flex-wrap: wrap nowrap;
+    margin: 10px 0;
 }
 .video-box {
     background-color: rgb(113, 113, 240);
     display: flex;
     flex-flow: column nowrap;
-    width: 200px;
+    width: 35%;
     border: 1px solid red;
     padding: 10px;
+    justify-content: center;
 }
 .video-box:hover {
     cursor: pointer;
 }
 video{
-    width:175px;
+    width:100%;
 }
 
 .video-box div h4 {

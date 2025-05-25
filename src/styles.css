@@ -92,7 +92,6 @@ header{
 /* BETTWEN HEADER & MAIN */
 .header-main {
     background-color: red;
-    height: 700px;
     display: flex;
     /* padding-top: 510px; */
     margin-top: 135px;
@@ -110,4 +109,13 @@ header{
     float: right;
     position: absolute;
     right: 15px;
+}
+
+.header-img {
+    height: 200px;
+}
+.header-img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
 }

@@ -322,14 +322,20 @@ main {
     height: 500px;
 }
 .video-box {
-    background-color: blue;
+    background-color: rgb(113, 113, 240);
     display: flex;
     flex-flow: column nowrap;
     width: 200px;
-    height: 200px;
+    border: 1px solid red;
+    padding: 10px;
 }
 video{
-    width:150px;
+    width:175px;
+}
+
+.video-box div h4 {
+    font-size: 14px;
+    padding:  4px ;
 }
 /* media query */
 @media screen and (min-width : 2048px) {

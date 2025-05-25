@@ -99,6 +99,15 @@ header{
     flex-flow: column nowrap;
 }
 .header-main-up{
-    height: 30px;
+    height: 40px;
     background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.header-main-up i {
+    float: right;
+    position: absolute;
+    right: 15px;
 }

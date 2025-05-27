@@ -519,7 +519,6 @@ main {
     padding-left: 15px;
 }
 footer{
-    height: 600px;
     background-color: chocolate;
 }
 .container-footer {
@@ -534,14 +533,19 @@ footer{
 }
 .container-footer div ul{
     list-style-type: none;
-    background-color: red;
     margin: 10px;
     font-size: 30px;
+    font-weight: 500;
 }
 .container-footer div ul li{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 20px;
+    margin-top: 12px;
+    margin-bottom: 13px;
+    font-size: 18px;
+    font-weight: 200;
+}
+.container-footer div ul li:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 /* media query */
 @media screen and (min-width : 2048px) {

@@ -507,6 +507,12 @@ main {
     background-color: black ;
     border: none;
     outline: none;
+    box-shadow: 5px 5px 1px black;
+    transition: color .6s;
+}
+.our-adiclub div button:hover {
+    color : rgb(65, 65, 65);
+    cursor: pointer;
 }
 .our-adiclub div button i {
     padding-left: 15px;

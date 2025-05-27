@@ -465,6 +465,14 @@ main {
 .board-black{
     height: 400px;
     background-color: black;
+    padding: 100px;
+}
+.board-black div {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 /* media query */
 @media screen and (min-width : 2048px) {

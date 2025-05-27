@@ -10,7 +10,9 @@
 
 
 }
-
+i:hover {
+    cursor: pointer;
+}
 /* HEADER  */
 
 
@@ -76,10 +78,14 @@
     padding: 0px 15px;
 }
 .icon-query {
-    font-size: 25px;
-    font-weight: 800;
+    font-size: 27px;
+    font-weight: 1200;
 
 }
+.icon-query i {
+    margin-right: 10px;
+}
+
 .header-icon {
     font-size: 50px;
     width : 60px
@@ -623,7 +629,8 @@ footer{
         display: none;
     }
     .header-down {
-        height: 75px;
+        height: 60px;
+        align-items: center;
     }
     .header-item {
         display: none;

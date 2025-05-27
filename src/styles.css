@@ -7,9 +7,7 @@
 
 /* HEADER  */
 
-header{
 
-}
 .header-top {
     position: fixed;
     width: 100%;
@@ -94,7 +92,7 @@ header{
 .header-main {
     background-color: red;
     display: flex;
-    margin-top: 135px;
+    margin-top: 130px;
     flex-flow: column nowrap;
     width: 100%;
 }
@@ -194,7 +192,6 @@ main {
 }
 /* img main */
 .img-main{
-    /* height: 500px; */
     background-color: yellow;
     display: flex;
     /* overflow-x: scroll; */
@@ -389,9 +386,8 @@ main {
     font-size: 20px;
 }
 .related-resources-container{
-    margin-top: 50px;
+    margin: 50px 0;
     background-color: blue;
-    height: 500px;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -436,6 +432,19 @@ main {
     font-size: 13px;
     font-weight: 100;
     line-height: 20px;
+}
+
+.list-main-container {
+    background-color: green;
+    height: 500px;
+    display: flex;
+}
+.list-main-item{
+    background-color: blue;
+    width: 300px;
+    margin: 0  10px ;
+    display: flex;
+    flex-flow: column nowrap;
 }
 /* media query */
 @media screen and (min-width : 2048px) {

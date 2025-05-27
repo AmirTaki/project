@@ -184,7 +184,6 @@ main {
 }
 .title-main{
     background-color: aqua;
-    
     padding: 20px 0;
     display: flex;
     flex-flow: row nowrap;
@@ -281,7 +280,6 @@ main {
     padding-bottom: 30px;
     width: 100%;
     overflow-x: scroll;
-    position: relative;
 }
 
 .scroll-img::-webkit-scrollbar {
@@ -301,10 +299,11 @@ main {
 .bi-arrow-left-square, .bi-arrow-right-square{
     position: absolute;
     top : 40%;
-    font-size: 40px;
+    font-size: 45px;
     opacity: .3;
     color : rgb(60, 60, 60);
     transition: opacity .6s;
+    z-index: 3;
 }
 .bi-arrow-right-square{
     right: 0;

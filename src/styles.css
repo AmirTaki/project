@@ -449,12 +449,19 @@ main {
 .list-main-item-title {
     font-size: 32px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
 }
-.list-main-item div {
-    margin: 10px 0;
+.list-main-item li {
+    margin: 25px 0;
     font-size : 29px;
+    list-style-type: none;
+    font-weight: 100;
     letter-spacing: 1px;
+}
+
+.list-main-item li:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 /* media query */
 @media screen and (min-width : 2048px) {

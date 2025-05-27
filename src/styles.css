@@ -201,20 +201,20 @@ main {
 }
 .window-img {
     border: 1px solid rgb(255, 255, 255);
-    background-color: bisque;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-flow: column nowrap;
     margin-right: 10px;
     position: relative;
-    width: 300px;
- 
- 
+    width: 300px; 
+
 }
 .window-img:hover {
     border: 1px solid black;
     cursor: pointer;
 }
 .window-img img {
+   
     height: 300px;
     width: 298px;
 }
@@ -318,30 +318,33 @@ main {
 .scroll-vidoe{
     padding: 50px 0;
     background-color: chartreuse;
+    overflow-x: scroll;
 }
+.scroll-vidoe video,
 .scroll-vidoe img{
     height: 350px;
     width: 298px;
 }
 .scroll-vidoe h3 {
-    background-color: rgb(191, 191, 191);
+    background-color: rgb(255, 255, 255);
     padding: 10px;
     font-size: 14px;
     font-weight: 700;
 }
 .scroll-vidoe p {
     background-color: rgb(255, 255, 255);
-    padding: 10px;
+    padding: 0 10px;
     color : rgb(75, 73, 73);
     font-weight: 200;
 }
 .scroll-vidoe a{
     float: left;
     margin: 5px 10px;
-    padding: 0;
+    padding-top: 5px;
     font-size: 15px;
     font-weight: 900;
     padding-bottom: 4px;
+    margin-bottom: 9px;
 }
 /* media query */
 @media screen and (min-width : 2048px) {

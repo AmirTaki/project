@@ -446,6 +446,10 @@ main {
     display: flex;
     flex-flow: column nowrap;
 }
+.list-main-item div {
+    margin: 10px 0;
+    font-size : 29px
+}
 /* media query */
 @media screen and (min-width : 2048px) {
     body {

@@ -22,9 +22,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+.header-up i {
+    padding-top: 5px;
+    font-size: 20px;
+    color : white;
+    margin-left: 10px;
+    /* position: absolute; */
 }
 .header-top h3 {
     color: white;
+    font-size: 17px;
+    letter-spacing: .5px;
 }
 
 .header-meddle{
@@ -582,5 +592,13 @@ footer{
     footer {
         width: 70%;
         margin: auto;
+    }
+}
+
+
+@media screen and (max-width : 850px) {
+    .header-up i {
+        position: absolute;
+        right:  10px;
     }
 }

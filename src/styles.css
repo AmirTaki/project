@@ -547,6 +547,10 @@ footer{
     cursor: pointer;
     text-decoration: underline;
 }
+.upper-footer{
+    height: 40px;
+    background-color: black;
+}
 /* media query */
 @media screen and (min-width : 2048px) {
     body {

@@ -518,6 +518,10 @@ main {
 .our-adiclub div button i {
     padding-left: 15px;
 }
+footer{
+    height: 600px;
+    background-color: chocolate;
+}
 /* media query */
 @media screen and (min-width : 2048px) {
     body {

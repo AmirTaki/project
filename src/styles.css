@@ -441,7 +441,7 @@ main {
 }
 .list-main-item{
     background-color: blue;
-    width: 300px;
+    width: 350px;
     margin: 0  10px ;
     display: flex;
     flex-flow: column nowrap;

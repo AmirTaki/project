@@ -522,6 +522,13 @@ footer{
     height: 600px;
     background-color: chocolate;
 }
+.container-footer {
+    background-color: blue;
+    display: flex;
+    flex-flow : row nowrap;
+    justify-content: center;
+    align-items: center;
+}
 /* media query */
 @media screen and (min-width : 2048px) {
     body {

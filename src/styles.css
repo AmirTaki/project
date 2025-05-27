@@ -195,19 +195,26 @@ main {
 }
 /* img main */
 .img-main{
-    height: 500px;
+    /* height: 500px; */
     background-color: yellow;
     display: flex;
+    /* overflow-x: scroll; */
 }
 .window-img {
-    border: 3px solid rgb(0, 204, 20);
+    border: 1px solid rgb(255, 255, 255);
     background-color: bisque;
     display: flex;
     flex-flow: column nowrap;
     margin-right: 30px;
     position: relative;
+ 
+}
+.window-img:hover {
+    border: 1px solid black;
+    cursor: pointer;
 }
 .window-img img {
+    height: 300px;
     width: 300px;
 }
 .window-img  h4 {
@@ -249,7 +256,7 @@ main {
 
     }
     main {
-        /* width: 50%; */
+        width: 90%;
         margin: auto;
     }
     .title-main div h3{

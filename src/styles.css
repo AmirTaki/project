@@ -179,8 +179,16 @@ main {
     height: 500px;
     background-color: red;
 }
-
-.title-main{}
+.size-main {
+    margin: 0 50px;
+}
+.title-main{
+    background-color: aqua;
+    height: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
 
 /* media query */
 @media screen and (min-width : 2048px) {

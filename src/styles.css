@@ -467,6 +467,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 60px 0;
 }
 .board-black div {
     width: 60%;
@@ -512,5 +513,9 @@ main {
     }
     .scroll-vidoe video{
         width: 100%;
+    }
+    .board-black{
+        width: 70%;
+        margin: auto;
     }
 }

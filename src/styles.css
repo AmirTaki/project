@@ -30,12 +30,14 @@
     align-items: center;
     position: relative;
 }
+.header-up:hover { 
+    cursor: pointer;
+}
 .header-up i {
     padding-top: 5px;
     font-size: 20px;
     color : white;
     margin-left: 10px;
-    /* position: absolute; */
 }
 .header-top h3 {
     color: white;
@@ -603,8 +605,17 @@ footer{
 
 
 @media screen and (max-width : 850px) {
+    .header-up{
+        height: 55px;
+    }
     .header-up i {
         position: absolute;
         right:  10px;
+    }
+    .header-meddle{
+        display: none;
+    }
+    .header-down {
+        height: 70px;
     }
 }

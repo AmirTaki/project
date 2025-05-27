@@ -463,16 +463,31 @@ main {
     text-decoration: underline;
 }
 .board-black{
-    height: 400px;
     background-color: black;
-    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .board-black div {
+    width: 60%;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.board-black div h1 {
+    letter-spacing: 1px;
+    padding: 10px 0;
+    font-weight: 600;
+}
+.board-black div p {
+    font-weight: 200;
+    line-height: 23px;
+    margin-bottom:20px;
+}
+.board-black div i {
+    margin-top: 35px;
 }
 /* media query */
 @media screen and (min-width : 2048px) {

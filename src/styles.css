@@ -501,9 +501,12 @@ main {
     display: flex;
 }
 .our-adiclub div button {
+    margin-left: 25px;
     color : white;
     padding: 10px 15px;
     background-color: black ;
+    border: none;
+    outline: none;
 }
 .our-adiclub div button i {
     padding-left: 15px;

@@ -175,8 +175,12 @@ header{
    
 }
 /* MAIN */
+main {
+    height: 500px;
+    background-color: red;
+}
 
-
+.title-main{}
 
 /* media query */
 @media screen and (min-width : 2048px) {
@@ -193,7 +197,7 @@ header{
         width: 90%;
         margin: auto;
     }
-    img {
+    /* img {
         width: 100%;
-    }
+    } */
 }

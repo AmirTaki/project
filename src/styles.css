@@ -362,8 +362,32 @@ main {
     background-color: yellow;
 }
 .table {
-    height: 400px;
-    background-color: rgb(196, 3, 160);
+    background-color: rgb(185, 250, 255);
+    display: flex;
+    padding: 10px 0;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.table div {
+    width: 30%;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin-top: 25px;
+    margin-bottom: 25px;
+    transition:border-bottom .1s ;
+}
+.table div:hover {
+    border-bottom: 8px solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+
+
+
+.table div h1 {
+    letter-spacing: 1.5px;
+    padding-bottom: 10px;
+    text-decoration: none !important;
+    font-size: 30px;
 }
 /* media query */
 @media screen and (min-width : 2048px) {

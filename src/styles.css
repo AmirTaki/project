@@ -320,10 +320,16 @@ main {
     background-color: chartreuse;
     overflow-x: scroll;
 }
+.scroll-vidoe .window-img{
+    background-color: rgb(255, 255, 255);
+    width: 340px;
+    margin: 0 6px;
+}
 .scroll-vidoe video,
 .scroll-vidoe img{
-    height: 350px;
-    width: 298px;
+    width: 338px;
+
+    border: 1px solid white;
 }
 .scroll-vidoe h3 {
     background-color: rgb(255, 255, 255);
@@ -339,6 +345,7 @@ main {
 }
 .scroll-vidoe a{
     float: left;
+    letter-spacing: normal;
     margin: 5px 10px;
     padding-top: 5px;
     font-size: 15px;
@@ -369,6 +376,9 @@ main {
         font-size: xx-large;
     } 
     .window-img img  {
-        /* width: 100%; */
+        width: 100%;
+    }
+    .scroll-vidoe video{
+        width: 100%;
     }
 }

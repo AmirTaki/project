@@ -174,8 +174,7 @@
 }
 /* MAIN */
 main {
-    height: 3500px;
-    background-color: red;
+    background-color: rgb(247, 0, 0);
 }
 .size-main {
     margin: 0 50px;
@@ -463,6 +462,10 @@ main {
     cursor: pointer;
     text-decoration: underline;
 }
+.board-black{
+    height: 400px;
+    background-color: black;
+}
 /* media query */
 @media screen and (min-width : 2048px) {
     body {
@@ -475,7 +478,7 @@ main {
 
     }
     main {
-        width: 100%;
+        width: 70%;
         margin: auto;
     }
     .title-main div h3{

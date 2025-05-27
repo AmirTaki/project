@@ -404,13 +404,18 @@ main {
     background-color: blueviolet;
     height: 400px;
     display: flex;
+    /* align-items: center; */
     overflow-x: scroll;
+}
+.container-slider-img::-webkit-scrollbar {
+    display: none;
 }
 .item-slider-img{
     background-color: brown;
+    margin:  0 5px;
 }
 .item-slider-img img {
-    width: 300px;
+    width: 270px;
     height: 200px;
     object-fit:cover;
 }

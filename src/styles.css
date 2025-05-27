@@ -491,14 +491,15 @@ main {
     margin-top: 35px;
 }
 .our-adiclub {
-    height: 120px;
-    background-color: yellow;
+    height: 100px;
+    background-color: rgb(239, 239, 30);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .our-adiclub div {
     display: flex;
+    font-weight: 600;
 }
 .our-adiclub div button {
     margin-left: 25px;

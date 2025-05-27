@@ -532,6 +532,12 @@ footer{
 .container-footer div {
     margin: 20px 60px;
 }
+.container-footer div ul{
+    
+}
+.container-footer div ul li{
+
+}
 /* media query */
 @media screen and (min-width : 2048px) {
     body {

@@ -75,10 +75,16 @@
     align-items: end;
     padding: 0px 15px;
 }
+.icon-query {
+    font-size: 25px;
+    font-weight: 800;
+
+}
 .header-icon {
     font-size: 50px;
     width : 60px
 }
+
 
 .header-item ul{
     display: flex;
@@ -617,9 +623,13 @@ footer{
         display: none;
     }
     .header-down {
-        height: 70px;
+        height: 75px;
     }
     .header-item {
         display: none;
     }
+    .header-icon-meddle{
+        display: ""
+    }
+   
 }

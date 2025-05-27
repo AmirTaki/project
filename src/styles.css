@@ -206,6 +206,8 @@ main {
     flex-flow: column nowrap;
     margin-right: 10px;
     position: relative;
+    width: 300px;
+ 
  
 }
 .window-img:hover {
@@ -214,7 +216,7 @@ main {
 }
 .window-img img {
     height: 300px;
-    width: 300px;
+    width: 298px;
 }
 .window-img  h4 {
     padding: 3px 10px;
@@ -319,7 +321,7 @@ main {
 }
 .scroll-vidoe img{
     height: 350px;
-    width: 300px;
+    width: 298px;
 }
 
 /* media query */

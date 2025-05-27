@@ -490,6 +490,16 @@ main {
 .board-black div i {
     margin-top: 35px;
 }
+.our-adiclub {
+    height: 120px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.our-adiclub div {
+    display: flex;
+}
 /* media query */
 @media screen and (min-width : 2048px) {
     body {

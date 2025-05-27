@@ -205,9 +205,36 @@ main {
     display: flex;
     flex-flow: column nowrap;
     margin-right: 30px;
+    position: relative;
 }
 .window-img img {
     width: 300px;
+}
+.window-img  h4 {
+    padding: 3px 10px;
+    font-size: 15px;
+}
+
+.window-img  h3 {
+    font-size: 14px;
+    padding: 0 10px;
+    font-weight: 300;
+}
+
+.window-img  p {
+    font-size: 12px;
+    font-weight: 300;
+    padding:  10px;
+}
+
+.window-img  i {
+    position: absolute;
+    top : 15px;
+    right: 15px;
+}
+.window-img i:hover {
+    cursor: pointer;
+    color:  gray;
 }
 
 /* media query */
@@ -217,18 +244,18 @@ main {
     }
     .header-main {
         margin: auto;
-        width: 90%;
+        width: 50%;
         margin-top:130px ;
 
     }
     main {
-        width: 90%;
+        /* width: 50%; */
         margin: auto;
     }
     .title-main div h3{
         font-size: xx-large;
     } 
-    /* img {
-        width: 100%;
-    } */
+    .window-img img  {
+        /* width: 100%; */
+    }
 }

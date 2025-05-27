@@ -529,6 +529,9 @@ footer{
     justify-content: center;
     align-items: center;
 }
+.container-footer div {
+    margin: 20px 60px;
+}
 /* media query */
 @media screen and (min-width : 2048px) {
     body {

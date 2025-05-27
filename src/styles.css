@@ -176,7 +176,7 @@ header{
 }
 /* MAIN */
 main {
-    height: 500px;
+    height: 1500px;
     background-color: red;
 }
 .size-main {
@@ -184,10 +184,28 @@ main {
 }
 .title-main{
     background-color: aqua;
-    height: 50px;
+    
+    padding: 20px 0;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+}
+.title-main div h3 {
+    letter-spacing: 1px;
+}
+/* img main */
+.img-main{
+    height: 500px;
+    background-color: yellow;
+}
+.window-img {
+    background-color: bisque;
+    display: flex;
+    flex-flow: column nowrap;
+    
+}
+.window-img img {
+    width: 300px;
 }
 
 /* media query */
@@ -205,6 +223,9 @@ main {
         width: 90%;
         margin: auto;
     }
+    .title-main div h3{
+        font-size: xx-large;
+    } 
     /* img {
         width: 100%;
     } */

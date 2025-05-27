@@ -176,7 +176,7 @@ header{
 }
 /* MAIN */
 main {
-    height: 1500px;
+    height: 3500px;
     background-color: red;
 }
 .size-main {
@@ -381,13 +381,38 @@ main {
 }
 
 
-
-
 .table div h1 {
     letter-spacing: 1.5px;
     padding-bottom: 10px;
+    font-weight: bolder;
     text-decoration: none !important;
-    font-size: 30px;
+    font-size: 20px;
+}
+.related-resources-container{
+    margin-top: 50px;
+    background-color: blue;
+    height: 500px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.related-resources {
+    background-color: bisque;
+    padding: 15px 0;
+
+}
+.container-slider-img{
+    background-color: blueviolet;
+    height: 400px;
+    display: flex;
+    overflow-x: scroll;
+}
+.item-slider-img{
+    background-color: brown;
+}
+.item-slider-img img {
+    width: 300px;
+    height: 200px;
+    object-fit:cover;
 }
 /* media query */
 @media screen and (min-width : 2048px) {

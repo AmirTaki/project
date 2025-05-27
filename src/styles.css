@@ -276,7 +276,12 @@ main {
     background-color: rgb(235, 235, 235);
 }
 
-
+.scroll-img{
+    margin-top: 15px;
+    padding-bottom: 30px;
+    width: 100%;
+    overflow-x: scroll;
+}
 
 /* media query */
 @media screen and (min-width : 2048px) {

@@ -357,8 +357,11 @@ main {
     transition: opacity .6s;
     z-index: 3;
 }
+.bi-arrow-left-square{
+    left: 10px ;
+}
 .bi-arrow-right-square{
-    right: 0;
+    right: 10px ;
 }
 .bi-arrow-left-square:hover, .bi-arrow-right-square:hover {
     opacity: 1;

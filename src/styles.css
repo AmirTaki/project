@@ -528,6 +528,9 @@ main {
     cursor: pointer;
     text-decoration: underline;
 }
+.list-main-item-title i {
+    opacity: 0;
+}
 .board-black{
     background-color: black;
     display: flex;
@@ -797,16 +800,27 @@ footer{
         font-weight: 400;
     }
     .list-main-container {
+        margin: 50px 0;
         flex-flow: column nowrap;
     }
     .list-main-item{
         width: 90%;
         padding: 10px 10px;
         margin:  0 20px ;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid rgb(221, 221, 221);
+    }
+    .list-main-item:hover{
+        cursor: pointer;
+        background-color: rgb(233, 233, 233);
+    
     }
     .list-main-item-title{
+        font-size: 20px;
+    }
     
+    .list-main-item-title i {
+        opacity: 1;
+        float: right;
     }
     .list-main-item li{
         display: none;

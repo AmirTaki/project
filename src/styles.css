@@ -227,8 +227,8 @@ main {
     margin: 0 136px;
 }
 .title-main{
-    background-color: rgb(255, 255, 255);
-    padding: 20px 0;
+    background-color: rgb(29, 183, 9);
+    padding: 20px 5px;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -240,9 +240,8 @@ main {
 }
 /* img main */
 .img-main{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(224, 0, 0);
     display: flex;
-    /* overflow-x: scroll; */
 }
 .window-img {
     border: 1px solid rgb(255, 255, 255);
@@ -252,7 +251,8 @@ main {
     margin-right: 5px;
     margin-left: 5px;
     position: relative;
-    width: 300px; 
+    /* width: 300px;  */
+    /* max-width: 500px; */
 
 }
 .window-img:hover {
@@ -602,28 +602,32 @@ footer{
     background-color: black;
 }
 /* media query */
-@media screen and (min-width : 2048px) {
+@media screen and (min-width : 2080px) {
     body {
         zoom : 1.4
     }
     .header-main {
         margin: auto;
-        width: 70%;
+        width: 50%;
         margin-top:130px ;
 
     }
     main {
-        width: 70%;
+        width: 50%;
         margin: auto;
     }
     .title-main div h3{
         font-size: xx-large;
     } 
-    .window-img img  {
+    .img-main{
+        overflow-x: scroll;
+        /* width: 100%; */
+    }
+    .window-img   {
         width: 100%;
     }
     .scroll-vidoe video{
-        width: 100%;
+        width: 70%;
     }
     .board-black{
         width: 70%;
@@ -634,7 +638,9 @@ footer{
         margin: auto;
     }
 }
-
+@media screen and (max-width : 1200px) {
+    
+}
 
 @media screen and (max-width : 850px) {
     .header-up{
@@ -698,6 +704,9 @@ footer{
         top : 500px;
         left : 25px
     }
+    .size-main {
+    margin: 0 
+}
     .header-img ul{
         top : 550px;
         left : 25px
@@ -705,4 +714,12 @@ footer{
     .title-main {
         width: 200px;
     }
+    .img-main{
+        overflow-x: scroll;
+        width: 500px;
+    }
+    .window-img {
+     max-width: 1000px;
+    }
 }
+

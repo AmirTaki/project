@@ -416,7 +416,7 @@ main {
 }
 .popular{
     letter-spacing: 1px;
-    background-color: rgb(163, 0, 0);
+    background-color: rgb(255, 255, 255);
 }
 .popular h2 {
     font-weight: 700;
@@ -680,6 +680,9 @@ footer{
         height: 60px;
         align-items: center;
     }
+    .header-icon {
+        margin-left: 30px;
+    }
     .header-item {
         display: none;
     }
@@ -748,6 +751,17 @@ footer{
     .popular h2 {
         font-size: 21px;
         font-weight: 500;
+    }
+    .table{
+        flex-flow: column nowrap;
+    }
+    .table div {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+    .table div h1 {
+        font-size: 25px;
     }
 }
 

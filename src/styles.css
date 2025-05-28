@@ -651,6 +651,7 @@ footer{
         overflow-x: scroll;
         width: 100%;
     }
+ 
 }
 
 @media screen and (max-width : 850px) {
@@ -737,8 +738,12 @@ footer{
     .img-main::-webkit-scrollbar{
         display: none;
     }
+}
+
+@media screen and (max-width : 550px) {
     .window-img{
         width: 202px;
+        margin-bottom: 10px;
     }
     .window-img img {
         width: 200px ;
@@ -751,8 +756,14 @@ footer{
         overflow-y:hidden ;
         overflow-x:hidden ;
         place-items: center;   
-        background-color: rgb(0, 184, 129);
+        background-color: rgb(255, 255, 255);
+        height: 420px;
     }
-
+    .scroll-img h4 ,.scroll-img h3,.scroll-img p{
+        display: none;
+    }  
+    .bi-arrow-left-square, .bi-arrow-right-square {
+        display: none;
+    }
 }
 

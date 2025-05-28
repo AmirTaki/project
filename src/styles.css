@@ -128,7 +128,6 @@ i:hover {
 }
 .header-search div .bi-search {
     margin-right: 0px;
-    font-size: 24px;
     font-weight: 1200;
 }
 /* BETTWEN HEADER & MAIN */
@@ -642,7 +641,7 @@ footer{
      }
 
     .scroll-vidoe video{
-        width: 70%;
+        width: 100%;
     }
     .board-black{
         width: 70%;
@@ -662,7 +661,7 @@ footer{
 }
 
 @media screen and (max-width : 850px) {
-     main{
+    main{
         margin-left:10px ;
         margin-right: 10px;
      } 
@@ -700,8 +699,11 @@ footer{
         font-weight: 1200;
         margin-bottom: 0;
         margin: 0;
-        margin-right: 10px;
+        margin-right: 13px;
         padding-bottom: 0;
+    }
+    .header-search .bi-search{
+        font-size: 18px;
     }
     .header-main{
         margin-top: 115px   ;
@@ -711,6 +713,9 @@ footer{
     }
     .header-main-up{
         font-size: 14px;
+    }
+    header i {
+        font-size: 20px;
     }
     .header-main-up i {
         font-size: 25px;

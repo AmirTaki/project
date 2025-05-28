@@ -369,7 +369,7 @@ main {
 }
 /* video */
 .scroll-vidoe{
-    padding: 50px 0;
+    padding: 10px 0;
     background-color: rgb(255, 255, 255);
     overflow-x: scroll;
 }
@@ -380,7 +380,6 @@ main {
 }
 .scroll-vidoe video,
 .scroll-vidoe img{
-
     width: 298px;
     border: 1px solid white;
 }
@@ -417,10 +416,13 @@ main {
 }
 .popular{
     letter-spacing: 1px;
-    background-color: yellow;
+    background-color: rgb(255, 255, 255);
+}
+.popular h2 {
+    font-weight: 700;
 }
 .table {
-    background-color: rgb(185, 250, 255);
+    background-color: rgb(255, 255, 255);
     display: flex;
     padding: 10px 0;
     flex-flow: row wrap;

@@ -370,18 +370,18 @@ main {
 /* video */
 .scroll-vidoe{
     padding: 50px 0;
-    background-color: chartreuse;
+    background-color: rgb(255, 255, 255);
     overflow-x: scroll;
 }
 .scroll-vidoe .window-img{
     background-color: rgb(255, 255, 255);
-    width: 302px;
+    width: 300px;
     margin: 0 6px;
 }
 .scroll-vidoe video,
 .scroll-vidoe img{
    height: 100%;
-    width: 300px;
+    width: 298px;
 
     border: 1px solid white;
 }
@@ -407,6 +407,11 @@ main {
     padding-bottom: 4px;
     color :black;
     margin-bottom: 9px;
+    transition: background-color .5s;
+}
+.scroll-vidoe a:hover {
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
 }
 .scroll-vidoe::-webkit-scrollbar {
     display: none;

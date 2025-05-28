@@ -221,24 +221,26 @@ i:hover {
 }
 /* MAIN */
 main {
-    background-color: rgb(247, 0, 0);
+    background-color: rgb(255, 255, 255);
 }
 .size-main {
     margin: 0 50px;
 }
 .title-main{
-    background-color: aqua;
+    background-color: rgb(228, 0, 0);
     padding: 20px 0;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
 .title-main div h3 {
+    font-size: 20px;
+    font-weight: 700;
     letter-spacing: 1px;
 }
 /* img main */
 .img-main{
-    background-color: yellow;
+    background-color: rgb(255, 255, 255);
     display: flex;
     /* overflow-x: scroll; */
 }
@@ -698,5 +700,8 @@ footer{
     .header-img ul{
         top : 550px;
         left : 25px
+    }
+    .title-main {
+        width: 200px;
     }
 }

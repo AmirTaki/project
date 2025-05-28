@@ -734,9 +734,20 @@ footer{
     .img-main::-webkit-scrollbar{
         display: none;
     }
+    .window-img{
+        width: 202px;
+    }
     .window-img img {
         width: 200px ;
         height: 200px ;
+    }
+    .scroll-img{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        overflow-y:hidden ;
+        overflow-x:hidden ;
+        place-items: center;   
+        background-color: yellow;
     }
 
 }

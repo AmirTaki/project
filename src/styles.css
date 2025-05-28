@@ -416,7 +416,7 @@ main {
 }
 .popular{
     letter-spacing: 1px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(163, 0, 0);
 }
 .popular h2 {
     font-weight: 700;
@@ -744,6 +744,10 @@ footer{
     }
     .img-main::-webkit-scrollbar{
         display: none;
+    }
+    .popular h2 {
+        font-size: 21px;
+        font-weight: 500;
     }
 }
 

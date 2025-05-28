@@ -166,13 +166,13 @@ i:hover {
     width: 100%;
     height: 100%;
     position: absolute;
-    /* height: 400px; */
     object-fit: cover;
     z-index: 1;
 }
 .header-img h1 {
     position: absolute;
     color : white;
+    font-size: 50px;
     top : 14px;
     left : 25px;
     letter-spacing: 4px;
@@ -182,7 +182,7 @@ i:hover {
 .header-img h4 {
     position: relative;
     color : black;
-    left : 70px;
+    left : 120px;
     top : 240px;
     background-color: white;
     display: inline;
@@ -194,12 +194,12 @@ i:hover {
     color : black;
     background-color: white;
     width: 250px;
-    left : 70px;
-    top : 260px;
+    left : 120px;
+    top : 253px;
     line-height: 20px;
-    padding: 5px 10px;
-    font-weight: 100;
-    font-size: 12px;
+    padding: 0px 10px;
+    font-weight: 200;
+    font-size: 13px;
     z-index: 2;
 }
 .header-img ul {
@@ -207,8 +207,8 @@ i:hover {
     display: flex;
     flex-flow:  row wrap;
     position: absolute;
-    left : 70px;
-    top : 325px;
+    left : 120px;
+    top : 318px;
     gap: 10px;
     z-index: 2;
 }
@@ -682,5 +682,21 @@ footer{
     }
     .header-img {
         height: 600px;
+        position: relative;
+    }
+    .header-img h1{
+        left: 40%;
+    }
+    .header-img h4{
+        top: 487px; 
+        left : 25px
+    }
+    .header-img p{
+        top : 500px;
+        left : 25px
+    }
+    .header-img ul{
+        top : 550px;
+        left : 25px
     }
 }

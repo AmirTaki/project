@@ -654,6 +654,7 @@ footer{
 }
 
 @media screen and (max-width : 850px) {
+  
     .header-up{
         height: 55px;
     }
@@ -701,7 +702,8 @@ footer{
         font-size: 25px;
     }
     .header-img {
-        height: 600px;
+        width: 100% !important;
+        height: 600px !important;
         position: relative;
     }
     .header-img h1{
@@ -731,6 +733,10 @@ footer{
     }
     .img-main::-webkit-scrollbar{
         display: none;
+    }
+    .window-img img {
+        width: 200px ;
+        height: 200px ;
     }
 
 }

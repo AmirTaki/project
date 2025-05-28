@@ -135,23 +135,26 @@ i:hover {
 .header-main {
     background-color: red;
     display: flex;
-    margin-top: 130px;
+    margin-top: 135px;
     flex-flow: column nowrap;
     width: 100%;
 }
 .header-main-up{
     height: 40px;
-    background-color: green;
+    background-color: rgb(1, 159, 25);
     display: flex;
     z-index: 3;
     justify-content: center;
     align-items: center;
+    font-size: 11px;
+    font-weight: 100;
     position: relative;
 }
 .header-main-up i {
     float: right;
     position: absolute;
     right: 15px;
+    font-size: 20px;
 }
 
 .header-img {
@@ -669,5 +672,11 @@ footer{
     }
     .header-main-up{
         height: 60px;
+    }
+    .header-main-up{
+        font-size: 14px;
+    }
+    .header-main-up i {
+        font-size: 25px;
     }
 }

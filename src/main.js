@@ -1,14 +1,16 @@
 let iconQuery = document.querySelector('.icon-query')
-let iconSearchHeader = document.querySelector(".header-search  .bi-search") 
+let iconSearchHeart = document.getElementById("icon-search-heart")
+
 // resize
 const resize_window = () => {
     if (window.innerWidth < 850){
         iconQuery.style.display = ""
-        iconSearchHeader.style.display = ""
+        iconSearchHeart.className = "bi bi-search"
+        console.log(iconSearchHeart.classList)
     }
     else {
         iconQuery.style.display = "none"
-        iconSearchHeader.style.display = "none"
+        iconSearchHeart.classList = 'bi bi-heart'
     }
 }
 // resize

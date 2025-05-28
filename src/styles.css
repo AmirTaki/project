@@ -765,5 +765,8 @@ footer{
     .bi-arrow-left-square, .bi-arrow-right-square {
         display: none;
     }
+    .size-button a {
+        display: none
+    }
 }
 

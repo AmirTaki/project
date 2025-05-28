@@ -448,8 +448,8 @@ main {
     font-size: 20px;
 }
 .related-resources-container{
-    margin: 35px 0;
-    background-color: blue;
+    margin: 35px 10px;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-flow: column nowrap;
 }
@@ -764,12 +764,18 @@ footer{
         flex-flow: column nowrap;
     }
     .table div {
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    width: 95%;
+    margin: 10px 10px;
     }
     .table div h1 {
         font-size: 25px;
+    }
+    .related-resources-container{
+        margin-top: 0;
+    }
+    .item-slider-img img {
+        width: 450px;
+        height: 370px;
     }
 }
 

@@ -220,7 +220,7 @@ i:hover {
 }
 /* MAIN */
 main {
-    background-color: rgb(241, 245, 0);
+    background-color: rgb(255, 255, 255);
 }
 .size-main {
     margin: 0 136px;
@@ -462,7 +462,7 @@ main {
 
 }
 .container-slider-img{
-    background-color: blueviolet;
+    background-color: rgb(255, 255, 255);
     display: flex;
     overflow-x: scroll;
 }
@@ -470,13 +470,13 @@ main {
     display: none;
 }
 .item-slider-img{
-    background-color: brown;
+    background-color: rgb(255, 255, 255);
     margin:  0 5px;
     height: 290px;
     position: relative;
 }
 .item-slider-img img {
-    width: 270px;
+    width: 298px;
     height: 200px;
     object-fit:cover;
 }
@@ -558,7 +558,7 @@ main {
 }
 .our-adiclub {
     height: 100px;
-    background-color: rgb(239, 239, 30);
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;

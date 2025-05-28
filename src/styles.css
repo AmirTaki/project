@@ -623,9 +623,10 @@ footer{
         overflow-x: scroll;
         /* width: 100%; */
     }
-    .window-img   {
-        width: 100%;
-    }
+     .img-main::-webkit-scrollbar{
+        display: none;
+     }
+
     .scroll-vidoe video{
         width: 70%;
     }
@@ -639,7 +640,10 @@ footer{
     }
 }
 @media screen and (max-width : 1200px) {
-    
+      .img-main{
+        overflow-x: scroll;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width : 850px) {
@@ -716,10 +720,8 @@ footer{
     }
     .img-main{
         overflow-x: scroll;
-        width: 500px;
+        width: 100%;
     }
-    .window-img {
-     max-width: 1000px;
-    }
+
 }
 

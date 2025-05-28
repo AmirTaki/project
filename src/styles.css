@@ -380,7 +380,8 @@ main {
 }
 .scroll-vidoe video,
 .scroll-vidoe img{
-    width: 338px;
+   height: 300px;
+    width: 298px;
 
     border: 1px solid white;
 }

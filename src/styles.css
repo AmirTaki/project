@@ -221,13 +221,13 @@ i:hover {
 }
 /* MAIN */
 main {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(241, 245, 0);
 }
 .size-main {
-    margin: 0 50px;
+    margin: 0 136px;
 }
 .title-main{
-    background-color: rgb(228, 0, 0);
+    background-color: rgb(255, 255, 255);
     padding: 20px 0;
     display: flex;
     flex-flow: row nowrap;
@@ -249,7 +249,8 @@ main {
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-flow: column nowrap;
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
     position: relative;
     width: 300px; 
 

@@ -742,12 +742,12 @@ footer{
 
 @media screen and (max-width : 550px) {
     .window-img{
-        width: 202px;
+        width: 222px;
         margin-bottom: 10px;
     }
     .window-img img {
-        width: 200px ;
-        height: 200px ;
+        width: 220px ;
+        height: 220px ;
     }
     .scroll-img{
 
@@ -757,7 +757,7 @@ footer{
         overflow-x:hidden ;
         place-items: center;   
         background-color: rgb(255, 255, 255);
-        height: 420px;
+        height: 460px;
     }
     .scroll-img h4 ,.scroll-img h3,.scroll-img p{
         display: none;

@@ -18,6 +18,18 @@ i:hover {
     background-color: red;
     display: flex;
     flex-flow: column nowrap;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    top : 0;
+    padding: 20px;
+    z-index: 20 !important;
+}
+.cross-page-move i{
+    float: right;
+    font-size: 40px;
+    color: rgb(42, 42, 42);
+    font-weight: 100;
 }
 header{
     position: fixed;

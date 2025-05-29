@@ -2,11 +2,12 @@ let iconQuery = document.querySelector('.icon-query')
 let iconSearchHeart = document.getElementById("icon-search-heart")
 let listUl = document.querySelectorAll(".title-ul")
 let listLi = document.querySelectorAll(".item-li")
-
+let iconListUl = document.querySelectorAll('.title-ul i')
 
 const hiddenListLi = ()=> {
     for (let i = 0; i < listLi.length; i++){
         listLi[i].style.display = 'none'
+        iconListUl[i].className = "bi bi-chevron-down"
     }
 }
 const showListLi = ()=> {
@@ -39,6 +40,7 @@ for (let i = 0; i< listUl.length; i++ ){
     listUl[i].addEventListener("click", (event)=>{
         if (window.innerWidth < 850){
             listLi[i].style.display = listLi[i].style.display === "none" ? "" : "none"
+            iconListUl[i].className = iconListUl[i].className === "bi bi-chevron-up" ? "bi bi-chevron-down" : "bi bi-chevron-up"
         }
        
     })

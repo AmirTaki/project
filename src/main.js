@@ -1,3 +1,6 @@
+let pageMove = document.querySelector(".page-move")
+let crossPage = document.querySelector('.cross-page-move i')
+let headerUp = document.querySelector(".header-up")
 let header = document.querySelector("header")
 let iconQuery = document.querySelector('.icon-query')
 let iconSearchHeart = document.getElementById("icon-search-heart")
@@ -7,6 +10,11 @@ let iconListUl = document.querySelectorAll('.title-ul i')
 let footer = document.querySelector(".container-footer")
 let footerBlack = document.querySelector(".footer-black")
 let upperFooter = document.querySelectorAll(".upper-footer div")
+
+
+
+
+
 
 const hideBorderRight = () => {
     for(let i = 0; i < upperFooter.length ; i++)
@@ -50,6 +58,7 @@ window.addEventListener("resize",(e)=> {
 })
 resize_window()
 hideBorderRight()
+
 //scroll
 window.addEventListener("scroll", ()=> {
     if (document.documentElement.scrollTop >= 155){
@@ -61,9 +70,6 @@ window.addEventListener("scroll", ()=> {
         header.className ="header-animation-reverse"    }
 })
 
-// document.querySelector(".header-img").addEventListener("click", evnet=>{
-//     header.className = "header-animation-reverse"
-// })
 
 for (let i = 0; i< listUl.length; i++ ){
     listUl[i].addEventListener("click", (event)=>{

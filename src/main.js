@@ -37,12 +37,8 @@ resize_window()
 
 for (let i = 0; i< listUl.length; i++ ){
     listUl[i].addEventListener("click", (event)=>{
-
-        if (listLi[i].style.display === "none"){
-            listLi[i].style.display = ""
-        }
-        else {
-            listLi[i].style.display = "none"
+        if (window.innerWidth < 850){
+            listLi[i].style.display = listLi[i].style.display === "none" ? "" : "none"
         }
        
     })

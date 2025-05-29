@@ -628,11 +628,16 @@ footer{
     color:white;
     justify-content: center;
     align-items: center;
-    font-size: 13px;
+    font-size: 10px;
     font-weight: 200;
 }
 .upper-footer div {
-    margin: 0 25px;
+    /* margin: 0 32px; */
+    padding: 0 32px;
+    border-right: 1px solid white;
+}
+.upper-footer div:hover {
+    cursor: pointer;
 }
 /* media query */
 @media screen and (min-width : 2080px) {

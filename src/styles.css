@@ -21,6 +21,7 @@ i:hover {
     height: 100px;
     position: fixed;
     width: 100%;
+    height: 300px;
     top : 0;
     padding: 20px;
     z-index: 20 !important;
@@ -33,6 +34,20 @@ i:hover {
 }
 .board-page-move {
     background-color: yellow;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+.board-page-move h3 {
+    font-weight: 700;
+    padding: 10px;
+}
+.board-page-move p {
+    padding: 10px;
+    font-weight: 300;
+}
+.board-page-move a {
+    padding: 10px;
 }
 header{
     position: fixed;

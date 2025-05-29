@@ -230,6 +230,62 @@ header{
     margin-right: 0px;
     font-weight: 1200;
 }
+
+
+/* MEGA MENU */
+.all-megaMenu{
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    position: fixed;
+    top: 151px;
+    width: 100%;
+    z-index: 4;
+}
+.megaMenu {
+  background-color: transparent; 
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+.megaMenu div {
+    border-right: 1px solid rgb(235, 235, 235);
+    padding: 20px;
+    height: 400px;
+    width: 300px;
+}
+.megaMenu ul {
+    display: flex;
+    flex-flow : column nowrap ;
+    gap: 16px;
+    color : black;
+    font-weight: 600;
+}
+
+.megaMenu ul li {
+    list-style-type: none;
+    color : rgb(85, 85, 85);
+    font-weight: 300;
+    font-size: 15px;
+}
+.megaMenu ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.title-megaMenu {
+    display: flex;
+    flex-flow:  row nowrap;
+    justify-content: space-around;
+    background-color: transparent; 
+}
+.title-megaMenu div {
+    width: 300px;
+    padding: 20px;
+
+}
 /* BETTWEN HEADER & MAIN */
 .header-main {
     background-color: red;

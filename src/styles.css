@@ -24,7 +24,6 @@ i:hover {
     padding: 20px;
     z-index: 20 ;
     animation: pageMoveAnimReverse 5s linear forwards;  
-    display: none;
 }
 
 .page-move-animation{
@@ -46,7 +45,7 @@ i:hover {
         transform: translateY(0px);
     }
     100% {
-        transform: translateY(-380px);
+        transform: translateY(-580px);
     }
 }
 

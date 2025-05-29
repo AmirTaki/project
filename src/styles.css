@@ -822,8 +822,8 @@ footer{
         opacity: 1;
         float: right;
     }
-    .list-main-item li{
-        display: none;
+    .list-main-item div{
+        
     }
 }
 

@@ -238,7 +238,7 @@ header{
     display: flex;
     flex-flow: column nowrap;
     position: fixed;
-    top: 151px;
+    top: 136px;
     width: 100%;
     z-index: 4;
 }
@@ -810,6 +810,9 @@ footer{
     main {
         width: 50%;
         margin: auto;
+    }
+    .all-megaMenu{
+        align-items: center;
     }
     .title-main div h3{
         font-size: xx-large;

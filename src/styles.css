@@ -22,16 +22,32 @@ i:hover {
     width: 100%;
     top : 0;
     padding: 20px;
-    z-index: 20 !important;
+    z-index: 20 ;
 }
+
 .page-move-animation{
     animation: pageMoveAnim 5s linear forwards;
 }
 @keyframes pageMoveAnim  {
+    0%{
+        transform: translateY(0px);
+    }
     100% {
-        transform: translateY(1000px);
+        transform: translateY(250px);
     }
 }
+.page-move-animation-reverse {
+    animation: pageMoveAnimReverse 5s linear forwards;  
+}
+@keyframes pageMoveAnimReverse  {
+        0%{
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-250px);
+    }
+}
+
 .cross-page-move i{
     float: right;
     font-size: 40px;
@@ -72,13 +88,12 @@ header{
 /* HEADER  */
 .header-animation {
     animation: headerAnimation .8s  linear forwards;
-    z-index: 10;
+    z-index: 10 ;
 }
 
 
 @keyframes headerAnimation {
     0%{
-        /* transform: translateY(-133px); */
         transform: translateY(-113px);
     }
   

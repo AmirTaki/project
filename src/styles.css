@@ -15,7 +15,7 @@ i:hover {
 }
 
 .page-move {
-    background-color: rgb(234, 0, 0);
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-flow: column nowrap;
     position: fixed;
@@ -31,7 +31,7 @@ i:hover {
     font-weight: 100;
 }
 .board-page-move {
-    background-color: rgb(9, 187, 0);
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
@@ -768,6 +768,10 @@ footer{
 @media screen and (max-width : 850px) {
     .page-move {
         padding: 5px;
+    }
+    .cross-page-move{
+        margin-top: 20px;
+        margin-right: 15px;
     }
     .board-page-move{
         flex-flow: column nowrap;

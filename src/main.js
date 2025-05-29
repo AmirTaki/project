@@ -14,7 +14,12 @@ let upperFooter = document.querySelectorAll(".upper-footer div")
 
 
 
-
+headerUp.addEventListener("click", (evnet)=> {
+    pageMove.className = ""
+})
+document.querySelector(".header-img").addEventListener("click", evnet => {
+    pageMove.classList.add("page-move-animation")
+})
 
 const hideBorderRight = () => {
     for(let i = 0; i < upperFooter.length ; i++)

@@ -851,6 +851,16 @@ footer{
         width: 200px;
         margin: 20px 0;
     }
+    .footer-black {
+        background-color: red;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .footer-black ul {
+        list-style-type: none;
+    }
 }
 
 @media screen and (max-width : 550px) {

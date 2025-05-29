@@ -10,9 +10,10 @@ let iconListUl = document.querySelectorAll('.title-ul i')
 let footer = document.querySelector(".container-footer")
 let footerBlack = document.querySelector(".footer-black")
 let upperFooter = document.querySelectorAll(".upper-footer div")
-let headerItem = document.querySelectorAll(".header-item li")
+let headerLi = document.querySelectorAll(".header-item li")
 let megaMenu = document.querySelector(".all-megaMenu")
-  
+let headerItem = document.querySelector('.header-item')
+
 // Page Move
 headerUp.addEventListener("click", (evnet)=> {
     pageMove.classList.remove("page-move-animation-reverse")
@@ -24,11 +25,14 @@ crossPage.addEventListener("click", (evnet)=> {
 })
 
 // megaMenu
-for (let i = 0;  i < headerItem.length ; i++){
-    headerItem[i].addEventListener("mousemove", (event)=>{
+for (let i = 0;  i < headerLi.length ; i++){
+    headerLi[i].addEventListener("mousemove", (event)=>{
         megaMenu.classList.remove("deactive")
     })
 }
+headerItem.addEventListener("mouseleave", (event)=>{    
+    megaMenu.classList.add("deactive")
+})
 
 // 
 const hiddenListLi = ()=> {
@@ -81,6 +85,7 @@ window.addEventListener("scroll", ()=> {
     if (document.documentElement.scrollTop >= 155){
         
         header.className ="header-animation"
+        megaMenu.classList.add("deactive")
         
     }
     else {

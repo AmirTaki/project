@@ -55,11 +55,10 @@ window.addEventListener("scroll", ()=> {
     if (document.documentElement.scrollTop >= 155){
         
         header.className ="header-animation"
-        // header.style.display = "none"
+        
     }
     else {
-        // header.style.display = ""
-    }
+        header.className ="header-animation-reverse"    }
 })
 
 // document.querySelector(".header-img").addEventListener("click", evnet=>{

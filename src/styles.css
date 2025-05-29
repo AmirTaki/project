@@ -14,11 +14,12 @@ i:hover {
     cursor: pointer;
 }
 header{
- 
+    position: fixed;
+    width: 100%;
 }
 /* HEADER  */
 .header-animation {
-    animation: headerAnimation .5s  linear forwards;
+    animation: headerAnimation .8s  linear forwards;
     z-index: 10;
 }
 
@@ -26,7 +27,7 @@ header{
 @keyframes headerAnimation {
     0%{
         /* transform: translateY(-133px); */
-        transform: translateY(0px);
+        transform: translateY(-113px);
     }
   
     100%{
@@ -35,7 +36,7 @@ header{
 }
 
 .header-animation-reverse {
-    animation: headerAnimationReverse .5s  linear forwards ;
+    animation: headerAnimationReverse .8s  linear forwards ;
 }
 
 @keyframes headerAnimationReverse {
@@ -171,6 +172,7 @@ header{
     z-index: 2;
 }
 .header-main-up{
+    opacity: 0;
     height: 40px;
     background-color: rgb(223, 223, 223);
     display: flex;

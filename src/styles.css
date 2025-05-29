@@ -15,7 +15,7 @@ i:hover {
 }
 
 .page-move {
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-flow: column nowrap;
     height: 100px;
@@ -33,7 +33,7 @@ i:hover {
     font-weight: 100;
 }
 .board-page-move {
-    background-color: yellow;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-around;
     margin: 20px;
@@ -46,8 +46,15 @@ i:hover {
     padding: 10px;
     font-weight: 300;
 }
-.board-page-move a {
-    padding: 10px;
+.board-page-move a {    
+    transition: color .5s, background-color .5s;
+    margin: 10px;
+}
+.board-page-move a:hover {
+    background-color: black;
+    color : white;
+    cursor: pointer;
+    text-decoration: none;
 }
 header{
     position: fixed;

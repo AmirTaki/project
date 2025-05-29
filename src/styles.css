@@ -15,13 +15,11 @@ i:hover {
 }
 
 .page-move {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(234, 0, 0);
     display: flex;
     flex-flow: column nowrap;
-    height: 100px;
     position: fixed;
     width: 100%;
-    height: 300px;
     top : 0;
     padding: 20px;
     z-index: 20 !important;
@@ -33,8 +31,9 @@ i:hover {
     font-weight: 100;
 }
 .board-page-move {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(9, 187, 0);
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
     margin: 20px;
 }
@@ -46,7 +45,8 @@ i:hover {
     padding: 10px;
     font-weight: 300;
 }
-.board-page-move a {    
+.board-page-move a {
+    color: black;    
     transition: color .5s, background-color .5s;
     margin: 10px;
 }
@@ -766,6 +766,26 @@ footer{
 }
 
 @media screen and (max-width : 850px) {
+    .page-move {
+        padding: 5px;
+    }
+    .board-page-move{
+        flex-flow: column nowrap;
+        height: 100vh;
+        justify-content: start;
+    }
+    .board-page-move div {
+        margin:  0px;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    .board-page-move h3,
+    .board-page-move p,
+    .board-page-move a{
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+    }
     header {
         margin-top: 20px;
     }

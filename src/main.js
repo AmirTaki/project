@@ -1,3 +1,4 @@
+let header = document.querySelector("header")
 let iconQuery = document.querySelector('.icon-query')
 let iconSearchHeart = document.getElementById("icon-search-heart")
 let listUl = document.querySelectorAll(".title-ul")
@@ -49,7 +50,16 @@ window.addEventListener("resize",(e)=> {
 })
 resize_window()
 hideBorderRight()
-
+//scroll
+window.addEventListener("scroll", ()=> {
+    if (document.documentElement.scrollTop >= 500){
+        console.log("ok")
+        header.style.display = "none"
+    }
+    else {
+        header.style.display = ""
+    }
+})
 
 
 for (let i = 0; i< listUl.length; i++ ){

@@ -14,7 +14,9 @@ i:hover {
     cursor: pointer;
 }
 /* HEADER  */
-
+.header-animation {
+    
+}
 
 .header-top {
     position: fixed;

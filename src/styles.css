@@ -13,6 +13,12 @@
 i:hover {
     cursor: pointer;
 }
+
+.page-move {
+    background-color: red;
+    display: flex;
+    flex-flow: column nowrap;
+}
 header{
     position: fixed;
     width: 100%;

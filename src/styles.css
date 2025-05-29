@@ -561,7 +561,7 @@ main {
 }
 .our-adiclub {
     height: 100px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(251, 255, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -570,6 +570,9 @@ main {
     display: flex;
     font-weight: 600;
 }
+.our-adiclub div h1 {
+    font-weight: 500;
+}
 .our-adiclub div button {
     margin-left: 25px;
     color : white;
@@ -577,6 +580,7 @@ main {
     background-color: black ;
     border: none;
     outline: none;
+    font-size: 17px;
     box-shadow: 5px 5px 1px black;
     transition: color .6s;
 }
@@ -829,8 +833,23 @@ footer{
         opacity: 1;
         float: right;
     }
-    .list-main-item div{
-        
+    .our-adiclub {
+        align-items: center;
+        height: 170px;
+    }
+    .our-adiclub div {
+        text-align: center;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .our-adiclub div h1 {
+        font-weight: 700;
+       }
+    .our-adiclub div button {
+        margin-left: 0;
+        width: 200px;
+        margin: 20px 0;
     }
 }
 

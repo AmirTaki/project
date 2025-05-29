@@ -4,6 +4,8 @@ let listUl = document.querySelectorAll(".title-ul")
 let listLi = document.querySelectorAll(".item-li")
 let iconListUl = document.querySelectorAll('.title-ul i')
 let footer = document.querySelector(".container-footer")
+let footerBlack = document.querySelector(".footer-black")
+
 const hiddenListLi = ()=> {
     for (let i = 0; i < listLi.length; i++){
         listLi[i].style.display = 'none'
@@ -22,12 +24,14 @@ const resize_window = () => {
         iconSearchHeart.className = "bi bi-search"
         hiddenListLi ()
         footer.style.display = "none"
+        footerBlack.style.display = ""
     }
     else {
         iconQuery.style.display = "none"
         iconSearchHeart.classList = 'bi bi-heart'
         showListLi()
         footer.style.display = ""
+        footerBlack.style.display = "none"
 
     }
 }

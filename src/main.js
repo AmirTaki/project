@@ -52,15 +52,19 @@ resize_window()
 hideBorderRight()
 //scroll
 window.addEventListener("scroll", ()=> {
-    if (document.documentElement.scrollTop >= 500){
-        console.log("ok")
-        header.style.display = "none"
+    if (document.documentElement.scrollTop >= 85){
+        
+        header.className ="header-animation"
+        // header.style.display = "none"
     }
     else {
-        header.style.display = ""
+        // header.style.display = ""
     }
 })
 
+document.querySelector(".header-img img").addEventListener("click", evnet=>{
+    header.className = "header-animation"
+})
 
 for (let i = 0; i< listUl.length; i++ ){
     listUl[i].addEventListener("click", (event)=>{

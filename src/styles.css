@@ -13,9 +13,23 @@
 i:hover {
     cursor: pointer;
 }
+header{
+    z-index: 12;
+}
 /* HEADER  */
 .header-animation {
-    
+    animation: headerAnimation 2s  linear forwards;
+}
+@keyframes headerAnimation {
+    0%{
+        transform: translateY(+40px);
+    }
+    10%{
+        transform: translateY(-150px);
+    }
+    100%{
+        transform: translateY(-290px);
+    }
 }
 
 .header-top {
@@ -27,7 +41,7 @@ i:hover {
     z-index: 5;
 }
 .header-up{
-    background-color: black;
+    background-color: rgb(224, 0, 0);
     height: 45px;
     display: flex;
     justify-content: center;
@@ -51,7 +65,7 @@ i:hover {
 
 .header-meddle{
     padding-top: 4px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(6, 4, 126);
     height: 30px;
 }
 .header-meddle ul {

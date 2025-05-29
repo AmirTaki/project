@@ -51,20 +51,20 @@ window.addEventListener("resize",(e)=> {
 resize_window()
 hideBorderRight()
 //scroll
-// window.addEventListener("scroll", ()=> {
-//     if (document.documentElement.scrollTop >= 155){
+window.addEventListener("scroll", ()=> {
+    if (document.documentElement.scrollTop >= 155){
         
-//         header.className ="header-animation"
-//         // header.style.display = "none"
-//     }
-//     else {
-//         // header.style.display = ""
-//     }
-// })
-
-document.querySelector(".header-img").addEventListener("click", evnet=>{
-    header.className = "header-animation"
+        header.className ="header-animation"
+        // header.style.display = "none"
+    }
+    else {
+        // header.style.display = ""
+    }
 })
+
+// document.querySelector(".header-img").addEventListener("click", evnet=>{
+//     header.className = "header-animation-reverse"
+// })
 
 for (let i = 0; i< listUl.length; i++ ){
     listUl[i].addEventListener("click", (event)=>{

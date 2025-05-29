@@ -14,19 +14,19 @@ i:hover {
     cursor: pointer;
 }
 header{
-    z-index: 12;
+ 
 }
 /* HEADER  */
 .header-animation {
     animation: headerAnimation .5s  linear forwards;
+    z-index: 5;
 }
 @keyframes headerAnimation {
     0%{
-        transform: translateY(-133px);
+        /* transform: translateY(-133px); */
+        transform: translateY(0px);
     }
-    10%{
-        /* transform: translateY(-150px); */
-    }
+  
     100%{
         transform: translateY(-290px);
     }
@@ -35,7 +35,7 @@ header{
 .header-top {
     position: fixed;
     width: 100%;
-    top : 0;
+    top : 10px;
     display: flex;
     flex-flow: column nowrap;
     z-index: 5;
@@ -153,6 +153,7 @@ header{
     margin-top: 135px;
     flex-flow: column nowrap;
     width: 100%;
+    z-index: 2;
 }
 .header-main-up{
     height: 40px;
@@ -175,14 +176,15 @@ header{
 .header-img {
     height: 450px;
     position: relative;
-    z-index: 1;
+    z-index: 0;
+    background-image: url('./img/photo-1588110679566-158c6dea107c.avif');
 }
 .header-img img {
     width: 100%;
     height: 100%;
     position: absolute;
     object-fit: cover;
-    z-index: 1;
+    z-index: 1 !important;
 }
 .header-img h1 {
     position: absolute;

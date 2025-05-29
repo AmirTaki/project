@@ -95,7 +95,7 @@ header{
 
 @keyframes headerAnimation {
     0%{
-        transform: translateY(-140px);
+        transform: translateY(-135px);
     }
   
     100%{
@@ -112,7 +112,7 @@ header{
         transform:  translateY(-290px);
     }  
     100%{
-        transform: translateY(-138px)
+        transform: translateY(-135px)
     }
 }
 

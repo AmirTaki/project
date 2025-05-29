@@ -10,10 +10,10 @@ let iconListUl = document.querySelectorAll('.title-ul i')
 let footer = document.querySelector(".container-footer")
 let footerBlack = document.querySelector(".footer-black")
 let upperFooter = document.querySelectorAll(".upper-footer div")
-
-
-
-
+let headerItem = document.querySelectorAll(".header-item li")
+let megaMenu = document.querySelector(".all-megaMenu")
+  
+// Page Move
 headerUp.addEventListener("click", (evnet)=> {
     pageMove.classList.remove("page-move-animation-reverse")
     pageMove.classList.add("page-move-animation")
@@ -23,14 +23,14 @@ crossPage.addEventListener("click", (evnet)=> {
     pageMove.classList.add("page-move-animation-reverse")
 })
 
-
-const hideBorderRight = () => {
-    for(let i = 0; i < upperFooter.length ; i++)
-        if (i === upperFooter.length - 1){
-            upperFooter[i].style.borderRight = "none"
-        }
+// megaMenu
+for (let i = 0;  i < headerItem.length ; i++){
+    headerItem[i].addEventListener("mousemove", (event)=>{
+        megaMenu.classList.remove("deactive")
+    })
 }
 
+// 
 const hiddenListLi = ()=> {
     for (let i = 0; i < listLi.length; i++){
         listLi[i].style.display = 'none'
@@ -42,6 +42,15 @@ const showListLi = ()=> {
         listLi[i].style.display = ''
     }
 }
+
+// footer hide border rigth
+const hideBorderRight = () => {
+    for(let i = 0; i < upperFooter.length ; i++)
+        if (i === upperFooter.length - 1){
+            upperFooter[i].style.borderRight = "none"
+        }
+}
+
 // resize
 const resize_window = () => {
     if (window.innerWidth < 850){
@@ -75,7 +84,8 @@ window.addEventListener("scroll", ()=> {
         
     }
     else {
-        header.className ="header-animation-reverse"    }
+        header.className ="header-animation-reverse"    
+    }
 })
 
 
@@ -88,3 +98,7 @@ for (let i = 0; i< listUl.length; i++ ){
        
     })
 }
+
+
+
+

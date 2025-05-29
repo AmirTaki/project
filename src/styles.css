@@ -286,6 +286,9 @@ header{
     padding: 20px;
 
 }
+.deactive {
+    display: none;
+}
 /* BETTWEN HEADER & MAIN */
 .header-main {
     background-color: red;

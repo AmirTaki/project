@@ -23,11 +23,11 @@ i:hover {
     top : 0;
     padding: 20px;
     z-index: 20 ;
-    animation: pageMoveAnimReverse 5s linear forwards;  
+    animation: pageMoveAnimReverse .7s linear forwards;  
 }
 
 .page-move-animation{
-    animation: pageMoveAnim 5s linear forwards;
+    animation: pageMoveAnim .7s linear forwards;
 }
 @keyframes pageMoveAnim  {
     0%{
@@ -38,7 +38,7 @@ i:hover {
     }
 }
 .page-move-animation-reverse {
-    animation: pageMoveAnimReverse 5s linear forwards;  
+    animation: pageMoveAnimReverse .7s linear forwards;  
 }
 @keyframes pageMoveAnimReverse  {
     0%{

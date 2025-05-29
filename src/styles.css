@@ -623,6 +623,16 @@ footer{
 .upper-footer{
     height: 40px;
     background-color: rgb(51, 51, 51);
+    display: flex;
+    flex-flow: row nowrap;
+    color:white;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 200;
+}
+.upper-footer div {
+    margin: 0 25px;
 }
 /* media query */
 @media screen and (min-width : 2080px) {
@@ -660,6 +670,9 @@ footer{
     footer {
         width: 70%;
         margin: auto;
+    }
+    .upper-footer{
+        width: 100%;
     }
 }
 @media screen and (max-width : 1200px) {
@@ -865,7 +878,7 @@ footer{
     }
     .footer-black ul {
         list-style-type: none;
-        font-size: 14px;
+        font-size: 16px;
     }
     .footer-black ul li {
         margin:  19px 0;

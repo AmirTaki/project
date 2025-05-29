@@ -1,7 +1,7 @@
 let iconQuery = document.querySelector('.icon-query')
 let iconSearchHeart = document.getElementById("icon-search-heart")
-let listUl = document.querySelectorAll(".list-main-item-title")
-let listLi = document.querySelectorAll(".list-main-item-title div")
+let listUl = document.querySelectorAll(".title-ul")
+let listLi = document.querySelectorAll(".item-li")
 
 
 const hiddenListLi = ()=> {
@@ -37,7 +37,13 @@ resize_window()
 
 for (let i = 0; i< listUl.length; i++ ){
     listUl[i].addEventListener("click", (event)=>{
-       console.log("ok")
-        listLi[i].style.display = ""
+
+        if (listLi[i].style.display === "none"){
+            listLi[i].style.display = ""
+        }
+        else {
+            listLi[i].style.display = "none"
+        }
+       
     })
 }

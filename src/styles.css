@@ -511,7 +511,7 @@ main {
     display: flex;
     flex-flow: column nowrap;
 }
-.list-main-item-title {
+.list-main-item-title div{
     font-size: 25px;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -803,18 +803,25 @@ footer{
         margin: 50px 0;
         flex-flow: column nowrap;
     }
-    .list-main-item{
+    .list-main-item {
         width: 90%;
-        padding: 10px 10px;
+    
         margin:  0 20px ;
-        border-bottom: 1px solid rgb(221, 221, 221);
     }
-    .list-main-item:hover{
+    .title-ul {
+        padding: 20px 10px;
+        border-bottom: 1px solid rgb(221, 221, 221);
+
+    }
+    .title-ul:hover{
         cursor: pointer;
         background-color: rgb(233, 233, 233);
     
     }
-    .list-main-item-title{
+    .item-li {
+        padding:  10px;
+    }
+    .list-main-item-title div{
         font-size: 20px;
     }
     

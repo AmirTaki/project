@@ -18,14 +18,14 @@ header{
 }
 /* HEADER  */
 .header-animation {
-    animation: headerAnimation 2s  linear forwards;
+    animation: headerAnimation .5s  linear forwards;
 }
 @keyframes headerAnimation {
     0%{
-        transform: translateY(+40px);
+        transform: translateY(-133px);
     }
     10%{
-        transform: translateY(-150px);
+        /* transform: translateY(-150px); */
     }
     100%{
         transform: translateY(-290px);

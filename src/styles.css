@@ -24,6 +24,7 @@ i:hover {
     padding: 20px;
     z-index: 20 ;
     animation: pageMoveAnimReverse 5s linear forwards;  
+    display: none;
 }
 
 .page-move-animation{
@@ -34,18 +35,18 @@ i:hover {
         transform: translateY(0px);
     }
     100% {
-        transform: translateY(350px);
+        transform: translateY(380px);
     }
 }
 .page-move-animation-reverse {
     animation: pageMoveAnimReverse 5s linear forwards;  
 }
 @keyframes pageMoveAnimReverse  {
-        0%{
+    0%{
         transform: translateY(0px);
     }
     100% {
-        transform: translateY(-350px);
+        transform: translateY(-380px);
     }
 }
 
@@ -112,7 +113,7 @@ header{
         transform:  translateY(-290px);
     }  
     100%{
-        transform: translateY(-150px)
+        transform: translateY(-138px)
     }
 }
 

@@ -5,6 +5,14 @@ let listLi = document.querySelectorAll(".item-li")
 let iconListUl = document.querySelectorAll('.title-ul i')
 let footer = document.querySelector(".container-footer")
 let footerBlack = document.querySelector(".footer-black")
+let upperFooter = document.querySelectorAll(".upper-footer div")
+
+const hideBorderRight = () => {
+    for(let i = 0; i < upperFooter.length ; i++)
+        if (i === upperFooter.length - 1){
+            upperFooter[i].style.borderRight = "none"
+        }
+}
 
 const hiddenListLi = ()=> {
     for (let i = 0; i < listLi.length; i++){
@@ -32,7 +40,7 @@ const resize_window = () => {
         showListLi()
         footer.style.display = ""
         footerBlack.style.display = "none"
-
+        hideBorderRight()
     }
 }
 // resize
@@ -40,6 +48,7 @@ window.addEventListener("resize",(e)=> {
   resize_window()
 })
 resize_window()
+hideBorderRight()
 
 
 

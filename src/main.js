@@ -56,6 +56,10 @@ megaMenu.addEventListener("mouseleave",()=>{
     megaMenu.classList.add("deactive")
 })
 
+const closeMegeMenu = () => {
+    megaMenu.classList.add("deactive")
+}
+
 // sidebar
 listIcon.addEventListener("click", e=>{
     sidebar.classList.add("sidebarAnimation")
@@ -164,6 +168,7 @@ const resize_window = () => {
 // resize
 window.addEventListener("resize",(e)=> {
   resize_window()
+  closeMegeMenu()
 })
 resize_window()
 hideBorderRight()

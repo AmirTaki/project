@@ -21,7 +21,7 @@ body{
 }
 @keyframes animationRigstera {
     100% {
-        transform: translateY(10px);
+        transform: translateY(0px);
     }
     
 }
@@ -30,7 +30,7 @@ body{
 }
 @keyframes animationRigsteraReverse {
     0% {
-        transform: translateY(10px);
+        transform: translateY(0px);
     }
     100% {
         transform: translateY(1500px);

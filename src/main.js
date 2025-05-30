@@ -59,10 +59,16 @@ megaMenu.addEventListener("mouseleave",()=>{
 // sidebar
 listIcon.addEventListener("click", e=>{
     sidebar.classList.add("sidebarAnimation")
+    body.style.overflow = "hidden"
+    headerMain.style.opacity = .3
+    main.style.opacity = .3 
 })
 
 crossSidebar.addEventListener("click", e=>{
     sidebar.classList.remove("sidebarAnimation")
+    body.style.overflow = ""
+    headerMain.style.opacity = 1
+    main.style.opacity = 1
 })
 // icon Heart
 for (let i = 0; i< iconHeart.length ; i++){

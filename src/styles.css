@@ -240,10 +240,10 @@ header{
     z-index: 12;
     display: flex;
     flex-flow: column nowrap;
-    animation: siderAnimReverse 5s linear forwards;
+    animation: siderAnimReverse .5s linear forwards;
 }
 .sidebarAnimation {
-    animation: siderAnim 5s linear forwards;
+    animation: siderAnim .5s linear forwards;
 } 
 @keyframes siderAnim {
     0%{
@@ -254,7 +254,7 @@ header{
     }
 }
 .sidebarAnimationReverse {
-    animation: siderAnimReverse 5s linear forwards;
+    animation: siderAnimReverse .5s linear forwards;
 } 
 @keyframes  siderAnimReverse{
     0%{

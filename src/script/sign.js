@@ -15,6 +15,7 @@ const checkName = () => {
         span[0].innerText = "Name is required"
         span[0].style.color = 'red'
         input[0].style.borderColor = "red"
+        // <i class="bi bi-x-circle"></i>
     }
     else if(!name.value.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
         span[0].innerText = "Write full Name"
@@ -22,7 +23,9 @@ const checkName = () => {
         input[0].style.borderColor = "red"
     }
     else {
-        
+        span[0].innerText = "Write full Name"
+        span[0].style.color = 'green'
+        input[0].style.borderColor = "green"
     }
 }
 

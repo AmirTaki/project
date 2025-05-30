@@ -277,7 +277,15 @@ header{
 .sidebar-item:hover {
     cursor: pointer;
 }
-
+.siderbar-list{
+    background-color: yellow;
+    display: flex;;
+    flex-flow:column nowrap ;
+    align-items: start;
+    justify-content: space-between;
+    padding: 13px 35px;
+    font-size:  20px;
+}
 /* MEGA MENU */
 .all-megaMenu{
     background-color: white;

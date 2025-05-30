@@ -89,12 +89,12 @@ form i {
     font-size: 25px;
     color : green
 }
-h3 {
+h3, h2 {
     margin: 50px;
     margin-bottom: 10px;
     color : wheat
 }
-h3:hover{
+h3:hover, h2:hover{
     cursor: pointer;
     color : blue
 }
@@ -112,10 +112,9 @@ h3:hover{
 } 
 
 @keyframes move-register {
-    50%{
-        transform: rotate(90deg);
-    }
+
     100%{
-        transform: translateX(1000px);
+        transform: translateY(2000px);
+        display: none;
     }
 }

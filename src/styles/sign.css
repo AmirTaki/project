@@ -16,40 +16,37 @@ body{
     left: 30%;
     transform: translateY(-800px); 
     width: 100%; 
-    /* height: 100vh; */
-    animation: anim linear 1s forwards;
+    animation: animationRigstera linear 1s forwards;
 
 }
-@keyframes anim {
+@keyframes animationRigstera {
     100% {
         transform: translateY(0px);
     }
     
 }
-
-.animationRegister {
-    animation: move-register 5s linear forwards;
-} 
-
-@keyframes move-register {
-
-    100%{
-        transform: translateY(2000px);
-        
+.animationRigsteraReverse {
+    animation: animationRigsteraReverse linear 1s forwards; 
+}
+@keyframes animationRigsteraReverse {
+    0% {
+        transform: translateY(0px);
     }
-}
-
-.animationLogin {
-    animation: move-login 5s linear forwards;
-}
-@keyframes move-login {
-
-    100%{
-        transform: translateY(2000px);
-        
-
+    100% {
+        transform: translateY(1500px);
     }
+    
 }
+
+
+.form-login{
+    position: fixed;
+    left: 30%;
+    transform: translateY(-800px); 
+    width: 100%; 
+}
+
+
 form{
     position: relative;
     border-radius: 8px ;
@@ -141,6 +138,9 @@ h3:hover, h2:hover{
     }
     .form-register{
         left: 6%;
+    }
+    .form-login{
+        left : 6%
     }
     .button {
         width: 80%;

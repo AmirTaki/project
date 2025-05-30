@@ -12,6 +12,7 @@ body{
     background-color: rgb(227, 227, 227);
 }
 form{
+    position: relative;
     border-radius: 8px ;
     border: 2px solid rgb(241, 241, 241);
     padding: 10px 20px;
@@ -66,7 +67,13 @@ form span {
     background-color:white;
     color :  rgb(1, 37, 46);;
 }
-@media screen and (max-width : 700px) {
+form i {
+    position: absolute;
+    right: 10%;
+    font-size: 25px;
+    color : green
+}
+@media screen and (max-width : 800px) {
     form {
         width: 90%;
     }

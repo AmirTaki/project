@@ -4,18 +4,33 @@
 function createDataBase ($name){
     $serverName = "localhost";
     $username = "root";
-    $password = ""
+    $password = "";
     try {
         $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ);
-        $connection = new PDO("mysql:host=$serverName",$username, $password, $options)
-        $sql = "CREATE DATABASE $name"
-        $connection->exec($sql)
+        $connection = new PDO("mysql:host=$serverName",$username, $password, $options);
+        $sql = "CREATE DATABASE $name";
+        $connection->exec($sql);
     }
     catch(PDOException $error) {
-        return "Warning : ".$erorr->getMessage()
+        return "Warning : ".$error->getMessage();
+
     }
 }
+// connect to dataBase
+function connectDataBase ($dbName){
+    $serverName = "localhost";
+    $username = "root";
+    $password = "";
+    global $connection ;
 
-
+    try { 
+        $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ);
+        $connection = new PDO ("mysql:host=$serverName", $username, $password, $options);
+        return $connection;
+    }
+    catch(PDOException $error){
+        return "Warning : ".$error->getMessage();
+    }
+}
 
 ?>

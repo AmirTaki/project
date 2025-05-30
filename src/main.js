@@ -56,6 +56,12 @@ arrowRight.addEventListener("click", e =>{
     scrollImg.style.scrollBehavior = "smooth"
     scrollImg.scrollLeft += 900
 })
+
+// scroll sidebar wheel
+scrollImg.addEventListener("wheel", e => {
+    e.preventDefault();
+    scrollImg.scrollLeft += e.deltaY
+})
 // 
 const hiddenListLi = ()=> {
     for (let i = 0; i < listLi.length; i++){

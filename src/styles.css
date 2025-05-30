@@ -241,7 +241,23 @@ header{
     display: flex;
     flex-flow: column nowrap;
 }
+.sidebarAnimation {
+    animation: siderAnim 5s linear forwards;
+} 
+@keyframes {
+    
+}
+.sidebarAnimationReverse {
+    animation: siderAnimReverse 5s linear forwards;
+} 
+@keyframes  siderAnimReverse{
+    0%{
 
+    }
+    100%{
+        
+    }
+}
 .sidebar-svg-cross{
     display: flex;
     align-items: center;

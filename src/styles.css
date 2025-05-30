@@ -240,6 +240,7 @@ header{
     z-index: 12;
     display: flex;
     flex-flow: column nowrap;
+    animation: siderAnimReverse 5s linear forwards;
 }
 .sidebarAnimation {
     animation: siderAnim 5s linear forwards;
@@ -252,10 +253,10 @@ header{
 } 
 @keyframes  siderAnimReverse{
     0%{
-
+        transform: translateX(0px);
     }
     100%{
-        
+        transform: translateX(-1000px);
     }
 }
 .sidebar-svg-cross{

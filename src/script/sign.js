@@ -7,10 +7,23 @@ let button = document.getElementById("button")
 let span = document.querySelectorAll("span")
 let input = document.querySelectorAll("input")
 let icon = document.querySelectorAll("form i")
+let showPassword = document.getElementById("showPassword")
+
+showPassword.addEventListener("click",()=>{
+    if  (showPassword.checked === true) {
+    
+        password.type = 'text'
+        repeatPassword.type = 'text'
+    }
+    else {
+        password.type = 'password'
+        repeatPassword.type = 'password'
+    } 
+})
 
 
 const checkName = () => {
-   
+    console.log(showPassword.checked)
     if (name.value.length == 0){
         span[0].innerText = "Name is required"
         span[0].style.color = 'red'

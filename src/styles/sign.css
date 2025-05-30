@@ -79,6 +79,7 @@ form i {
     font-size: 25px;
     color : green
 }
+
 @media screen and (max-width : 800px) {
     form {
         width: 90%;

@@ -9,10 +9,10 @@ let input = document.querySelectorAll("input")
 let icon = document.querySelectorAll("form i")
 let showPassword = document.getElementById("showPassword")
 let login = document.querySelector('h3')
-
+let register = document.querySelector('h2')
 
 login.addEventListener('click',(e)=>{
-    form.classList.add('animationClass')
+    form.classList.add('animationRegister')
 })
 
 

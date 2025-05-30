@@ -107,7 +107,7 @@ h3:hover, h2:hover{
     }
 }
 
-.animationClass {
+.animationRegister {
     animation: move-register 5s linear forwards;
 } 
 
@@ -116,5 +116,15 @@ h3:hover, h2:hover{
     100%{
         transform: translateY(2000px);
         display: none;
+    }
+}
+
+.animationLogin {
+    animation: move-login 5s linear forwards;
+}
+@keyframes move-login {
+
+    100%{
+        transform: translateY(2000px);
     }
 }

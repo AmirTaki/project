@@ -69,11 +69,12 @@ scrollImg.addEventListener("wheel", e => {
 //  arrow left & arrow right scroll Vidoe
 arrowLeftCircle.addEventListener("click", e => {
     scrollVidoe.style.scrollBehavior = "smooth"
-    scrollVidoe.scrollLeft -= 900
+    scrollVidoe.scrollLeft -= window.innerWidth < 850 ? 300 : 900
+   
 })
 arrowRigthCircle.addEventListener("click", e => {
     scrollVidoe.style.scrollBehavior = "smooth"
-    scrollVidoe.scrollLeft += 900
+   scrollVidoe.scrollLeft += window.innerWidth < 850 ? 300 : 900
 })
 
 

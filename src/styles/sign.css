@@ -47,6 +47,7 @@ body{
 .animationLogin {
     animation: animationLogin linear 1s forwards; 
 }
+
 @keyframes animationLogin {
     0% {
         transform: translateY(-800px);
@@ -55,7 +56,18 @@ body{
         transform: translateY(100px);
     }
 }
+.animationLoginReverse {
+    animation: animationLoginReverse linear 1s forwards; 
+} 
 
+@keyframes animationLoginReverse {
+    0% {
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(1000px);
+    }
+}
 
 form{
     position: relative;

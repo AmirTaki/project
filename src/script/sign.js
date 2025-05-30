@@ -14,12 +14,14 @@ let formRegister = document.querySelector('.form-register')
 let formLogin = document.querySelector(".form-login")
 
 login.addEventListener('click',(e)=>{
+    formLogin.classList.remove('animationLoginReverse')
     formRegister.classList.add("animationRigsteraReverse")
     formLogin.classList.add('animationLogin')
 })
 
 register.addEventListener("click", (e)=> {
-    form[1].classList.add("animationLogin")
+    formRegister.classList.remove("animationRigsteraReverse")
+    formLogin.classList.add('animationLoginReverse')
 })
 
 

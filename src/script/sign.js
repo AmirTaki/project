@@ -28,7 +28,7 @@ const checkName = () => {
         return false
     }
     else {
-        span[0].innerText = ""
+        span[0].innerText = "veryGood"
         span[0].style.color = 'green'
         input[0].style.borderColor = "black"
         icon[0].className = "bi bi-check-circle"
@@ -55,7 +55,7 @@ const checkEmail = () => {
         return false
     }
     else {
-        span[1].innerText = ""
+        span[1].innerText = "veryGood"
         span[1].style.color = 'green'
         input[1].style.borderColor = "black"
         icon[1].className = "bi bi-check-circle"
@@ -82,7 +82,7 @@ const checkPassword = () => {
         return false
     }
     else {
-        span[2].innerText = ""
+        span[2].innerText = "veryGood"
         span[2].style.color = 'green'
         input[2].style.borderColor = "black"
         icon[2].className = "bi bi-check-circle"
@@ -91,12 +91,38 @@ const checkPassword = () => {
     }
 }
 
-
+const checkRepeatPassword = () => {
+    if (repeatPassword.value.length == 0){
+        span[3].innerText = "Repeat Password is required"
+        span[3].style.color = 'red'
+        input[3].style.borderColor = "red"
+        icon[3].className = "bi bi-x-circle"
+        icon[3].style.color = "red"
+        return false
+    }
+    else if(password.value !== repeatPassword.value){
+        span[3].innerText = "Repeating the password is not the same as the password."
+        span[3].style.color = 'red'
+        input[3].style.borderColor = "red"
+        icon[3].className = "bi bi-x-circle"
+        icon[3].style.color = "red"
+        return false
+    }
+    else {
+        span[3].innerText = "veryGood"
+        span[3].style.color = 'green'
+        input[3].style.borderColor = "black"
+        icon[3].className = "bi bi-check-circle"
+        icon[3].style.color = "green"
+        return true
+    }
+}
 
 button.addEventListener('click', (e)=>{
     e.preventDefault()
     checkName()
     checkEmail()
     checkPassword()
+    checkRepeatPassword()
 })
 

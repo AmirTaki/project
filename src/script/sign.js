@@ -14,7 +14,7 @@ let formRegister = document.querySelector('.form-register')
 let formLogin = document.querySelector(".form-login")
 let buttonLogin = document.getElementById("button-login")
 let emailLogin = document.getElementById('emailLogin')
-
+let passwordLogin = document.getElementById('passwordLogin')
 
 
 // register
@@ -98,29 +98,29 @@ const checkEmail = (email, number, inputNumber) => {
     }
 }
 
-const checkPassword = () => {
+const checkPassword = (password, number, inputNumber) => {
     if (password.value.length == 0){
-        span[2].innerText = "Password is required"
-        span[2].style.color = 'red'
-        input[2].style.borderColor = "red"
-        icon[2].className = "bi bi-x-circle"
-        icon[2].style.color = "red"
+        span[number].innerText = "Password is required"
+        span[number].style.color = 'red'
+        input[inputNumber].style.borderColor = "red"
+        icon[number].className = "bi bi-x-circle"
+        icon[number].style.color = "red"
         return false
     }
     else if(!password.value.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)){
-        span[2].innerText = "Password should contain 1Uppercase, 1Lowecase, 1 Digit & 1Alphabet "
-        span[2].style.color = 'red'
-        input[2].style.borderColor = "red"
-        icon[2].className = "bi bi-x-circle"
-        icon[2].style.color = "red"
+        span[number].innerText = "Password should contain 1Uppercase, 1Lowecase, 1 Digit & 1Alphabet "
+        span[number].style.color = 'red'
+        input[inputNumber].style.borderColor = "red"
+        icon[number].className = "bi bi-x-circle"
+        icon[number].style.color = "red"
         return false
     }
     else {
-        span[2].innerText = "veryGood"
-        span[2].style.color = 'green'
-        input[2].style.borderColor = "black"
-        icon[2].className = "bi bi-check-circle"
-        icon[2].style.color = "green"
+        span[number].innerText = "veryGood"
+        span[number].style.color = 'green'
+        input[inputNumber].style.borderColor = "black"
+        icon[number].className = "bi bi-check-circle"
+        icon[number].style.color = "green"
         return true
     }
 }
@@ -157,7 +157,7 @@ button.addEventListener('click', (e)=>{
     e.preventDefault()
     checkName()
     checkEmail(email, 1, 1)
-    checkPassword()
+    checkPassword(password, 2, 2)
     checkRepeatPassword()
 })
 
@@ -167,4 +167,5 @@ button.addEventListener('click', (e)=>{
 buttonLogin.addEventListener('click',(e)=>{
     e.preventDefault()
     checkEmail(emailLogin, 4, 6)
+    checkPassword(passwordLogin, 5, 7)
 })

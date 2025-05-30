@@ -9,11 +9,14 @@ body{
     height: 100vh;
     align-items: center;
     justify-content: center;
+    background-color: rgb(227, 227, 227);
 }
 form{
+    border-radius: 8px ;
     border: 2px solid rgb(241, 241, 241);
-    padding:  10px;
-    width: 50%;
+    padding: 10px 20px;
+    padding-bottom: 60px;
+    width: 40%;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-flow: column nowrap;
@@ -26,8 +29,9 @@ form label {
 }
 
 form input {
+    
     margin: 10px;
-    padding: 8px 10px;
+    padding: 15px 18px;
     border-radius:3px ;
     outline: none;
     border: 2px black solid;
@@ -43,7 +47,7 @@ form input:hover {
 form span {
     margin:  16px;
     margin-top: 0px;
-    margin-bottom: 15px;
+    margin-bottom:25px;
     font-size: small;
 }
 .button {
@@ -52,6 +56,7 @@ form span {
     color : white;
     transition: color 2s, background-color 2s;
     font-size: 20px;
+    margin-top: 10px;
     font-weight:800;
     width: 40%;
 }

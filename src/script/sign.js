@@ -37,8 +37,36 @@ const checkName = () => {
     }
 }
 
+const checkEmail = () => {
+       if (email.value.length == 0){
+        span[1].innerText = "Email is required"
+        span[1].style.color = 'red'
+        input[1].style.borderColor = "red"
+        icon[1].className = "bi bi-x-circle"
+        icon[1].style.color = "red"
+        return false
+    }
+    else if(!email.value.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
+        span[1].innerText = "Write full Email"
+        span[1].style.color = 'red'
+        input[1].style.borderColor = "red"
+        icon[1].className = "bi bi-x-circle"
+        icon[1].style.color = "red"
+        return false
+    }
+    else {
+        span[1].innerText = ""
+        span[1].style.color = 'green'
+        input[1].style.borderColor = "black"
+        icon[1].className = "bi bi-check-circle"
+        icon[1].style.color = "green"
+        return true
+    }
+}
+
 button.addEventListener('click', (e)=>{
     e.preventDefault()
     checkName()
+    checkEmail()
 })
 

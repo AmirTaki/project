@@ -25,7 +25,8 @@ form{
 form label {
     background-color: transparent;
     margin:5px 10px;
-    color : gray
+    color : rgb(0, 0, 0);
+    font-weight: 600;
 }
 
 form input {
@@ -38,6 +39,7 @@ form input {
     background-color: rgb(255, 255, 255);
     color : rgb(74, 74, 74);
     transition: box-shadow 5s, color 5s;
+    font-size: 15px;
 }
 form input:hover {
     box-shadow: inset 10px 80px 10px aliceblue; 

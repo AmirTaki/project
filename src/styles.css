@@ -245,8 +245,13 @@ header{
 .sidebarAnimation {
     animation: siderAnim 5s linear forwards;
 } 
-@keyframes {
-    
+@keyframes siderAnim {
+    0%{
+        transform: translateX(-1000px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
 }
 .sidebarAnimationReverse {
     animation: siderAnimReverse 5s linear forwards;

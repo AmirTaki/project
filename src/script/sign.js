@@ -11,9 +11,11 @@ let showPassword = document.getElementById("showPassword")
 let login = document.querySelector('h3')
 let register = document.querySelector('h2')
 let formRegister = document.querySelector('.form-register')
+let formLogin = document.querySelector(".form-login")
 
 login.addEventListener('click',(e)=>{
     formRegister.classList.add("animationRigsteraReverse")
+    formLogin.classList.add('animationLogin')
 })
 
 register.addEventListener("click", (e)=> {

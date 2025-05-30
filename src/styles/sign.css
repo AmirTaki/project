@@ -21,7 +21,7 @@ body{
 }
 @keyframes animationRigstera {
     100% {
-        transform: translateY(0px);
+        transform: translateY(20px);
     }
     
 }
@@ -30,7 +30,7 @@ body{
 }
 @keyframes animationRigsteraReverse {
     0% {
-        transform: translateY(0px);
+        transform: translateY(20px);
     }
     100% {
         transform: translateY(1500px);
@@ -38,12 +38,22 @@ body{
     
 }
 
-
 .form-login{
     position: fixed;
     left: 30%;
     transform: translateY(-800px); 
     width: 100%; 
+}
+.animationLogin {
+    animation: animationLogin linear 1s forwards; 
+}
+@keyframes animationLogin {
+    0% {
+        transform: translateY(-800px);
+    }
+    100%{
+        transform: translateY(100px);
+    }
 }
 
 

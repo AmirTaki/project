@@ -13,6 +13,8 @@ let upperFooter = document.querySelectorAll(".upper-footer div")
 let headerLi = document.querySelectorAll(".header-item li")
 let megaMenu = document.querySelector(".all-megaMenu")
 let headerItem = document.querySelector('.header-item')
+let  iconHeart = document.querySelectorAll(".heart-click")
+
 
 
 // Page Move
@@ -32,19 +34,17 @@ for (let i = 0;  i < headerLi.length ; i++){
     })
 }
 
-
-megaMenu.addEventListener("mousemove",(event)=>{
-if (event.mous in megaMenu){
-    console.log("ok")
-}
-})
-
-
-
-
 megaMenu.addEventListener("mouseleave",()=>{
     megaMenu.classList.add("deactive")
 })
+
+// icon Heart
+for (let i = 0; i< iconHeart.length ; i++){
+    iconHeart[i].addEventListener("click",()=>{
+        iconHeart[i].className = iconHeart[i].className === "bi bi-heart-fill heart-click" ? "bi bi-heart heart-click" : "bi bi-heart-fill heart-click"
+    })
+}
+
 
 
 // 

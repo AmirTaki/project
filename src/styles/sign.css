@@ -106,3 +106,16 @@ h3:hover{
         width: 80%;
     }
 }
+
+.animationClass {
+    animation: move-register 5s linear forwards;
+} 
+
+@keyframes move-register {
+    50%{
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: translateX(1000px);
+    }
+}

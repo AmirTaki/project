@@ -9,6 +9,9 @@ let input = document.querySelectorAll("input")
 let icon = document.querySelectorAll("form i")
 let showPassword = document.getElementById("showPassword")
 
+
+
+
 showPassword.addEventListener("click",()=>{
     if  (showPassword.checked === true) {
     

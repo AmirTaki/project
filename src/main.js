@@ -17,6 +17,9 @@ let  iconHeart = document.querySelectorAll(".heart-click")
 let arrowLeft = document.querySelector(".bi-arrow-left-square")
 let arrowRight = document.querySelector(".bi-arrow-right-square")
 let scrollImg = document.querySelector(".scroll-img")
+let arrowLeftCircle = document.querySelector(".bi-arrow-left-circle")
+let arrowRigthCircle = document.querySelector(".bi-arrow-right-circle")
+let scrollVidoe = document.querySelector(".scroll-vidoe")
 
 // Page Move
 headerUp.addEventListener("click", (evnet)=> {
@@ -62,13 +65,26 @@ scrollImg.addEventListener("wheel", e => {
     e.preventDefault();
     scrollImg.scrollLeft += e.deltaY
 })
-// 
+
+//  arrow left & arrow right scroll Vidoe
+arrowLeftCircle.addEventListener("click", e => {
+    scrollVidoe.style.scrollBehavior = "smooth"
+    scrollVidoe.scrollLeft -= 900
+})
+arrowRigthCircle.addEventListener("click", e => {
+    scrollVidoe.style.scrollBehavior = "smooth"
+    scrollVidoe.scrollLeft += 900
+})
+
+
+// hide icon chevron down
 const hiddenListLi = ()=> {
     for (let i = 0; i < listLi.length; i++){
         listLi[i].style.display = 'none'
         iconListUl[i].className = "bi bi-chevron-down"
     }
 }
+// show list li
 const showListLi = ()=> {
       for (let i = 0; i < listLi.length; i++){
         listLi[i].style.display = ''

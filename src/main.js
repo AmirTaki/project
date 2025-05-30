@@ -1,3 +1,4 @@
+let body = document.querySelector("body")
 let pageMove = document.querySelector(".page-move")
 let crossPage = document.querySelector('.cross-page-move i')
 let headerUp = document.querySelector(".header-up")
@@ -26,10 +27,12 @@ let containerSliderImg = document.querySelector('.container-slider-img')
 headerUp.addEventListener("click", (evnet)=> {
     pageMove.classList.remove("page-move-animation-reverse")
     pageMove.classList.add("page-move-animation")
+    body.style.overflow = "hidden"
 })
 crossPage.addEventListener("click", (evnet)=> {
     pageMove.classList.remove("page-move-animation")
     pageMove.classList.add("page-move-animation-reverse")
+    body.style.overflow = ""
 })
 
 // megaMenu

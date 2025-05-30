@@ -247,7 +247,7 @@ header{
     align-items: center;
     text-align: center;
     justify-content: center;
-    border-bottom: 1px solid rgb(207, 207, 207) ;
+    border-bottom: 1px solid rgb(240, 240, 240) ;
     padding: 15px ;
     position: relative;
 }
@@ -257,13 +257,13 @@ header{
 .sidebar-svg-cross i {
     position: absolute;
     right: 10px;
+    font-weight: 1000;
     font-size: 25px;
-    font-weight: 700;
     padding: 10px;
 }
 .sidebar-container {
     background-color: transparent;
-    border-bottom: 1px solid rgb(207, 207, 207) ;
+    border-bottom: 1px solid rgb(240, 240, 240) ;
     display: flex;
     flex-flow: column nowrap;
     padding: 10px 0;
@@ -290,8 +290,7 @@ header{
     align-items: start;
     justify-content: space-between;
     padding: 10px 0;
-    border-bottom: 1px solid rgb(207, 207, 207) ;
-
+    border-bottom: 1px solid rgb(240, 240, 240) ;
 }
 
 .siderbar-list div {

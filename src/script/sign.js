@@ -38,7 +38,7 @@ const checkName = () => {
 }
 
 const checkEmail = () => {
-       if (email.value.length == 0){
+    if (email.value.length == 0){
         span[1].innerText = "Email is required"
         span[1].style.color = 'red'
         input[1].style.borderColor = "red"
@@ -64,9 +64,39 @@ const checkEmail = () => {
     }
 }
 
+const checkPassword = () => {
+    if (password.value.length == 0){
+        span[2].innerText = "Password is required"
+        span[2].style.color = 'red'
+        input[2].style.borderColor = "red"
+        icon[2].className = "bi bi-x-circle"
+        icon[2].style.color = "red"
+        return false
+    }
+    else if(!password.value.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)){
+        span[2].innerText = "Password should contain 1Uppercase, 1Lowecase, 1 Digit & 1Alphabet "
+        span[2].style.color = 'red'
+        input[2].style.borderColor = "red"
+        icon[2].className = "bi bi-x-circle"
+        icon[2].style.color = "red"
+        return false
+    }
+    else {
+        span[2].innerText = ""
+        span[2].style.color = 'green'
+        input[2].style.borderColor = "black"
+        icon[2].className = "bi bi-check-circle"
+        icon[2].style.color = "green"
+        return true
+    }
+}
+
+
+
 button.addEventListener('click', (e)=>{
     e.preventDefault()
     checkName()
     checkEmail()
+    checkPassword()
 })
 

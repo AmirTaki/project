@@ -12,9 +12,17 @@ console.log(span)
 const checkName = () => {
    
     if (name.value.length == 0){
-        span[0].innerText = "name is required"
+        span[0].innerText = "Name is required"
         span[0].style.color = 'red'
         input[0].style.borderColor = "red"
+    }
+    else if(!name.value.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
+        span[0].innerText = "Write full Name"
+        span[0].style.color = 'red'
+        input[0].style.borderColor = "red"
+    }
+    else {
+        
     }
 }
 

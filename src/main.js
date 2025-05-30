@@ -14,8 +14,9 @@ let headerLi = document.querySelectorAll(".header-item li")
 let megaMenu = document.querySelector(".all-megaMenu")
 let headerItem = document.querySelector('.header-item')
 let  iconHeart = document.querySelectorAll(".heart-click")
-
-
+let arrowLeft = document.querySelector(".bi-arrow-left-square")
+let arrowRight = document.querySelector(".bi-arrow-right-square")
+let scrollImg = document.querySelector(".scroll-img")
 
 // Page Move
 headerUp.addEventListener("click", (evnet)=> {
@@ -46,7 +47,15 @@ for (let i = 0; i< iconHeart.length ; i++){
 }
 
 
-
+// arrow left & arrow right scroll image
+arrowLeft.addEventListener("click", e =>{
+    scrollImg.style.scrollBehavior = "smooth"
+    scrollImg.scrollLeft -= 900
+})
+arrowRight.addEventListener("click", e =>{
+    scrollImg.style.scrollBehavior = "smooth"
+    scrollImg.scrollLeft += 900
+})
 // 
 const hiddenListLi = ()=> {
     for (let i = 0; i < listLi.length; i++){

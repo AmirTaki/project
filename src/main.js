@@ -8,6 +8,8 @@ let iconSearchHeart = document.getElementById("icon-search-heart")
 let listUl = document.querySelectorAll(".title-ul")
 let listLi = document.querySelectorAll(".item-li")
 let iconListUl = document.querySelectorAll('.title-ul i')
+let headerMain = document.querySelector(".header-main")
+let main = document.querySelector('main')
 let footer = document.querySelector(".container-footer")
 let footerBlack = document.querySelector(".footer-black")
 let upperFooter = document.querySelectorAll(".upper-footer div")
@@ -28,11 +30,16 @@ headerUp.addEventListener("click", (evnet)=> {
     pageMove.classList.remove("page-move-animation-reverse")
     pageMove.classList.add("page-move-animation")
     body.style.overflow = "hidden"
+    headerMain.style.opacity = .3
+    main.style.opacity = .3 
+    
 })
 crossPage.addEventListener("click", (evnet)=> {
     pageMove.classList.remove("page-move-animation")
     pageMove.classList.add("page-move-animation-reverse")
     body.style.overflow = ""
+    headerMain.style.opacity = 1
+    main.style.opacity = 1 
 })
 
 // megaMenu

@@ -240,17 +240,42 @@ header{
     z-index: 12;
     display: flex;
     flex-flow: column nowrap;
-    padding: 10px
 }
 
 .sidebar-svg-cross{
     text-align: center;
+    border-bottom: 1px solid rgb(207, 207, 207) ;
+    padding: 10px;
 }
 .sidebar-svg-cross svg {
     width: 50px;
 }
 .sidebar-svg-cross i {
     float: right;
+    font-size: 25px;
+    font-weight: 700;
+}
+.sidebar-container {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(207, 207, 207) ;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 10px 0;
+}
+.sidebar-item {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 35px;
+    font-size:  20px;
+}
+.sidebar-item div i {
+    font-size: 14px;
+}
+.sidebar-item:hover {
+    cursor: pointer;
 }
 
 /* MEGA MENU */

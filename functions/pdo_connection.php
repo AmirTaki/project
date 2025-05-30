@@ -5,11 +5,11 @@ use Dba\Connection;
 // create database : adidas
 function createDataBase ($name){
     $serverName = "localhost";
-    $username = "root";
+    $userName = "root";
     $password = "";
     try {
         $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ);
-        $connection = new PDO("mysql:host=$serverName",$username, $password, $options);
+        $connection = new PDO("mysql:host=$serverName",$userName, $password, $options);
         $sql = "CREATE DATABASE $name";
         $connection->exec($sql);
     }
@@ -21,13 +21,13 @@ function createDataBase ($name){
 // connect to dataBase
 function connectDataBase ($dbName){
     $serverName = "localhost";
-    $username = "root";
+    $userName = "root";
     $password = "";
     global $connection ;
 
     try { 
         $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ);
-        $connection = new PDO ("mysql:host=$serverName", $username, $password, $options);
+        $connection = new PDO ("mysql:host=$serverName;dbname=$dbName", $userName, $password, $options);
         return $connection;
     }
     catch(PDOException $error){
@@ -38,7 +38,8 @@ function connectDataBase ($dbName){
 // creat userTabel
 function createUserTable ($dbName){
     try{
-        $connection = connectDataBase($dbName)   ;
+        $connection = connectDataBase($dbName)  ; 
+
         $sql = "CREATE TABLE `users`(
             `id` int(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
             `name` varchar(130),
@@ -47,7 +48,7 @@ function createUserTable ($dbName){
             `password` varchar(130),
             `created_at` DATETIME
         
-        )"     ;
+        )";
         $connection->exec($sql);
     }
     catch(PDOException $error){

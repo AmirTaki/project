@@ -528,11 +528,15 @@ main {
     cursor: pointer;
 }
 /* video */
+.postion-video-scroll{
+    position: relative;
+}
+
 .scroll-vidoe{
     padding: 10px 0;
     background-color: rgb(255, 255, 255);
     overflow-x: scroll;
-    position: relative;
+ 
 }
 .scroll-vidoe .window-img{
     background-color: rgb(255, 255, 255);
@@ -577,7 +581,7 @@ main {
 }
 .bi-arrow-left-circle, .bi-arrow-right-circle{
     position: absolute;
-    top : 40%;
+    top : 35%;
     z-index: 4;
     color: white;
     font-size: 50px;
@@ -585,10 +589,10 @@ main {
     transition: opacity .5s;
 }
 .bi-arrow-left-circle {
-    left: 1%;
+    left: 10px;
 }
 .bi-arrow-right-circle {
-    right: 1%;
+    right: 10px;
 }
 .bi-arrow-left-circle:hover   {
     opacity: 1;

@@ -24,6 +24,8 @@ let arrowLeftCircle = document.querySelector(".bi-arrow-left-circle")
 let arrowRigthCircle = document.querySelector(".bi-arrow-right-circle")
 let scrollVidoe = document.querySelector(".scroll-vidoe")
 let containerSliderImg = document.querySelector('.container-slider-img')
+let listIcon = document.querySelector('.bi-list')
+let sidebar = document.querySelector(".sidebar")
 
 // Page Move
 headerUp.addEventListener("click", (evnet)=> {
@@ -53,6 +55,10 @@ megaMenu.addEventListener("mouseleave",()=>{
     megaMenu.classList.add("deactive")
 })
 
+// sidebar
+listIcon.addEventListener("click", e=>{
+    sidebar.classList.add("sidebarAnimation")
+})
 // icon Heart
 for (let i = 0; i< iconHeart.length ; i++){
     iconHeart[i].addEventListener("click",()=>{

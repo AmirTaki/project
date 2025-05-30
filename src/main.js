@@ -14,6 +14,7 @@ let headerLi = document.querySelectorAll(".header-item li")
 let megaMenu = document.querySelector(".all-megaMenu")
 let headerItem = document.querySelector('.header-item')
 
+
 // Page Move
 headerUp.addEventListener("click", (evnet)=> {
     pageMove.classList.remove("page-move-animation-reverse")
@@ -30,9 +31,21 @@ for (let i = 0;  i < headerLi.length ; i++){
         megaMenu.classList.remove("deactive")
     })
 }
-headerItem.addEventListener("mouseleave", (event)=>{    
+
+
+megaMenu.addEventListener("mousemove",(event)=>{
+if (event.mous in megaMenu){
+    console.log("ok")
+}
+})
+
+
+
+
+megaMenu.addEventListener("mouseleave",()=>{
     megaMenu.classList.add("deactive")
 })
+
 
 // 
 const hiddenListLi = ()=> {

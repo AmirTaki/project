@@ -12,6 +12,12 @@ let login = document.querySelector('h3')
 let register = document.querySelector('h2')
 let formRegister = document.querySelector('.form-register')
 let formLogin = document.querySelector(".form-login")
+let buttonLogin = document.getElementById("button-login")
+let emailLogin = document.getElementById('emailLogin')
+
+
+
+// register
 
 login.addEventListener('click',(e)=>{
     formLogin.classList.remove('animationLoginReverse')
@@ -39,7 +45,6 @@ showPassword.addEventListener("click",()=>{
 
 
 const checkName = () => {
-    console.log(showPassword.checked)
     if (name.value.length == 0){
         span[0].innerText = "Name is required"
         span[0].style.color = 'red'
@@ -66,29 +71,29 @@ const checkName = () => {
     }
 }
 
-const checkEmail = () => {
+const checkEmail = (email, number, inputNumber) => {
     if (email.value.length == 0){
-        span[1].innerText = "Email is required"
-        span[1].style.color = 'red'
-        input[1].style.borderColor = "red"
-        icon[1].className = "bi bi-x-circle"
-        icon[1].style.color = "red"
+        span[number].innerText = "Email is required"
+        span[number].style.color = 'red'
+        input[inputNumber].style.borderColor = "red"
+        icon[number].className = "bi bi-x-circle"
+        icon[number].style.color = "red"
         return false
     }
     else if(!email.value.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
-        span[1].innerText = "Write full Email"
-        span[1].style.color = 'red'
-        input[1].style.borderColor = "red"
-        icon[1].className = "bi bi-x-circle"
-        icon[1].style.color = "red"
+        span[number].innerText = "Write full Email"
+        span[number].style.color = 'red'
+        input[inputNumber].style.borderColor = "red"
+        icon[number].className = "bi bi-x-circle"
+        icon[number].style.color = "red"
         return false
     }
     else {
-        span[1].innerText = "veryGood"
-        span[1].style.color = 'green'
-        input[1].style.borderColor = "black"
-        icon[1].className = "bi bi-check-circle"
-        icon[1].style.color = "green"
+        span[number].innerText = "veryGood"
+        span[number].style.color = 'green'
+        input[inputNumber].style.borderColor = "black"
+        icon[number].className = "bi bi-check-circle"
+        icon[number].style.color = "green"
         return true
     }
 }
@@ -147,11 +152,19 @@ const checkRepeatPassword = () => {
     }
 }
 
+// register
 button.addEventListener('click', (e)=>{
     e.preventDefault()
     checkName()
-    checkEmail()
+    checkEmail(email, 1, 1)
     checkPassword()
     checkRepeatPassword()
 })
 
+
+// login
+
+buttonLogin.addEventListener('click',(e)=>{
+    e.preventDefault()
+    checkEmail(emailLogin, 4, 6)
+})

@@ -1,5 +1,7 @@
 <?php 
 
+use Dba\Connection;
+
 // create database : adidas
 function createDataBase ($name){
     $serverName = "localhost";
@@ -30,6 +32,26 @@ function connectDataBase ($dbName){
     }
     catch(PDOException $error){
         return "Warning : ".$error->getMessage();
+    }
+}
+
+// creat userTabel
+function createUserTable ($dbName){
+    try{
+        $connection = connectDataBase($dbName)   ;
+        $sql = "CREATE TABLE `users`(
+            `id` int(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            `name` varchar(130),
+            `email` varchar(200) UNIQUE,
+            `status` TINYINT NOT NULL DEFAULT 0,
+            `password` varchar(130),
+            `created_at` DATETIME
+        
+        )"     ;
+        $connection->exec($sql);
+    }
+    catch(PDOException $error){
+        return 'Warning : '.$error->getMessage();
     }
 }
 

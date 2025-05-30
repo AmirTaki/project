@@ -20,6 +20,7 @@ let scrollImg = document.querySelector(".scroll-img")
 let arrowLeftCircle = document.querySelector(".bi-arrow-left-circle")
 let arrowRigthCircle = document.querySelector(".bi-arrow-right-circle")
 let scrollVidoe = document.querySelector(".scroll-vidoe")
+let containerSliderImg = document.querySelector('.container-slider-img')
 
 // Page Move
 headerUp.addEventListener("click", (evnet)=> {
@@ -85,6 +86,12 @@ const hiddenListLi = ()=> {
         iconListUl[i].className = "bi bi-chevron-down"
     }
 }
+
+// container Slider Img : wheel scroll mouse
+containerSliderImg.addEventListener("wheel", e => {
+    e.preventDefault()
+    containerSliderImg.scrollLeft += e.deltaY
+})
 // show list li
 const showListLi = ()=> {
       for (let i = 0; i < listLi.length; i++){

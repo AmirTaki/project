@@ -1,4 +1,4 @@
-let form = document.querySelector('form')
+let form = document.querySelectorAll('form')
 let name = document.getElementById("name")
 let email = document.getElementById('email')
 let password = document.getElementById('password')
@@ -12,7 +12,11 @@ let login = document.querySelector('h3')
 let register = document.querySelector('h2')
 
 login.addEventListener('click',(e)=>{
-    form.classList.add('animationRegister')
+    form[0].classList.add('animationRegister')
+})
+
+register.addEventListener("click", (e)=> {
+    form[1].classList.add("animationLogin")
 })
 
 

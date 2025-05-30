@@ -70,6 +70,12 @@ crossSidebar.addEventListener("click", e=>{
     headerMain.style.opacity = 1
     main.style.opacity = 1
 })
+const closeSidebar = () => {
+    sidebar.classList.remove("sidebarAnimation")
+    body.style.overflow = ""
+    headerMain.style.opacity = 1
+    main.style.opacity = 1
+}
 // icon Heart
 for (let i = 0; i< iconHeart.length ; i++){
     iconHeart[i].addEventListener("click",()=>{
@@ -142,6 +148,7 @@ const resize_window = () => {
         hiddenListLi ()
         footer.style.display = "none"
         footerBlack.style.display = ""
+        sidebar.style.display = ""
     }
     else {
         iconQuery.style.display = "none"
@@ -150,6 +157,8 @@ const resize_window = () => {
         footer.style.display = ""
         footerBlack.style.display = "none"
         hideBorderRight()
+        sidebar.style.display = "none"
+        closeSidebar()
     }
 }
 // resize

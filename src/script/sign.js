@@ -15,7 +15,7 @@ let formLogin = document.querySelector(".form-login")
 let buttonLogin = document.getElementById("button-login")
 let emailLogin = document.getElementById('emailLogin')
 let passwordLogin = document.getElementById('passwordLogin')
-
+let showPasswordLogin = document.getElementById('showPasswordLogin')
 
 // register
 
@@ -168,4 +168,10 @@ buttonLogin.addEventListener('click',(e)=>{
     e.preventDefault()
     checkEmail(emailLogin, 4, 6)
     checkPassword(passwordLogin, 5, 7)
+})
+
+showPasswordLogin.addEventListener("click",(e)=>{
+
+    passwordLogin.type = showPasswordLogin.checked === true ? "text" : 'password'
+
 })

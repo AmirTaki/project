@@ -22,6 +22,7 @@ form{
 form label {
     background-color: yellow;
     margin:5px 10px;
+    color : gray
 }
 
 form input {
@@ -30,7 +31,7 @@ form input {
     border-radius:3px ;
     outline: none;
     border: 2px black solid;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(255, 255, 255);
     color : rgb(74, 74, 74);
     transition: box-shadow 5s, color 5s;
 }
@@ -38,6 +39,12 @@ form input:hover {
     box-shadow: inset 10px 80px 10px aliceblue; 
     color : rgb(41, 41, 41);
     cursor: pointer;
+}
+form span {
+    margin:  16px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: small;
 }
 @media screen and (max-width : 700px) {
     form {

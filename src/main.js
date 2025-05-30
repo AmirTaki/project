@@ -26,6 +26,7 @@ let scrollVidoe = document.querySelector(".scroll-vidoe")
 let containerSliderImg = document.querySelector('.container-slider-img')
 let listIcon = document.querySelector('.bi-list')
 let sidebar = document.querySelector(".sidebar")
+let crossSidebar = document.querySelector(".sidebar-svg-cross i")
 
 // Page Move
 headerUp.addEventListener("click", (evnet)=> {
@@ -58,6 +59,10 @@ megaMenu.addEventListener("mouseleave",()=>{
 // sidebar
 listIcon.addEventListener("click", e=>{
     sidebar.classList.add("sidebarAnimation")
+})
+
+crossSidebar.addEventListener("click", e=>{
+    sidebar.classList.remove("sidebarAnimation")
 })
 // icon Heart
 for (let i = 0; i< iconHeart.length ; i++){

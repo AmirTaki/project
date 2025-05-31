@@ -14,13 +14,21 @@
         isset($_POST['repeat-password']) and $_POST['repeat-password'] !== "" and (preg_match("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/",$_POST['repeat-password']))
         ){
             if ($_POST['password'] === $_POST['repeat-password']) {
+                
                 createUserTable('adidas');
-                if (readTable('adidas', "SELECT * FROM adidas.users WHERE email = ?", true, [$_POST['email']]) === false){
 
-                }
-                else {
-                    redirect('auth/sign.php?value=11');
-                }
+                    if(readTable ("adidas", "SELECT * FROM adidas.users WHERE email = ?", $sigle = true, $execute = [$_POST['email']])){                  
+                        redirect('auth/sign.php?value=11');
+                    }
+                    else {
+                        var_dump("ok");
+                    }
+                // if (readTable('adidas', , true,  === false){
+                //     var_dump("ok");
+                // }
+                // else {
+                //     
+                // }
 
             }           
             else {
@@ -109,7 +117,7 @@
     </script>
     <?php 
         if($_GET["value"] == 11){
-            var_dump($_GET['value'])?>
+    ?>
         <script>
             value = 11;
         </script>

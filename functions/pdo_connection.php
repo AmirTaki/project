@@ -1,6 +1,6 @@
 <?php 
 
-use Dba\Connection;
+// use Dba\Connection;
 
 // create database : adidas
 function createDataBase ($name){
@@ -60,7 +60,7 @@ function readTable ($dbName, $query, $sigle = true, $execute = null){
     $pdo = connectDataBase($dbName);
     $statment = $pdo->prepare($query);
     $execute = null ? $statment->execute() : $statment->execute($execute);
-    $reading =    $sigle ? $statment->fetch() : $statment.fetchAll();
+    $reading =   $sigle ? $statment->fetch() : $statment.fetchAll();
     return $reading;
 }
 

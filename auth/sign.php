@@ -1,3 +1,9 @@
+<?php  
+    require_once "../functions/helpers.php"
+    require_once "../functions/pdo_connection.php"
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +15,7 @@
 </head>
 <body>
     <div class = 'form-register '>
-        <form >
+        <form  action ="<?php  ?>" method = "post">
             <h1>Register</h1>
             <h3>To Login</h3>
             <label for="name">Full Name</label>

@@ -10,6 +10,5 @@
 <body>
     
     <?php require_once "./layouts/navbar.php"?>
-
 </body>
 </html>

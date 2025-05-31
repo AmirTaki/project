@@ -86,7 +86,7 @@
             <label for="Email">Email</label>
             <input type="email" id = "emailLogin">
             <span></span>
-            <i style="top : 139px"></i>
+            <i style="top : 159px"></i>
          
 
             <label for="password">Password</label>

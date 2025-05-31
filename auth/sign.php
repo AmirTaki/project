@@ -16,20 +16,12 @@
             if ($_POST['password'] === $_POST['repeat-password']) {
                 
                 createUserTable('adidas');
-
-                    if(readTable ("adidas", "SELECT * FROM adidas.users WHERE email = ?", $sigle = true, $execute = [$_POST['email']])){                  
-                        redirect('auth/sign.php?value=11');
-                    }
-                    else {
-                    
-                    }
-                // if (readTable('adidas', , true,  === false){
-                //     var_dump("ok");
-                // }
-                // else {
-                //     
-                // }
-
+                if(readTable ("adidas", "SELECT * FROM adidas.users WHERE email = ?", $sigle = true, $execute = [$_POST['email']])){                  
+                    redirect('auth/sign.php?value=11');
+                }
+                else {
+                    $passwordHash =  password_hash($_POST['password'], PASSWORD_DEFAULT);
+                }
             }           
             else {
                 var_dump("eror");

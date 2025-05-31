@@ -14,7 +14,7 @@
 
                 }
                 else {
-                    var_dump("email_repeat");
+                    redirect('auth/sign.php?value=11')
                 }
 
             }           
@@ -99,5 +99,18 @@
     </div>
     
     <script src = "../src/script/sign.js"></script>
+    <script>
+        value = 0;
+    </script>
+    <?php 
+        if( $_GET["value"] === 11){
+    ?>
+        <script>
+            value = 11;
+        </script>
+    <?php } ?>
+
+    <script></script>
+    
 </body>
 </html>

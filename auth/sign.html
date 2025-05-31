@@ -110,7 +110,13 @@
         </script>
     <?php } ?>
 
-    <script></script>
+    <script>
+        document.querySelectorAll('span')[1].innerText = "This email has already been registered!"
+        document.querySelectorAll('span')[1].style.color = 'oragne'
+        document.querySelectorAll('input')[1].style.borderColor = "red"
+        document.querySelectorAll('i')[1].className = "bi bi-exclamation-circle"
+        document.querySelectorAll('i')[1].style.color = "orange"
+    </script>
     
 </body>
 </html>

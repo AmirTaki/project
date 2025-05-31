@@ -46,8 +46,7 @@ function createUserTable ($dbName){
             `email` varchar(200) UNIQUE,
             `status` TINYINT NOT NULL DEFAULT 0,
             `password` varchar(130),
-            `created_at` DATETIME
-        
+            `created_at` DATETIME 
         )";
         $connection->exec($sql);
     }
@@ -55,6 +54,7 @@ function createUserTable ($dbName){
         return 'Warning : '.$error->getMessage();
     }
 }
+
 //read table to dataBase 
 function readTable ($dbName, $query, $sigle = true, $execute = null){
     $pdo = connectDataBase($dbName);
@@ -62,6 +62,19 @@ function readTable ($dbName, $query, $sigle = true, $execute = null){
     $execute = null ? $statment->execute() : $statment->execute($execute);
     $reading =   $sigle ? $statment->fetch() : $statment.fetchAll();
     return $reading;
+}
+
+//  create account to user table
+function createAccountToUserTable ($name, $email, $password, $dbname, $table){
+    try {
+        $connection = connectDataBase($dbName);
+        $sql = "INSERT INTO $table SET name = ?, email = ?, password = ? , created_at = NOW();";
+        $statment = $connection->prepare($sql);
+        $statment->execute([$name, $email, $password]);
+    }
+    catch(PDOException $error){
+        return "Warning : ".$error->getMessage();
+    }
 }
 
 

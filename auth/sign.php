@@ -22,11 +22,11 @@
                 else {
                     $passwordHash =  password_hash($_POST['password'], PASSWORD_DEFAULT);
                     createAccountToUserTable ($_POST['name'], $_POST['email'], $passwordHash, 'adidas', 'users');
-                    var_dump('ok');
+                    redirect('panel');
                 }
             }           
             else {
-                var_dump("eror");
+                redirect('');
             }
         }
 

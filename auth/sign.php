@@ -9,8 +9,14 @@
         isset($_POST['repeat-password']) and $_POST['repeat-password'] !== "" and (preg_match("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/",$_POST['repeat-password']))
         ){
             if ($_POST['password'] === $_POST['repeat-password']) {
-                createUserTable('adidas')
-                
+                createUserTable('adidas');
+                if (readTable('adidas', "SELECT * FROM adidas.users WHERE email = ?", true, [$_POST['email']]) === false){
+
+                }
+                else {
+                    var_dump("email_repeat");
+                }
+
             }           
             else {
                 var_dump("eror");

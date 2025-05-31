@@ -125,6 +125,7 @@
             document.querySelectorAll('input')[1].style.borderColor = "orange"
             document.querySelectorAll('i')[1].className = "bi bi-exclamation-circle"
             document.querySelectorAll('i')[1].style.color = "orange"
+            document.querySelectorAll('i')[1].style.top = "268px"
         }
     </script>
     

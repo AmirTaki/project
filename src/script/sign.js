@@ -77,6 +77,7 @@ const checkEmail = (email, number, inputNumber) => {
         input[inputNumber].style.borderColor = "red"
         icon[number].className = "bi bi-x-circle"
         icon[number].style.color = "red"
+        document.querySelectorAll('i')[1].style.top = "282px"
         return false
     }
     else if(!email.value.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
@@ -85,6 +86,7 @@ const checkEmail = (email, number, inputNumber) => {
         input[inputNumber].style.borderColor = "red"
         icon[number].className = "bi bi-x-circle"
         icon[number].style.color = "red"
+        document.querySelectorAll('i')[1].style.top = "282px"
         return false
     }
     else {
@@ -93,6 +95,7 @@ const checkEmail = (email, number, inputNumber) => {
         input[inputNumber].style.borderColor = "black"
         icon[number].className = "bi bi-check-circle"
         icon[number].style.color = "green"
+        document.querySelectorAll('i')[1].style.top = "282px"
         return true
     }
 }
@@ -104,6 +107,7 @@ const checkPassword = (password, number, inputNumber) => {
         input[inputNumber].style.borderColor = "red"
         icon[number].className = "bi bi-x-circle"
         icon[number].style.color = "red"
+        document.querySelectorAll('i')[1].style.top = "282px"
         return false
     }
     else if(!password.value.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)){

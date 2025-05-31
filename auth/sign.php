@@ -2,6 +2,11 @@
     require_once "../functions/helpers.php"
     require_once "../functions/pdo_connection.php"
 
+    if (isset($_POST['name']) and (!preg_match("/^[A-Za-z]*\s{1}[A-Za-z]*$/", $_POST['name'])) and
+    (!preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/",$_POST['email'])) and
+
+    )
+
 ?>
 
 <!DOCTYPE html>
@@ -19,25 +24,25 @@
             <h1>Register</h1>
             <h3>To Login</h3>
             <label for="name">Full Name</label>
-            <input type="text" id = "name">
+            <input type="text" id = "name" name = 'name'>
             <span></span>
             <i  style="top : 138px"></i>
 
             <label for="email">Email</label>
-            <input type="email" id = 'email'>
+            <input type="email" id = 'email' name = 'email'>
             <span></span>
             <i class="" style="top : 277px"></i>
 
 
             <label for="password">Password</label>
-            <input type="password" id = 'password'> 
+            <input type="password" id = 'password' name = 'password'> 
             <span></span>
             <i class="" style="top : 418px"></i>
         
 
 
             <label for="repeat_password">Repeat Password</label>
-            <input type="password" id = "repeat-password">
+            <input type="password" id = "repeat-password" name = 'repeat-password'>
             <span></span>
             <i class="" style="top : 559px"></i>
          

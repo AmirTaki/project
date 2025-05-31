@@ -155,7 +155,7 @@ const checkRepeatPassword = () => {
 button.addEventListener('click', (e)=>{
  
     flag =  checkName() && checkEmail(email, 1, 1) && checkPassword(password, 2, 2) && checkRepeatPassword() ? true : false
-    flag ?  ""  : e.preventDefault()
+    // flag ?  ""  : e.preventDefault()
    
 })
 

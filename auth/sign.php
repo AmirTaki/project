@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class = 'form-register '>
-        <form  action ="<?php  ?>" method = "post">
+        <form  action ="<?= url('auth/sign.php?value=')  ?>" method = "post">
             <h1>Register</h1>
             <h3>To Login</h3>
             <label for="name">Full Name</label>

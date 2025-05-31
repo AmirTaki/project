@@ -21,7 +21,7 @@
                         redirect('auth/sign.php?value=11');
                     }
                     else {
-                        var_dump("ok");
+                    
                     }
                 // if (readTable('adidas', , true,  === false){
                 //     var_dump("ok");

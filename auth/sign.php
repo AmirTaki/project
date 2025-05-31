@@ -3,8 +3,9 @@
     require_once "../functions/pdo_connection.php"
 
     if (isset($_POST['name']) and (!preg_match("/^[A-Za-z]*\s{1}[A-Za-z]*$/", $_POST['name'])) and
-    (!preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/",$_POST['email'])) and
-
+        isset($_POST['email']) and (!preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/",$_POST['email'])) and
+        isset($_POST['password']) and (!preg_match("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/",$_POST['password'])) and
+        isset($_POST['repeat-password']) and (!preg_match("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/",$_POST['repeat-password']))
     )
 
 ?>

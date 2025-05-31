@@ -17,7 +17,7 @@ let passwordLogin = document.getElementById('passwordLogin')
 let showPasswordLogin = document.getElementById('showPasswordLogin')
 
 // register
-console.log(loginRigester)
+
 loginRigester[0].addEventListener('click',(e)=>{
     formLogin.classList.remove('animationLoginReverse')
     formRegister.classList.add("animationRigsteraReverse")

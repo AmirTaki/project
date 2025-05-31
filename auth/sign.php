@@ -2,6 +2,11 @@
     require_once "../functions/helpers.php";
     require_once "../functions/pdo_connection.php";
 
+    if(!isset($_GET['value'])){
+        $_GET['value'] = 1;
+    }
+
+
     if (
         isset($_POST['name']) and $_POST['name'] !== "" and (preg_match("/^[A-Za-z]*\s{1}[A-Za-z]*$/", $_POST['name'])) and
         isset($_POST['email']) and $_POST['email'] !== ""  and (preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/",$_POST['email'])) and
@@ -14,7 +19,7 @@
 
                 }
                 else {
-                    redirect('auth/sign.php?value=11')
+                    redirect('auth/sign.php?value=11');
                 }
 
             }           
@@ -100,22 +105,27 @@
     
     <script src = "../src/script/sign.js"></script>
     <script>
-        value = 0;
+        let value = 0 ;
     </script>
     <?php 
-        if( $_GET["value"] === 11){
-    ?>
+        if($_GET["value"] == 11){
+            var_dump($_GET['value'])?>
         <script>
             value = 11;
         </script>
     <?php } ?>
 
     <script>
-        document.querySelectorAll('span')[1].innerText = "This email has already been registered!"
-        document.querySelectorAll('span')[1].style.color = 'oragne'
-        document.querySelectorAll('input')[1].style.borderColor = "red"
-        document.querySelectorAll('i')[1].className = "bi bi-exclamation-circle"
-        document.querySelectorAll('i')[1].style.color = "orange"
+        
+        if (value == 11){
+            console.log(value)
+            document.querySelectorAll('span')[1].innerText = "This email has already been registered!"
+            document.querySelectorAll('span')[1].style.color = 'orange'
+            document.querySelectorAll('input')[1].style.borderColor = "orange"
+            document.querySelectorAll('i')[1].className = "bi bi-exclamation-circle"
+            document.querySelectorAll('i')[1].style.color = "orange"
+        
+        }
     </script>
     
 </body>

@@ -5,7 +5,7 @@ define("BASE_URL", $address);
 
 // redirect
 function redirect ($url){
-    header("Location", trim(BASE_URL,'/ '). '/'.trim($url, '/ '));
+    header("Location". trim(BASE_URL,'/ '). '/'.trim($url, '/ '));
     exit;
 }
 

@@ -67,7 +67,7 @@ function readTable ($dbName, $query, $sigle = true, $execute = null){
 //  create account to user table
 function createAccountToUserTable ($name, $email, $password, $dbname, $table){
     try {
-        $connection = connectDataBase($dbName);
+        $connection = connectDataBase($dbname);
         $sql = "INSERT INTO $table SET name = ?, email = ?, password = ? , created_at = NOW();";
         $statment = $connection->prepare($sql);
         $statment->execute([$name, $email, $password]);

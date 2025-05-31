@@ -49,25 +49,25 @@
             <label for="name">Full Name</label>
             <input type="text" id = "name" name = 'name'>
             <span></span>
-            <i  style="top : 138px"></i>
+            <i  style="top : 159px"></i>
 
             <label for="email">Email</label>
             <input type="email" id = 'email' name = 'email'>
             <span></span>
-            <i class="" style="top : 277px"></i>
+            <i class="" style="top : 282px"></i>
 
 
             <label for="password">Password</label>
             <input type="password" id = 'password' name = 'password'> 
             <span></span>
-            <i class="" style="top : 418px"></i>
+            <i class="" style="top : 397px"></i>
         
 
 
             <label for="repeat_password">Repeat Password</label>
             <input type="password" id = "repeat-password" name = 'repeat-password'>
             <span></span>
-            <i class="" style="top : 559px"></i>
+            <i class="" style="top : 518px"></i>
          
             <div>
                 <label for="">show password</label>
@@ -125,7 +125,6 @@
             document.querySelectorAll('input')[1].style.borderColor = "orange"
             document.querySelectorAll('i')[1].className = "bi bi-exclamation-circle"
             document.querySelectorAll('i')[1].style.color = "orange"
-        
         }
     </script>
     

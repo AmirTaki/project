@@ -145,16 +145,16 @@ form i {
     font-size: 25px;
     color : green
 }
-h3, h2 {
+h3{
     background-color: transparent;
-    margin-left: 45%;
+    margin-left: 43%;
     margin-bottom: 10px;
     color : wheat
 }
 h3 {
     margin-bottom: 0;
 }
-h3:hover, h2:hover{
+h3:hover{
     cursor: pointer;
     color : blue
 }

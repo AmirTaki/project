@@ -8,8 +8,7 @@ let span = document.querySelectorAll("span")
 let input = document.querySelectorAll("input")
 let icon = document.querySelectorAll("form i")
 let showPassword = document.getElementById("showPassword")
-let login = document.querySelector('h3')
-let register = document.querySelector('h2')
+let loginRigester = document.querySelectorAll('h3')
 let formRegister = document.querySelector('.form-register')
 let formLogin = document.querySelector(".form-login")
 let buttonLogin = document.getElementById("button-login")
@@ -18,14 +17,14 @@ let passwordLogin = document.getElementById('passwordLogin')
 let showPasswordLogin = document.getElementById('showPasswordLogin')
 
 // register
-
-login.addEventListener('click',(e)=>{
+console.log(loginRigester)
+loginRigester[0].addEventListener('click',(e)=>{
     formLogin.classList.remove('animationLoginReverse')
     formRegister.classList.add("animationRigsteraReverse")
     formLogin.classList.add('animationLogin')
 })
 
-register.addEventListener("click", (e)=> {
+loginRigester[1].addEventListener("click", (e)=> {
     formRegister.classList.remove("animationRigsteraReverse")
     formLogin.classList.add('animationLoginReverse')
 })

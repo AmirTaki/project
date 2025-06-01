@@ -15,11 +15,11 @@
         if($user !== false){
             if($user->status == 10){
                 if(password_verify($_POST['passwordLogin'], $user->password)){
-                    var_dump($user);
+                    redirect('panel');
                 }
                 else {
                     // not password 
-                    redirect('auth/sign.php?value=12');
+                    redirect('auth/sign.php?value=13');
                 }
             }
             else {
@@ -29,7 +29,7 @@
         }
         else {
             //  not email 
-            redirect('auth/sign.php?value=12');
+            redirect('auth/sign.php?value=13');
         }
     }
 
@@ -149,8 +149,13 @@
         <script>
             value = 12;
         </script>
+    <?php } 
+        elseif($_GET['value'] == 13){
+    ?>
+        <script>
+            value = 13;
+        </script>
     <?php } ?>
-
     <script>       
         if (value == 11){
             document.querySelectorAll('span')[1].innerText = "This email has already been registered!"
@@ -166,7 +171,19 @@
             document.querySelectorAll('input')[5].style.borderColor = "orange"
             document.querySelectorAll('i')[4].className = "bi bi-exclamation-circle"
             document.querySelectorAll('i')[4].style.color = "orange"
-            // document.querySelectorAll('i')[1].style.top = "268px"
+        }
+        else if (value == 13){
+            document.querySelectorAll('span')[4].innerText = "You entered the wrong email."
+            document.querySelectorAll('span')[4].style.color = 'red'
+            document.querySelectorAll('input')[5].style.borderColor = "red"
+            document.querySelectorAll('i')[4].className = "bi bi-x-circle"
+            document.querySelectorAll('i')[4].style.color = "red"
+
+            document.querySelectorAll('span')[5].innerText = "You entered the wrong password."
+            document.querySelectorAll('span')[5].style.color = 'red'
+            document.querySelectorAll('input')[6].style.borderColor = "red"
+            document.querySelectorAll('i')[5].className = "bi bi-x-circle"
+            document.querySelectorAll('i')[5].style.color = "red"
         }
     </script>
     

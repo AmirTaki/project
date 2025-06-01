@@ -36,7 +36,9 @@
         isset($_POST['emailLogin']) and $_POST['emailLogin'] !== ""  and (preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/",$_POST['emailLogin'])) and 
         isset($_POST['passwordLogin']) and $_POST['passwordLogin'] !== ""
         ){
-            var_dump("ok")
+            $user =   readTable ("adidas", "SELECT * FROM adidas.users WHERE email = ?", $sigle = true, $execute = [$_POST['emailLogin']]);
+            
+            
         }
 ?>
 
@@ -88,7 +90,7 @@
     </div>
   
     <div class = 'form-login' >
-        <form action="">
+        <form action="" method = "post">
             <h1>Login</h1>
             <h3>To Register</h3>
             <label for="Email">Email</label>

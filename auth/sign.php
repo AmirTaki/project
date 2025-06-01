@@ -1,11 +1,13 @@
 <?php  
     require_once "../functions/helpers.php";
     require_once "../functions/pdo_connection.php";
-// register
+
     if(!isset($_GET['value'])){
         $_GET['value'] = 1;
     }
-    // amir@123Taki
+   
+
+
     // login
    if (
         isset($_POST["emailLogin"]) and $_POST['emailLogin']!== "" and
@@ -32,12 +34,12 @@
             redirect('auth/sign.php?value=13');
         }
     }
-
+// register
     if (
         isset($_POST['name']) and $_POST['name'] !== "" and (preg_match("/^[A-Za-z]*\s{1}[A-Za-z]*$/", $_POST['name'])) and
         isset($_POST['email']) and $_POST['email'] !== ""  and (preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/",$_POST['email'])) and
         isset($_POST['password']) and $_POST['password'] !== "" and (preg_match("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/",$_POST['password'])) and
-        isset($_POST['repeat-password']) and $_POST['repeat-password'] !== "" and (preg_match("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/",$_POST['repeat-password']))
+        isset($_POST['repeat-password']) and $_POST['repeat-password'] !== ""  and (preg_match("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/",$_POST['repeat-password']))  
         ){
             if ($_POST['password'] === $_POST['repeat-password']) {
                 

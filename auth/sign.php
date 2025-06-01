@@ -1,4 +1,7 @@
 <?php  
+
+    session_start();
+
     require_once "../functions/helpers.php";
     require_once "../functions/pdo_connection.php";
 
@@ -6,8 +9,9 @@
         $_GET['value'] = 1;
     }
    
-
-
+    if(isset($_SESSION['user'])){
+        unset($_SESSION['user']);
+    }
     // login
    if (
         isset($_POST["emailLogin"]) and $_POST['emailLogin']!== "" and
@@ -17,6 +21,7 @@
         if($user !== false){
             if($user->status == 10){
                 if(password_verify($_POST['passwordLogin'], $user->password)){
+                   $_SESSION['user'] = $user->email;
                     redirect('panel');
                 }
                 else {

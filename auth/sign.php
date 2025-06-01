@@ -37,8 +37,13 @@
         isset($_POST['passwordLogin']) and $_POST['passwordLogin'] !== ""
         ){
             $user =   readTable ("adidas", "SELECT * FROM adidas.users WHERE email = ?", $sigle = true, $execute = [$_POST['emailLogin']]);
-            if($user->status === 10){
-
+            if($user->status == 10){
+                if(password_verify($_POST['passwordLogin'], $user->password)){
+                    redirect("panel")
+                }
+                else {
+                    redirect("auth/sign.php?value=12");
+                }
             }
             else {
                 redirect("auth/sign.php?value=12");

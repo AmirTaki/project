@@ -37,7 +37,12 @@
         isset($_POST['passwordLogin']) and $_POST['passwordLogin'] !== ""
         ){
             $user =   readTable ("adidas", "SELECT * FROM adidas.users WHERE email = ?", $sigle = true, $execute = [$_POST['emailLogin']]);
-            
+            if($user->status === 10){
+
+            }
+            else {
+                redirect("auth/sign.php?value=12");
+            }
             
         }
 ?>
@@ -124,18 +129,30 @@
         <script>
             value = 11;
         </script>
+    <?php }
+        elseif($_GET['value'] == 12) { 
+    ?>
+        <script>
+            value = 12;
+        </script>
     <?php } ?>
 
-    <script>
-        
+    <script>       
         if (value == 11){
-            console.log(value)
             document.querySelectorAll('span')[1].innerText = "This email has already been registered!"
             document.querySelectorAll('span')[1].style.color = 'orange'
             document.querySelectorAll('input')[1].style.borderColor = "orange"
             document.querySelectorAll('i')[1].className = "bi bi-exclamation-circle"
             document.querySelectorAll('i')[1].style.color = "orange"
             document.querySelectorAll('i')[1].style.top = "268px"
+        }
+        else if (value == 12){
+            document.querySelectorAll('span')[4].innerText = "You are not allowed to access."
+            document.querySelectorAll('span')[4].style.color = 'orange'
+            document.querySelectorAll('input')[5].style.borderColor = "orange"
+            document.querySelectorAll('i')[4].className = "bi bi-exclamation-circle"
+            document.querySelectorAll('i')[4].style.color = "orange"
+            // document.querySelectorAll('i')[1].style.top = "268px"
         }
     </script>
     

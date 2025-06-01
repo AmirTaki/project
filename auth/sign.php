@@ -1,7 +1,7 @@
 <?php  
     require_once "../functions/helpers.php";
     require_once "../functions/pdo_connection.php";
-
+// register
     if(!isset($_GET['value'])){
         $_GET['value'] = 1;
     }
@@ -30,6 +30,14 @@
         }
 
 
+
+    // login
+    if (
+        isset($_POST['emailLogin']) and $_POST['emailLogin'] !== ""  and (preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/",$_POST['emailLogin'])) and 
+        isset($_POST['passwordLogin']) and $_POST['passwordLogin'] !== ""
+        ){
+            var_dump("ok")
+        }
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +55,7 @@
             <h1>Register</h1>
             <h3>To Login</h3>
             <label for="name">Full Name</label>
-            <input type="text" id = "name" name = 'name'>
+            <input type="text" id = "name" name = 'name'  >
             <span></span>
             <i  style="top : 159px"></i>
 
@@ -84,13 +92,13 @@
             <h1>Login</h1>
             <h3>To Register</h3>
             <label for="Email">Email</label>
-            <input type="email" id = "emailLogin">
+            <input type="email" id = "emailLogin" name = "emailLogin">  
             <span></span>
             <i style="top : 159px"></i>
          
 
             <label for="password">Password</label>
-            <input type="password" id = 'passwordLogin'> 
+            <input type="password" id = 'passwordLogin' name = "passwordLogin"> 
             <span></span>
             <i style="top : 277px"></i>
 

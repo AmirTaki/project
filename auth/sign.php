@@ -54,11 +54,7 @@
             else {
                 redirect('');
             }
-        }
-
-
-
- 
+        } 
 ?>
 
 <!DOCTYPE html>
@@ -175,13 +171,13 @@
         else if (value == 13){
             document.querySelectorAll('span')[4].innerText = "You entered the wrong email."
             document.querySelectorAll('span')[4].style.color = 'red'
-            document.querySelectorAll('input')[5].style.borderColor = "red"
+            document.querySelectorAll('input')[6].style.borderColor = "red"
             document.querySelectorAll('i')[4].className = "bi bi-x-circle"
             document.querySelectorAll('i')[4].style.color = "red"
 
             document.querySelectorAll('span')[5].innerText = "You entered the wrong password."
             document.querySelectorAll('span')[5].style.color = 'red'
-            document.querySelectorAll('input')[6].style.borderColor = "red"
+            document.querySelectorAll('input')[7].style.borderColor = "red"
             document.querySelectorAll('i')[5].className = "bi bi-x-circle"
             document.querySelectorAll('i')[5].style.color = "red"
         }

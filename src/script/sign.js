@@ -155,7 +155,7 @@ const checkRepeatPassword = () => {
     }
 }
 
-const  checkEmailPassword = (result, number, input, message) => {
+const  checkEmailPassword = (result, number, inputNumber, message) => {
      if (result.value.length == 0){
         span[number].innerText = message;
         span[number].style.color = 'red';
@@ -182,7 +182,7 @@ button.addEventListener('click', (e)=>{
 
 buttonLogin.addEventListener('click',(e)=>{
 
-    flag =      checkEmailPassword (emailLogin, 4, 5, "Email is required") &&  checkEmailPassword (passwordLogin, 5, 6, "Password is required")  ? true : false;
+    flag =  checkEmailPassword (emailLogin, 4, 6, "Email is required") &&  checkEmailPassword (passwordLogin, 5, 7, "Password is required")  ? true : false;
     flag ? "" :  e.preventDefault()
 
 

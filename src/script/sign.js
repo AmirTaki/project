@@ -167,9 +167,11 @@ button.addEventListener('click', (e)=>{
 // login
 
 buttonLogin.addEventListener('click',(e)=>{
-    e.preventDefault()
-    checkEmail(emailLogin, 4, 6)
-    checkPassword(passwordLogin, 5, 7)
+
+    flag =     checkEmail(emailLogin, 4, 6) &&   checkPassword(passwordLogin, 5, 7) ? true : false;
+    flag ? "" :  e.preventDefault()
+
+
 })
 
 showPasswordLogin.addEventListener("click",(e)=>{

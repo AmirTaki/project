@@ -5,6 +5,33 @@
     if(!isset($_GET['value'])){
         $_GET['value'] = 1;
     }
+    // amir@123Taki
+    // login
+   if (
+        isset($_POST["emailLogin"]) and $_POST['emailLogin']!== "" and
+        isset($_POST['passwordLogin']) and $_POST['passwordLogin']!== ""
+    ){
+        $user = readTable ("adidas", "SELECT *  FROM adidas.users WHERE email = ?", true, [$_POST["emailLogin"]]);
+        if($user !== false){
+            if($user->status == 10){
+                if(password_verify($_POST['passwordLogin'], $user->password)){
+                    var_dump($user);
+                }
+                else {
+                    // not password 
+                    redirect('auth/sign.php?value=12');
+                }
+            }
+            else {
+                // not status
+                redirect('auth/sign.php?value=12');
+            }
+        }
+        else {
+            //  not email 
+            redirect('auth/sign.php?value=12');
+        }
+    }
 
     if (
         isset($_POST['name']) and $_POST['name'] !== "" and (preg_match("/^[A-Za-z]*\s{1}[A-Za-z]*$/", $_POST['name'])) and
@@ -31,25 +58,7 @@
 
 
 
-    // login
-    if (
-        isset($_POST['emailLogin']) and $_POST['emailLogin'] !== ""  and (preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/",$_POST['emailLogin'])) and 
-        isset($_POST['passwordLogin']) and $_POST['passwordLogin'] !== ""
-        ){
-            $user =   readTable ("adidas", "SELECT * FROM adidas.users WHERE email = ?", $sigle = true, $execute = [$_POST['emailLogin']]);
-            if($user->status == 10){
-                if(password_verify($_POST['passwordLogin'], $user->password)){
-                    redirect("panel")
-                }
-                else {
-                    redirect("auth/sign.php?value=12");
-                }
-            }
-            else {
-                redirect("auth/sign.php?value=12");
-            }
-            
-        }
+ 
 ?>
 
 <!DOCTYPE html>
@@ -100,7 +109,7 @@
     </div>
   
     <div class = 'form-login' >
-        <form action="" method = "post">
+        <form method = "post"  action ="<?= url('auth/sign.php?value=')  ?>" >
             <h1>Login</h1>
             <h3>To Register</h3>
             <label for="Email">Email</label>

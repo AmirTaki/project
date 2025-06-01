@@ -155,6 +155,20 @@ const checkRepeatPassword = () => {
     }
 }
 
+const  checkEmailPassword = (result, number, input, message) => {
+     if (result.value.length == 0){
+        span[number].innerText = message;
+        span[number].style.color = 'red';
+        input[inputNumber].style.borderColor = "red";
+        icon[number].className = "bi bi-x-circle";
+        icon[number].style.color = "red";
+        return false
+    }
+    else {
+        return true;
+    }
+}
+
 // register
 button.addEventListener('click', (e)=>{
  
@@ -168,8 +182,8 @@ button.addEventListener('click', (e)=>{
 
 buttonLogin.addEventListener('click',(e)=>{
 
-    // flag =     checkEmail(emailLogin, 4, 6) &&   checkPassword(passwordLogin, 5, 7) ? true : false;
-    // flag ? "" :  e.preventDefault()
+    flag =      checkEmailPassword (emailLogin, 4, 5, "Email is required") &&  checkEmailPassword (passwordLogin, 5, 6, "Password is required")  ? true : false;
+    flag ? "" :  e.preventDefault()
 
 
 })

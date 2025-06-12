@@ -15,3 +15,16 @@ iconSearch.addEventListener('click', (e)=>{
         searchIconInput.style.display = searchIconInput.style.display === "flex" ? "none" : "flex";
     }
 })
+const HideFlexInputSearchHeader = () =>{
+    if(window.innerWidth < 750){
+        searchIconInput.style.display  = 'none'
+    }   
+    else {
+        searchIconInput.style.display  = 'flex'
+    }
+}
+
+window.addEventListener("resize", (e)=>{
+    HideFlexInputSearchHeader()
+})
+

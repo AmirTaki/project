@@ -47,7 +47,6 @@
     display: none;
 }
 .searchIcon{
-    background-color: yellow;
     display: flex;
     position: relative;
     align-items: center;

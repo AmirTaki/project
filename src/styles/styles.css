@@ -271,25 +271,26 @@
         width: 100%;
         z-index: 3;
         flex-flow: column wrap;
-        height: 250px;
-        overflow: scroll;
+        height: 100%;
+        top: 0;
+    
     }
 
     .itemCategory{
         background-color: red;
-        height: 100px;
+        height: 50%;
         width: 50%;
       
     }
     .itemProduct {
         background-color: blue;
-        height: 100px;
+        height: 50%;
         width: 50%;
       
     }
     .itemImage {
         background-color: antiquewhite;
-        height: 500px;
+        height: 100%;
         width: 50%;
     }
 

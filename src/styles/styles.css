@@ -82,6 +82,14 @@
 }
 .containerSidertoSider{
     display: none;
+    position: fixed;
+    top: 0;
+    background-color: red;
+    left: 0;
+    width: 100%;
+}
+.itemHeaderDiv:hover .containerSidertoSider{
+    display: flex;
 }
 
 .searchIcon div {
@@ -174,11 +182,27 @@
         background-color: red;
         overflow: hidden;     
         height: 0px;
+        position:static;
+      
     }
-    .itemHeader:hover {
+    .arrowdownHeader{
+        transition: transform .5s;
+    }
+  
+    .itemHeaderDiv:hover .itemHeader {
         cursor: pointer;
         background-color: gray;
         border: none;
+    }  
+    .itemHeaderDiv:hover .arrowdownHeader{
+        transform: rotate(180deg);
+    }
+    
+    .itemHeaderDiv:hover .containerSidertoSider{
+        animation: upperhightSider .5s linear forwards;
+    }
+    .itemHeaderDiv:not(:hover) .containerSidertoSider{
+        animation: downerhightSider .5s linear forwards;
     }
     @keyframes upperhightSider {
         0%{

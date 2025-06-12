@@ -24,7 +24,9 @@
     height: 50px;
     align-items: center;
     display: flex;
-
+}
+.iconSidebar{
+    display: none;
 }
 .deleteContainer{
     display: none;
@@ -65,6 +67,16 @@
         flex-flow: column nowrap;
         display: none;
     }
+    .iconSidebar{
+        display: flex;
+        font-size: 20px;
+        transition: scale .5s;
+    }
+    .iconSidebar:hover {
+        scale: 1.2;
+        cursor: pointer;
+    }
+    
     .deleteContainer{
         display: flex;
         background-color: red;

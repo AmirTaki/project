@@ -264,33 +264,41 @@
     }
     
     /*  side to in side */
-    .containerSideToinSide{
+    .SideToinSide{
         background-color: yellow;
-        display: flex;
+        /* display: flex; */
         position: fixed;
         width: 100%;
         z-index: 3;
-        flex-flow: column wrap;
+        /* flex-flow: column wrap; */
         height: 100%;
         top: 0;
     
     }
-
+    .backSideToSide{
+        background-color: silver;
+        height: 10%;
+    }
+    .containerSideToinSide{
+        display: flex;   
+        flex-flow: column wrap;
+        height: 100%;
+    }
     .itemCategory{
         background-color: red;
-        height: 50%;
+        height: 45%;
         width: 50%;
       
     }
     .itemProduct {
         background-color: blue;
-        height: 50%;
+        height: 45%;
         width: 50%;
       
     }
     .itemImage {
         background-color: antiquewhite;
-        height: 100%;
+        height: 90%;
         width: 50%;
     }
 

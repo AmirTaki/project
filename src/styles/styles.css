@@ -17,7 +17,6 @@
 .logo {
     background-color: transparent;
     width: 80px;
-    z-index: 1;
 }
 .logo img {
     width: 100%;
@@ -26,6 +25,7 @@
     height: 50px;
     align-items: center;
     display: flex;
+    z-index: 2;
 }
 .iconSidebar{
     display: none;
@@ -100,21 +100,30 @@
         height: 70px;    
     }
     .containterHeader{
-        position: fixed;
+        position:fixed;
         width: 100%;
         top: 0;
         left: 0;
         height: auto;
         display: inline;
         flex-flow: column nowrap;
-        background-color: rgba(41, 3, 140, 0.496);
-        z-index: 2;
-        display: none;
+        background-color: rgba(32, 1, 125, 0.251);
+        transform: translateX(800px);
+        /* animation: sidebarMove 2s linear forwards; */
     }
+    @keyframes sidebarMove {
+        0%{
+           transform: translateX(-800px); 
+        }
+        100%{
+            transform: translateX(0);
+        }
+    } 
     .iconSidebar{
         display: flex;
         font-size: 20px;
         transition: scale .5s;
+        z-index: 1;
     }
     .iconSidebar:hover {
         scale: 1.2;

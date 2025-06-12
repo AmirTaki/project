@@ -9,3 +9,9 @@ searchIconInput.addEventListener("focus", (e)=> {
 searchIconInput.addEventListener("focusout", (e)=> {
     iconSearch.style.opacity = 1
 })
+
+iconSearch.addEventListener('click', (e)=>{
+    if (window.innerWidth < 750){
+        searchIconInput.style.display = searchIconInput.style.display === "flex" ? "none" : "flex";
+    }
+})

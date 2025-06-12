@@ -8,7 +8,9 @@
     background-color: red;
     height: 50px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
 
 }
 
@@ -21,6 +23,10 @@
 }
 .containterHeader{
     background-color: blue;
+    display: flex;
+}
+.searchIcon{
+    background-color: yellow;
     display: flex;
 }
 

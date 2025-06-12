@@ -2,6 +2,7 @@ const searchIconInput = document.querySelector(".searchIcon input")
 const iconSearch = document.querySelector(".searchIcon .bi-search")
 const iconSidebar = document.querySelector(".iconSidebar i")
 const containterHeader = document.querySelector('.containterHeader')
+const deleteContainer = document.querySelector(".deleteContainer i")
 
 searchIconInput.addEventListener("focus", (e)=> {
     iconSearch.style.opacity = 0
@@ -30,6 +31,10 @@ iconSearch.addEventListener('click', (e)=>{
 
 iconSidebar.addEventListener("click", (e)=>{
     containterHeader.style.animation  = "sidebarMove 2s linear forwards"
+})
+
+deleteContainer.addEventListener('click', (e)=>{
+    containterHeader.style.animation  = "sidebarMoveReverse 2s linear forwards"
 })
 
 window.addEventListener("resize", (e)=>{

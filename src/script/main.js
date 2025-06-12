@@ -11,17 +11,28 @@ searchIconInput.addEventListener("focusout", (e)=> {
 })
 
 iconSearch.addEventListener('click', (e)=>{
-    if (window.innerWidth < 750){
-        searchIconInput.style.display = searchIconInput.style.display === "flex" ? "none" : "flex";
+  
+    if(searchIconInput.style.opacity == 0){
+
+        searchIconInput.style.opacity = 1
+        searchIconInput.style.animation  = "searchInput .5s linear forwards " 
+          
+    } 
+    else {
+        searchIconInput.style.animation  = "searchInputReverse .5s linear forwards "
+        setTimeout(() => {
+            searchIconInput.style.opacity = 0
+        }, 500);
+//    
+ 
     }
+
 })
 const HideFlexInputSearchHeader = () =>{
-    if(window.innerWidth < 750){
-        searchIconInput.style.display  = 'none'
-    }   
-    else {
-        searchIconInput.style.display  = 'flex'
-    }
+    searchIconInput.style.animation  = "searchInputReverse .5s linear forwards "
+    setTimeout(() => {
+        searchIconInput.style.opacity = 0
+    }, 500);
 }
 
 window.addEventListener("resize", (e)=>{

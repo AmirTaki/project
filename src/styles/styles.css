@@ -52,18 +52,38 @@
     align-items: center;
 }
 .searchIcon input {
+    width: 0;
+    opacity: 0;
     border: none;
     outline: none;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 6px 10px;
+    background-color: yellow;
 
 }
+@keyframes searchInput {
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 250px;
+    }
+}
+@keyframes searchInputReverse {
+    0%{
+        width: 250px;
+    }
+    100%{
+        width: 0px;
+    }
+}
+
 .searchIcon div {
     margin-right:  8px;
 }
 .searchIcon .bi-search{
     position: absolute;
-    right: 85px;
+    left : 1px
 }
 
 .searchIcon i:hover {
@@ -133,6 +153,7 @@
         font-size: 12px;
     }
     .searchIcon input {
-        display: none;
+        /* display: none; */
     }
+  
 }

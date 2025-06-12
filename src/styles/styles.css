@@ -7,6 +7,9 @@
 .header{
     background-color: red;
     height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+
 }
 
 .logo {
@@ -15,6 +18,9 @@
 }
 .logo img {
     width: 100%;
+}
+.containterHeader{
+    background-color: blue;
 }
 
 /* media Query screen mobile */

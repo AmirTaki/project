@@ -294,6 +294,16 @@
         cursor: pointer;
         color : black
     }
+    .exitSidebbar {
+        font-size: 25px;
+        margin: 10px;   
+        color : rgb(228, 228, 228);
+        transition: color .5s;
+    }
+    .exitSidebbar:hover {
+        cursor: pointer;
+        color : black
+    }
     .containerSideToinSide{
         display: flex;   
         flex-flow: column wrap;

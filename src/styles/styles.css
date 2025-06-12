@@ -121,6 +121,12 @@
     cursor: pointer;
 }
 
+
+.containerSideToinSide{
+    background-color: yellow;
+    display: flex;
+}
+
 /* media Query screen mobile */
 @media screen and (max-width : 750px) {
     .header{

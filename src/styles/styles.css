@@ -87,6 +87,17 @@
     background-color: red;
     left: 0;
     width: 100%;
+    flex-flow: column nowrap;
+}
+.itemSidertoSider{
+    width: 350px;
+    /* margin: 0 3px; */
+    padding: 10px;
+    background-color: yellow;
+}
+.itemSidertoSider:hover {
+    cursor: pointer;
+    background-color: silver;
 }
 .itemHeaderDiv:hover .containerSidertoSider{
     display: flex;
@@ -193,6 +204,9 @@
         justify-content: space-between;
         align-items: center;
         padding: 12px 20px;
+        margin: 0;
+        background-color: transparent;
+        width: 100%;
     }
     .itemSidertoSider:hover {
         cursor: pointer;

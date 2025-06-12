@@ -108,13 +108,13 @@
         display: inline;
         flex-flow: column nowrap;
         background-color: rgba(32, 1, 125, 0.251);
-        transform: translateX(-800px);
-        
+        /* transform: translateX(800px); */
+        display: none;
     }
     @keyframes sidebarMove {
         0%{
            transform: translateX(-800px); 
-        }
+        }   
         100%{
             transform: translateX(0);
         }

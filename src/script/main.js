@@ -29,15 +29,21 @@ iconSearch.addEventListener('click', (e)=>{
     }
 })
 
+const resizeItem = () => {
+    containterHeader.style.display  =  window.innerWidth < 750 ?  "none" : 'flex'
+}
+
 iconSidebar.addEventListener("click", (e)=>{
-    containterHeader.style.animation  = "sidebarMove 2s linear forwards"
+    containterHeader.style.animation  = "sidebarMove .3s linear forwards"
+    containterHeader.style.display  = "inline"
 })
 
 deleteContainer.addEventListener('click', (e)=>{
-    containterHeader.style.animation  = "sidebarMoveReverse 2s linear forwards"
+    containterHeader.style.animation  = "sidebarMoveReverse .3s linear forwards"
 })
 
 window.addEventListener("resize", (e)=>{
     HideFlexInputSearchHeader()
+    resizeItem()
 })
 

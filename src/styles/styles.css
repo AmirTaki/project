@@ -134,11 +134,12 @@
         width: 100%;
         top: 0;
         left: 0;
-        height: auto;
+        height: 100%;
         display: inline;
         flex-flow: column nowrap;
         display: none;
         z-index: 2;
+
     }
     @keyframes sidebarMove {
         0%{
@@ -266,18 +267,20 @@
     /*  side to in side */
     .SideToinSide{
         background-color: yellow;
-        /* display: flex; */
         position: fixed;
         width: 100%;
         z-index: 3;
-        /* flex-flow: column wrap; */
         height: 100%;
         top: 0;
-    
+        /* display: none; */
     }
     .backSideToSide{
         background-color: silver;
         height: 10%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
     }
     .containerSideToinSide{
         display: flex;   

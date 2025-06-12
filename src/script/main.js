@@ -3,7 +3,7 @@ const iconSearch = document.querySelector(".searchIcon .bi-search")
 const iconSidebar = document.querySelector(".iconSidebar i")
 const containterHeader = document.querySelector('.containterHeader')
 const deleteContainer = document.querySelector(".deleteContainer i")
-const itemHeader = document.querySelectorAll('.itemHeader')
+const itemHeader = document.querySelectorAll('.itemHeaderDiv')
 const containerSidertoSider = document.querySelectorAll('.containerSidertoSider')
 
 searchIconInput.addEventListener("focus", (e)=> {

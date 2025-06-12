@@ -80,6 +80,9 @@
         width: 0px;
     }
 }
+.containerSidertoSider{
+    display: none;
+}
 
 .searchIcon div {
     margin-right:  8px;
@@ -167,6 +170,7 @@
         position: relative;
     }
     .containerSidertoSider{
+        display: block;
         background-color: red;
         overflow: hidden;     
         height: 0px;

@@ -122,11 +122,6 @@
 }
 
 
-.containerSideToinSide{
-    background-color: yellow;
-    display: flex;
-}
-
 /* media Query screen mobile */
 @media screen and (max-width : 750px) {
     .header{
@@ -268,5 +263,34 @@
         display: none;
     }
     
+    /*  side to in side */
+    .containerSideToinSide{
+        background-color: yellow;
+        display: flex;
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+        flex-flow: column wrap;
+        height: 250px;
+        overflow: scroll;
+    }
+
+    .itemCategory{
+        background-color: red;
+        height: 100px;
+        width: 50%;
+      
+    }
+    .itemProduct {
+        background-color: blue;
+        height: 100px;
+        width: 50%;
+      
+    }
+    .itemImage {
+        background-color: antiquewhite;
+        height: 500px;
+        width: 50%;
+    }
 
 }

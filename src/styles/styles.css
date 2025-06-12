@@ -49,6 +49,25 @@
 .searchIcon{
     background-color: yellow;
     display: flex;
+    position: relative;
+    align-items: center;
+}
+.searchIcon input {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+
+}
+.searchIcon div {
+    margin-right:  8px;
+}
+.searchIcon .bi-search{
+    position: absolute;
+    right: 85px;
+}
+.searchIcon i:hover {
+    cursor: pointer;
 }
 
 /* media Query screen mobile */
@@ -112,5 +131,8 @@
     .arrowdownHeader {
         display: inline;
         font-size: 12px;
+    }
+    .searchIcon input {
+        display: none;
     }
 }

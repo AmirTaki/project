@@ -66,6 +66,7 @@
     position: absolute;
     right: 85px;
 }
+
 .searchIcon i:hover {
     cursor: pointer;
 }

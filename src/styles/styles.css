@@ -25,6 +25,9 @@
     background-color: blue;
     display: flex;
 }
+.arrowdownHeader {
+    display: none;
+}
 .searchIcon{
     background-color: yellow;
     display: flex;
@@ -42,5 +45,15 @@
         top: 0;
         left: 0;
         flex-flow: column nowrap;
+    }
+    .itemHeader {
+        background-color: orange;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .arrowdownHeader {
+        display: inline;
     }
 }

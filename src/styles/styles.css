@@ -99,6 +99,9 @@
     cursor: pointer;
     background-color: silver;
 }
+.itemHeaderDiv:hover .itemHeader{
+    border-bottom: 2px solid black;
+}
 .itemHeaderDiv:hover .containerSidertoSider{
     display: flex;
 }

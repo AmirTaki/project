@@ -46,12 +46,12 @@ deleteContainer.addEventListener('click', (e)=>{
 
 for(let i = 0; i <  itemHeader.length; i++){
     itemHeader[i].addEventListener("mouseover", (e)=>{
-        containerSidertoSider[i].style.animation = "upperhightSider 3s linear forwards"
+        containerSidertoSider[i].style.animation = "upperhightSider .3s linear forwards"
     })
 }
 for(let i = 0; i <  itemHeader.length; i++){
     itemHeader[i].addEventListener("mouseleave", (e)=>{
-        containerSidertoSider[i].style.animation = "downerhightSider 3s linear forwards"
+        containerSidertoSider[i].style.animation = "downerhightSider .3s linear forwards"
     })
 }
 

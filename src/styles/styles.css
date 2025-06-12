@@ -164,11 +164,11 @@
         padding: 10px;
         margin: 0;
         border-bottom:none;
+        position: relative;
     }
     .containerSidertoSider{
         background-color: red;
-        /* width: 100%; */
-        overflow: hidden;
+        overflow: hidden;     
         height: 0px;
     }
     .itemHeader:hover {

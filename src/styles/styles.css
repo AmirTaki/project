@@ -21,6 +21,7 @@
 }
 .containterHeader{
     background-color: blue;
+    display: flex;
 }
 
 /* media Query screen mobile */

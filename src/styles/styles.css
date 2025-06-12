@@ -26,6 +26,9 @@
     display: flex;
 
 }
+.deleteContainer{
+    display: none;
+}
 .itemHeader {
     margin: 0 10px;
     display: flex;
@@ -60,11 +63,29 @@
         height: auto;
         display: inline;
         flex-flow: column nowrap;
+        display: none;
+    }
+    .deleteContainer{
+        display: flex;
+        background-color: red;
+    }
+    .deleteContainer i {
+        border: 1px solid gray;
+        background-color: rgb(255, 255, 255);
+        padding: 5px;
+        color : gray;
+        border-radius: 3px;
+        font-size: 25px;
+        margin: 5px 8px;
+        transition: color .5s;
+    }
+    .deleteContainer i:hover {
+        cursor: pointer;
+        color : black
     }
     .itemHeader {
         background-color: orange;
         display: flex;
-        /* display: none; */
         align-items: center;
         justify-content: space-between;
         padding: 10px;

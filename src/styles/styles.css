@@ -152,8 +152,8 @@
         display: inline;
         font-size: 12px;
     }
-    .searchIcon input {
-        /* display: none; */
+    .iconSearch_header{
+        display: none;
     }
   
 }

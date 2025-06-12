@@ -91,6 +91,9 @@
 .itemHeaderDiv:hover .containerSidertoSider{
     display: flex;
 }
+.itemSidertoSider .bi-chevron-right{
+    display: none;
+}
 
 .searchIcon div {
     margin-right:  8px;
@@ -178,12 +181,16 @@
         position: relative;
     }
     .containerSidertoSider{
-        display: block;
+        display: flex;
+        flex-flow: column nowrap;
         background-color: red;
         overflow: hidden;     
         height: 0px;
         position:static;
       
+    }
+    .itemSidertoSider .bi-chevron-right{
+        display: inline;
     }
     .arrowdownHeader{
         transition: transform .5s;

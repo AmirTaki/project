@@ -350,5 +350,21 @@
         height: 93%;
         width: 50%;
     }
-
+    .containerImgae{
+        margin: auto;
+        border: 1px solid red;
+        background-color: yellow;
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap ;
+        width: 200px;
+    }
+    .containerImgae img {
+        width: 100%;
+    }
+    .captionImage{
+        background-color: blue;
+        font-size: 15px;
+        color : rgb(114, 114, 114);
+    }
 }

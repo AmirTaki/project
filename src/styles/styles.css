@@ -273,6 +273,15 @@
         height: 100%;
         top: 0;
         display: none;
+        animation: moveSideToSide 3s linear forwards;
+    }
+    @keyframes moveSideToSide {
+        0%{
+            transform: translateX(800px);
+        }
+        100%{
+            transform: translateX(0);
+        }
     }
     .backSideToSide{
         background-color: rgb(249, 249, 249);

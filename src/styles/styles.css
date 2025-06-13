@@ -326,7 +326,7 @@
     .listCategory, .listProduct{
         background-color: rgb(255, 255, 255);
         padding:  10px;
-        font-size: 20px;   
+        font-size: 15px;   
         display: flex;
         color : rgb(114, 114, 114);
         transition: color .5s;
@@ -346,25 +346,36 @@
       
     }
     .itemImage {
-        background-color: antiquewhite;
+        background-color: rgb(249, 249, 249);
         height: 93%;
         width: 50%;
     }
     .containerImgae{
         margin: auto;
-        border: 1px solid red;
-        background-color: yellow;
+        margin-top: 50px;
+        margin-bottom: 75px;
+        background-color: rgb(255, 255, 255);
         display: flex;
         align-items: center;
         flex-flow: column nowrap ;
         width: 200px;
     }
     .containerImgae img {
-        width: 100%;
+        width: 90%;
+        border-radius: 10px;
+        margin: 5px;
     }
     .captionImage{
-        background-color: blue;
-        font-size: 15px;
-        color : rgb(114, 114, 114);
+        width: 90%;
+        background-color: transparent;
+        font-size: 13px;
+        color : rgb(213, 213, 213);
+        text-align: center;
+        margin: 5px;
+        transition: color .5s;
+    }
+    .captionImage:hover {
+        cursor: pointer;
+        color:rgb(52, 52, 52);
     }
 }

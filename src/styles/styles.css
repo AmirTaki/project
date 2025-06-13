@@ -141,9 +141,18 @@
     background-color: brown;
     display: flex;
 }
+.titleCategory, .titleProduct {
+    text-align: center;
+    margin: 20px 10px;
+    color : rgb(214, 214, 214);
+    font-size: 20px;
+}
 .itemCategory{
     background-color: antiquewhite;
     width: 33.3% ;
+}
+.listCategory{
+    background-color: blue;
 }
 .itemProduct{
     width: 33.3%;

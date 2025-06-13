@@ -57,7 +57,8 @@
 }
 .searchIcon input {
     width: 0;
-    opacity: 0;
+    display: none;
+    /* opacity: 0; */
     border: none;
     outline: none;
     border-radius: 5px;
@@ -122,11 +123,14 @@
 }
 
 .searchIcon div {
-    margin-right:  8px;
+    margin-right:  10px;
+}
+.searchIcon .bi-search{
+    margin-right: 0;
 }
 .searchIcon .bi-search{
     position: absolute;
-    left : 5px
+    right: 118px
 }
 
 .searchIcon i:hover {
@@ -143,7 +147,7 @@
     height: 100%;
     top: 50px;
     left:30%;
-    display: none;
+    /* display: none; */
 }
 .backSideToSide, .exitSidebbar{
     display: none;
@@ -233,7 +237,11 @@
         flex-flow: column nowrap;
         display: none;
         z-index: 2;
+    }
 
+    .searchIcon .bi-search{
+        position: absolute;
+        right: 40px
     }
     @keyframes sidebarMove {
         0%{

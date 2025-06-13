@@ -19,13 +19,13 @@ searchIconInput.addEventListener("focusout", (e)=> {
 const HideFlexInputSearchHeader = () =>{
     searchIconInput.style.animation  = "searchInputReverse .5s linear forwards "
     setTimeout(() => {
-        searchIconInput.style.opacity = 0
+        searchIconInput.style.display = "none"
     }, 500);
 }
 
 iconSearch.addEventListener('click', (e)=>{
-    if(searchIconInput.style.opacity == 0){
-        searchIconInput.style.opacity = 1
+    if(searchIconInput.style.display == "none"){
+        searchIconInput.style.display = "flex"
         searchIconInput.style.animation  = "searchInput .5s linear forwards " 
     } 
     else {
@@ -75,6 +75,10 @@ for(let i = 0; i < exitSidebbar.length; i++){
         containterHeader.style.animation  = "sidebarMoveReverse .3s linear forwards"
         closeSideToinSide()
     })
+}
+
+const displaySideToinSide = () => {
+    window.innerWidth > 750 ? "flex" : "none"
 }
 
 window.addEventListener("resize", (e)=>{

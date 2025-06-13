@@ -84,17 +84,25 @@
     display: none;
     position: fixed;
     top: 50px;
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(26, 2, 180);
     left: 0;
     width: 100%;
     height: 600px;    
     flex-flow: column nowrap;
 }
-.itemSidertoSider{
-    width: 30%;
+.itemSiderDiv{
+    background-color: red;
     height: 100%;
     border-right: 1px solid rgb(124, 124, 124);
+    width: 30%;
+}
+.itemSidertoSider{
+    width: 100%;
+    /* height: 100%; */
     padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    
     /* background-color: yellow; */
 }
 .itemSidertoSider:hover {
@@ -282,8 +290,14 @@
         width: 100%;
         position:static; 
     }
+    .itemSiderDiv{
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+    }
     .itemSidertoSider {
         display: flex;
+        flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
         padding: 12px 20px;

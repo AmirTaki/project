@@ -134,8 +134,25 @@
     left:30%;
     display: none;
 }
-
-
+.backSideToSide, .exitSidebbar{
+    display: none;
+}
+.containerSideToinSide{
+    background-color: brown;
+    display: flex;
+}
+.itemCategory{
+    background-color: antiquewhite;
+    width: 33.3% ;
+}
+.itemProduct{
+    width: 33.3%;
+    background-color: aqua;
+}
+.itemImage{
+    width: 33.3%;
+    background-color: violet;
+}
 
 /* media Query screen mobile */
 @media screen and (max-width : 750px) {

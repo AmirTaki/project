@@ -272,8 +272,7 @@
         z-index: 3;
         height: 100%;
         top: 0;
-        display: none
-    
+        display: none;
     }
     @keyframes moveSideToSide {
         0%{
@@ -282,6 +281,14 @@
         }
         100%{
             transform: translateX(0);
+        }
+    }
+    @keyframes moveSideToSideReverse {
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(800px);
         }
     }
     .backSideToSide{

@@ -5,6 +5,7 @@ const containterHeader = document.querySelector('.containterHeader')
 const deleteContainer = document.querySelector(".deleteContainer i")
 const itemSidertoSider = document.querySelectorAll('.itemSidertoSider')
 const SideToinSide = document.querySelectorAll(".SideToinSide")
+const backSideToSide = document.querySelectorAll(".backSideToSide")
 
 searchIconInput.addEventListener("focus", (e)=> {
     iconSearch.style.opacity = 0
@@ -48,6 +49,14 @@ for(let i = 0; i < itemSidertoSider.length; i++){
     itemSidertoSider[i].addEventListener("click", (e)=>{
         SideToinSide[i].style.animation = "moveSideToSide .3s linear forwards"  
         SideToinSide[i].style.display = "block"
+    })
+}
+for(let i = 0; i < backSideToSide.length ; i++){
+    backSideToSide[i].addEventListener("click", (e)=>{
+    SideToinSide[i].style.animation = "moveSideToSideReverse .3s linear forwards"
+    setTimeout(() => {
+        SideToinSide[i].style.display = "none"
+    }, 300);
     })
 }
 window.addEventListener("resize", (e)=>{

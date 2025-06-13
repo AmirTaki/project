@@ -70,15 +70,12 @@ const closeSideToinSide = () => {
     }
 }
 
-
 for(let i = 0; i < exitSidebbar.length; i++){
     exitSidebbar[i].addEventListener('click', (e)=>{
         containterHeader.style.animation  = "sidebarMoveReverse .3s linear forwards"
         closeSideToinSide()
-      
     })
 }
-
 
 window.addEventListener("resize", (e)=>{
     HideFlexInputSearchHeader()

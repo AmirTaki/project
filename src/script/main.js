@@ -6,6 +6,7 @@ const deleteContainer = document.querySelector(".deleteContainer i")
 const itemSidertoSider = document.querySelectorAll('.itemSidertoSider')
 const SideToinSide = document.querySelectorAll(".SideToinSide")
 const backSideToSide = document.querySelectorAll(".backSideToSide")
+const exitSidebbar = document.querySelectorAll('.exitSidebbar');
 
 searchIconInput.addEventListener("focus", (e)=> {
     iconSearch.style.opacity = 0
@@ -45,6 +46,9 @@ deleteContainer.addEventListener('click', (e)=>{
     containterHeader.style.animation  = "sidebarMoveReverse .3s linear forwards"
 })
 
+
+
+
 for(let i = 0; i < itemSidertoSider.length; i++){
     itemSidertoSider[i].addEventListener("click", (e)=>{
         SideToinSide[i].style.animation = "moveSideToSide .3s linear forwards"  
@@ -65,6 +69,17 @@ const closeSideToinSide = () => {
         SideToinSide[i].style.display = "none"
     }
 }
+
+
+for(let i = 0; i < exitSidebbar.length; i++){
+    exitSidebbar[i].addEventListener('click', (e)=>{
+        containterHeader.style.animation  = "sidebarMoveReverse .3s linear forwards"
+        closeSideToinSide()
+      
+    })
+}
+
+
 window.addEventListener("resize", (e)=>{
     HideFlexInputSearchHeader()
     resizeItem()

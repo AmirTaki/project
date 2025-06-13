@@ -59,8 +59,15 @@ for(let i = 0; i < backSideToSide.length ; i++){
     }, 300);
     })
 }
+
+const closeSideToinSide = () => {
+    for(let i = 0; i < backSideToSide.length ; i++){
+        SideToinSide[i].style.display = "none"
+    }
+}
 window.addEventListener("resize", (e)=>{
     HideFlexInputSearchHeader()
     resizeItem()
+    closeSideToinSide()
 })
 

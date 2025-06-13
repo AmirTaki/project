@@ -272,12 +272,13 @@
         z-index: 3;
         height: 100%;
         top: 0;
-        display: none;
-        animation: moveSideToSide 3s linear forwards;
+        display: none
+    
     }
     @keyframes moveSideToSide {
         0%{
             transform: translateX(800px);
+           
         }
         100%{
             transform: translateX(0);

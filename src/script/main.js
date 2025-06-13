@@ -3,6 +3,8 @@ const iconSearch = document.querySelector(".searchIcon .bi-search")
 const iconSidebar = document.querySelector(".iconSidebar i")
 const containterHeader = document.querySelector('.containterHeader')
 const deleteContainer = document.querySelector(".deleteContainer i")
+const itemSidertoSider = document.querySelectorAll('.itemSidertoSider')
+const SideToinSide = document.querySelectorAll(".SideToinSide")
 
 searchIconInput.addEventListener("focus", (e)=> {
     iconSearch.style.opacity = 0
@@ -42,6 +44,12 @@ deleteContainer.addEventListener('click', (e)=>{
     containterHeader.style.animation  = "sidebarMoveReverse .3s linear forwards"
 })
 
+for(let i = 0; i < itemSidertoSider.length; i++){
+    itemSidertoSider[i].addEventListener("click", (e)=>{
+        SideToinSide[i].style.animation = "moveSideToSide .3s linear forwards"  
+        SideToinSide[i].style.display = "block"
+    })
+}
 window.addEventListener("resize", (e)=>{
     HideFlexInputSearchHeader()
     resizeItem()

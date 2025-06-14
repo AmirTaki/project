@@ -5,93 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @media screen and (max-width : 750px) {
-            .containerMenu{
-                display: flex; flex-flow:  column nowrap; justify-content: space-between; background-color: rebeccapurple;
-        }   
-        }
-        .containerMenu{
-            display: flex; justify-content: space-between; background-color: rebeccapurple;
-        }
-        .containerMegaMenu{
+        .menu{
+            background-color: red;
+            width: 100%;
             display: flex;
         }
-        .containerList{
-            width: 29%; background-color: blue; height: 500px; text-align: center;
+        .item{
+            background-color: blue;
+            position: fixed;
+            top: 32px;
+            width: 25%;
         }
-        .containerRow{
-            width: 33.3%;
+        .list {
+            background-color: yellow;
+            position: fixed;
+            top:32px;
+            left:25%;
+            width:25% ;
         }
-        .containerCategory{
-            width: 70%; background-color: red; height: 500px; display: flex; flex-flow: row nowrap; text-align: center;
+
+        .product{
+            background-color: green;
+            position: fixed;
+            top:32px;
+            left:50%;
+            width:25% ;
+        }
+        .img {
+            background-color: blue;
+            position: fixed;
+            top:32px;
+            left:75%;
+            width:25% ;
+
+        }
+        @media screen  and (max-width : 750px){
+            .menu{
+            background-color: red;
+            width: 100%;
+            display: block;
+        }
+        .item{
+            background-color: blue;
+            position: static;
+            width: 100%;
+            
+        }
+      
+        .container{
+            background-color: green;
+            position: fixed;
+            height: 20px;
+            z-index: 2;
+            top:60px;
+            left: 0;
+            width:100% ;
+        }
+        .product{
+            position: static;    
+        }
+        .list {
+            
+            background-color: yellow;
+            position: static;
+            top:32px;
+            left:25%;
+            width:25% ;
+        }
+        .img {
+        
+            background-color: blue;
+            position: static;
+            top:32px;
+            left:75%;
+            width:25% ;
+
+        }  
         }
       
     </style>
 </head>
 
 <body>
+    <div class = "menu">
+        <div>menu</div>
+        <div class = 'item'>
+            <div>item</div>
+                <div class = "container">
+                    <div class = "list">list</div>
+                    <div class ="product">product</div>
+                    <div class = "img">img</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 
-    <div class="containerMenu">
-        <div>item</div>
-        <div>item</div>
-        <div>item</div>
-        <div>item</div>
-        <div>item</div>
-    </div>
-    <div class="containerMegaMenu">
-        <div class = "containerList">
-            <div>
-                <div>title</div>
-            </div>
-            <div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>
-            </div>
-       
-        </div>
-        <div class = 'containerCategory'>
-            <div class = "containerRow" style=" background-color: yellow;">
-                <div>
-                    <div>title</div>
-                </div>
-                <div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                </div>
-            </div>
-            <div class = "containerRow" style=" background-color: pink;">
-                <div>
-                <div>title</div>
-            </div>
-            <div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>
-            </div>
-            </div>
-            <div class = "containerRow" style=" background-color: palegreen;">
-                <div>
-                <div>title</div>
-            </div>
-            <div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>
-            </div>
-            </div>
-          
-        </div>
-    </div>
-   
 </body>
 </html>

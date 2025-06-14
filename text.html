@@ -4,17 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .containerMenu{
+            display: flex; justify-content: space-between; background-color: rebeccapurple;
+        }
+        .containerMegaMenu{
+            display: flex;
+        }
+        .containerList{
+            width: 29%; background-color: blue; height: 500px; text-align: center;
+        }
+        .containerRow{
+            width: 33.3%;
+        }
+        .containerCategory{
+            width: 70%; background-color: red; height: 500px; display: flex; flex-flow: row nowrap; text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    <div style="display: flex; justify-content: space-between; background-color: rebeccapurple;">
+
+    <div class="containerMenu">
         <div>item</div>
         <div>item</div>
         <div>item</div>
         <div>item</div>
         <div>item</div>
     </div>
-    <div style="display: flex;">
-        <div style="width: 29%; background-color: blue; height: 500px; text-align: center;">
+    <div class="containerMegaMenu">
+        <div class = "containerList">
             <div>
                 <div>title</div>
             </div>
@@ -27,8 +46,20 @@
             </div>
        
         </div>
-        <div style="width: 70%; background-color: red; height: 500px; display: flex; flex-flow: row nowrap; text-align: center;">
-            <div style="width: 33.3%; background-color: yellow;">
+        <div class = 'containerCategory'>
+            <div class = "containerRow" style=" background-color: yellow;">
+                <div>
+                    <div>title</div>
+                </div>
+                <div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                </div>
+            </div>
+            <div class = "containerRow" style=" background-color: pink;">
                 <div>
                 <div>title</div>
             </div>
@@ -40,19 +71,7 @@
                 <div>item</div>
             </div>
             </div>
-            <div style="width: 33.3%; background-color: pink;">
-                <div>
-                <div>title</div>
-            </div>
-            <div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>
-            </div>
-            </div>
-            <div style="width: 33.3%; background-color: palegreen;">
+            <div class = "containerRow" style=" background-color: palegreen;">
                 <div>
                 <div>title</div>
             </div>

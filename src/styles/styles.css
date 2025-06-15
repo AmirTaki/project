@@ -67,6 +67,9 @@
     left : 30%;
     top : 50px;
     width: 70%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 @media screen and (max-width : 750px) {
     /* HEADER */

@@ -116,6 +116,15 @@
             transform: translateX(0);
         }
     }
+    /* ANIMATION  REVERSE MENU CONTAINER */
+    @keyframes moveSidebar {
+        0%{
+            transform: translateX(0px);
+        }
+        100%{
+            transform: translateX(-800);
+        }
+    }
     /* CROSS SIDEBAR */
     .crossSideBar{
         display: flex

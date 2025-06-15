@@ -72,6 +72,9 @@
     display: flex;
     flex-flow: row nowrap;
 }
+.crossBack{
+    display: none;
+}
 /* CATEGORY CONTAINER */
 .categoryContainer{
     background-color: brown;
@@ -206,22 +209,26 @@
             transform: translateX(800px);
         }
     }
+    /* CROSS BACK */
+    .crossBack{
+        display: flex;
+    }
     /* CATEGORY CONTAINER */
     .categoryContainer{
         background-color: brown;
-        width: 50%;
-        height: 95%;
+        /* width: 50%; */
+        /* height: 95%; */
     }
     /* PRODUCT CONTAINER */
     .productContainer{
         background-color: rgb(43, 226, 107);
-        width: 50%;
-        height: 45%;
+        /* width: 50%; */
+        /* height: 45%; */
     }
     /*  IMAGE CONTAINER */
     .imageContainer{
         background-color: blue;
-        width: 50%;
-        height: 45%;
+        /* width: 50%; */
+        /* height: 45%; */
     }   
 }

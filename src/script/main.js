@@ -27,9 +27,11 @@ for(let i = 0; i < listTitle.length; i++){
 for(let i = 0; i < backCountaienr.length; i++){
     backCountaienr[i].addEventListener("click", (e)=>{
         pageContainer[i].style.animation = "moveReversePageContainer .5s linear forwards"  
+        menuContainer.style.display = "none"
         setTimeout(() => {
             pageContainer[i].style.display = 'none'
         }, 500);
+       
     })
 }
 // FUNCTION DISPLAY NONE PAGECONTAINER
@@ -42,10 +44,11 @@ const closePageContainerSidebar = () => {
 for(let i = 0; i < crossContainerSidebar.length; i++){
     crossContainerSidebar[i].addEventListener("click", (e)=>{
         pageContainer[i].style.animation = "moveReversePageContainer .5s linear forwards"  
-        menuContainer.style.animation = "moveReverseSidebar .5s linear forwards"
         setTimeout(() => {
-            // pageContainer[i].style.display = 'none'
-        }, 500)
+            pageContainer[i].style.display = 'none'
+        }, 500);
+    
+   
     })
 }
 

@@ -23,8 +23,8 @@
     display: flex;
     flex-flow:  row nowrap;
 }
-/* ITEM CONTAINER */
-.itemContainer {
+/* MENU ITEM */
+.menuItem {
     margin-right: 12%;
 }
 /* CROSS SIDEBAR */

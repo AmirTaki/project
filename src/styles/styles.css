@@ -16,6 +16,9 @@
 .iconMenu{
     display: none
 }
+.menu{
+    display: flex;
+}
 @media screen and (max-width : 750px) {
     .header{
         background-color: rgb(156, 23, 23);
@@ -23,5 +26,8 @@
     }   
     .iconMenu{
         display: block
+    }
+    .menu{
+        display: none;
     }
 }

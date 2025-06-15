@@ -1,3 +1,5 @@
+
+
 *{
     padding: 0;
     margin: 0;
@@ -10,4 +12,16 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;  
+}
+.iconMenu{
+    display: none
+}
+@media screen and (max-width : 750px) {
+    .header{
+        background-color: rgb(156, 23, 23);
+        height: 70px;
+    }   
+    .iconMenu{
+        display: block
+    }
 }

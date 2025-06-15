@@ -184,13 +184,10 @@
     .pageContainer{
         background-color: rebeccapurple;
         position: fixed;
-        left : 25%;
-        top : 50px;
-        width: 75%;
+        left : 0;
+        top : 0;
+        width: 100%;
         height: 500px;
-        /* display: flex; */
-        display: none;
-        flex-flow: row nowrap;
     }
     /* PAGE CONTAINER ANIMATION */
     @keyframes movePageContainer {
@@ -212,16 +209,19 @@
     /* CATEGORY CONTAINER */
     .categoryContainer{
         background-color: brown;
-        width: 33.3%;
+        width: 50%;
+        height: 95%;
     }
     /* PRODUCT CONTAINER */
     .productContainer{
         background-color: rgb(43, 226, 107);
-        width: 33.3%;
+        width: 50%;
+        height: 45%;
     }
     /*  IMAGE CONTAINER */
     .imageContainer{
         background-color: blue;
-        width: 33.3%;
+        width: 50%;
+        height: 45%;
     }   
 }

@@ -27,7 +27,6 @@ for(let i = 0; i < listTitle.length; i++){
 for(let i = 0; i < backCountaienr.length; i++){
     backCountaienr[i].addEventListener("click", (e)=>{
         pageContainer[i].style.animation = "moveReversePageContainer .5s linear forwards"  
-        menuContainer.style.display = "none"
         setTimeout(() => {
             pageContainer[i].style.display = 'none'
         }, 500);
@@ -43,12 +42,11 @@ const closePageContainerSidebar = () => {
 //
 for(let i = 0; i < crossContainerSidebar.length; i++){
     crossContainerSidebar[i].addEventListener("click", (e)=>{
-        pageContainer[i].style.animation = "moveReversePageContainer .5s linear forwards"  
+        pageContainer[i].style.animation = "moveReversePageContainer .2s linear forwards"  
         setTimeout(() => {
             pageContainer[i].style.display = 'none'
-        }, 500);
-    
-   
+        },200);
+        menuContainer.style.animation = "moveReverseSidebar .5s linear forwards"
     })
 }
 

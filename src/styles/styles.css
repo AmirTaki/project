@@ -69,15 +69,13 @@
     top : 50px;
     width: 75%;
     height: 500px;
-}
-  
+} 
 /* HOVER CONTAINER */
 .hoverContainer{
     display: flex;
     flex-flow: row nowrap;
     height: 500px;
 }
-
 .crossBack{
     display: none;
 }
@@ -198,7 +196,7 @@
         width: 100%;
         height: 500px;
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: row nowrap;
     }
     /* PAGE CONTAINER ANIMATION */
     @keyframes movePageContainer {
@@ -217,6 +215,8 @@
             transform: translateX(800px);
         }
     }
+
+
     /* CROSS BACK */
     .crossBack{
         width: 100%;
@@ -224,6 +224,13 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
+    }
+    /* HOVER CONTAINER */
+    .hoverContainer{
+        display: none;
+        flex-flow: row nowrap;
+        height: 10%;
+        width: 100%;
     }
     /* CATEGORY CONTAINER */
     .categoryContainer{

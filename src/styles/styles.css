@@ -69,9 +69,15 @@
     top : 50px;
     width: 75%;
     height: 500px;
+}
+  
+/* HOVER CONTAINER */
+.hoverContainer{
     display: flex;
     flex-flow: row nowrap;
+    height: 500px;
 }
+
 .crossBack{
     display: none;
 }

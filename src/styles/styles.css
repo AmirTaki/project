@@ -196,7 +196,7 @@
         width: 100%;
         height: 500px;
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
     }
     /* PAGE CONTAINER ANIMATION */
     @keyframes movePageContainer {
@@ -236,27 +236,27 @@
     }
     /* HOVER CONTAINER */
     .hoverContainer{
-        display: none;
-        flex-flow: row nowrap;
-        height: 10%;
+        display: flex;
+        flex-flow: column wrap;
+        height: 92%;
         width: 100%;
     }
     /* CATEGORY CONTAINER */
     .categoryContainer{
         background-color: brown;
         width: 50%;
-        height: 47.5%;
+        height: 50%;
     }
     /* PRODUCT CONTAINER */
     .productContainer{
         background-color: rgb(43, 226, 107);
         width: 50%;
-        height: 47.5%;
+        height: 50%;
     }
     /*  IMAGE CONTAINER */
     .imageContainer{
-        background-color: blue;
+        background-color: rgb(111, 3, 4);
         width: 50%;
-        height: 95%;
+        height: 100%;
     }   
 }

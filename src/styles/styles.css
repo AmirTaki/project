@@ -75,6 +75,26 @@
     .arrowTitle{
         display: block;
     }
+    /* LIST CONTAINER */
+    .listContainer{
+        background-color: red;
+        width: 100%;
+        overflow: hidden;
+    }
+    /* LIST IETM */
+    .listItem{
+   
+    }
+    /* LIST TITLE */
+    .listTitle {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: aliceblue;
+    }
+    /* HOVER LIST CONTAIERN :  */
 
  
     

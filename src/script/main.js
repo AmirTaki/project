@@ -10,3 +10,12 @@ iconMenu.addEventListener("click", (e)=>{
 crossSideBar.addEventListener("click", (e)=>{
     menuContainer.style.animation = "moveReverseSidebar .5s linear forwards"
 })
+// WINDOW ADD EVENET RESIZE 
+window.addEventListener('resize', (e)=>{
+    if(window.innerWidth < 750){
+        menuContainer.style.display = "none"
+    }
+    else {
+        menuContainer.style.display = "flex"
+    }
+})

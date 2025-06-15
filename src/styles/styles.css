@@ -192,6 +192,23 @@
         display: none;
         flex-flow: row nowrap;
     }
+    /* PAGE CONTAINER ANIMATION */
+    @keyframes movePageContainer {
+        0%{
+            transform: translateX(800px);
+        }   
+        100%{
+            transform: translateX(0);
+        }
+    }
+    @keyframes moveReversePageContainer {
+        0%{
+            transform: translateX(0);
+        }   
+        100%{
+            transform: translateX(800px);
+        }
+    }
     /* CATEGORY CONTAINER */
     .categoryContainer{
         background-color: brown;

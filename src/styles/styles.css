@@ -23,6 +23,10 @@
     display: flex;
     flex-flow:  row nowrap;
 }
+/* ITEM CONTAINER */
+.itemContainer {
+    margin-right: 12%;
+}
 
 @media screen and (max-width : 750px) {
     /* HEADER */
@@ -37,6 +41,12 @@
     /* CLASS MENU CONTAINER  */
     .menuContainer{
         background-color: yellow;
-        display: none;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left : 0;
+        display: flex;
+        flex-flow:  column nowrap;
+
     }
 }

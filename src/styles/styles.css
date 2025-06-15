@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* HEADER */
 .header{
     background-color: rgb(188, 188, 198);
     height: 50px; 
@@ -13,21 +14,29 @@
     justify-content: space-between;
     padding: 10px 20px;  
 }
+/* ICON MENU */
 .iconMenu{
     display: none
 }
-.menu{
+/* CLASS MENU CONTAINER */
+.menuContainer{
     display: flex;
+    flex-flow:  row nowrap;
 }
+
 @media screen and (max-width : 750px) {
+    /* HEADER */
     .header{
         background-color: rgb(156, 23, 23);
         height: 70px;
     }   
+    /* ICON MENU */
     .iconMenu{
         display: block
     }
-    .menu{
+    /* CLASS MENU CONTAINER  */
+    .menuContainer{
+        background-color: yellow;
         display: none;
     }
 }

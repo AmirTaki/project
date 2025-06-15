@@ -44,6 +44,7 @@
     background-color: aqua;
     position: fixed;
     left: 0;
+    height: 500px;
     top:50px;
     width: 30%;
     display: none;
@@ -67,9 +68,14 @@
     left : 30%;
     top : 50px;
     width: 70%;
+    height: 500px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+}
+/*  */
+.categoryContainer{
+    background-color: brown;
+    width: 33.3%;
 }
 @media screen and (max-width : 750px) {
     /* HEADER */
@@ -118,6 +124,7 @@
         overflow: hidden;
         position: static;
         display: block;
+        height: auto;
     }
     
     /* ARROW RIGHT TITLE */

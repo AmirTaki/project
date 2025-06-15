@@ -39,7 +39,14 @@
 .arrowRigthTitle{
     display: none;
 }
-
+/* LIST CONTAINER */
+.listContainer{
+    background-color: aqua;
+    position: fixed;
+    left: 0;
+    top:50px;
+    width: 30%;
+}
 
 @media screen and (max-width : 750px) {
     /* HEADER */
@@ -84,6 +91,7 @@
         background-color: red;
         width: 100%;
         overflow: hidden;
+        position: static;
     }
     /* ARROW RIGHT TITLE */
     .arrowRigthTitle{

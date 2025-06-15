@@ -4,6 +4,7 @@ let crossSideBar = document.querySelector(".crossSideBar")
 let listTitle = document.querySelectorAll('.listTitle')
 let pageContainer = document.querySelectorAll('.pageContainer')
 let backCountaienr = document.querySelectorAll(".backCountaienr")
+let crossContainerSidebar = document.querySelectorAll('.crossContainer-sidebar')
 // MOVE ANIMATION SIDEBAR
 iconMenu.addEventListener("click", (e)=>{
     menuContainer.style.display = "flex"
@@ -37,14 +38,26 @@ const closePageContainerSidebar = () => {
     pageContainer[i].style.display = "none"
     }
 }
+//
+for(let i = 0; i < crossContainerSidebar.length; i++){
+    crossContainerSidebar[i].addEventListener("click", (e)=>{
+        pageContainer[i].style.animation = "moveReversePageContainer .5s linear forwards"  
+        menuContainer.style.animation = "moveReverseSidebar .5s linear forwards"
+        setTimeout(() => {
+            // pageContainer[i].style.display = 'none'
+        }, 500)
+    })
+}
 
 // WINDOW ADD EVENET RESIZE 
 window.addEventListener('resize', (e)=>{
-    closePageContainerSidebar()
     if(window.innerWidth < 750){
         menuContainer.style.display = "none"
+        closePageContainerSidebar()//
     }
     else {
         menuContainer.style.display = "flex"
+        pageContainer[0].style.display = "block"//
+
     }
 })

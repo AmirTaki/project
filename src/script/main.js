@@ -1,0 +1,1 @@
+let iconMenu = document.querySelector('.iconMenu')

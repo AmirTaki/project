@@ -220,10 +220,19 @@
     /* CROSS BACK */
     .crossBack{
         width: 100%;
-        height: 5%;
+        height: 8%;
         display: flex;
+        align-items: center;
+        padding: 10px;
         flex-flow: row nowrap;
         justify-content: space-between;
+        background-color: blue;
+    }
+    .backCountaienr{
+        display: flex;
+    }
+    .backIcon {
+        margin-left: 10px;
     }
     /* HOVER CONTAINER */
     .hoverContainer{

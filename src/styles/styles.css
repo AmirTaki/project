@@ -23,14 +23,19 @@
     display: flex;
     flex-flow:  row nowrap;
 }
-/* MENU ITEM */
-.menuItem {
-    margin-right: 12%;
-}
 /* CROSS SIDEBAR */
 .crossSideBar{
     display: none
 }
+/* MENU ITEM */
+.menuItem {
+    margin-right: 12%;
+}
+/* ARROW TITLE */
+.arrowTitle{
+    display: none;
+}
+
 
 @media screen and (max-width : 750px) {
     /* HEADER */
@@ -54,7 +59,23 @@
     }
     /* CROSS SIDEBAR */
     .crossSideBar{
-            display: flex
-        }
+        display: flex
+    }
+    /* MENU ITEM */
+    .menuItem {
+        margin-right: 0;
+        padding: 10px;
+    }
+    /* ITEM TITLE */
+    .itemTitle{
+        display: flex;
+        justify-content: space-between
+    }
+    /* ARROW TITLE */
+    .arrowTitle{
+        display: block;
+    }
 
+ 
+    
 }

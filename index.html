@@ -24,11 +24,22 @@
             position: fixed;
             width: 30%;
             left : 10px;
+            height: 500px;
             top:20px;
             background-color: gray;
-            display: none
+            display: none;
+            border-right: 3px solid red;
+            
         }
         
+        .itemnew{
+            display: flex;
+            flex-flow: column nowrap;
+            /* margin:  10px; */
+        }
+        .list-title{
+            padding: 10px;
+        }
 
 
         @media screen and (max-width : 750px) {
@@ -53,13 +64,17 @@
         
             .item:hover .list-title{
                 height: 30px;
+                padding: 10px ;
+                margin: 5px;
             }
             .containerNew{
                 background-color: yellow;
                 width: 100%;
+                height: auto;
                 overflow: hidden;
                 position: static;
                 display: block;
+                border-right: none;
             }
             .itemnew{
                 background-color: gray;
@@ -67,8 +82,9 @@
             }
             .list-title{
                 display: flex;
-                width: 100%;
+                width: 90%;
                 height: 0;
+                padding: 0;
                 transition: height  .5s;
                 justify-content: space-between;
             }

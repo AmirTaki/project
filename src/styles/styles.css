@@ -117,12 +117,12 @@
         }
     }
     /* ANIMATION  REVERSE MENU CONTAINER */
-    @keyframes moveSidebar {
+    @keyframes moveReverseSidebar {
         0%{
-            transform: translateX(0px);
+            transform: translateX(0);
         }
         100%{
-            transform: translateX(-800);
+            transform: translateX(-800px);
         }
     }
     /* CROSS SIDEBAR */

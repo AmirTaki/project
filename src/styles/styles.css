@@ -44,13 +44,29 @@
     background-color: aqua;
     position: fixed;
     left: 0;
-    top:25px;
-    width: 100%;
+    top:50px;
+    width: 30%;
     display: none;
 }
-
+/* MENUITEM HOVER : LIST CONTAINER */
 .menuItem:hover .listContainer {
     display: block
+}
+/* ITEM TITLE */
+.itemTitle{
+    background-color: red;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* PAGE CONTAINER */
+.pageContainer{
+    background-color: rebeccapurple;
+    position: fixed;
+    left : 30%;
+    top : 50px;
+    width: 70%;
 }
 @media screen and (max-width : 750px) {
     /* HEADER */
@@ -84,7 +100,8 @@
     /* ITEM TITLE */
     .itemTitle{
         display: flex;
-        justify-content: space-between
+        justify-content: space-between;
+        height: auto;
     }
     /* ARROW TITLE */
     .arrowTitle{
@@ -98,8 +115,6 @@
         overflow: hidden;
         position: static;
         display: block;
-        /* height: 0;
-        transition: height .5s; */
     }
     
     /* ARROW RIGHT TITLE */
@@ -122,7 +137,6 @@
     /* HOVER ITEM TITLE:  LIST TITLE */
     .menuItem:hover .listTitle {
         height:20px;
-
     }
     .menuItem:hover .arrowTitle{
         transform: rotate(180deg);

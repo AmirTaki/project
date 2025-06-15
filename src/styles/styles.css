@@ -83,7 +83,6 @@
     }
     /* LIST IETM */
     .listItem{
-   
     }
     /* LIST TITLE */
     .listTitle {
@@ -91,10 +90,15 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
         background-color: aliceblue;
+        height: 0;
+        transition: height .5s ;
     }
-    /* HOVER LIST CONTAIERN :  */
+    /* HOVER ITEM TITLE:  LIST TITLE */
+    .menuItem:hover .listTitle {
+        height: 20px;
+        /* padding: 10px; */
+    }
 
  
     

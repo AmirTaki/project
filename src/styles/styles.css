@@ -44,11 +44,14 @@
     background-color: aqua;
     position: fixed;
     left: 0;
-    top:50px;
-    width: 30%;
-    /* display: none; */
+    top:25px;
+    width: 100%;
+    display: none;
 }
 
+.menuItem:hover .listContainer {
+    display: block
+}
 @media screen and (max-width : 750px) {
     /* HEADER */
     .header{
@@ -94,6 +97,9 @@
         width: 100%;
         overflow: hidden;
         position: static;
+        display: block;
+        /* height: 0;
+        transition: height .5s; */
     }
     
     /* ARROW RIGHT TITLE */
@@ -101,8 +107,8 @@
         display: block;
     }
     /* LIST IETM */
-    .listItem{
-    }
+    /* .listItem{
+    } */
     /* LIST TITLE */
     .listTitle {
         display: flex;
@@ -110,13 +116,13 @@
         justify-content: space-between;
         align-items: center;
         background-color: aliceblue;
-        height: 0;
         transition: height .5s ;
+        height: 0;
     }
     /* HOVER ITEM TITLE:  LIST TITLE */
     .menuItem:hover .listTitle {
-        height: 20px;
-        /* padding: 10px; */
+        height:20px;
+
     }
     .menuItem:hover .arrowTitle{
         transform: rotate(180deg);

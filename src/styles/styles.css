@@ -46,7 +46,7 @@
     left: 0;
     height: 500px;
     top:50px;
-    width: 30%;
+    width: 25%;
     display: none;
 }
 /* MENUITEM HOVER : LIST CONTAINER */
@@ -65,16 +65,26 @@
 .pageContainer{
     background-color: rebeccapurple;
     position: fixed;
-    left : 30%;
+    left : 25%;
     top : 50px;
-    width: 70%;
+    width: 75%;
     height: 500px;
     display: flex;
     flex-flow: row nowrap;
 }
-/*  */
+/* CATEGORY CONTAINER */
 .categoryContainer{
     background-color: brown;
+    width: 33.3%;
+}
+/* PRODUCT CONTAINER */
+.productContainer{
+    background-color: rgb(43, 226, 107);
+    width: 33.3%;
+}
+/*  IMAGE CONTAINER */
+.imageContainer{
+    background-color: blue;
     width: 33.3%;
 }
 @media screen and (max-width : 750px) {

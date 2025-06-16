@@ -84,7 +84,7 @@
 }
 /* PAGE CONTAINER */
 .pageContainer{
-     background-color: rgb(247, 247, 247);
+    background-color: rgb(247, 247, 247);
     position: fixed;
     left : 25%;
     top:51px;
@@ -295,6 +295,7 @@
         background-color: yellow;
         position: fixed;
         width: 100%;
+        height: 100%;
         top: 0;
         left : 0;
         display: none;
@@ -346,6 +347,7 @@
         overflow: hidden;
         position: static;
         display: block;
+        padding-top: 0;
         height: auto;
     }
     
@@ -365,6 +367,7 @@
         background-color: aliceblue;
         transition: height .5s ;
         height: 0;
+        padding:0;
     }
     /* HOVER ITEM TITLE:  LIST TITLE */
     .menuItem:hover .listTitle {

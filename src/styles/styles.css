@@ -7,7 +7,8 @@
 }
 /* HEADER */
 .header{
-    background-color: rgb(188, 188, 198);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, .3);   
+    background-color: rgb(239, 239, 239);
     height: 50px; 
     display: flex;
     align-items: center;
@@ -97,12 +98,13 @@
 @media screen and (max-width : 750px) {
     /* HEADER */
     .header{
-        background-color: rgb(156, 23, 23);
+        background-color: rgb(239, 239, 239);
         height: 70px;
     }   
     /* ICON MENU */
     .iconMenu{
         display: block
+        
     }
     /* CLASS MENU CONTAINER  */
     .menuContainer{

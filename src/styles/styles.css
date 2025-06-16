@@ -46,7 +46,7 @@
     position: fixed;
     left: 0;
     height: 500px;
-    top:50px;
+    top:51px;
     width: 25%;
     /* display: none; */
     border-right: 1px solid gray;
@@ -82,7 +82,7 @@
     background-color: rebeccapurple;
     position: fixed;
     left : 25%;
-    top : 50px;
+    top:51px;
     width: 75%;
     height: 500px;
 } 
@@ -100,8 +100,15 @@
 }
 /* CATEGORY CONTAINER */
 .categoryContainer{
-    /* background-color: brown; */
+    background-color: brown;
     width: 33.3%;
+}
+.categoryTitle{
+    color:rgb(134, 134, 134);
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    margin-bottom:10px;
+    text-align: center;
 }
 /* PRODUCT CONTAINER */
 .productContainer{

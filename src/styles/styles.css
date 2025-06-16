@@ -62,7 +62,6 @@
     align-items: center;
     justify-content: center;
     border-bottom: 2px solid transparent ;
-
 }
 .menuItem:hover .itemTitle{
     cursor: pointer;
@@ -148,9 +147,18 @@
     cursor: pointer;
 }
 /* ICON HEADER SEARCH */
-.iconHeader{
+.iconHeader {
     display: flex;
-    margin-right: 15px;
+}
+.iconHeader i{
+    font-size: 17px;
+    margin-right: 5px;
+    color :gray;
+    transition: color .5s;
+}
+.iconHeader i:hover {
+    cursor: pointer;
+    color: black;
 }
 /* ICONE SEARCH HEADER DISPLAY  */
 .iconSeH{

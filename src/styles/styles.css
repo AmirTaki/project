@@ -106,6 +106,7 @@
 .categoryContainer{
     background-color: brown;
     width: 33.3%;
+    border-right: 1px solid gray ;
 }
 .categoryTitle{
     color:rgb(134, 134, 134);
@@ -131,12 +132,21 @@
 }
 /* PRODUCT CONTAINER */
 .productContainer{
-    /* background-color: rgb(43, 226, 107); */
+    background-color: rgb(43, 226, 107);
+    border-right: 1px solid gray ;
     width: 33.3%;
+}
+.productTitle{
+    color:rgb(134, 134, 134);
+    background-color: rgb(240, 240, 240);
+    padding: 13px;
+    border: .5px solid rgb(240, 240, 240);
+    text-align: center;
 }
 /*  IMAGE CONTAINER */
 .imageContainer{
-    /* background-color: blue; */
+    background-color: blue;
+    border-right: 1px solid gray ; 
     width: 33.3%;
 }
 /* SEARCH HEADER */

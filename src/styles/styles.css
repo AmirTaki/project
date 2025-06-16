@@ -132,9 +132,9 @@
 #searchIcon{
     position: absolute;
     right: 20px;
-    top:-15px;
+    top:-17px;
     font-size: 25px;
-    background-color: rebeccapurple;
+    transition: scale .4s;
 }
 #searchIcon:hover {
     scale: 1.3;

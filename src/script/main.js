@@ -64,8 +64,14 @@ searchInputIcon.addEventListener("click", (e)=>{
         setTimeout(() => {
             InputSearchHeader.style.display = "none"
         },500);
-     
    }
+})
+//
+InputSearchHeader.addEventListener("focus", (e)=>{
+    searchInputIcon.style.display = "none" 
+})
+InputSearchHeader.addEventListener("focusout", (e)=>{
+    searchInputIcon.style.display = "block" 
 })
 // WINDOW ADD EVENET RESIZE 
 window.addEventListener('resize', (e)=>{

@@ -66,10 +66,11 @@ searchInputIcon.addEventListener("click", (e)=>{
         },500);
    }
 })
-//
+//   FOCUS INPUT SEARCH HIDE ICON SEARCH
 InputSearchHeader.addEventListener("focus", (e)=>{
     searchInputIcon.style.display = "none" 
 })
+//   FOCUS OUT INPUT SEARCH DISPLAY ICON SEARCH
 InputSearchHeader.addEventListener("focusout", (e)=>{
     searchInputIcon.style.display = "block" 
 })

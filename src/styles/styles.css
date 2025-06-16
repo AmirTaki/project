@@ -135,16 +135,20 @@
     top:-17px;
     font-size: 25px;
     transition: scale .4s;
+    z-index: 1;
 }
 #searchIcon:hover {
     scale: 1.3;
     cursor: pointer;
 }
-
 /* ICON HEADER SEARCH */
 .iconHeader{
     display: flex;
     margin-right: 15px;
+}
+/* ICONE SEARCH HEADER DISPLAY  */
+.iconSeH{
+    display: block;
 }
 @media screen and (max-width : 750px) {
     /* HEADER */
@@ -163,6 +167,10 @@
         scale : 1.3;
         cursor: pointer;
     }
+    /* ICONE SEARCH HEADER DISPLAY  */
+    .iconSeH{
+        display: none;
+    }
     /* CLASS MENU CONTAINER  */
     .menuContainer{
         background-color: yellow;
@@ -172,6 +180,7 @@
         left : 0;
         display: none;
         flex-flow:  column nowrap;
+        z-index: 2;
     }
     /* ANIMATION MENU CONTAINER */
     @keyframes moveSidebar {
@@ -318,4 +327,5 @@
         width: 50%;
         height: 100%;
     }   
+    
 }

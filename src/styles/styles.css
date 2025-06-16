@@ -108,6 +108,7 @@
     width: 33.3%;
     border-right: 1px solid gray ;
 }
+/* CATEGORY TITLE */
 .categoryTitle{
     color:rgb(134, 134, 134);
     background-color: rgb(240, 240, 240);
@@ -115,6 +116,7 @@
     border: .5px solid rgb(240, 240, 240);
     text-align: center;
 }
+/* CATEGORY ITEM */
 .categoryItem{
     background-color: rgb(255, 255, 255);
     padding: 13px;
@@ -136,6 +138,7 @@
     border-right: 1px solid gray ;
     width: 33.3%;
 }
+/* PRODUCT TITLE */
 .productTitle{
     color:rgb(134, 134, 134);
     background-color: rgb(240, 240, 240);
@@ -143,6 +146,7 @@
     border: .5px solid rgb(240, 240, 240);
     text-align: center;
 }
+/* PRODUCT ITEM */
 .productItem{
     background-color: rgb(255, 255, 255);
     padding: 13px;
@@ -160,6 +164,20 @@
     background-color: blue;
     border-right: 1px solid gray ; 
     width: 33.3%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+
+}
+.imageItem{
+    background-color: red;
+    width: 160px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+   
 }
 /* SEARCH HEADER */
 .searchHeader{
@@ -179,6 +197,7 @@
     border: none;
     width: 200px;
     margin-right: 10px;
+    border-radius: 4px;
 }
 @keyframes moveInput {
     0%{

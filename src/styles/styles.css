@@ -247,8 +247,8 @@
 #searchIcon{
     position: absolute;
     right: 20px;
-    top:-17px;
-    font-size: 25px;
+    top:-8px;
+    font-size: 15px;
     transition: scale .4s;
     z-index: 1;
 }

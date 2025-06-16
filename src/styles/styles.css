@@ -424,8 +424,6 @@
         height: 100%;
         display: none;
         flex-flow: column nowrap;
-        border-bottom: .5px solid rgb(223, 223, 223);
-
     }
     /* PAGE CONTAINER ANIMATION */
     @keyframes movePageContainer {
@@ -456,6 +454,7 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         background-color:transparent;
+        border-bottom: .5px solid rgb(223, 223, 223);
     }
     /* BACK CONTAINER */
     .backCountaienr{
@@ -493,19 +492,19 @@
     }
     /* CATEGORY CONTAINER */
     .categoryContainer{
-        background-color: brown;
+        background-color: transparent;
         width: 50%;
         height: 50%;
     }
     /* PRODUCT CONTAINER */
     .productContainer{
-        background-color: rgb(43, 226, 107);
+        background-color: transparent;       
         width: 50%;
         height: 50%;
     }
     /*  IMAGE CONTAINER */
     .imageContainer{
-        background-color: rgb(111, 3, 4);
+        background-color: transparent;
         width: 50%;
         height: 100%;
     }   

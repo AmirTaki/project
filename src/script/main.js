@@ -5,7 +5,7 @@ let listTitle = document.querySelectorAll('.listTitle')
 let pageContainer = document.querySelectorAll('.pageContainer')
 let backCountaienr = document.querySelectorAll(".backCountaienr")
 let crossContainerSidebar = document.querySelectorAll('.crossContainer-sidebar')
-let searchInputIcon = document.querySelector(".containerInput i")
+let searchInputIcon = document.querySelector("#searchIcon")
 let InputSearchHeader = document.querySelector(".InputSearchHeader")
 
 // MOVE ANIMATION SIDEBAR
@@ -52,14 +52,20 @@ for(let i = 0; i < crossContainerSidebar.length; i++){
         menuContainer.style.animation = "moveReverseSidebar .5s linear forwards"
     })
 }
-// 
+//
+InputSearchHeader.style.display = "none" 
 searchInputIcon.addEventListener("click", (e)=>{
-    if(InputSearchHeader.style.width == "0px"){
-        InputSearchHeader.style.animation = "moveInput .5s linear forwards"
+    if(InputSearchHeader.style.display == "none"){
         InputSearchHeader.style.display = "block"
+        InputSearchHeader.style.animation = "moveInput .5s linear forwards"
     }
-  
- 
+    else{
+        InputSearchHeader.style.animation = "moveReverseInput .5s linear forwards"
+        setTimeout(() => {
+            InputSearchHeader.style.display = "none"
+        },500);
+     
+   }
 })
 // WINDOW ADD EVENET RESIZE 
 window.addEventListener('resize', (e)=>{

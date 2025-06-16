@@ -56,11 +56,17 @@
 }
 /* ITEM TITLE */
 .itemTitle{
-    background-color: red;
+    background-color: transparent;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 2px solid transparent ;
+
+}
+.menuItem:hover .itemTitle{
+    cursor: pointer;
+    border-bottom:  2px solid black;
 }
 /* PAGE CONTAINER */
 .pageContainer{

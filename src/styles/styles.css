@@ -95,6 +95,42 @@
     background-color: blue;
     width: 33.3%;
 }
+/* SEARCH HEADER */
+.searchHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* SEARCH ICON INPUT */
+.containerInput {
+    position: relative;
+}
+.containerInput input {
+    padding: 5px 10px ;
+    outline: none;
+    border: none;
+    margin-right: 10px;
+    width: 0;
+}
+@keyframes moveInput {
+    0%{
+        width: 0 ;
+    }
+    100%{
+        width: 250px;
+    }
+}
+.containerInput i {
+    position: absolute;
+    right: 20px;
+    font-size: 15px;
+}
+
+/* ICON HEADER SEARCH */
+.iconHeader{
+    display: flex;
+    margin-right: 15px;
+}
 @media screen and (max-width : 750px) {
     /* HEADER */
     .header{

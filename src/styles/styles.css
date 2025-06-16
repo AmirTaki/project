@@ -42,18 +42,19 @@
 }
 /* LIST CONTAINER */
 .listContainer{
-    background-color: aqua;
+    background-color: rgb(247, 247, 247);
     position: fixed;
     left: 0;
-    height: 500px;
+    height: 600px;
     top:51px;
     width: 25%;
     /* display: none; */
-    border-right: 1px solid gray;
+    border-right: 1px solid rgb(228, 228, 228); ;
+    border-bottom: 1px solid rgb(228, 228, 228); ;
     padding-top: 46px;
 }
 .listTitle{
-    background-color: rgb(255, 255, 255);
+    background-color:transparent;
     padding: 13px;
     color:gray;
     transition: color .5s , background-color .5s ;
@@ -82,12 +83,13 @@
 }
 /* PAGE CONTAINER */
 .pageContainer{
-    background-color: rebeccapurple;
+     background-color: rgb(247, 247, 247);
     position: fixed;
     left : 25%;
     top:51px;
     width: 75%;
-    height: 500px;
+    border-bottom: 1px solid rgb(228, 228, 228);
+    height: 600px;
 } 
 .listItem:hover .listTitle{
     background-color: rgb(226, 226, 226);
@@ -97,16 +99,17 @@
 .hoverContainer{
     display: flex;
     flex-flow: row nowrap;
-    height: 500px;
+    height: 600px;
 }
 .crossBack{
     display: none;
 }
 /* CATEGORY CONTAINER */
 .categoryContainer{
-    background-color: brown;
+    background-color: transparent;
     width: 33.3%;
-    border-right: 1px solid gray ;
+    border-right: 1px solid rgb(228, 228, 228); ;
+
 }
 /* CATEGORY TITLE */
 .categoryTitle{
@@ -118,7 +121,7 @@
 }
 /* CATEGORY ITEM */
 .categoryItem{
-    background-color: rgb(255, 255, 255);
+    background-color: transparent;
     padding: 13px;
     color: gray;
     display: flex;
@@ -134,8 +137,8 @@
 }
 /* PRODUCT CONTAINER */
 .productContainer{
-    background-color: rgb(43, 226, 107);
-    border-right: 1px solid gray ;
+    background-color: transparent;
+    border-right: 1px solid rgb(228, 228, 228); ;
     width: 33.3%;
 }
 /* PRODUCT TITLE */
@@ -148,7 +151,7 @@
 }
 /* PRODUCT ITEM */
 .productItem{
-    background-color: rgb(255, 255, 255);
+    background-color: transparent;
     padding: 13px;
     color: gray;
     display: flex;
@@ -161,7 +164,8 @@
 }
 /*  IMAGE CONTAINER */
 .imageContainer{
-    background-color: blue;
+    border-right: 1px solid rgb(228, 228, 228); ;
+    background-color: transparent;
     border-right: 1px solid gray ; 
     width: 33.3%;
     display: flex;
@@ -171,9 +175,11 @@
     padding: 10px;
 
 }
+/* IMAGE ITEM */
 .imageItem{
-    background-color: red;
-    width: 160px;
+    background-color: rgb(232, 232, 232);
+    border-radius: 5px;
+    width: 175px;
     overflow: hidden;
     display: flex;
     margin: 10px;
@@ -187,10 +193,12 @@
     width: 100%;
     color:gray;
     font-size: 13px;
-    background-color: yellow;
+    background-color: transparent;
     padding: 5px;
+    padding-left: 6px;
     transition: color .5s;
 }
+/* CAPTION IMAGE */
 .captionImage:hover {
     cursor: pointer;
     color: blue;

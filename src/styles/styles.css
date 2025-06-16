@@ -182,12 +182,12 @@
 }
 /* IMAGE ITEM */
 .imageItem{
-    background-color: rgb(232, 232, 232);
+    background-color: rgb(240, 240, 240);
     border-radius: 5px;
-    width: 175px;
+    width: 190px;
     overflow: hidden;
     display: flex;
-    margin: 10px;
+    margin: 5px;
     flex-flow: column nowrap;
 }
 .imageItem img {
@@ -374,7 +374,6 @@
     }
     /* LIST CONTAINER */
     .listContainer{
-        background-color: red;
         width: 100%;
         overflow: hidden;
         position: static;

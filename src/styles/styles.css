@@ -176,8 +176,24 @@
     width: 160px;
     overflow: hidden;
     display: flex;
+    margin: 10px;
     flex-flow: column nowrap;
-   
+}
+.imageItem img {
+    width: 100%;
+    padding: 5px;
+}
+.captionImage{
+    width: 100%;
+    color:gray;
+    font-size: 13px;
+    background-color: yellow;
+    padding: 5px;
+    transition: color .5s;
+}
+.captionImage:hover {
+    cursor: pointer;
+    color: blue;
 }
 /* SEARCH HEADER */
 .searchHeader{

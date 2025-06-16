@@ -262,7 +262,7 @@
 }
 .iconHeader i{
     font-size: 17px;
-    margin-right: 5px;
+    margin-right: 10px;
     color :gray;
     transition: color .5s;
 }

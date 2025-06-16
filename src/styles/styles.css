@@ -24,9 +24,13 @@
     display: flex;
     flex-flow:  row nowrap;
 }
+/* CONTAINER CLOSE */
+.containerClose{
+    display: none;
+}
 /* CROSS SIDEBAR */
 .crossSideBar{
-    display: none
+    /* display: none */
 }
 /* MENU ITEM */
 .menuItem {
@@ -320,9 +324,16 @@
             transform: translateX(-800px);
         }
     }
+    /* CONTAINER CLOSE */
+    .containerClose{
+        display: flex;
+        background-color: red;
+        height: 35px;
+        width: 100%;
+    }
     /* CROSS SIDEBAR */
     .crossSideBar{
-        display: flex
+        background-color: blue;
     }
     /* MENU ITEM */
     .menuItem {

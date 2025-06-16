@@ -48,10 +48,11 @@
     height: 600px;
     top:51px;
     width: 25%;
-    /* display: none; */
+    display: none;
     border-right: 1px solid rgb(228, 228, 228); ;
     border-bottom: 1px solid rgb(228, 228, 228); ;
     padding-top: 46px;
+    transform: display .5s;
 }
 .listTitle{
     background-color:transparent;

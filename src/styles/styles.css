@@ -50,9 +50,10 @@
     position: fixed;
     left: 0;
     height: 600px;
-    top:51px;
+    top:50px;
     width: 25%;
     display: none;
+    border-top:  1px solid rgb(228, 228, 228);
     border-right: 1px solid rgb(228, 228, 228); ;
     border-bottom: 1px solid rgb(228, 228, 228); ;
     padding-top: 46px;
@@ -91,9 +92,10 @@
     background-color: rgb(247, 247, 247);
     position: fixed;
     left : 25%;
-    top:51px;
+    top:50px;
     width: 75%;
     border-bottom: 1px solid rgb(228, 228, 228);
+    border-top:  1px solid rgb(228, 228, 228);
     height: 600px;
 } 
 .listItem:hover .listTitle{

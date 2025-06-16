@@ -103,8 +103,14 @@
     }   
     /* ICON MENU */
     .iconMenu{
-        display: block
+        font-size: 20px;
+        display: block;
+        transition: scale .5s;
         
+    }
+    .iconMenu:hover {
+        scale : 1.3;
+        cursor: pointer;
     }
     /* CLASS MENU CONTAINER  */
     .menuContainer{

@@ -6,7 +6,7 @@ let pageContainer = document.querySelectorAll('.pageContainer')
 let backCountaienr = document.querySelectorAll(".backCountaienr")
 let crossContainerSidebar = document.querySelectorAll('.crossContainer-sidebar')
 let searchInputIcon = document.querySelector(".containerInput i")
-let searchInput = document.querySelector(".containerInput input")
+let InputSearchHeader = document.querySelector(".InputSearchHeader")
 
 // MOVE ANIMATION SIDEBAR
 iconMenu.addEventListener("click", (e)=>{
@@ -54,12 +54,11 @@ for(let i = 0; i < crossContainerSidebar.length; i++){
 }
 // 
 searchInputIcon.addEventListener("click", (e)=>{
-    if(searchInput.style.width == 0){
-        searchInput.style.animation = "moveInput .5s linear forwards"
+    if(InputSearchHeader.style.width == "0px"){
+        InputSearchHeader.style.animation = "moveInput .5s linear forwards"
+        InputSearchHeader.style.display = "block"
     }
-    else {
-        
-    }
+  
  
 })
 // WINDOW ADD EVENET RESIZE 

@@ -2,7 +2,6 @@
 .containerScroll{
     background-color: white;
     display: flex;
-    /* justify-content: center; */
     overflow-x: scroll;
     margin: 10px;
     height: 100%;
@@ -93,5 +92,12 @@
 @media screen and (max-width:750px) {
     .containerScroll::-webkit-scrollbar{
         display: none;
+    }
+    .containerScroll{
+        overflow:visible;
+        display: flex;
+        flex-flow:  column nowrap;
+        width: 100%;
+        background-color: yellow;
     }
 }

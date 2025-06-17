@@ -89,3 +89,8 @@
     padding: 2px;
 }
 
+@media screen and (max-width:750px) {
+    .containerScroll::-webkit-scrollbar{
+        display: none;
+    }
+}

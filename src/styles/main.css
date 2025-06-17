@@ -1,6 +1,6 @@
-CONTAINER SCROLL 
+/* CONTAINER SCROLL  */
 .containerScroll{
-    background-color: white;
+    background-color: rgb(173, 21, 21);
     display: flex;
     flex-flow: row nowrap ;
     overflow-x: scroll;
@@ -90,22 +90,22 @@ CONTAINER SCROLL
 }
 
 @media screen and (max-width:750px) {
-    /* .containerScroll::-webkit-scrollbar{
+    .containerScroll::-webkit-scrollbar{
         display: none;
     }
     .containerScroll{
         overflow:visible;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        width: 100%;
+        width: 500px;
         background-color: yellow;
     }
     .containerScrollImage{
         background-color: blue;
-        width: 150px;
+        min-width: 150px;
     }
     .containerScrollImage img{
-        width: 200px;
+        width: 100%;
         
-    } */
+    } 
 }

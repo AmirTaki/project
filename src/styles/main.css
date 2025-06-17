@@ -1,3 +1,4 @@
+/* CONTAINER SCROLL  */
 .containerScroll{
     background-color: white;
     display: flex;
@@ -8,6 +9,7 @@
     padding: 20px;
     width: 90%;
 }
+/*  CONTAINER SCROLL WEBKIT SCROLLBAR */
 .containerScroll::-webkit-scrollbar {
     width : 5px;
     height: 5px;
@@ -22,6 +24,7 @@
     background-color: hsl(0, 0%, 0%);
     cursor: pointer;
 }
+/*  CONTAINER SCROLL IMAGE */
 .containerScrollImage{
    min-width:  300px;
     overflow: hidden;
@@ -37,6 +40,7 @@
     background-color: white;
     position: relative;
 }
+/*  CONTAINER SCROLL IMAGE ICON */
 .containerScrollImageIcon{
     position: absolute;
     right: 10px;
@@ -44,16 +48,19 @@
     transition: color .5s;
     color: gray;
 }
+/*  CONTAINER SCROLL IMAGE ICON : HOVER */
 .containerScrollImageIcon:hover{
     color: black;
     cursor: pointer;
 }
+/*  CONTAINER SCROLL IMAGE  IMG */
 .containerScrollImage img {
     /* width: 100%; */
     min-width: 300px;
     height: 300px;
     object-fit: cover;
 }
+/*  CONTAINER SCROLL CAPTION  */
 .containerScrollCaption{
     background-color: transparent;
     height: 100%;
@@ -62,19 +69,21 @@
     display: flex;
     flex-flow:  column nowrap;
 }
+/*  CONTAINER SCROLL CAPTION  TITLE */
 .containerScrollCaptionTitle{
     background-color: transparent;
     padding: 2px;
     font-weight: bold;
     margin-bottom: 5px;
 }
+/*  CONTAINER SCROLL CAPTION BODY */ 
 .containerScrollCaptionBody{
     background-color: transparent;
     color:gray;
     padding: 2px;
     margin-bottom: 5px;
 }
-
+/*  CONTAINER SCROLL CAPTION PREFORMANCE  */
 .containerScrollCaptionPerfomance{
     background-color: transparent;
     padding: 2px;

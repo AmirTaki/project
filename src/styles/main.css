@@ -1,12 +1,31 @@
 .scroller-grig-img{
     display: flex;
     justify-content: center;
+    position: relative;
+    align-items: center;
+}
+/* ICON LEFT SCROLL CONTAINER */
+.iconLeftScrollImg{
+    position: absolute;
+    top : 50%;
+    z-index: 2;
+    color: red;
+    left : 70px
+}
+/* ICON RIGHT SCROLL CONTAINER */
+.iconRigthtScrollImg{
+    position: absolute;
+    top : 50%;
+    z-index: 2;
+    color: red;
+    right : 70px
 }
 /* CONTAINER SCROLL  */
 .containerScroll{
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-flow: row nowrap ;
+    justify-content: center;
     overflow-x: scroll;
     margin: 10px;
     height: 100%;

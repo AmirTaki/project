@@ -5,10 +5,10 @@
     flex-flow: row nowrap ;
     overflow-x: scroll;
     margin: 10px;
-    /* height: 100%; */
+    height: 100%;
     padding: 20px;
     padding-bottom:40px ;
-    /* width: 90%; */
+    width: 90%;
 }
 /*  CONTAINER SCROLL WEBKIT SCROLLBAR */
 .containerScroll::-webkit-scrollbar {
@@ -94,7 +94,7 @@
         display: none;
     }
     .containerScroll{
-        overflow:hidden;
+        /* overflow:hidden; */
         display: grid;
         /* flex-flow: column wrap; */
         grid-template-columns: repeat(2, 1fr);
@@ -103,17 +103,20 @@
         background-color: yellow;
         align-items: center;
         height: 500px;
+        width: 100%;
     }
     .containerScrollImage{
         min-height: none;
         background-color: blue;
         width: 265px;
         margin: 5px;
+        height: 100%;
         border: none;
         outline: none;
     }
     .containerScrollImage img{
-        width: 265px;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
         border-radius:10px ;
     } 

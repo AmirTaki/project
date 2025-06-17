@@ -9,7 +9,7 @@
     width: 90%;
 }
 .containerScrollImage{
-    width: 300px;
+   min-width:  300px;
     overflow: hidden;
     height: 450px;
     display: flex;
@@ -23,7 +23,7 @@
 }
 .containerScrollImage img {
     /* width: 100%; */
-    width: 300px;
+    min-width: 300px;
     height: 300px;
     object-fit: cover;
 }

@@ -19,7 +19,7 @@
     border: none;
     outline: none;
     border-radius: 10px;
-    background-color: rgb(139, 139, 152);
+    background-color: white
 }
 .containerScrollImage img {
     /* width: 100%; */
@@ -28,7 +28,7 @@
     object-fit: cover;
 }
 .containerScrollCaption{
-    background-color: rgb(0, 231, 135);
+    background-color: transparent;
     height: 100%;
     width: 300px;
     padding: 10px;
@@ -36,12 +36,19 @@
     flex-flow:  column nowrap;
 }
 .containerScrollCaptionTitle{
-    background-color: yellow;
+    background-color: transparent;
     padding: 2px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 .containerScrollCaptionBody{
-    background-color: blue;
-    color:gray
+    background-color: transparent;
+    color:gray;
+    padding: 2px;
+    margin-bottom: 5px;
+}
+
+.containerScrollCaptionPerfomance{
+    background-color: transparent;
+    padding: 2px;
 }

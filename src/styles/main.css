@@ -1,6 +1,6 @@
 /* CONTAINER SCROLL  */
 .containerScroll{
-    background-color: rgb(173, 21, 21);
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-flow: row nowrap ;
     overflow-x: scroll;
@@ -29,7 +29,7 @@
 .containerScrollImage{
     min-width:  300px;
     overflow: hidden;
-    /* height: 450px; */
+    height: 450px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -39,7 +39,7 @@
     border-radius: 10px;
     border: .5px solid rgb(233, 233, 233);
     background-color: white;
-    position: relative;
+    position: relative; 
 }
 /*  CONTAINER SCROLL IMAGE ICON */
 .containerScrollImageIcon{
@@ -94,38 +94,41 @@
         display: none;
     }
     .containerScroll{
-        /* overflow:hidden; */
+        overflow:hidden;
         display: grid;
-        /* flex-flow: column wrap; */
         grid-template-columns: repeat(2, 1fr);
         min-width: none;
         place-items: center;
-        background-color: yellow;
+        background-color: rgb(255, 255, 255);
         align-items: center;
-        height: 500px;
+        height: 520px;
         width: 100%;
+        padding: 0;
     }
     .containerScrollImage{
         min-height: none;
-        background-color: blue;
-        width: 265px;
-        margin: 5px;
-        height: 100%;
+        background-color: rgb(255, 255, 255);
+        min-width: 210px;
+        height: 240px;
+        /* margin: 5px; */
         border: none;
         outline: none;
+        overflow:visible;
     }
     .containerScrollImage img{
-        width: 100%;
-        height: 100%;
+        min-width: 210px;
         object-fit: cover;
+        height: 240px;
         border-radius:10px ;
     } 
     .containerScrollCaption{
         display: none;
     }
 }
-@media screen and (max-width:580px){
+
+@media screen and (max-width:500px) {
     .containerScroll{
         grid-template-columns: repeat(1, 1fr);
+
     }
 }

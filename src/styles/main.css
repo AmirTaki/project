@@ -36,5 +36,12 @@
     flex-flow:  column nowrap;
 }
 .containerScrollCaptionTitle{
-    
+    background-color: yellow;
+    padding: 2px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.containerScrollCaptionBody{
+    background-color: blue;
+    color:gray
 }

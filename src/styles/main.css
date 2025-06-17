@@ -1,3 +1,7 @@
+.scroller-grig-img{
+    display: flex;
+    justify-content: center;
+}
 /* CONTAINER SCROLL  */
 .containerScroll{
     background-color: rgb(255, 255, 255);
@@ -90,9 +94,11 @@
 }
 
 @media screen and (max-width:750px) {
+    /*  CONTAINER SCROLL WEBKIT SCROLLBAR */
     .containerScroll::-webkit-scrollbar{
         display: none;
     }
+    /* CONTAINER SCROOL */
     .containerScroll{
         overflow:hidden;
         display: grid;
@@ -105,28 +111,31 @@
         width: 100%;
         padding: 0;
     }
+    /* CONTAINER SCROLL IMAGE */
     .containerScrollImage{
         min-height: none;
         background-color: rgb(255, 255, 255);
         min-width: 210px;
         height: 240px;
-        /* margin: 5px; */
         border: none;
         outline: none;
         overflow:visible;
     }
+    /* CONTAINER SCROOL IMAGE IMG */
     .containerScrollImage img{
         min-width: 210px;
         object-fit: cover;
         height: 240px;
         border-radius:10px ;
     } 
+    /* CAONTAINER SCROLL CAPTION */
     .containerScrollCaption{
         display: none;
     }
 }
 
 @media screen and (max-width:500px) {
+    /* CONTAINRE SCROLL */
     .containerScroll{
         grid-template-columns: repeat(1, 1fr);
 

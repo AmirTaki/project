@@ -1,0 +1,11 @@
+.containerScroll{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+.containerScrollImage{
+    width: 250px;
+    height: 300px;
+    border: 2px solid green;
+    background-color: blue;
+}

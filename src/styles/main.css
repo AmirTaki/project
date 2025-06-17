@@ -95,9 +95,13 @@
     }
     .containerScroll{
         overflow:visible;
-        display: flex;
-        flex-flow:  column nowrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         width: 100%;
         background-color: yellow;
+    }
+    .containerScrollImage{
+        background-color: blue;
+        width: 150px;
     }
 }

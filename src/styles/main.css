@@ -5,10 +5,10 @@
     flex-flow: row nowrap ;
     overflow-x: scroll;
     margin: 10px;
-    height: 100%;
+    /* height: 100%; */
     padding: 20px;
     padding-bottom:40px ;
-    width: 90%;
+    /* width: 90%; */
 }
 /*  CONTAINER SCROLL WEBKIT SCROLLBAR */
 .containerScroll::-webkit-scrollbar {
@@ -27,7 +27,7 @@
 }
 /*  CONTAINER SCROLL IMAGE */
 .containerScrollImage{
-   min-width:  300px;
+    min-width:  300px;
     overflow: hidden;
     /* height: 450px; */
     display: flex;
@@ -94,30 +94,26 @@
         display: none;
     }
     .containerScroll{
-        overflow:visible;
+        overflow:hidden;
         display: grid;
+        /* flex-flow: column wrap; */
         grid-template-columns: repeat(2, 1fr);
-        /* width: 500px; */
+        min-width: none;
         place-items: center;
         background-color: yellow;
         align-items: center;
+        height: 500px;
     }
     .containerScrollImage{
-        /* background-color: blue; */
-        /* min-width: 150px; */
-        /* height: 100%; */
-        /* height: 300x; */
-        width: 200px;
+        min-height: none;
+        background-color: blue;
+        width: 265px;
         margin: 5px;
         border: none;
         outline: none;
-        display: flex;
     }
     .containerScrollImage img{
-        /* width: 100%; */
-        width: 200px;
-        height: 300px;
-        padding: 5px;
+        width: 265px;
         object-fit: cover;
         border-radius:10px ;
     } 
@@ -125,7 +121,7 @@
         display: none;
     }
 }
-@media screen and (max-width:550px){
+@media screen and (max-width:580px){
     .containerScroll{
         grid-template-columns: repeat(1, 1fr);
     }

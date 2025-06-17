@@ -125,3 +125,8 @@
         display: none;
     }
 }
+@media screen and (max-width:550px){
+    .containerScroll{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

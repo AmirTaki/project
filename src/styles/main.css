@@ -10,7 +10,9 @@
     top : 50%;
     z-index: 2;
     color: red;
-    left : 70px
+    left : 60px;
+    opacity: .2;
+    transition: opacity .5s;
 }
 /* ICON RIGHT SCROLL CONTAINER */
 .iconRigthtScrollImg{
@@ -18,7 +20,13 @@
     top : 50%;
     z-index: 2;
     color: red;
-    right : 70px
+    right : 60px;
+    opacity: .2;
+    transition: opacity .5s;
+}
+.iconLeftScrollImg:hover , .iconRigthtScrollImg:hover {
+    cursor: pointer;
+    opacity: 1;
 }
 /* CONTAINER SCROLL  */
 .containerScroll{
@@ -113,6 +121,10 @@
 }
 
 @media screen and (max-width:750px) {
+    /* ICON RIGHT SCROLL CONTAINER  &&  ICON LEFT SCROLL CONTAINER*/
+    .iconLeftScrollImg, .iconRigthtScrollImg{
+        display: none;
+    }
     /*  CONTAINER SCROLL WEBKIT SCROLLBAR */
     .containerScroll::-webkit-scrollbar{
         display: none;

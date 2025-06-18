@@ -25,9 +25,10 @@ const clickSiderRigth = document.querySelector(".clickSiderRigth")
 const containerSliderImage = document.querySelector(".containerSliderImage")
 const buttonSliderImg = document.querySelectorAll(".itemButtonRow1 .buttonSliderImg")
 const buttonSliderImgRow = document.querySelectorAll(".itemButtonRow2 .buttonSliderImg")
-// 
+
+// CONTAINER SLIDER IMAGE WHEEL
 containerSliderImage.addEventListener("wheel", (e)=>{
-    // e.preventDefault()
+    e.preventDefault()
 })
 // CONTAINER SLIDER IMAGE CLICK SLIDER LEFT
 clickSiderLeft.addEventListener("click", (e)=>{
@@ -39,22 +40,21 @@ clickSiderRigth.addEventListener("click", (e)=>{
     containerSliderImage.style.scrollBehavior = "smooth"
     containerSliderImage.scrollLeft += (window.innerWidth - 195 )   
 })
-// 
+// CHANEG BACK GROUND COLOR BUTON SLIDER IMAEG
 const changeBackGroundColor = (first = null) => {
     buttonSliderImg.forEach(button => {
         button.style.backgroundColor = "rgb(203, 203, 203)"
     });
     if(first)buttonSliderImg[0].style.backgroundColor = "red"
 }
-// 
+// CHANGE BACK GROUND COLOR BUTTON SILIDER IMAGE
 const changeBackGroundColorRow = (first = null) => {
     buttonSliderImgRow.forEach(button => {
         button.style.backgroundColor = "rgb(203, 203, 203)"
     });
     if(first)buttonSliderImgRow[0].style.backgroundColor = "red"
 }
-
-
+// CLICK BUTTON SLIDER IMAGE ROW 1
 for(let i = 0; i < buttonSliderImg.length ; i ++){
     buttonSliderImg[i].addEventListener("click",(e)=>{
         changeBackGroundColor()
@@ -63,19 +63,21 @@ for(let i = 0; i < buttonSliderImg.length ; i ++){
         buttonSliderImg[i].style.backgroundColor = "red"     
     })
 }
-
+// CLICK BUTTON SLIDER IMAGE ROW 2
 for (let i = 0 ; i < buttonSliderImgRow.length ; i++){
     buttonSliderImgRow[i].addEventListener('click',(e)=> {
         changeBackGroundColorRow()
         containerSliderImage.style.scrollBehavior = "smooth"    
-        containerSliderImage.scrollLeft = (i * (window.innerWidth  - 195))   
+        containerSliderImage.scrollLeft = (i * (window.innerWidth - 198.5))   
         buttonSliderImgRow[i].style.backgroundColor = "red"  
     })
 }
+// FUNCTION SCROLL BEHAVIOR CONATINER SLIDER IMAGE
 const scrollBehaviorContainerSliderImage = () => {
    containerSliderImage.style.scrollBehavior = "smooth"
    containerSliderImage.scrollLeft = 0  
 }
+/// RESIZE WINDOW INNDER WIDTH
 window.addEventListener("resize", (e)=> {
     scrollBehaviorContainerSliderImage()
     changeBackGroundColor("first")

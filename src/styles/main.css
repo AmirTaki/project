@@ -338,7 +338,7 @@
     /* CLASIFIER CONTAINER */
     .clasifierContainer{
         grid-template-columns: repeat(1, 1fr);
-        height: 2805px;
+        /* height: 2805px; */
     }
     /* CLASIFIER ITEM */
     .clasifierItem{

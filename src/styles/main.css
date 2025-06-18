@@ -163,9 +163,8 @@
     width: 100%;
     background-color: red;
     display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   /* place-items: center; */
-   overflow: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
 }
 .clasifierItem{
     width: 100%;
@@ -183,8 +182,8 @@
 .clasifierCaption{
     background-color: transparent;
     position: absolute;
-    bottom:8%;
-    left : 3%;
+    bottom:-2%;
+    left : .3%;
     display: flex;
     flex-flow: column nowrap;
     padding: 10px;
@@ -207,6 +206,7 @@
     background-color: wheat;
     padding: 10px;
     margin: 10px;
+    width: 70%;
     border-radius: 4px;
     color: rgb(35, 35, 35);
     transition: color .5s, background-color .5s;
@@ -217,7 +217,7 @@
 }
 .clasifierCaptionIcon{
     background-color: antiquewhite;
-    width: 95%;
+    width: 70%;
     margin: 10px;
     padding: 10px;
     border-radius: 7px;

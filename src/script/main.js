@@ -39,9 +39,15 @@ clickSiderRigth.addEventListener("click", (e)=>{
     containerSliderImage.scrollLeft += (window.innerWidth - 195 )   
 })
 // 
+const changeBackGroundColor = () => {
+    buttonSliderImg.forEach(button => {
+        button.style.backgroundColor = "rgb(203, 203, 203)"
+    });
+}
 
 for(let i = 0; i < buttonSliderImg.length ; i ++){
     buttonSliderImg[i].addEventListener("click",(e)=>{
+        changeBackGroundColor()
         containerSliderImage.style.scrollBehavior = "smooth"
         containerSliderImage.scrollLeft = (i * (window.innerWidth  - 210))  
         buttonSliderImg[i].style.backgroundColor = "red"     

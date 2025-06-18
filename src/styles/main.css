@@ -1,4 +1,4 @@
-/* CONTAINER GRID IMAGE ====> ING */
+/*    =========================================================  CONTAINER GRID IMAGE : IMG   ===================================================== */
 .scroller-grig-img{
     display: flex;
     justify-content: center;
@@ -120,7 +120,7 @@
     background-color: transparent;
     padding: 2px;
 }
-/*   IMAGE SLIDER EFFECTS ===> */
+/*    =========================================================             IMAGE SLIDER EFFECTS     ===================================================== */
 /* BANNER */
 .banner{
     width: 100%;
@@ -158,7 +158,21 @@
     height: 100%
 
 }
+/*  */
+.clasifierContainer{
+    width: 100%;
+    height: 1000px;
+    background-color: red;
+    display: flex;
+}
+.clasifierItem{
+    background-color: blue;
+    width: 50%;
+    height: 50%;
+}
+/*    ========================================================= @media screen maxx-width : 750px  ===================================================== */
 @media screen and (max-width:750px) {
+    /*    =========================================================  CONTAINER GRID IMAGE : IMG   ===================================================== */
     /* ICON RIGHT SCROLL CONTAINER  &&  ICON LEFT SCROLL CONTAINER*/
     .iconLeftScrollImg, .iconRigthtScrollImg{
         display: none;
@@ -202,7 +216,7 @@
         display: none;
     }
 }
-
+/*    ========================================================= @media screen maxx-width : 500px  ===================================================== */
 @media screen and (max-width:500px) {
     /* CONTAINRE SCROLL */
     .containerScroll{

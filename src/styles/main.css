@@ -119,7 +119,16 @@
     background-color: transparent;
     padding: 2px;
 }
-
+/* BANNER */
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+}
+.sliderBanner{
+    width: 200px;
+    height: 250px;
+}
 @media screen and (max-width:750px) {
     /* ICON RIGHT SCROLL CONTAINER  &&  ICON LEFT SCROLL CONTAINER*/
     .iconLeftScrollImg, .iconRigthtScrollImg{

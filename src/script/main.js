@@ -25,15 +25,15 @@ const clickSiderRigth = document.querySelector(".clickSiderRigth")
 const containerSliderImage = document.querySelector(".containerSliderImage")
 // 
 containerSliderImage.addEventListener("wheel", (e)=>{
-    e.preventDefault()
+    // e.preventDefault()
 })
 // CONTAINER SLIDER IMAGE CLICK SLIDER LEFT
 clickSiderLeft.addEventListener("click", (e)=>{
     containerSliderImage.style.scrollBehavior = "smooth"
-    containerSliderImage.scrollLeft -= (window.innerWidth + ()) 
+    containerSliderImage.scrollLeft -= (window.innerWidth ) 
 })
 // CONTAINER SLIDER IMAGE CLICK SLIDER RIGHT
 clickSiderRigth.addEventListener("click", (e)=>{
     containerSliderImage.style.scrollBehavior = "smooth"
-    containerSliderImage.scrollLeft += (window.innerWidth - 18)   
+    containerSliderImage.scrollLeft += (window.innerWidth - 190 )   
 })

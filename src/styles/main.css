@@ -289,13 +289,13 @@
 }
 /* ==================================================  CONTAINER SLIDER IMAGE  =========================================================== */
 .containerSliderImageRoll{
+    padding: 30px 100px;
     position: relative;
     background-color: olivedrab;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    margin: 10px
 }
 .containerSliderImage{
     background-color: transparent; 
@@ -325,9 +325,9 @@
     cursor: pointer;
 } */
 .itemSliderImage{
-    min-width: 32% ;
+    min-width: 32.5% ;
     height: 60%;
-    margin: 1%;
+    margin: .5%;
 }
 .clickSiderLeft{
     position: absolute;

@@ -24,6 +24,7 @@ const clickSiderLeft = document.querySelector(".clickSiderLeft")
 const clickSiderRigth = document.querySelector(".clickSiderRigth")
 const containerSliderImage = document.querySelector(".containerSliderImage")
 const buttonSliderImg = document.querySelectorAll(".itemButtonRow1 .buttonSliderImg")
+const buttonSliderImgRow = document.querySelectorAll(".itemButtonRow2 .buttonSliderImg")
 // 
 containerSliderImage.addEventListener("wheel", (e)=>{
     // e.preventDefault()
@@ -45,6 +46,14 @@ const changeBackGroundColor = (first = null) => {
     });
     if(first)buttonSliderImg[0].style.backgroundColor = "red"
 }
+// 
+const changeBackGroundColorRow = (first = null) => {
+    buttonSliderImgRow.forEach(button => {
+        button.style.backgroundColor = "rgb(203, 203, 203)"
+    });
+    if(first)buttonSliderImgRow[0].style.backgroundColor = "red"
+}
+
 
 for(let i = 0; i < buttonSliderImg.length ; i ++){
     buttonSliderImg[i].addEventListener("click",(e)=>{
@@ -54,6 +63,15 @@ for(let i = 0; i < buttonSliderImg.length ; i ++){
         buttonSliderImg[i].style.backgroundColor = "red"     
     })
 }
+
+for (let i = 0 ; i < buttonSliderImgRow.length ; i++){
+    buttonSliderImgRow[i].addEventListener('click',(e)=> {
+        changeBackGroundColorRow()
+        containerSliderImage.style.scrollBehavior = "smooth"    
+        containerSliderImage.scrollLeft = (i * (window.innerWidth  - 195))   
+        buttonSliderImgRow[i].style.backgroundColor = "red"  
+    })
+}
 const scrollBehaviorContainerSliderImage = () => {
    containerSliderImage.style.scrollBehavior = "smooth"
    containerSliderImage.scrollLeft = 0  
@@ -61,4 +79,5 @@ const scrollBehaviorContainerSliderImage = () => {
 window.addEventListener("resize", (e)=> {
     scrollBehaviorContainerSliderImage()
     changeBackGroundColor("first")
+    changeBackGroundColorRow("first")
 })

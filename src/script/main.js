@@ -23,6 +23,7 @@
 const clickSiderLeft = document.querySelector(".clickSiderLeft")
 const clickSiderRigth = document.querySelector(".clickSiderRigth")
 const containerSliderImage = document.querySelector(".containerSliderImage")
+const buttonSliderImg = document.querySelectorAll(".buttonSliderImg")
 // 
 containerSliderImage.addEventListener("wheel", (e)=>{
     // e.preventDefault()
@@ -36,4 +37,18 @@ clickSiderLeft.addEventListener("click", (e)=>{
 clickSiderRigth.addEventListener("click", (e)=>{
     containerSliderImage.style.scrollBehavior = "smooth"
     containerSliderImage.scrollLeft += (window.innerWidth - 195 )   
+})
+// 
+
+for(let i = 0; i < buttonSliderImg.length ; i ++){
+    buttonSliderImg[i].addEventListener("click",(e)=>{
+        containerSliderImage.style.scrollBehavior = "smooth"
+        containerSliderImage.scrollLeft = (i * (window.innerWidth  - 210))  
+        buttonSliderImg[i].style.backgroundColor = "red"     
+    })
+}
+
+window.addEventListener("resize", (e)=> {
+    containerSliderImage.style.scrollBehavior = "smooth"
+   containerSliderImage.scrollLeft = 0  
 })

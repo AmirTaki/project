@@ -30,10 +30,10 @@ containerSliderImage.addEventListener("wheel", (e)=>{
 // CONTAINER SLIDER IMAGE CLICK SLIDER LEFT
 clickSiderLeft.addEventListener("click", (e)=>{
     containerSliderImage.style.scrollBehavior = "smooth"
-    containerSliderImage.scrollLeft -= (window.innerWidth - 50)
+    containerSliderImage.scrollLeft -= (window.innerWidth + ()) 
 })
 // CONTAINER SLIDER IMAGE CLICK SLIDER RIGHT
 clickSiderRigth.addEventListener("click", (e)=>{
     containerSliderImage.style.scrollBehavior = "smooth"
-    containerSliderImage.scrollLeft += (window.innerWidth - 50)  
+    containerSliderImage.scrollLeft += (window.innerWidth - 18)   
 })

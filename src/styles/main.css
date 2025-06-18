@@ -197,10 +197,11 @@
     width: 150px;
     text-align: center;
     border-radius:4px ;
-    transition: color .5s;
+    transition: color .5s, transform .5s;
 }
 .clasifierCaptionTitle:hover {
     color: black;
+    transform:scale(1.1)
 }
 .clasifierCaptionBody{
     background-color: wheat;
@@ -213,6 +214,36 @@
 .clasifierCaptionBody:hover {
     color: wheat;
     background-color: rgb(35, 35, 35);
+}
+.clasifierCaptionIcon{
+    background-color: antiquewhite;
+    width: 95%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.titleIcon{
+    width: 10%;
+}
+.iconGirdCaption{
+    background-color: red;
+    width: 90%;
+    /* animation: animationTranslateX .5s linear forwards; */
+}
+.clasifierCaptionIcon:hover  .iconGirdCaption{
+   color : blue;
+   animation: animationTranslateX .5s linear forwards ;
+}
+@keyframes animationTranslateX {
+    0%{
+        transform: translateX(0);
+    } 
+    100%{
+        transform: translateX(90%);
+    }  
 }
 
 /*    ========================================================= @media screen maxx-width : 750px  ===================================================== */

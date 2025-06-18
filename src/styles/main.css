@@ -1,3 +1,4 @@
+/* CONTAINER GRID IMAGE ====> ING */
 .scroller-grig-img{
     display: flex;
     justify-content: center;
@@ -119,6 +120,7 @@
     background-color: transparent;
     padding: 2px;
 }
+/*   IMAGE SLIDER EFFECTS ===> */
 /* BANNER */
 .banner{
     width: 100%;

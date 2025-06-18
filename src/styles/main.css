@@ -399,6 +399,9 @@
         min-width: 48% ;        
         height: 60%;
     }
+    .clickSiderLeft , .clickSiderRigth{
+        display: none;
+    }
 }
 
 /*    ========================================================= @media screen maxx-width : 500px  ===================================================== */

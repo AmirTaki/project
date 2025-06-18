@@ -196,11 +196,25 @@
     color:  gray;
     width: 150px;
     text-align: center;
-    border-radius:10px ;
+    border-radius:4px ;
+    transition: color .5s;
 }
 .clasifierCaptionTitle:hover {
     color: black;
 }
+.clasifierCaptionBody{
+    background-color: wheat;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    color: rgb(35, 35, 35);
+    transition: color .5s, background-color .5s;
+}
+.clasifierCaptionBody:hover {
+    color: wheat;
+    background-color: rgb(35, 35, 35);
+}
+
 /*    ========================================================= @media screen maxx-width : 750px  ===================================================== */
 @media screen and (max-width:750px) {
     /*    =========================================================  CONTAINER GRID IMAGE : IMG   ===================================================== */

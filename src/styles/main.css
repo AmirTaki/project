@@ -164,13 +164,17 @@
     height: 100%;
     background-color: red;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+   grid-template-columns: repeat(2, 1fr);
+   /* place-items: center; */
+   overflow: hidden;
 }
 .clasifierItem{
-    background-color: blue;
-
+    width: 100%;
+    height: 100%;
+    padding: .5%;
 }
 .clasifierItem img {
+    object-fit:cover ;
     width: 100%;
     height: 100%;
 }
@@ -221,14 +225,15 @@
     }
     /*  */
     .clasifierContainer{
-      
+        grid-template-columns: repeat(1, 1fr);
+        height: 2805px;
 
     }
     .clasifierItem{
-   
+        height: 700px;
     }
     .clasifierItem img {
-
+        object-fit: cover;
     }
 }
 /*    ========================================================= @media screen maxx-width : 500px  ===================================================== */

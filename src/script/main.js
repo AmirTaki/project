@@ -23,28 +23,13 @@
 const clickSiderLeft = document.querySelector(".clickSiderLeft")
 const clickSiderRigth = document.querySelector(".clickSiderRigth")
 const containerSliderImage = document.querySelector(".containerSliderImage")
-
+// CONTAINER SLIDER IMAGE CLICK SLIDER LEFT
 clickSiderLeft.addEventListener("click", (e)=>{
     containerSliderImage.style.scrollBehavior = "smooth"
-        containerSliderImage.scrollLeft -= 1000
-        console.log(window.innerWidth)
-    // if(window.innerWidth > 800){
-    //     containerSliderImage.scrollLeft -= 1000
-    // }
-    // else {
-    //     containerSliderImage.scrollLeft -= 825
-    // }
-    
+    containerSliderImage.scrollLeft -= (window.innerWidth - 50)
 })
+// CONTAINER SLIDER IMAGE CLICK SLIDER RIGHT
 clickSiderRigth.addEventListener("click", (e)=>{
     containerSliderImage.style.scrollBehavior = "smooth"
-        containerSliderImage.scrollLeft += 1000
-              console.log(window.innerWidth)
-
-    // if(window.innerWidth > 800){
-    //     containerSliderImage.scrollLeft += 1000
-    // }
-    // else {
-    //     containerSliderImage.scrollLeft += 825
-    // }
+    containerSliderImage.scrollLeft += (window.innerWidth - 50)  
 })

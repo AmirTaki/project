@@ -39,22 +39,26 @@ clickSiderRigth.addEventListener("click", (e)=>{
     containerSliderImage.scrollLeft += (window.innerWidth - 195 )   
 })
 // 
-const changeBackGroundColor = () => {
+const changeBackGroundColor = (first = null) => {
     buttonSliderImg.forEach(button => {
         button.style.backgroundColor = "rgb(203, 203, 203)"
     });
+    if(first)buttonSliderImg[0].style.backgroundColor = "red"
 }
 
 for(let i = 0; i < buttonSliderImg.length ; i ++){
     buttonSliderImg[i].addEventListener("click",(e)=>{
         changeBackGroundColor()
         containerSliderImage.style.scrollBehavior = "smooth"
-        containerSliderImage.scrollLeft = (i * (window.innerWidth  - 210))  
+        containerSliderImage.scrollLeft = (i * (window.innerWidth  - 195))  
         buttonSliderImg[i].style.backgroundColor = "red"     
     })
 }
-
-window.addEventListener("resize", (e)=> {
-    containerSliderImage.style.scrollBehavior = "smooth"
+const scrollBehaviorContainerSliderImage = () => {
+   containerSliderImage.style.scrollBehavior = "smooth"
    containerSliderImage.scrollLeft = 0  
+}
+window.addEventListener("resize", (e)=> {
+    scrollBehaviorContainerSliderImage()
+    changeBackGroundColor("first")
 })

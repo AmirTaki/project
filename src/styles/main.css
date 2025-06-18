@@ -295,10 +295,23 @@
     display: flex;
     flex-flow: row nowrap ;
     overflow-x: scroll;
+    position: relative;
 }
 .itemSliderImage{
     min-width: 33.3% ;
     height: 100%;
+}
+.clickSiderLeft{
+    position: absolute;
+    color: aqua;
+    top: 50%;
+    left : 2%;
+}
+.clickSiderRigth{
+    position: absolute;
+    color:aqua;
+    top:50%;
+    right: 2%;
 }
 
 /*    ========================================================= @media screen maxx-width : 750px  ===================================================== */

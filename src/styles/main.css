@@ -290,6 +290,7 @@
 /* ==================================================  CONTAINER SLIDER IMAGE  =========================================================== */
 .containerSliderImageRoll{
     position: relative;
+    margin: 10px
 }
 .containerSliderImage{
     background-color: blue; 
@@ -298,10 +299,12 @@
     display: flex;
     flex-flow: row nowrap ;
     overflow-x: scroll;
+    align-items: center;
 }
 .itemSliderImage{
-    min-width: 33.3% ;
-    height: 100%;
+    min-width: 31% ;
+    height: 60%;
+    margin: 1%;
 }
 .clickSiderLeft{
     position: absolute;
@@ -393,8 +396,8 @@
     }
     /* ==================================================  CONTAINER SLIDER IMAGE  =========================================================== */
     .itemSliderImage{
-        min-width: 50% ;        
-        height: 100%;
+        min-width: 48% ;        
+        height: 60%;
     }
 }
 
@@ -405,7 +408,7 @@
         grid-template-columns: repeat(1, 1fr);
     }
     .itemSliderImage{
-        min-width: 100%;
-        height: 100%;
+        min-width: 98%;
+        height: 60%;
     }
 }

@@ -229,20 +229,30 @@
     width: 10%;
 }
 .iconGirdCaption{
-    background-color: red;
+    background-color: transparent;
     width: 90%;
-    /* animation: animationTranslateX .5s linear forwards; */
 }
 .clasifierCaptionIcon:hover  .iconGirdCaption{
-   color : blue;
    animation: animationTranslateX .5s linear forwards ;
 }
+.clasifierCaptionIcon:not(:hover)  .iconGirdCaption{
+   animation: animationTranslateXReverse .5s linear forwards ;
+}
+
 @keyframes animationTranslateX {
     0%{
         transform: translateX(0);
     } 
     100%{
         transform: translateX(90%);
+    }  
+}
+@keyframes animationTranslateXReverse {
+    0%{
+        transform: translateX(90%);
+    } 
+    100%{
+        transform: translateX(0);
     }  
 }
 

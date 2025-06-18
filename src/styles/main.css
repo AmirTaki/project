@@ -181,13 +181,25 @@
     /* z-index: 1; */
 }
 .clasifierCaption{
-    background-color: white;
+    background-color: transparent;
     position: absolute;
     bottom:8%;
     left : 3%;
     display: flex;
     flex-flow: column nowrap;
     padding: 10px;
+}
+.clasifierCaptionTitle{
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    padding: 5px;
+    color:  gray;
+    width: 150px;
+    text-align: center;
+    border-radius:10px ;
+}
+.clasifierCaptionTitle:hover {
+    color: black;
 }
 /*    ========================================================= @media screen maxx-width : 750px  ===================================================== */
 @media screen and (max-width:750px) {

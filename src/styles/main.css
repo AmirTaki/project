@@ -288,6 +288,9 @@
     cursor: pointer;
 }
 /* ==================================================  CONTAINER SLIDER IMAGE  =========================================================== */
+.containerSliderImageRoll{
+    position: relative;
+}
 .containerSliderImage{
     background-color: blue; 
     width: 100%; 
@@ -295,7 +298,6 @@
     display: flex;
     flex-flow: row nowrap ;
     overflow-x: scroll;
-    position: relative;
 }
 .itemSliderImage{
     min-width: 33.3% ;

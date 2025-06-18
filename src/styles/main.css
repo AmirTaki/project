@@ -134,19 +134,21 @@
     left: calc(50% - 100px);
     transform-style:  preserve-3d;
     transform: perspective(1000px);
-    animation: autoRun 20x linear infinite;
+    animation: autoRun 20s linear infinite;
 }
 @keyframes autoRun {
     from {
-        transform: perspective(1000px) rotateX(-16deg)  rotateY(0deg);
+        transform: perspective(1000px) rotateX(-10deg)  rotateY(0deg);
     }
 
     to {
-        transform: perspective(1000px)  rotateX(-16deg) rotateY(360deg);
+        transform: perspective(1000px)  rotateX(-10deg) rotateY(360deg);
     }
 }
 .itemBanner{
-
+    position: absolute;
+    inset: 0 0 0 0 ;
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
 }
 .itemBanner img {
     width: 100%;

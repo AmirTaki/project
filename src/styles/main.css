@@ -422,11 +422,14 @@
         flex-flow: row nowrap;
     }
     .buttonSliderImg{
-        background-color: blue;
+        background-color: rgb(203, 203, 203);
         width: 30px;
         height: 10px;
         border-radius: 10px;
         margin-right : 20px ;
+    }
+    .buttonSliderImg:hover {
+        cursor: pointer;
     }
 }
 

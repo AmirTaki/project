@@ -419,7 +419,14 @@
     .containerButtonSliderImg{
         background-color: transparent;
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
+    }
+    .itemButtonRow1{
+        display: flex;
+        flex-flow: row nowrap ;
+    }
+    .itemButtonRow2{
+        display:none
     }
     .buttonSliderImg{
         background-color: rgb(203, 203, 203);
@@ -446,19 +453,17 @@
         min-width: 98.5%;
         height: 60%;
     }
-    .containerSliderImage::-webkit-scrollbar {
-        display: block;
-        width : 10px;
+    .itemButtonRow1{
+        display: none  
+    }
+    .itemButtonRow2{
+        display: flex;
+        flex-flow: row nowrap ;
+    }
+    .buttonSliderImg{
+        background-color: rgb(203, 203, 203);
+        width: 20px;
         height: 10px;
         border-radius: 10px;
-        background-color: hsl(0, 0%, 80%);
-    }
-    .containerSliderImage::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background-color: hsl(230, 100%, 38%);
-    }
-    .containerSliderImage::-webkit-scrollbar-thumb:hover {
-        background-color: hsl(0, 0%, 0%);
-        cursor: pointer;
-    }
-}
+        margin-right : 10px ;
+    }}

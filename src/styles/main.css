@@ -305,13 +305,21 @@
     position: absolute;
     color: aqua;
     top: 50%;
+    opacity: .3;
     left : 2%;
+    transition: opacity .5s;
 }
 .clickSiderRigth{
     position: absolute;
     color:aqua;
     top:50%;
     right: 2%;
+    opacity: .3;
+    transition: opacity .5s;
+}
+.clickSiderLeft:hover , .clickSiderRigth:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 
 /*    ========================================================= @media screen maxx-width : 750px  ===================================================== */

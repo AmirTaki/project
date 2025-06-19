@@ -107,10 +107,11 @@ clickRightSlider.addEventListener("click", (e)=> {
     containerSliderImg.scrollLeft += 1130
 })
 
-const changeBackGroundColorButton = (buttons) => {
+const changeBackGroundColorButton = (buttons, option = null, color = null) => {
     buttons.forEach(button => {
         button.style.backgroundColor = "rgb(230, 230, 230)"    
     });
+    if(option) buttons[0].style.backgroundColor = color
 }
 for (let i = 0; i < itembutton.length ; i ++){
     itembutton[i].addEventListener("click", e=>{
@@ -137,4 +138,6 @@ const scrollBehaviorContainerSliderImage = () => {
 }
 window.addEventListener('resize', (e)=>{
     scrollBehaviorContainerSliderImage()
+    changeBackGroundColorButton (itembutton, option = "first", color = "blue")
+    changeBackGroundColorButton (itembuttonclick, option = 'first', color = " rgba(252, 5, 5, 0.655)" )
 })

@@ -27,6 +27,7 @@ const containerSliderImg = document.querySelector('.containerSliderImg')
 const itembutton = document.querySelectorAll(".itembutton")
 const itembuttonclick = document.querySelectorAll(".itembuttonclick")
 
+// CONTAINER SLIDER IMAGE WHEEL
 containerSliderImg.addEventListener("wheel", (e)=>{
     e.preventDefault()
 })
@@ -34,10 +35,12 @@ containerSliderImg.addEventListener("wheel", (e)=>{
 clickLeftSlider.addEventListener("click", (e)=> {
     containerSliderImg.style.scrollBehavior = "smooth"
     containerSliderImg.scrollLeft -= 1130
+    console.log(containerSliderImg.scrollLeft)
 })
 clickRightSlider.addEventListener("click", (e)=> {
     containerSliderImg.style.scrollBehavior = "smooth"
     containerSliderImg.scrollLeft += 1130
+    console.log(containerSliderImg.scrollLeft)
 })
 
 const changeBackGroundColorButton = (buttons, option = null, color = null) => {
@@ -69,6 +72,9 @@ const scrollBehaviorContainerSliderImage = () => {
    containerSliderImg.style.scrollBehavior = "smooth"
    containerSliderImg.scrollLeft = 0  
 }
+
+console.log(containerSliderImg.scrollWidth)
+
 window.addEventListener('resize', (e)=>{
     scrollBehaviorContainerSliderImage()
     changeBackGroundColorButton (itembutton, option = "first", color = "blue")

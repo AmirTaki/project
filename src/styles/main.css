@@ -320,10 +320,11 @@
     align-items: center;
     margin: 10px;
 }
-.itemSliderImage img {
-    /* min-width: 350px; */
-    object-fit: cover;
-    width: 100%
+.itemImageSlider{
+    margin: 10px;
+}
+.itemImageSlider img {
+
 }
 /* CLICK SIDER LEFT */
 .clickSiderLeft{

@@ -412,10 +412,15 @@
         flex-flow: row nowrap;
     }
     .itembuttonclick{
+        margin-top: -40px;
         height: 10px;
-        width: 10px;
-        background-color: rgb(0, 0, 0);
-        margin-right: 10px;  
+        width: 25px;
+        background-color: rgb(230, 230, 230);
+        margin-right: 10px;
+        border-radius: 10px;
+    }
+    .itembuttonclick:nth-child(1){
+        background-color: rgba(12, 187, 24, 0.655);
     }
 }
 

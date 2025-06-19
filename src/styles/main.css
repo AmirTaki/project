@@ -350,8 +350,11 @@
 }
 
 @media screen and (max-width:1300px) {
-    
+    .containerSliderImage{
+        width: 760px;
+    }
 }
+
 
 /*    ========================================================= @media screen maxx-width : 750px  ===================================================== */
 @media screen and (max-width:750px) {

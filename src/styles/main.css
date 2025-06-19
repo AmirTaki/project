@@ -294,6 +294,18 @@
     align-items: center; 
     flex-flow: column nowrap;
     background-color: red;
+    position: relative;
+}
+#clickLeftSlider, #clickRightSlider {
+    position: absolute;
+    background-color: rgb(0, 155, 62);
+    top : 50%;
+}
+#clickLeftSlider{
+    left: 10%
+}
+#clickRightSlider {
+    right: 10%;
 }
 .containerSliderImg{
     background-color: blue;

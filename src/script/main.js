@@ -92,8 +92,8 @@
 
 */
 
-const left =  document.getElementById("#clickLeftSlider")
-const clickRightSlider = document.getElementById("#clickRightSlider")
+const left =  document.getElementById("clickLeftSlider")
+const clickRightSlider = document.getElementById("clickRightSlider")
 const containerSliderImg = document.querySelector('.containerSliderImg')
 const itembutton = document.querySelectorAll(".itembutton")
 const itembuttonclick = document.querySelectorAll(".itembuttonclick")

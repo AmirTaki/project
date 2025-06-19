@@ -293,14 +293,15 @@
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    flex-flow: column nowrap   
+    flex-flow: column nowrap ;
+    position: relative;  
 }
 /* CONATINAER SLIDER IMAGE */
 .containerSliderImage{
     background-color: blue;
     height: 500px;
-    width: 980px;
-    margin: 0 auto;
+    width: 1130px;
+    margin: 100px auto;
     display: flex;
     flex-flow: row nowrap;
     overflow-x: scroll;

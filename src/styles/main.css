@@ -290,7 +290,10 @@
 /* ==================================================  CONTAINER SLIDER IMAGE  =========================================================== */
 /* CONTAINER SLIDER IMAGE ROLL */
 .containerSliderImageRoll{
-    
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-flow: column nowrap   
 }
 /* CONATINAER SLIDER IMAGE */
 .containerSliderImage{
@@ -415,10 +418,7 @@
     /* ==================================================  CONTAINER SLIDER IMAGE  =========================================================== */
     /* ITEM SLIDER IMAGE */
     .itemSliderImage{
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-        flex-flow: column nowrap
+        
     }
     /* CLICK SIDER LEFT & CLICK SIDER RIGHT */
     .clickSiderLeft , .clickSiderRigth{

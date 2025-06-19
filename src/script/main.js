@@ -107,16 +107,26 @@ clickRightSlider.addEventListener("click", (e)=> {
     containerSliderImg.scrollLeft += 1130
 })
 
+const changeBackGroundColorButton = (buttons) => {
+    buttons.forEach(button => {
+        button.style.backgroundColor = "rgb(230, 230, 230)"    
+    });
+}
 for (let i = 0; i < itembutton.length ; i ++){
     itembutton[i].addEventListener("click", e=>{
         containerSliderImg.style.scrollBehavior = "smooth"
         containerSliderImg.scrollLeft = (i * 760 )
+        changeBackGroundColorButton(itembutton)
+        itembutton[i].style.backgroundColor = "blue"
     })
 }
 for (let i = 0; i < itembuttonclick.length; i++){
     itembuttonclick[i].addEventListener("click", e => {
         containerSliderImg.style.scrollBehavior = "smooth"
         containerSliderImg.scrollLeft =  ( i * 390)
+        changeBackGroundColorButton(itembuttonclick)
+        itembuttonclick[i].style.backgroundColor = " rgba(252, 5, 5, 0.655)"
+       
     })
 }
 

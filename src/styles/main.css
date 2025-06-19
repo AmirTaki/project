@@ -294,7 +294,7 @@
     align-items: center; 
     flex-flow: column nowrap
 }
-.container{
+.containerSliderImg{
     background-color: blue;
     height: 500px;
     width: 1130px;
@@ -330,7 +330,7 @@ img {
 
 /* @ MEDIA SCREEN AND MAX - WIDTH 1300 PX */
 @media screen and (max-width:1300px) {
-    .container{
+    .containerSliderImg{
         width: 760px;
     }
     .containerItem {
@@ -357,7 +357,7 @@ img {
 }
 /* @ MEDIA SCREEN AND MAX - WIDTH 930 PX */
 @media screen and (max-width:930px) {
-    .container{
+    .containerSliderImg{
         width: 390px;
     }
     .containerItem, .containeItemtow{

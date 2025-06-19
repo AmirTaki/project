@@ -25,20 +25,24 @@ const clickSiderRigth = document.querySelector(".clickSiderRigth")
 const containerSliderImage = document.querySelector(".containerSliderImage")
 const buttonSliderImg = document.querySelectorAll(".itemButtonRow1 .buttonSliderImg")
 const buttonSliderImgRow = document.querySelectorAll(".itemButtonRow2 .buttonSliderImg")
+const containerSliderImageRoll = document.querySelector(".containerSliderImageRoll")
+containerSliderImage.style.width ="100%"
+console.log(containerSliderImage.style.backgroundColor = "orange")
+
 
 // CONTAINER SLIDER IMAGE WHEEL
 containerSliderImage.addEventListener("wheel", (e)=>{
-    e.preventDefault()
+    // e.preventDefault()
 })
 // CONTAINER SLIDER IMAGE CLICK SLIDER LEFT
 clickSiderLeft.addEventListener("click", (e)=>{
     containerSliderImage.style.scrollBehavior = "smooth"
-    containerSliderImage.scrollLeft -= (window.innerWidth - 545   ) 
+    containerSliderImage.scrollLeft -= window.
 })
 // CONTAINER SLIDER IMAGE CLICK SLIDER RIGHT
 clickSiderRigth.addEventListener("click", (e)=>{
     containerSliderImage.style.scrollBehavior = "smooth"
-    containerSliderImage.scrollLeft += (window.innerWidth  - 545 )   
+    containerSliderImage.scrollLeft += 500
 })
 // CHANEG BACK GROUND COLOR BUTON SLIDER IMAEG
 const changeBackGroundColor = (first = null) => {

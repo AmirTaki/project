@@ -1,4 +1,4 @@
-// CONTAINER SCROLL IMAGE
+/* ==================================================  CLASSIFIEER CONTAINER : GRID IMAGE  =========================================================== */
 // let iconLeftScrollImg = document.querySelector(".iconLeftScrollImg")
 // let iconRigthtScrollImg = document.querySelector(".iconRigthtScrollImg")
 // let containerScroll = document.querySelector(".containerScroll")
@@ -26,7 +26,26 @@ const clickRightSlider = document.getElementById("clickRightSlider")
 const containerSliderImg = document.querySelector('.containerSliderImg')
 const itembutton = document.querySelectorAll(".itembutton")
 const itembuttonclick = document.querySelectorAll(".itembuttonclick")
+const containerItemColumnOne  = document.querySelectorAll(".containerItemColumnOne")
 
+
+const hideShow = () => {
+    if(containerSliderImg.scrollLeft <= 150){
+        clickLeftSlider.style.display = "none"
+    }
+    else {
+        clickLeftSlider.style.display = "block"
+    }
+    // console.log(containerSliderImg.scrollLeft)
+    // console.log(containerSliderImg.scrollWidth)
+    if(containerSliderImg.scrollLeft >= containerSliderImg.scrollWidth - 1330  ){
+        clickRightSlider.style.display = "none"
+    }
+    else {
+        clickRightSlider.style.display = "block"       
+    }
+}
+hideShow()
 // CONTAINER SLIDER IMAGE WHEEL
 containerSliderImg.addEventListener("wheel", (e)=>{
     e.preventDefault()
@@ -35,13 +54,19 @@ containerSliderImg.addEventListener("wheel", (e)=>{
 clickLeftSlider.addEventListener("click", (e)=> {
     containerSliderImg.style.scrollBehavior = "smooth"
     containerSliderImg.scrollLeft -= 1130
-    console.log(containerSliderImg.scrollLeft)
+    setTimeout(()=>{
+        hideShow()
+    }, 500)
 })
 // CLICK RIGHT SLIDER
 clickRightSlider.addEventListener("click", (e)=> {
+
     containerSliderImg.style.scrollBehavior = "smooth"
     containerSliderImg.scrollLeft += 1130
-    console.log(containerSliderImg.scrollLeft)
+    setTimeout(()=>{
+        hideShow()
+    }, 500)
+   
 })
 // FUNCTION CHANGE BACK GRAND COLOR BUTTON
 const changeBackGroundColorButton = (buttons, option = null, color = null) => {
@@ -69,14 +94,12 @@ for (let i = 0; i < itembuttonclick.length; i++){
        
     })
 }
-
 // FUNCTION SCROLL BEHAVIOR CONATINER SLIDER IMAGE
 const scrollBehaviorContainerSliderImage = () => {
    containerSliderImg.style.scrollBehavior = "smooth"
    containerSliderImg.scrollLeft = 0  
 }
 
-console.log(containerSliderImg.scrollWidth)
 // WINDOW RESIZE EVENT LISTENER
 window.addEventListener('resize', (e)=>{
     scrollBehaviorContainerSliderImage()

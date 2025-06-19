@@ -119,3 +119,12 @@ for (let i = 0; i < itembuttonclick.length; i++){
         containerSliderImg.scrollLeft =  ( i * 390)
     })
 }
+
+// FUNCTION SCROLL BEHAVIOR CONATINER SLIDER IMAGE
+const scrollBehaviorContainerSliderImage = () => {
+   containerSliderImg.style.scrollBehavior = "smooth"
+   containerSliderImg.scrollLeft = 0  
+}
+window.addEventListener('resize', (e)=>{
+    scrollBehaviorContainerSliderImage()
+})

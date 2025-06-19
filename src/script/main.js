@@ -94,28 +94,28 @@
 
 const left =  document.getElementById("#left")
 const right = document.getElementById("#right")
-const container = document.querySelector('.container')
+const containerSliderImg = document.querySelector('.containerSliderImg')
 const itembutton = document.querySelectorAll(".itembutton")
 const itembuttonclick = document.querySelectorAll(".itembuttonclick")
 
 left.addEventListener("click", (e)=> {
-container.style.scrollBehavior = "smooth"
-container.scrollLeft -= 1130
+    containerSliderImg.style.scrollBehavior = "smooth"
+    containerSliderImg.scrollLeft -= 1130
 })
 right.addEventListener("click", (e)=> {
-container.style.scrollBehavior = "smooth"
-container.scrollLeft += 1130
+    containerSliderImg.style.scrollBehavior = "smooth"
+    containerSliderImg.scrollLeft += 1130
 })
 
 for (let i = 0; i < itembutton.length ; i ++){
     itembutton[i].addEventListener("click", e=>{
-        container.style.scrollBehavior = "smooth"
-        container.scrollLeft = (i * 760 )
+        containerSliderImg.style.scrollBehavior = "smooth"
+        containerSliderImg.scrollLeft = (i * 760 )
     })
 }
 for (let i = 0; i < itembuttonclick.length; i++){
     itembuttonclick[i].addEventListener("click", e => {
-        container.style.scrollBehavior = "smooth"
-        container.scrollLeft =  ( i * 390)
+        containerSliderImg.style.scrollBehavior = "smooth"
+        containerSliderImg.scrollLeft =  ( i * 390)
     })
 }

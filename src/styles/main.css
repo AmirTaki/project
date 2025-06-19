@@ -288,7 +288,39 @@
     cursor: pointer;
 }
 /* ==================================================  CONTAINER SLIDER IMAGE  =========================================================== */
+.container{
+    background-color: blue;
+    height: 500px;
+    width: 1130px;
+    margin: 100px auto;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: scroll;
+}
+.containerButtonClick{
+    display: none;
+}
 
+.containerItem {
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.containeItemtow, .containerItemThree{
+    display: none;
+}
+
+.item{
+    margin: 10px;
+}
+img {
+    object-fit: cover;
+    width: 350px;
+    height: 300px;
+}
 
 /* @ MEDIA SCREEN AND MAX - WIDTH 1300 PX */
 @media screen and (max-width:1300px) {

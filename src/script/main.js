@@ -28,24 +28,13 @@ const itembutton = document.querySelectorAll(".itembutton")
 const itembuttonclick = document.querySelectorAll(".itembuttonclick")
 const containerItemColumnOne  = document.querySelectorAll(".containerItemColumnOne")
 
-
-const hideShow = () => {
-    if(containerSliderImg.scrollLeft <= 150){
-        clickLeftSlider.style.display = "none"
-    }
-    else {
-        clickLeftSlider.style.display = "block"
-    }
-    // console.log(containerSliderImg.scrollLeft)
-    // console.log(containerSliderImg.scrollWidth)
-    if(containerSliderImg.scrollLeft >= containerSliderImg.scrollWidth - 1330  ){
-        clickRightSlider.style.display = "none"
-    }
-    else {
-        clickRightSlider.style.display = "block"       
-    }
+// HIDEEN SHOW ICON CLICK LEFT RIGHT SLIDER
+const hideShowClickLeftRigth = () => {
+    clickLeftSlider.style.display = containerSliderImg.scrollLeft <= 150 ? "none" : "block"
+    clickRightSlider.style.display = containerSliderImg.scrollLeft >= containerSliderImg.scrollWidth - 1330   ? "none" : "block"
 }
-hideShow()
+hideShowClickLeftRigth()
+
 // CONTAINER SLIDER IMAGE WHEEL
 containerSliderImg.addEventListener("wheel", (e)=>{
     e.preventDefault()
@@ -55,7 +44,7 @@ clickLeftSlider.addEventListener("click", (e)=> {
     containerSliderImg.style.scrollBehavior = "smooth"
     containerSliderImg.scrollLeft -= 1130
     setTimeout(()=>{
-        hideShow()
+        hideShowClickLeftRigth()
     }, 500)
 })
 // CLICK RIGHT SLIDER
@@ -64,7 +53,7 @@ clickRightSlider.addEventListener("click", (e)=> {
     containerSliderImg.style.scrollBehavior = "smooth"
     containerSliderImg.scrollLeft += 1130
     setTimeout(()=>{
-        hideShow()
+        hideShowClickLeftRigth()
     }, 500)
    
 })
@@ -100,9 +89,11 @@ const scrollBehaviorContainerSliderImage = () => {
    containerSliderImg.scrollLeft = 0  
 }
 
+
 // WINDOW RESIZE EVENT LISTENER
 window.addEventListener('resize', (e)=>{
     scrollBehaviorContainerSliderImage()
     changeBackGroundColorButton (itembutton, option = "first", color = "blue")
     changeBackGroundColorButton (itembuttonclick, option = 'first', color = " rgba(252, 5, 5, 0.655)" )
+    hideShowClickLeftRigth()
 })

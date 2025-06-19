@@ -33,12 +33,12 @@ containerSliderImage.addEventListener("wheel", (e)=>{
 // CONTAINER SLIDER IMAGE CLICK SLIDER LEFT
 clickSiderLeft.addEventListener("click", (e)=>{
     containerSliderImage.style.scrollBehavior = "smooth"
-    containerSliderImage.scrollLeft -= (window.innerWidth - 195 ) 
+    containerSliderImage.scrollLeft -= (window.innerWidth - 545   ) 
 })
 // CONTAINER SLIDER IMAGE CLICK SLIDER RIGHT
 clickSiderRigth.addEventListener("click", (e)=>{
     containerSliderImage.style.scrollBehavior = "smooth"
-    containerSliderImage.scrollLeft += (window.innerWidth - 195 )   
+    containerSliderImage.scrollLeft += (window.innerWidth  - 545 )   
 })
 // CHANEG BACK GROUND COLOR BUTON SLIDER IMAEG
 const changeBackGroundColor = (first = null) => {

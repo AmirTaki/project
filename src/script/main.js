@@ -92,17 +92,17 @@
 
 */
 
-const left =  document.getElementById("#left")
-const right = document.getElementById("#right")
+const left =  document.getElementById("#clickLeftSlider")
+const clickRightSlider = document.getElementById("#clickRightSlider")
 const containerSliderImg = document.querySelector('.containerSliderImg')
 const itembutton = document.querySelectorAll(".itembutton")
 const itembuttonclick = document.querySelectorAll(".itembuttonclick")
 
-left.addEventListener("click", (e)=> {
+clickLeftSlider.addEventListener("click", (e)=> {
     containerSliderImg.style.scrollBehavior = "smooth"
     containerSliderImg.scrollLeft -= 1130
 })
-right.addEventListener("click", (e)=> {
+clickRightSlider.addEventListener("click", (e)=> {
     containerSliderImg.style.scrollBehavior = "smooth"
     containerSliderImg.scrollLeft += 1130
 })

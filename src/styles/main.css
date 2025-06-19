@@ -292,7 +292,8 @@
     display: flex;
     justify-content: center; 
     align-items: center; 
-    flex-flow: column nowrap
+    flex-flow: column nowrap;
+    background-color: red;
 }
 .containerSliderImg{
     background-color: blue;

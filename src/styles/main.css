@@ -314,7 +314,7 @@
     cursor: pointer;
 }
 .containerSliderImg{
-    background-color: blue;
+    background-color: transparent;
     height: 500px;
     width: 1130px;
     margin: 100px auto;
@@ -332,7 +332,7 @@
 
 .containerItemColumnOne {
     width: 100%;
-    background-color: red;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -374,7 +374,7 @@
         display: none;
     }
     .containerItemColumnTwo{
-        background-color: yellow;
+        background-color: transparent;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -386,7 +386,7 @@
         flex-flow: row nowrap;
     }
     .itembutton{
-        margin-top: -40px;
+        margin-top: -90px;
         height: 10px;
         width: 25px;
         background-color: rgb(230, 230, 230);
@@ -409,7 +409,7 @@
         display: none;
     }   
     .containerItemColumnThree{
-        background-color: blueviolet;
+        background-color: transparent;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -424,7 +424,7 @@
         flex-flow: row nowrap;
     }
     .itembuttonclick{
-        margin-top: -40px;
+        margin-top: -90px;
         height: 10px;
         width: 25px;
         background-color: rgb(230, 230, 230);

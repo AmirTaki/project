@@ -355,6 +355,12 @@
     }
 }
 
+@media screen and (max-width:930px) {
+    .containerSliderImage{
+        width: 390px;
+    }
+}
+
 
 /*    ========================================================= @media screen maxx-width : 750px  ===================================================== */
 @media screen and (max-width:750px) {

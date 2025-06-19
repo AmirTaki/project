@@ -315,7 +315,7 @@
     align-items: center;
     margin: 10px;
 }
-.containerItemColumnTwo, .containerItemThree{
+.containerItemColumnTwo, .containerItemColumnThree{
     display: none;
 }
 
@@ -363,7 +363,7 @@ img {
     .containerItemColumnOne, .containerItemColumnTwo{
         display: none;
     }   
-    .containerItemThree{
+    .containerItemColumnThree{
         background-color: blueviolet;
         display: flex;
         justify-content: center;

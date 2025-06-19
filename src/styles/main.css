@@ -288,80 +288,15 @@
     cursor: pointer;
 }
 /* ==================================================  CONTAINER SLIDER IMAGE  =========================================================== */
-/* CONTAINER SLIDER IMAGE ROLL */
-.containerSliderImageRoll{
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    flex-flow: column nowrap ;
-    position: relative;  
-}
-/* CONATINAER SLIDER IMAGE */
-.containerSliderImage{
-    background-color: blue;
-    height: 500px;
-    width: 1130px;
-    margin: 100px auto;
-    display: flex;
-    flex-flow: row nowrap;
-    overflow-x: scroll;
-}
 
-/* CONATINAER SLIDER IMAGE :: WEBKIT SCROLLBAR */
-.containerSliderImage::-webkit-scrollbar{
-    display: none;
-}
-/* ITEM SLIDER IAMGE */
-.itemSliderImageColumnOne{
-    width: 100%;
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-}
-.itemImageSlider{
-    margin: 10px;
-}
-.itemImageSlider img {
-    object-fit: cover;
-    width: 350px;
-    height: 300px;
-}
-/* CLICK SIDER LEFT */
-.clickSiderLeft{
-    position: absolute;
-    color: aqua;
-    top: 50%;
-    opacity: .3;
-    left : 2%;
-    transition: opacity .5s;
-}
-/* CLICK SIDER RIGHT  */
-.clickSiderRigth{
-    position: absolute;
-    color:aqua;
-    top:50%;
-    right: 2%;
-    opacity: .3;
-    transition: opacity .5s;
-}
-/* CLICK SIDER LEFT & CLICK SIDER RIGHT :: HOVER */
-.clickSiderLeft:hover , .clickSiderRigth:hover {
-    opacity: 1;
-    cursor: pointer;
-}
 
+/* @ MEDIA SCREEN AND MAX - WIDTH 1300 PX */
 @media screen and (max-width:1300px) {
-    .containerSliderImage{
-        width: 760px;
-    }
+   
 }
-
+/* @ MEDIA SCREEN AND MAX - WIDTH 930 PX */
 @media screen and (max-width:930px) {
-    .containerSliderImage{
-        width: 390px;
-    }
+   
 }
 
 
@@ -432,77 +367,11 @@
     .clasifierCaptionButton{
         width: 60%;
     }
-    /* ==================================================  CONTAINER SLIDER IMAGE  =========================================================== */
-    /* ITEM SLIDER IMAGE */
-    .itemSliderImage{
-        
-    }
-    /* CLICK SIDER LEFT & CLICK SIDER RIGHT */
-    .clickSiderLeft , .clickSiderRigth{
-        display: none;
-    }
-    /*  CONTAINER SCROLL WEBKIT SCROLLBAR */
-    .containerSliderImage::-webkit-scrollbar {
-        display: none;
-    }
-    /* CONTAINER BUTTON SLIDER IMAGE */
-    .containerButtonSliderImg{
-        background-color: transparent;
-        display: flex;
-        flex-flow: column nowrap;
-    }
-    /* ITEM BUTTON ROW 1 */
-    .itemButtonRow1{
-        display: flex;
-        flex-flow: row nowrap ;
-    }
-    /* ITEM BUTTON ROW 2 */
-    .itemButtonRow2{
-        display:none
-    }
-    /* BUTTON SLIDER IMG */
-    .buttonSliderImg{
-        background-color: rgb(203, 203, 203);
-        width: 30px;
-        height: 10px;
-        border-radius: 10px;
-        margin-right : 20px ;
-    }
-    /* BUTTON SLIDER IMG : NTH CHILD */
-    .buttonSliderImg:nth-child(1){
-        background-color: red;
-    }
-    /* BUTTON SLIDER IMG : HOVER */
-    .buttonSliderImg:hover {
-        cursor: pointer;
-    }
 }
-
 /*    ========================================================= @media screen maxx-width : 500px  ===================================================== */
 @media screen and (max-width:500px) {
     /* CONTAINRE SCROLL */
     .containerScroll{
         grid-template-columns: repeat(1, 1fr);
     }
-    /* ITEM SLIDER IMAGE */
-    .itemSliderImage{
-        min-width: 98.5%;
-        height: 60%;
-    }
-    /* ITEM BUTTON ROW 1  */
-    .itemButtonRow1{
-        display: none  
-    }
-    /* ITEM BUTTON ROW 2 */
-    .itemButtonRow2{
-        display: flex;
-        flex-flow: row nowrap ;
-    }
-    /* BUTTON SLIDER IMG */
-    .buttonSliderImg{
-        background-color: rgb(203, 203, 203);
-        width: 20px;
-        height: 10px;
-        border-radius: 10px;
-        margin-right : 10px ;
-    }}
+}

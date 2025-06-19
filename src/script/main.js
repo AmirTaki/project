@@ -92,11 +92,15 @@
 
 */
 
-const left =  document.getElementById("clickLeftSlider")
+const clickLeftSlider =  document.getElementById("clickLeftSlider")
 const clickRightSlider = document.getElementById("clickRightSlider")
 const containerSliderImg = document.querySelector('.containerSliderImg')
 const itembutton = document.querySelectorAll(".itembutton")
 const itembuttonclick = document.querySelectorAll(".itembuttonclick")
+
+containerSliderImg.addEventListener("wheel", (e)=>{
+    e.preventDefault()
+})
 
 clickLeftSlider.addEventListener("click", (e)=> {
     containerSliderImg.style.scrollBehavior = "smooth"

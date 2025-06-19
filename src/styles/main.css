@@ -315,7 +315,7 @@
     align-items: center;
     margin: 10px;
 }
-.containeItemtow, .containerItemThree{
+.containerItemColumnTwo, .containerItemThree{
     display: none;
 }
 
@@ -336,7 +336,7 @@ img {
     .containerItemColumnOne {
         display: none;
     }
-    .containeItemtow{
+    .containerItemColumnTwo{
         background-color: yellow;
         display: flex;
         justify-content: center;
@@ -360,7 +360,7 @@ img {
     .containerSliderImg{
         width: 390px;
     }
-    .containerItem, .containeItemtow{
+    .containerItemColumnOne, .containerItemColumnTwo{
         display: none;
     }   
     .containerItemThree{

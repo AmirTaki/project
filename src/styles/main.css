@@ -322,7 +322,7 @@
 .itemImg{
     margin: 10px;
 }
-img {
+.itemImg img {
     object-fit: cover;
     width: 350px;
     height: 300px;

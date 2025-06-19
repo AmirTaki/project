@@ -307,7 +307,7 @@
     display: none;
 }
 
-.containerItem {
+.containerItemColumnOne {
     width: 100%;
     background-color: red;
     display: flex;
@@ -333,7 +333,7 @@ img {
     .containerSliderImg{
         width: 760px;
     }
-    .containerItem {
+    .containerItemColumnOne {
         display: none;
     }
     .containeItemtow{

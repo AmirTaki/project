@@ -31,24 +31,26 @@ const itembuttonclick = document.querySelectorAll(".itembuttonclick")
 containerSliderImg.addEventListener("wheel", (e)=>{
     e.preventDefault()
 })
-
+// CLICK LEFT SLIDER
 clickLeftSlider.addEventListener("click", (e)=> {
     containerSliderImg.style.scrollBehavior = "smooth"
     containerSliderImg.scrollLeft -= 1130
     console.log(containerSliderImg.scrollLeft)
 })
+// CLICK RIGHT SLIDER
 clickRightSlider.addEventListener("click", (e)=> {
     containerSliderImg.style.scrollBehavior = "smooth"
     containerSliderImg.scrollLeft += 1130
     console.log(containerSliderImg.scrollLeft)
 })
-
+// FUNCTION CHANGE BACK GRAND COLOR BUTTON
 const changeBackGroundColorButton = (buttons, option = null, color = null) => {
     buttons.forEach(button => {
         button.style.backgroundColor = "rgb(230, 230, 230)"    
     });
     if(option) buttons[0].style.backgroundColor = color
 }
+// BUTTON CLCIK CONTAINER
 for (let i = 0; i < itembutton.length ; i ++){
     itembutton[i].addEventListener("click", e=>{
         containerSliderImg.style.scrollBehavior = "smooth"
@@ -57,6 +59,7 @@ for (let i = 0; i < itembutton.length ; i ++){
         itembutton[i].style.backgroundColor = "blue"
     })
 }
+// BUTTON CLICK CONTAINER
 for (let i = 0; i < itembuttonclick.length; i++){
     itembuttonclick[i].addEventListener("click", e => {
         containerSliderImg.style.scrollBehavior = "smooth"
@@ -74,7 +77,7 @@ const scrollBehaviorContainerSliderImage = () => {
 }
 
 console.log(containerSliderImg.scrollWidth)
-
+// WINDOW RESIZE EVENT LISTENER
 window.addEventListener('resize', (e)=>{
     scrollBehaviorContainerSliderImage()
     changeBackGroundColorButton (itembutton, option = "first", color = "blue")

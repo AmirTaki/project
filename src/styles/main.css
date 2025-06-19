@@ -324,7 +324,30 @@ img {
 
 /* @ MEDIA SCREEN AND MAX - WIDTH 1300 PX */
 @media screen and (max-width:1300px) {
-   
+    .container{
+        width: 760px;
+    }
+    .containerItem {
+        display: none;
+    }
+    .containeItemtow{
+        background-color: yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        width: 100%;
+    }
+    .containerButton{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .itembutton{
+        height: 10px;
+        width: 10px;
+        background-color: rgb(0, 0, 0);
+        margin-right: 10px;
+    }
 }
 /* @ MEDIA SCREEN AND MAX - WIDTH 930 PX */
 @media screen and (max-width:930px) {

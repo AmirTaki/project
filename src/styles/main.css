@@ -378,16 +378,19 @@
     overflow-x: scroll;
     flex-flow: column wrap;
 }
+.containerGirdImage::-webkit-scrollbar{
+    display: none;
+}
 .itemGridImage{
-    width: 49%;
+    width: 49.6%;
     height: 97%;
-    margin: .5%;
+    margin: .2%;
     display: flex;
     flex-flow: row wrap;
     overflow: hidden;
 }
 .itemGrid {
-    width: 49%;
+    width: 49.6%;
     height: 50%;
     margin: .2%;
 }

@@ -369,7 +369,18 @@
     width: 350px;
     height: 300px;
 }
-
+/* ================================================== GRID BOX IMAGE  =========================================================== */
+.containerGirdImage{
+    background-color: blue;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.itemGridImage{
+    width: 50%;
+    height: 500px;
+}
 /* @ MEDIA SCREEN AND MAX - WIDTH 1300 PX */
 @media screen and (max-width:1300px) {
     /* CONTAINER SLIDER IMAGE */

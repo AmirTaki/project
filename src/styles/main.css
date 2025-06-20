@@ -381,7 +381,15 @@
 .itemGridImage{
     width: 49%;
     height: 97%;
-    margin: .5%
+    margin: .5%;
+    display: flex;
+    flex-flow: row wrap;
+    overflow: hidden;
+}
+.itemGrid {
+    width: 49%;
+    height: 49%;
+    margin: .5%;
 }
 .itemGridImage img {
     width: 100%;

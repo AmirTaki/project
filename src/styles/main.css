@@ -400,7 +400,7 @@
 }
 .captionGridImg {
     position: absolute;
-    background-color: red;
+    background-color: rgba(219, 219, 219,.1);
     color:white;
     bottom: 1px;
     padding: 10px;

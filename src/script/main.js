@@ -113,7 +113,7 @@ containerGirdImage.addEventListener("wheel",(e)=>{
 //     buttonleft.style.display =  containerGirdImage.scrollLeft  <= window.innerWidth - 500 ? "none" : "block"
 //     buttonRight.style.display = containerGirdImage.scrollLeft  >= containerGirdImage.scrollWidth - window.innerWidth - 400 ? "none":"block"
 // }
-hideViewButtonLeftRigth()
+// hideViewButtonLeftRigth()
 // BUTTON RIGHT
 buttonRight.addEventListener("click",(e)=>{ 
     containerGirdImage.style.scrollBehavior = "smooth"
@@ -125,7 +125,7 @@ buttonRight.addEventListener("click",(e)=>{
 // BUTTON LEFT
 buttonleft.addEventListener("click",(e)=>{
     containerGirdImage.style.scrollBehavior = "smooth"
-    containerGirdImage.scrollLeft -= window.innerWidth
+    containerGirdImage.scrollLeft -= window.innerWidth 
     setTimeout(()=>{
         // hideViewButtonLeftRigth()
     }, 500) 

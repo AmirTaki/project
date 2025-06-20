@@ -371,61 +371,29 @@
 }
 /* ================================================== GRID BOX IMAGE  =========================================================== */
 /* CONTAINER GRID IMAGE */
-.containerGirdImage{
-    background-color: rgb(255, 255, 255);
+
+.container{
     width: 100%;
-    height: 500px;
+    height: 600px;
+    background-color: red;
     display: flex;
-    overflow-x: scroll;
     flex-flow: column wrap;
-    position: relative;
+    overflow-x:scroll ;
+    justify-content: start;
+    align-items: start;
 }
-/* CONTAINER GRID IMAEG WEBKIT SCROLLBAR */
-.containerGirdImage::-webkit-scrollbar{
-    display: none;
+.container::-webkit-scrollbar{
+/* display: none; */
 }
-/* ITEM GRID IMAGE */
-.itemGridImage{
-    width: 49.6%;
-    height: 97%;
-    margin: .2%;
-    display: flex;
-    flex-flow: row wrap;
-    overflow: hidden;
-}
-/* ITEM GRID */
-.itemGrid {
-    width: 49.6%;
-    height: 50%;
-    margin: .2%;
-}
-/* ITEM GRID IMAGE IMAGE */
-.itemGridImage img {
-    width: 100%;
+
+.firstItem{
+    width: 50%;
     height: 100%;
-    object-fit: cover;
+
 }
-/* BUTTON LEFT GIRD IMAGE & BUTTON RIGHT GRID IMAGE */
-#ButtonLeftGridImage , #ButtonRigthGridImage{
-    background-color: wheat;
-    color : blue;
-    position: absolute;
-    top : 40%;
-    opacity: .3;
-    transition: opacity .5s;
-}
-/* BUTTON LEFT GRID IMAGE */
-#ButtonLeftGridImage{
-    left : 4%
-}
-/*  BUTTON RIGHT GRID IMAGE */
-#ButtonRigthGridImage{
-    right: 4%;
-}
-/* BUTTON LEFT & RIGHT GIRD IMAGE : HOVER   */
-#ButtonLeftGridImage:hover , #ButtonRigthGridImage:hover {
-    opacity: 1;
-    cursor: pointer;
+.item{
+    width: 25%;
+    height: 25%;
 }
 
 /* @ MEDIA SCREEN AND MAX - WIDTH 1300 PX */
@@ -586,6 +554,16 @@
     .clasifierCaptionButton{
         width: 60%;
     }
+    /* ================================================== GRID BOX IMAGE  =========================================================== */
+    .firstItem{
+        width: 100%;
+        height: 100%;
+    }
+    .item {
+        width: 100%;
+        height: 100%;
+    }
+
 }
 /*    ========================================================= @media screen maxx-width : 500px  ===================================================== */
 @media screen and (max-width:500px) {

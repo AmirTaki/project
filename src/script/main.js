@@ -109,6 +109,10 @@ buttonRight.addEventListener("click",(e)=>{
     containerGirdImage.scrollLeft += window.innerWidth 
 })
 
+containerGirdImage.addEventListener("wheel",(e)=>[
+    e.preventDefault()
+])
+
 buttonleft.addEventListener("click",(e)=>{
     containerGirdImage.style.scrollBehavior = "smooth"
     containerGirdImage.scrollLeft -= window.innerWidth 

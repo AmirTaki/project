@@ -383,7 +383,7 @@
     align-items: start;
 }
 .containerGirdImage::-webkit-scrollbar{
-display: none;
+    display: none;
 }
 
 .itemGridFirst{
@@ -398,18 +398,18 @@ display: none;
     margin: .5%;
     overflow: hidden;
 }
-.caption {
+.captionGridImg {
     position: absolute;
     background-color: red;
     color:white;
     bottom: 1px;
     padding: 10px;
 }
-.itemGridFirst .caption{
+.itemGridFirst .captionGridImg{
     width: 99%;
     left: .5%
 }
-.itemGridOther .caption{
+.itemGridOther .captionGridImg{
     width: 98%;
     left: 1%;
 }

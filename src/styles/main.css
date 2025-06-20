@@ -380,8 +380,13 @@
 }
 .itemGridImage{
     width: 49%;
-    height: 500px;
+    height: 97%;
     margin: .5%
+}
+.itemGridImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 /* @ MEDIA SCREEN AND MAX - WIDTH 1300 PX */
 @media screen and (max-width:1300px) {

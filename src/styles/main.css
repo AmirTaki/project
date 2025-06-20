@@ -414,9 +414,16 @@
     margin: 1%;
 }
 #ButtonRigthGridImage , #ButtonLeftGridImage{
-    background-color: blue;
+    background-color: transparent;
     position: absolute ;
-    top:50%
+    top:50%;
+    opacity: .2;
+    color:aqua;
+    transition: opacity .5s;
+}
+#ButtonRigthGridImage:hover , #ButtonLeftGridImage:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 #ButtonRigthGridImage{
     right: 3%;

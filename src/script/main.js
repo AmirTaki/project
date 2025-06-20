@@ -109,17 +109,17 @@ containerGirdImage.addEventListener("wheel",(e)=>{
     // e.preventDefault()
 })
 // FUNCTION VIEW BUTTON LEFT RIGTH
-// const hideViewButtonLeftRigth = () => {
-//     buttonleft.style.display =  containerGirdImage.scrollLeft  <= window.innerWidth - 500 ? "none" : "block"
-//     buttonRight.style.display = containerGirdImage.scrollLeft  >= containerGirdImage.scrollWidth - window.innerWidth - 400 ? "none":"block"
-// }
-// hideViewButtonLeftRigth()
+const hideViewButtonLeftRigth = () => {
+    buttonleft.style.display =  containerGirdImage.scrollLeft  <= window.innerWidth - 500 ? "none" : "block"
+    buttonRight.style.display = containerGirdImage.scrollLeft  >= containerGirdImage.scrollWidth - window.innerWidth - 400 ? "none":"block"
+}
+hideViewButtonLeftRigth()
 // BUTTON RIGHT
 buttonRight.addEventListener("click",(e)=>{ 
     containerGirdImage.style.scrollBehavior = "smooth"
     containerGirdImage.scrollLeft += window.innerWidth 
     setTimeout(()=>{
-        // hideViewButtonLeftRigth()
+        hideViewButtonLeftRigth()
     }, 500)
 })
 // BUTTON LEFT
@@ -127,6 +127,6 @@ buttonleft.addEventListener("click",(e)=>{
     containerGirdImage.style.scrollBehavior = "smooth"
     containerGirdImage.scrollLeft -= window.innerWidth 
     setTimeout(()=>{
-        // hideViewButtonLeftRigth()
+        hideViewButtonLeftRigth()
     }, 500) 
 })

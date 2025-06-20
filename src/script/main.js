@@ -109,8 +109,10 @@ containerGirdImage.addEventListener("wheel",(e)=>{
 })
 
 const hideViewButtonLeftRigth = () => {
-    buttonleft.style.display =  containerGirdImage.scrollLeft - 200 <= 100 ? "none" : "block"
+    buttonleft.style.display =  containerGirdImage.scrollLeft  <= window.innerWidth - 500 ? "none" : "block"
+    buttonRight.style.display = containerGirdImage.scrollLeft  >= containerGirdImage.scrollWidth - window.innerWidth - 400 ? "none":"block"
 }
+hideViewButtonLeftRigth()
 
 buttonRight.addEventListener("click",(e)=>{ 
     containerGirdImage.style.scrollBehavior = "smooth"
@@ -134,4 +136,3 @@ buttonleft.addEventListener("click",(e)=>{
     console.log(containerGirdImage.scrollLeft)
     console.log(containerGirdImage.scrollWidth)
 })
-hideViewButtonLeftRigth()

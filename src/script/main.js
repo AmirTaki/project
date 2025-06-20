@@ -99,40 +99,34 @@ window.addEventListener('resize', (e)=>{
     // hideShowClickLeftRigth()
 })
 
-
+/* ================================================== GRID BOX IMAGE  =========================================================== */
 const buttonleft = document.getElementById("ButtonLeftGridImage")
 const buttonRight = document.getElementById("ButtonRigthGridImage")
 const containerGirdImage  = document.querySelector(".containerGirdImage")
 
+// CONTAINER GRID IMAGE : WHELL
 containerGirdImage.addEventListener("wheel",(e)=>{
     e.preventDefault()
 })
-
+// FUNCTION VIEW BUTTON LEFT RIGTH
 const hideViewButtonLeftRigth = () => {
     buttonleft.style.display =  containerGirdImage.scrollLeft  <= window.innerWidth - 500 ? "none" : "block"
     buttonRight.style.display = containerGirdImage.scrollLeft  >= containerGirdImage.scrollWidth - window.innerWidth - 400 ? "none":"block"
 }
 hideViewButtonLeftRigth()
-
+// BUTTON RIGHT
 buttonRight.addEventListener("click",(e)=>{ 
     containerGirdImage.style.scrollBehavior = "smooth"
     containerGirdImage.scrollLeft += window.innerWidth 
     setTimeout(()=>{
         hideViewButtonLeftRigth()
     }, 500)
-    console.log(containerGirdImage.scrollLeft)
-    console.log(containerGirdImage.scrollWidth)
 })
-
-
-
-
+// BUTTON LEFT
 buttonleft.addEventListener("click",(e)=>{
     containerGirdImage.style.scrollBehavior = "smooth"
     containerGirdImage.scrollLeft -= window.innerWidth
     setTimeout(()=>{
         hideViewButtonLeftRigth()
     }, 500) 
-    console.log(containerGirdImage.scrollLeft)
-    console.log(containerGirdImage.scrollWidth)
 })

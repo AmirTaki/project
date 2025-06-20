@@ -370,6 +370,7 @@
     height: 300px;
 }
 /* ================================================== GRID BOX IMAGE  =========================================================== */
+/* CONTAINER GRID IMAGE */
 .containerGirdImage{
     background-color: rgb(255, 255, 255);
     width: 100%;
@@ -379,9 +380,11 @@
     flex-flow: column wrap;
     position: relative;
 }
+/* CONTAINER GRID IMAEG WEBKIT SCROLLBAR */
 .containerGirdImage::-webkit-scrollbar{
     display: none;
 }
+/* ITEM GRID IMAGE */
 .itemGridImage{
     width: 49.6%;
     height: 97%;
@@ -390,16 +393,19 @@
     flex-flow: row wrap;
     overflow: hidden;
 }
+/* ITEM GRID */
 .itemGrid {
     width: 49.6%;
     height: 50%;
     margin: .2%;
 }
+/* ITEM GRID IMAGE IMAGE */
 .itemGridImage img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+/* BUTTON LEFT GIRD IMAGE & BUTTON RIGHT GRID IMAGE */
 #ButtonLeftGridImage , #ButtonRigthGridImage{
     background-color: wheat;
     color : blue;
@@ -408,17 +414,20 @@
     opacity: .3;
     transition: opacity .5s;
 }
+/* BUTTON LEFT GRID IMAGE */
 #ButtonLeftGridImage{
     left : 4%
 }
+/*  BUTTON RIGHT GRID IMAGE */
 #ButtonRigthGridImage{
     right: 4%;
 }
-
+/* BUTTON LEFT & RIGHT GIRD IMAGE : HOVER   */
 #ButtonLeftGridImage:hover , #ButtonRigthGridImage:hover {
     opacity: 1;
     cursor: pointer;
 }
+
 /* @ MEDIA SCREEN AND MAX - WIDTH 1300 PX */
 @media screen and (max-width:1300px) {
     /* CONTAINER SLIDER IMAGE */
@@ -461,6 +470,7 @@
         background-color: blue;
     }
 }
+
 /* @ MEDIA SCREEN AND MAX - WIDTH 930 PX */
 @media screen and (max-width:930px) {
     /* CONTAINER SLIDER IMAGE */

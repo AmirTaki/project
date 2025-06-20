@@ -104,16 +104,34 @@ const buttonleft = document.getElementById("ButtonLeftGridImage")
 const buttonRight = document.getElementById("ButtonRigthGridImage")
 const containerGirdImage  = document.querySelector(".containerGirdImage")
 
-buttonRight.addEventListener("click",(e)=>{
-    containerGirdImage.style.scrollBehavior = "smooth"
-    containerGirdImage.scrollLeft += window.innerWidth 
+containerGirdImage.addEventListener("wheel",(e)=>{
+    e.preventDefault()
 })
 
-containerGirdImage.addEventListener("wheel",(e)=>[
-    e.preventDefault()
-])
+const hideViewButtonLeftRigth = () => {
+    buttonleft.style.display =  containerGirdImage.scrollLeft - 200 <= 100 ? "none" : "block"
+}
+
+buttonRight.addEventListener("click",(e)=>{ 
+    containerGirdImage.style.scrollBehavior = "smooth"
+    containerGirdImage.scrollLeft += window.innerWidth 
+    setTimeout(()=>{
+        hideViewButtonLeftRigth()
+    }, 500)
+    console.log(containerGirdImage.scrollLeft)
+    console.log(containerGirdImage.scrollWidth)
+})
+
+
+
 
 buttonleft.addEventListener("click",(e)=>{
     containerGirdImage.style.scrollBehavior = "smooth"
-    containerGirdImage.scrollLeft -= window.innerWidth 
+    containerGirdImage.scrollLeft -= window.innerWidth
+    setTimeout(()=>{
+        hideViewButtonLeftRigth()
+    }, 500) 
+    console.log(containerGirdImage.scrollLeft)
+    console.log(containerGirdImage.scrollWidth)
 })
+hideViewButtonLeftRigth()

@@ -402,9 +402,11 @@
 }
 .captionGridImg {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: red;
     color:white;
-    bottom: 1px;
+    bottom: 0;
+    width: 100%;
+    left:0;
     padding: 13px;
     display: flex;
     flex-flow: column nowrap;
@@ -621,10 +623,22 @@
         width: 100%;
         height: 100%;
     }
-    .itemGridOther {
+    .itemGridFirst img,     .itemGridOther img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    .itemGridOther{
         width: 100%;
         height: 100%;
     }
+    .itemGridOther .captionGridImg, .itemGridFirst .captionGridImg{
+        width: 100%;
+        left: 0%;
+    }
+    
+    
+
 
 }
 /*    ========================================================= @media screen maxx-width : 500px  ===================================================== */

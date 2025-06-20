@@ -100,16 +100,16 @@ window.addEventListener('resize', (e)=>{
 })
 
 
-const left = document.getElementById("left")
-const right = document.getElementById("right")
+const buttonleft = document.getElementById("ButtonLeftGridImage")
+const buttonRight = document.getElementById("ButtonRigthGridImage")
 const containerGirdImage  = document.querySelector(".containerGirdImage")
 
-right.addEventListener("click",(e)=>{
+buttonRight.addEventListener("click",(e)=>{
     containerGirdImage.style.scrollBehavior = "smooth"
     containerGirdImage.scrollLeft += window.innerWidth 
 })
 
-left.addEventListener("click",(e)=>{
+buttonleft.addEventListener("click",(e)=>{
     containerGirdImage.style.scrollBehavior = "smooth"
     containerGirdImage.scrollLeft -= window.innerWidth 
 })

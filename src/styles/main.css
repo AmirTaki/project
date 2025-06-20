@@ -471,7 +471,9 @@
     height: 98%;
     margin: 1%;
     overflow: hidden;
-
+}
+.containerClickSelect{
+    display: none;
 }
 /* @ MEDIA SCREEN AND MAX - WIDTH 1300 PX */
 @media screen and (max-width:1300px) {
@@ -655,6 +657,24 @@
     }
     #ButtonLeftGridImage , #ButtonRigthGridImage{
         display: none !important;
+    }
+    .containerClickSelect{
+        display: flex;
+        /* justify-content: space-between; */
+        position: absolute;
+        bottom:  20%;
+        left:10%;
+        /* width: 90%; */
+        background-color: blue;
+    }
+    .itemClickSelect{
+        width: 30px;
+        height: 10px;
+        border-radius: 10px;
+        background-color:blue
+    }
+    .itemClickSelect:nth-child(1){
+        background-color: red;
     }
 }
 /*    ========================================================= @media screen maxx-width : 500px  ===================================================== */

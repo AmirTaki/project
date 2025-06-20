@@ -375,11 +375,13 @@
     width: 100%;
     height: 500px;
     display: flex;
-    flex-flow: row nowrap;
+    overflow-x: scroll;
+    flex-flow: column wrap;
 }
 .itemGridImage{
-    width: 50%;
+    width: 49%;
     height: 500px;
+    margin: .5%
 }
 /* @ MEDIA SCREEN AND MAX - WIDTH 1300 PX */
 @media screen and (max-width:1300px) {

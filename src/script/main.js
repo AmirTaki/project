@@ -1,4 +1,4 @@
-/* ==================================================  CLASSIFIEER CONTAINER : GRID IMAGE  =========================================================== */
+// /* ==================================================  CLASSIFIEER CONTAINER : GRID IMAGE  =========================================================== */
 // let iconLeftScrollImg = document.querySelector(".iconLeftScrollImg")
 // let iconRigthtScrollImg = document.querySelector(".iconRigthtScrollImg")
 // let containerScroll = document.querySelector(".containerScroll")
@@ -103,6 +103,7 @@ window.addEventListener('resize', (e)=>{
 const buttonleft = document.getElementById("ButtonLeftGridImage")
 const buttonRight = document.getElementById("ButtonRigthGridImage")
 const containerGirdImage  = document.querySelector(".containerGirdImage")
+const itemClickSelect = document.querySelectorAll(".itemClickSelect")
 
 // CONTAINER GRID IMAGE : WHELL
 containerGirdImage.addEventListener("wheel",(e)=>{
@@ -122,6 +123,20 @@ buttonRight.addEventListener("click",(e)=>{
         hideViewButtonLeftRigth()
     }, 500)
 })
+
+const changeItemClickSelect = () => {
+    itemClickSelect.forEach((item) =>{
+        item.style.backgroundColor = "rgb(163, 163, 163)"
+    } )
+}
+itemClickSelect.forEach((item,index) => {
+    item.addEventListener("click", (e)=>{
+    changeItemClickSelect()
+    item.style.backgroundColor = "blue"
+      containerGirdImage.style.scrollBehavior = "smooth"
+    containerGirdImage.scrollLeft = index * window.innerWidth
+   }) 
+});
 // BUTTON LEFT
 buttonleft.addEventListener("click",(e)=>{
     containerGirdImage.style.scrollBehavior = "smooth"

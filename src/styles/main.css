@@ -663,20 +663,24 @@
         /* justify-content: space-between; */
         position: absolute;
         bottom:  20%;
-        left:10%;
-        /* width: 90%; */
-        background-color: blue;
+        left:15%;
+        border-radius:10px ;
+        background-color: rgb(163, 163, 163);
+        width: 70%
     }
     .itemClickSelect{
-        width: 30px;
+        width: 40px;
         height: 10px;
         border-radius: 10px;
-        background-color:blue
+        background-color:transparent
+     
+     
     }
     .itemClickSelect:nth-child(1){
-        background-color: red;
+        background-color: blue;
     }
 }
+  
 /*    ========================================================= @media screen maxx-width : 500px  ===================================================== */
 @media screen and (max-width:500px) {
     /* CONTAINRE SCROLL */

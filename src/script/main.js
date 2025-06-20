@@ -98,3 +98,18 @@ window.addEventListener('resize', (e)=>{
     // changeBackGroundColorButton (itembuttonclick, option = 'first', color = " rgba(252, 5, 5, 0.655)" )
     // hideShowClickLeftRigth()
 })
+
+
+const left = document.getElementById("left")
+const right = document.getElementById("right")
+const containerGirdImage  = document.querySelector(".containerGirdImage")
+
+right.addEventListener("click",(e)=>{
+    containerGirdImage.style.scrollBehavior = "smooth"
+    containerGirdImage.scrollLeft += window.innerWidth 
+})
+
+left.addEventListener("click",(e)=>{
+    containerGirdImage.style.scrollBehavior = "smooth"
+    containerGirdImage.scrollLeft -= window.innerWidth 
+})

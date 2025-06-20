@@ -403,7 +403,18 @@
     background-color: rgba(219, 219, 219,.1);
     color:white;
     bottom: 1px;
-    padding: 10px;
+    padding: 13px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.titleCpationGridImg{
+    font-size: large;
+    margin: 1%;
+}
+.bodyCaptionGridImg{
+    font-size: medium;
+    margin: 1%;
+    color:gray
 }
 .itemGridFirst .captionGridImg{
     width: 99%;

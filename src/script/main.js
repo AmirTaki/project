@@ -90,14 +90,7 @@
 // }
 
 
-// WINDOW RESIZE EVENT LISTENER
-window.addEventListener('resize', (e)=>{
-   /* ==================================================  CONTAINER SLIDER IMAGE  =========================================================== */
-    // scrollBehaviorContainerSliderImage()
-    // changeBackGroundColorButton (itembutton, option = "first", color = "blue")
-    // changeBackGroundColorButton (itembuttonclick, option = 'first', color = " rgba(252, 5, 5, 0.655)" )
-    // hideShowClickLeftRigth()
-})
+
 
 /* ================================================== GRID BOX IMAGE  =========================================================== */
 const buttonleft = document.getElementById("ButtonLeftGridImage")
@@ -124,10 +117,16 @@ buttonRight.addEventListener("click",(e)=>{
     }, 500)
 })
 
-const changeItemClickSelect = () => {
+const changeItemClickSelect = (optional = null) => {
     itemClickSelect.forEach((item) =>{
         item.style.backgroundColor = "rgb(163, 163, 163)"
     } )
+    if(optional) {
+        itemClickSelect[0].style.backgroundColor = "blue"
+        containerGirdImage.style.scrollBehavior = "smooth"
+        containerGirdImage.scrollLeft = 0; 
+        hideViewButtonLeftRigth()
+    }
 }
 itemClickSelect.forEach((item,index) => {
     item.addEventListener("click", (e)=>{
@@ -144,4 +143,18 @@ buttonleft.addEventListener("click",(e)=>{
     setTimeout(()=>{
         hideViewButtonLeftRigth()
     }, 500) 
+})
+
+
+// WINDOW RESIZE EVENT LISTENER
+window.addEventListener('resize', (e)=>{
+   /* ==================================================  CONTAINER SLIDER IMAGE  =========================================================== */
+    // scrollBehaviorContainerSliderImage()
+    // changeBackGroundColorButton (itembutton, option = "first", color = "blue")
+    // changeBackGroundColorButton (itembuttonclick, option = 'first', color = " rgba(252, 5, 5, 0.655)" )
+    // hideShowClickLeftRigth()
+    /* ================================================== GRID BOX IMAGE  =========================================================== */
+
+    changeItemClickSelect("first")
+
 })

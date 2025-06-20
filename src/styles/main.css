@@ -383,7 +383,7 @@
     align-items: start;
 }
 .containerGirdImage::-webkit-scrollbar{
-/* display: none; */
+display: none;
 }
 
 .itemGridFirst{
@@ -409,17 +409,17 @@
     width: 99%;
     left: .5%
 }
-.item .caption{
+.itemGridOther .caption{
     width: 98%;
     left: 1%;
 }
-.item{
+.itemGridOther{
     width: 25%;
     overflow: hidden;
     height: 50%;
     position: relative;
 }
-.item img {
+.itemGridOther img {
     width: 98%;
     height: 98%;
     margin: 1%;
@@ -589,7 +589,7 @@
         width: 100%;
         height: 100%;
     }
-    .item {
+    .itemGridOther {
         width: 100%;
         height: 100%;
     }

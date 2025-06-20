@@ -370,8 +370,10 @@
     height: 300px;
 }
 /* ================================================== GRID BOX IMAGE  =========================================================== */
+.GirdImageDivest{
+    position: relative;
+}
 /* CONTAINER GRID IMAGE */
-
 .containerGirdImage{
     width: 100%;
     height: 550px;
@@ -400,7 +402,7 @@
 }
 .captionGridImg {
     position: absolute;
-    background-color: rgba(219, 219, 219,.1);
+    background-color: rgba(255, 255, 255, 0.1);
     color:white;
     bottom: 1px;
     padding: 13px;
@@ -410,6 +412,18 @@
 .titleCpationGridImg{
     font-size: large;
     margin: 1%;
+}
+#ButtonRigthGridImage , #ButtonLeftGridImage{
+    background-color: blue;
+    position: absolute ;
+    top:50%
+}
+#ButtonRigthGridImage{
+    right: 3%;
+}
+
+#ButtonLeftGridImage{
+    left:3%
 }
 .bodyCaptionGridImg{
     font-size: medium;

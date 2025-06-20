@@ -405,12 +405,19 @@
     color : blue;
     position: absolute;
     top : 40%;
+    opacity: .3;
+    transition: opacity .5s;
 }
 #ButtonLeftGridImage{
     left : 4%
 }
 #ButtonRigthGridImage{
     right: 4%;
+}
+
+#ButtonLeftGridImage:hover , #ButtonRigthGridImage:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 /* @ MEDIA SCREEN AND MAX - WIDTH 1300 PX */
 @media screen and (max-width:1300px) {

@@ -104,8 +104,10 @@ containerGirdImage.addEventListener("wheel",(e)=>{
 })
 // FUNCTION VIEW BUTTON LEFT RIGTH
 const hideViewButtonLeftRigth = () => {
-    buttonleft.style.display =  containerGirdImage.scrollLeft  <= window.innerWidth - 500 ? "none" : "block"
-    buttonRight.style.display = containerGirdImage.scrollLeft  >= containerGirdImage.scrollWidth - window.innerWidth - 400 ? "none":"block"
+    // buttonleft.style.display =  containerGirdImage.scrollLeft  <= window.innerWidth - 500 ? "none" : "block"
+    // buttonRight.style.display = containerGirdImage.scrollLeft  >= containerGirdImage.scrollWidth - window.innerWidth - 400 ? "none":"block"
+    buttonleft.style.display =  containerGirdImage.scrollLeft  < window.innerWidth  ? "none" : "block"
+    buttonRight.style.display = containerGirdImage.scrollLeft  > containerGirdImage.scrollWidth - window.innerWidth  ? "none":"block"
 }
 hideViewButtonLeftRigth()
 // BUTTON RIGHT
@@ -114,7 +116,8 @@ buttonRight.addEventListener("click",(e)=>{
     containerGirdImage.scrollLeft += window.innerWidth 
     setTimeout(()=>{
         hideViewButtonLeftRigth()
-    }, 500)
+        console.log(window.innerWidth)
+    }, 1000)
 })
 
 const changeItemClickSelect = (optional = null) => {
@@ -142,7 +145,8 @@ buttonleft.addEventListener("click",(e)=>{
     containerGirdImage.scrollLeft -= window.innerWidth 
     setTimeout(()=>{
         hideViewButtonLeftRigth()
-    }, 500) 
+           console.log(window.innerWidth)
+    }, 1000) 
 })
 
 

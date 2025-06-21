@@ -388,10 +388,11 @@
         const containerBox = document.querySelector(".containerBox")
         const itemClick = document.querySelectorAll(".itemClick")
 
-        const changeBackgroundColorItemClick =  () => {
+        const changeBackgroundColorItemClick =  (optional = null) => {
             itemClick.forEach((item)=>{
                 item.style.backgroundColor = "rgb(227, 227, 227)"
             })
+            if(optional) itemClick[0].style.backgroundColor = "red";
         }
         itemClick.forEach((item, index) => {
             item.addEventListener("click", (e)=>{
@@ -429,6 +430,7 @@
         window.addEventListener("resize",(e)=> {
             resizeContainerBox()
             viewHideClickLeftRight()
+            changeBackgroundColorItemClick("optional")
         })
     </script>
     <!-- header -->

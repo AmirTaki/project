@@ -332,36 +332,24 @@
         const right = document.getElementById('right')
         const containerBox = document.querySelector(".containerBox")
         const viewHideClickLeftRight = () => {
-            console.log(Math.round(containerBox.scrollWidth), "scrolWidth")
-            console.log(containerBox.scrollLeft, "scrolleft")
-            console.log(window.innerWidth, 'window innerWidth')
-            if (containerBox.scrollLeft < window.innerWidth){
-                left.style.display = "none"
-            }
-            else {
-                left.style.display = "block"
-            }
-            if(containerBox.scrollLeft >= Math.round(containerBox.scrollWidth) - window.innerWidth  ){
-                right.style.display = "none"
-            }
-            else {
-                right.style.display = "block"
-            }
+            setTimeout(()=> {
+                left.style.display  = containerBox.scrollLeft < window.innerWidth ? "none" : "block"
+                right.style.display = containerBox.scrollLeft >= Math.round(containerBox.scrollWidth) - window.innerWidth  ? "none" : "block"
+            },1000)
+          
         }
         viewHideClickLeftRight()
         left.addEventListener("click", (e)=>{
             containerBox.style.scrollBehavior = "smooth"
             containerBox.scrollLeft -= window.innerWidth 
-            setTimeout(()=>{
-                viewHideClickLeftRight()
-            }, 1000)
+            viewHideClickLeftRight()
+        
         })
         right.addEventListener("click", (e)=>{
             containerBox.style.scrollBehavior = "smooth"
             containerBox.scrollLeft += window.innerWidth 
-            setTimeout(()=>{
-                viewHideClickLeftRight()
-            }, 1000)
+            viewHideClickLeftRight()
+        
         })
         const resizeContainerBox = () => {
             containerBox.style.scrollBehavior = "smooth"

@@ -388,6 +388,9 @@
         const containerBox = document.querySelector(".containerBox")
         const itemClick = document.querySelectorAll(".itemClick")
 
+        containerBox.addEventListener("wheel", (e)=>{
+            e.preventDefault();
+        })
         const changeBackgroundColorItemClick =  (optional = null) => {
             itemClick.forEach((item)=>{
                 item.style.backgroundColor = "rgb(227, 227, 227)"

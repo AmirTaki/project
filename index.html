@@ -39,12 +39,11 @@
             overflow: hidden;
         }
         @media screen and (max-width : 750px) {
-           
             .itemBox:nth-child(1), .itemBox{
-                width: 100%;
-                margin: 0  ;
+                min-width: 100%;
+                margin: 0;
                 height: 100%;
-                overflow: hidden;
+                overflow:auto;
             }
         }
         
@@ -137,7 +136,24 @@
     </div> 
 
     <script>
-        
+        const left = document.getElementById("left")
+        const right = document.getElementById('right')
+        const containerBox = document.querySelector(".containerBox")
+        left.addEventListener("click", (e)=>{
+            containerBox.style.scrollBehavior = "smooth"
+            containerBox.scrollLeft -= window.innerWidth 
+        })
+        right.addEventListener("click", (e)=>{
+            containerBox.style.scrollBehavior = "smooth"
+            containerBox.scrollLeft += window.innerWidth 
+        })
+        const resizeContainerBox = () => {
+            containerBox.style.scrollBehavior = "smooth"
+            containerBox.scrollLeft = 0 
+        }
+        window.addEventListener("resize",(e)=> {
+            resizeContainerBox()
+        })
     </script>
     <!-- header -->
     <!-- <script src = "./src/script/header.js"></script> -->

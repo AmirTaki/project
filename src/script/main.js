@@ -100,7 +100,7 @@ const itemClickSelect = document.querySelectorAll(".itemClickSelect")
 
 // CONTAINER GRID IMAGE : WHELL
 containerGirdImage.addEventListener("wheel",(e)=>{
-    // e.preventDefault()
+    e.preventDefault()
 })
 // FUNCTION VIEW BUTTON LEFT RIGTH
 const hideViewButtonLeftRigth = () => {

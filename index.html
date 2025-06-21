@@ -80,6 +80,9 @@
             cursor: pointer;
             opacity: 1;
         }
+        .containerClick{
+            display: none
+        }
         @media screen and (max-width : 1200px) {
             .itemBox{
                 width: 49.5%;
@@ -96,7 +99,19 @@
                 overflow:auto;
             }
             #left, #right {
-                display: none;
+                display: none !important;
+            }
+            .containerClick{
+                display: flex;
+                position: absolute;
+                bottom: 18%;
+            }
+            .itemClick{
+                width: 15px;
+                height: 10px;
+                border-radius: 10px;
+                background-color: red;
+                margin-right: 5px;
             }
         }
         
@@ -323,6 +338,39 @@
             </div>
             <div id = "left">clickleft</div>
             <div id = "right">clickright</div>
+            <div style="display: flex; justify-content: center; align-items: center; flex-flow: row nowrap;">
+                <div class = "containerClick">
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                    <div class="itemClick"></div>
+                </div>
+            </div>
         </div>
     
     </div> 
@@ -331,6 +379,7 @@
         const left = document.getElementById("left")
         const right = document.getElementById('right')
         const containerBox = document.querySelector(".containerBox")
+        
         const viewHideClickLeftRight = () => {
             setTimeout(()=> {
                 left.style.display  = containerBox.scrollLeft < window.innerWidth ? "none" : "block"

@@ -386,7 +386,21 @@
         const left = document.getElementById("left")
         const right = document.getElementById('right')
         const containerBox = document.querySelector(".containerBox")
-        
+        const itemClick = document.querySelectorAll(".itemClick")
+
+        const changeBackgroundColorItemClick =  () => {
+            itemClick.forEach((item)=>{
+                item.style.backgroundColor = "rgb(227, 227, 227)"
+            })
+        }
+        itemClick.forEach((item, index) => {
+            item.addEventListener("click", (e)=>{
+                containerBox.style.scrollBehavior = "smooth"
+                containerBox.scrollLeft = index * window.innerWidth 
+                changeBackgroundColorItemClick()
+                itemClick[index].style.backgroundColor = "red"
+            })
+        })
         const viewHideClickLeftRight = () => {
             setTimeout(()=> {
                 left.style.display  = containerBox.scrollLeft < window.innerWidth ? "none" : "block"

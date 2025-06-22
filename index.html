@@ -89,6 +89,14 @@
         const containerImageAnimation = document.querySelector(".containerImageAnimation")
         const itemImageAnimation = document.querySelectorAll(".itemImageAnimation")
         const click = document.getElementById("click")
+
+        const sizeContainerImageAnimation = () => {
+            return window.innerWidth <= 750 ? 500 : 600; 
+        }
+        click.addEventListener("click", (e)=>{
+            containerImageAnimation.style.scrollBehavior = "smooth"
+            containerImageAnimation.scrollTop += sizeContainerImageAnimation()
+        })
         const animationMoveImage = () => {
             setTimeout(()=>{
                 itemImageAnimation.forEach((element, index) => {

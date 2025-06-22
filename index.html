@@ -186,6 +186,15 @@
         containerSliderImg.style.scrollBehavior = "smooth"
         containerSliderImg.scrollLeft += selectSizeContainerSliderImg()
        })
+       // FUNCTION SCROLL BEHAVIOR CONATINER SLIDER IMAGE
+        const scrollBehaviorContainerSliderImage = () => {
+        containerSliderImg.style.scrollBehavior = "smooth"
+        containerSliderImg.scrollLeft = 0  
+        }
+
+       window.addEventListener("resize", (e)=>{
+            scrollBehaviorContainerSliderImage()
+       })
     </script>
     <!-- header -->
     <!-- <script src = "./src/script/header.js"></script> -->

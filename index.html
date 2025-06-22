@@ -174,15 +174,11 @@
                 if(window.innerWidth < 750){
                     let columns =  item.querySelectorAll(".itemToMenu")
                     if(checkHeightItemContainer(columns)){
-                        columns.forEach(column => {
-                            column.style.height = 0
-                        });
+                        columnHight(columns, 0)
                     }
                     else{
                         closeItemContaer()
-                        columns.forEach(column => {
-                            column.style.height = 20
-                        });
+                        columnHight(columns, 20)
                     }
                 }
             })

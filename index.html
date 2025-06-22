@@ -98,15 +98,17 @@
             containerImageAnimation.style.scrollBehavior = "smooth"
             containerImageAnimation.scrollTop  = 0
         }
-        click.addEventListener("click", (e)=>{
+
+        const changeImageMoveAnimation = () => {
             containerImageAnimation.style.scrollBehavior = "smooth"
             containerImageAnimation.scrollTop += sizeContainerImageAnimation()
-            console.log(containerImageAnimation.scrollTop)
-            console.log(containerImageAnimation.scrollHeight)
             if(containerImageAnimation.scrollTop  >= containerImageAnimation.scrollHeight - sizeContainerImageAnimation() ){
                 containerImageAnimationResize()
             }
-        })
+        }
+        setInterval(()=>{
+            changeImageMoveAnimation()
+        }, 5000)
         window.addEventListener('resize', (e)=>{
             containerImageAnimationResize()
         })

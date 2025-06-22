@@ -119,6 +119,9 @@
             .itemButtonClickColumnOne:hover {
                 cursor: pointer;
             }
+            .containerButtonClickColumnTwo{
+                display: none;
+            }
         }
         @media screen and (max-width : 500px){
             .containerSliderImg{
@@ -136,6 +139,23 @@
             }
             .containerButtonClickColumnOne{
                 display: none
+            }
+            .containerButtonClickColumnTwo{
+                display: flex;
+                flex-flow: row nowrap;
+            }
+            .itemButtonClickColumnTwo{
+                width: 20px;
+                height: 10px;
+                margin-right: 10px;
+                background-color: rgb(198, 195, 195);
+                border-radius: 10px;
+            }
+            .itemButtonClickColumnTwo:nth-child(1){
+                background-color: red;
+            }
+            .itemButtonClickColumnTwo:hover {
+                cursor: pointer;
             }
         }
     </style>
@@ -228,6 +248,24 @@
                     <div class ="itemButtonClickColumnOne"></div>
                     <div class ="itemButtonClickColumnOne"></div>
                     <div class ="itemButtonClickColumnOne"></div>
+                </div>
+                <div class = "containerButtonClickColumnTwo">
+                <!-- foreach -->
+                    <div class ="itemButtonClickColumnTwo"></div>
+                    <div class ="itemButtonClickColumnTwo"></div>
+                    <div class ="itemButtonClickColumnTwo"></div>
+                    <div class ="itemButtonClickColumnTwo"></div>
+                    <div class ="itemButtonClickColumnTwo"></div>
+                    <div class ="itemButtonClickColumnTwo"></div>
+                    <div class ="itemButtonClickColumnTwo"></div>
+                    <div class ="itemButtonClickColumnTwo"></div>
+                    <div class ="itemButtonClickColumnTwo"></div>
+                    <div class ="itemButtonClickColumnTwo"></div>
+                    <div class ="itemButtonClickColumnTwo"></div>
+                    <div class ="itemButtonClickColumnTwo"></div>
+                    <div class ="itemButtonClickColumnTwo"></div>
+                    <div class ="itemButtonClickColumnTwo"></div>
+                    <div class ="itemButtonClickColumnTwo"></div>
                 </div>
             </div>
            

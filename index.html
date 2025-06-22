@@ -31,7 +31,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: blue;   
+            background-color: rgb(196, 196, 204);   
+            position: relative;
         }
         .containerSliderImg{
             width: 800px;
@@ -61,6 +62,22 @@
             background-color: gray;
             padding: 6px;
             font-size: 15px;
+        }
+        #clickLeftSlider ,#clickRightSlider{
+            position: absolute;
+            top : 50%;
+            opacity: .3;
+            color:aqua
+        } 
+        #clickLeftSlider{
+            left: 7%;
+        }
+        #clickRightSlider{
+            right: 7%;
+        }
+        #clickLeftSlider:hover ,#clickRightSlider:hover{
+            cursor: pointer;
+            opacity: 1;
         }
         @media screen and (max-width : 750px){
             .containerSliderImg{
@@ -157,10 +174,10 @@
                     <div class = "itemCaption">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, rem?</div>
                 </div>
             </div>
-
+            <div id = "clickLeftSlider">left</div>
+            <div id = "clickRightSlider">right</div>
         </div>
-        <div id = "clickLeftSlider">left</div>
-        <div id = "clickRightSlider">right</div>
+        
     </div> 
 
     <script>

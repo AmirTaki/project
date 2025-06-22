@@ -301,10 +301,11 @@
             return 300
        }
 
-       const changeBackGroundColorButton = (list, color) => {
+       const changeBackGroundColorButton = (list, color, bg = null) => {
             list.forEach((item)=>{
                 item.style.backgroundColor = color
             })
+            if(bg){list[0].style.backgroundColor = bg}
        }
         buttonClickOne.forEach((button, index)=>{
             button.addEventListener("click", (e)=>{
@@ -333,6 +334,7 @@
        window.addEventListener("resize", (e)=>{
             scrollBehaviorContainerSliderImage()
             viewHideClickLeftRightSlider()
+            changeBackGroundColorButton(buttonClickOne, "rgb(198, 195, 195)", "blue")
        })
     </script>
     <!-- header -->

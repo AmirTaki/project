@@ -31,34 +31,36 @@
             background-color: beige;
         }
         .menuConatainer{
-            width: 100%;
+            width: 90%;
             background-color: transparent;
             height: 40% ;
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
+            margin: auto;
             overflow: hidden;
             transition: height .5s ;
-            border-bottom: 1px solid gray ;
-          
+            border-bottom: 1px solid gray ;           
         }
         .menuConatainer:hover {
             height: 100%;
         }
         .itemContainer{
             background-color: transparent;
-            /* height: 500px; */
             margin: 0 5%;
             font-size: large;
             color: rgb(78, 78, 78);
         }
         .itemToItemContainer{
+            padding-top: 20px;
             background-color: transparent;
         }
         .itemToMenu{
             color: gray;
+            margin-top: 5px;
             padding:  10px 5px;
             font-size: medium;
+            transition: color .5s,text-decoration .5s ;
         }
         .itemToMenu:hover {
             color:rgb(64, 64, 64);

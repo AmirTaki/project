@@ -11,6 +11,20 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> -->
     <title>Document</title>
     <style>
+        body::-webkit-scrollbar {
+            width : 10px;
+            height: 5px;
+            border-radius: 10px;
+            background-color: hsl(0, 0%, 80%);
+        }
+        body::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: hsl(0, 0%, 27%);
+        }
+        body::-webkit-scrollbar-thumb:hover {
+            background-color: hsl(0, 0%, 0%);
+            cursor: pointer;
+        }
         /* BOX SLIDER */
         .boxSliderProduct{
             position: relative;
@@ -87,6 +101,12 @@
             opacity: 1;
         }
         /* CONTINER CLCIK BOX SLIDER */
+        .boxContainerClickBoxSlider{
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-flow: row nowrap;
+        }
         .containerClickBoxSlider{
             display: none
         }
@@ -135,8 +155,7 @@
                 background-color: red;
             }
         }
-        
-    
+
     </style>
     <!-- 
     
@@ -146,7 +165,7 @@
     C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg
     -->
 </head>
-<body>
+<body style="height: 2000px;">
     <!-- header -->
  
     <!-- main  -->
@@ -154,169 +173,176 @@
         <div class = "boxSliderProduct">
             <div class = "containerBoxSlider">
                 <!-- foreach -->
-                <div class = "itemBoxSlider" style="background-color: red;">
+                <div class = "itemBoxSlider">
                     <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
+                <div class = "itemBoxSlider">
+                    <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
+                    <div class = "captionBoxSlider">
+                        <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
+                        <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
+                    </div>
+                </div>
+                <div class = "itemBoxSlider">
                     <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-pixabay-33545.jpg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
+                <div class = "itemBoxSlider">
                     <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
-                    <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg" alt="">
+                <div class = "itemBoxSlider">
+                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
-                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
+                <div class = "itemBoxSlider">
+                    <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
+                <div class = "itemBoxSlider">
                     <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-pixabay-33545.jpg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
+                <div class = "itemBoxSlider">
                     <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
-                    <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg" alt="">
+                <div class = "itemBoxSlider">
+                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
-                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
+                <div class = "itemBoxSlider">
+                    <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
+                <div class = "itemBoxSlider">
                     <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-pixabay-33545.jpg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
+                <div class = "itemBoxSlider">
                     <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
-                    <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg" alt="">
+                <div class = "itemBoxSlider">
+                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
-                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
+                <div class = "itemBoxSlider">
+                    <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
+                <div class = "itemBoxSlider">
                     <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-pixabay-33545.jpg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
+                <div class = "itemBoxSlider">
                     <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
-                    <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg" alt="">
+                <div class = "itemBoxSlider">
+                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
-                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
+                <div class = "itemBoxSlider">
+                    <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
+                <div class = "itemBoxSlider">
                     <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-pixabay-33545.jpg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
+                <div class = "itemBoxSlider">
                     <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
-                    <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg" alt="">
+                <div class = "itemBoxSlider">
+                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
-                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
+                <div class = "itemBoxSlider">
+                    <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
+                <div class = "itemBoxSlider">
                     <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-pixabay-33545.jpg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
+                <div class = "itemBoxSlider">
                     <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <div class = "itemBoxSlider" style="background-color: red;">
-                    <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg" alt="">
+                <div class = "itemBoxSlider">
+                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
                         <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
@@ -325,19 +351,9 @@
             </div>
             <div id = "leftBoxSlider">clickleft</div>
             <div id = "rightBoxSlider">clickright</div>
-            <div style="display: flex; justify-content: center; align-items: center; flex-flow: row nowrap;">
+            <div class = "boxContainerClickBoxSlider">
                 <div class = "containerClickBoxSlider">
                     <!-- foreach -->
-                    <div class="itemClickBoxSlider"></div>
-                    <div class="itemClickBoxSlider"></div>
-                    <div class="itemClickBoxSlider"></div>
-                    <div class="itemClickBoxSlider"></div>
-                    <div class="itemClickBoxSlider"></div>
-                    <div class="itemClickBoxSlider"></div>
-                    <div class="itemClickBoxSlider"></div>
-                    <div class="itemClickBoxSlider"></div>
-                    <div class="itemClickBoxSlider"></div>
-                    <div class="itemClickBoxSlider"></div>
                     <div class="itemClickBoxSlider"></div>
                 </div>
             </div>
@@ -363,7 +379,7 @@
         itemClick.forEach((item, index) => {
             item.addEventListener("click", (e)=>{
                 containerBox.style.scrollBehavior = "smooth"
-                containerBox.scrollLeft = index * window.innerWidth 
+                containerBox.scrollLeft = index * window.innerWidth - 10
                 changeBackgroundColorItemClick()
                 itemClick[index].style.backgroundColor = "red"
             })
@@ -378,13 +394,13 @@
         viewHideClickLeftRight()
         leftBoxSlider.addEventListener("click", (e)=>{
             containerBox.style.scrollBehavior = "smooth"
-            containerBox.scrollLeft -= window.innerWidth 
+            containerBox.scrollLeft -= window.innerWidth - 10
             viewHideClickLeftRight()
         
         })
         rightBoxSlider.addEventListener("click", (e)=>{
             containerBox.style.scrollBehavior = "smooth"
-            containerBox.scrollLeft += window.innerWidth 
+            containerBox.scrollLeft += window.innerWidth - 10
             viewHideClickLeftRight()
         
         })

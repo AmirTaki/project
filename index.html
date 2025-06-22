@@ -64,11 +64,9 @@
                 overflow: hidden;    
             }
         
-           
             .itemToMenu{
                 height: 0;
                 transition: height .5s;
-             
             } 
             /* .itemContainer:hover .itemToItemContainer div{
                 height: 20px;
@@ -149,11 +147,14 @@
         const itemToItemContainer  = document.querySelectorAll(".itemToItemContainer")
         const itemToMenu = document.querySelectorAll(".itemToMenu")
         const closeItemContaer = () => {
-            
+            itemToMenu.forEach(item => {
+                item.style.height = 0
+            });
         }
         itemContainer.forEach((item, index) => {
             item.addEventListener("click", (e)=>{
                 if(window.innerWidth < 750){
+                    closeItemContaer()
                     let columns =  item.querySelectorAll(".itemToMenu")
                     columns.forEach(column => {
                         column.style.height = 20

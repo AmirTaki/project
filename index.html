@@ -25,6 +25,24 @@
             background-color: hsl(0, 0%, 0%);
             cursor: pointer;
         }
+        
+        .container{
+            width: 100%;
+            background-color: gray;
+            height:450px;
+        }
+        .item{
+            background-color: blue;
+        }
+        .containerItem{
+            background-color: yellow;
+            height: 0;
+            overflow: hidden;
+            transition: height .5s;
+        }
+        /* .item:hover .containerItem{
+            height: 50%;
+        } */
   </style>
     <!-- 
     
@@ -39,7 +57,52 @@
  
     <!-- main  -->
     <div class = "main" style="margin: 50px 0; ">
-       
+       <div class = "container">
+            <div class = "item">
+                <div class = "column">column</div>
+                <div class = "containerItem">
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                </div>
+            </div>
+            <div class = "item">
+                <div class = "column">column</div>
+                <div class = "containerItem">
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                </div>
+            </div>
+            <div class = "item">
+                <div class = "column">column</div>
+                <div class = "containerItem">
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                </div>
+            </div>
+       </div>
       
     </div>  
    
@@ -47,5 +110,33 @@
     <!-- <script src = "./src/script/header.js"></script> -->
     <!-- main -->
     <!-- <script src = "./src/script/main.js"> </script> -->
+     
+    <script>
+        const columns = document.querySelectorAll(".column")
+        const containerItem = document.querySelectorAll(".containerItem")
+
+        const CheckHiehtContainerItem = (index) => {
+           return containerItem[index].style.height === "100%" ? true : false
+        }
+
+        const closeContainerItem = () => {
+            containerItem.forEach(item=>{
+                item.style.height = 0
+            })
+        }
+        columns.forEach((column,index) => {
+            column.addEventListener("click", (e)=>{
+                
+                if(CheckHiehtContainerItem(index)){
+                    closeContainerItem()
+                }
+                else {
+                    closeContainerItem()
+                    containerItem[index].style.height = "100%"
+                }
+                
+            })            
+        });
+    </script>
 </body>
 </html>

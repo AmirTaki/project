@@ -37,7 +37,7 @@
         .containerSliderImg{
             width: 800px;
             height: 50%;
-            background-color: red;
+            background-color: transparent;
             display: flex;
             flex-flow: column  wrap;
             overflow-x: scroll;
@@ -59,7 +59,7 @@
         .itemCaption{
             height: 20%;
             width: 100%;
-            background-color: gray;
+            background-color: rgb(210, 210, 210);
             padding: 6px;
             font-size: 15px;
         }
@@ -280,7 +280,9 @@
        const buttonClickOne = document.querySelectorAll(".itemButtonClickColumnOne")
        const buttonClickTwo = document.querySelectorAll(".itemButtonClickColumnTwo")
        
-       console.log(document.querySelectorAll(".itemImg").length)
+       containerSliderImg.addEventListener("wheel",(e)=>{
+            e.preventDefault()
+       })
     
        const viewHideClickLeftRightSlider = () => {
             setTimeout(()=>{

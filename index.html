@@ -46,7 +46,7 @@
         }
         @media screen and (max-width:750px) {
             .containerImageAnimation{
-                height: 500px;
+                height: 450px;
             }
         }
     </style>
@@ -81,17 +81,19 @@
             </div>
         </div>
 
-        <div id = "click">click</div>
-        
+     
     </div> 
 
    <script>
         const containerImageAnimation = document.querySelector(".containerImageAnimation")
         const itemImageAnimation = document.querySelectorAll(".itemImageAnimation")
-        const click = document.getElementById("click")
+      
+        containerImageAnimation.addEventListener("wheel", (e)=>{
+            e.preventDefault();
+        })
 
         const sizeContainerImageAnimation = () => {
-            return window.innerWidth <= 750 ? 500 : 600; 
+            return window.innerWidth <= 750 ? 450 : 600; 
         }
  
         const containerImageAnimationResize = () => {
@@ -108,7 +110,7 @@
         }
         setInterval(()=>{
             changeImageMoveAnimation()
-        }, 5000)
+        }, 3000)
         window.addEventListener('resize', (e)=>{
             containerImageAnimationResize()
         })

@@ -27,18 +27,20 @@
         }
         .containerMenuMain{
             height: 300px;
-            text-align: center;
+            text-align: left;
             background-color: beige;
         }
         .menuConatainer{
             width: 100%;
             background-color: transparent;
-            height: 20% ;
+            height: 40% ;
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
             overflow: hidden;
             transition: height .5s ;
+            border-bottom: 1px solid gray ;
+          
         }
         .menuConatainer:hover {
             height: 100%;
@@ -51,7 +53,18 @@
             color: rgb(78, 78, 78);
         }
         .itemToItemContainer{
-            background-color: green;
+            background-color: transparent;
+        }
+        .itemToMenu{
+            color: gray;
+            padding:  10px 5px;
+            font-size: medium;
+        }
+        .itemToMenu:hover {
+            color:rgb(64, 64, 64);
+            cursor: pointer;
+            text-decoration: underline;
+            
         }
         @media screen and (max-width : 750px) {
             .containerMenuMain{

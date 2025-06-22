@@ -28,19 +28,33 @@
         .menuConatainer{
             width: 100%;
             background-color: red;
-            height: 500px;
+            height: 4%;
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
+            overflow: hidden;
+            transition: height .5s ;
+        }
+        .menuConatainer:hover {
+            height: 10%;
         }
         .itemContainer{
             background-color: blue;
+            /* height: 500px; */
             margin-right: 10%;
+        }
+        .itemToItemContainer{
+            background-color: green;
+            overflow: hidden;
         }
         @media screen and (max-width : 750px) {
             .menuConatainer{
                 flex-flow: column nowrap;
+                height: auto;
             }   
+            .menuConatainer:hover {
+             height: auto;
+            }
             .itemContainer{
                 background-color: blue;
                 margin-right: 0;
@@ -62,7 +76,20 @@
     <!-- main  -->
     <div class = "main" style="margin: 50px 0; ">
         <div class = "menuConatainer">
-            <div class = "itemContainer">column</div>
+            <div class = "itemContainer">
+                <div>column</div>
+                <div class = "itemToItemContainer">
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                    <div>item</div>
+                </div>
+              
+            </div>
             <div class = "itemContainer">column</div>
             <div class = "itemContainer">column</div>
             <div class = "itemContainer">column</div>

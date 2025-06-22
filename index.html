@@ -28,7 +28,7 @@
         .menuConatainer{
             width: 100%;
             background-color: red;
-            height: 20%;
+            height: 20% ;
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
@@ -45,13 +45,11 @@
         }
         .itemToItemContainer{
             background-color: green;
-            /* overflow: hidden; */
-        
         }
         @media screen and (max-width : 750px) {
             .menuConatainer{
                 flex-flow: column nowrap;
-                height: auto;
+                height: auto ;
                 overflow: hidden;
             }   
             .menuConatainer:hover {
@@ -146,6 +144,19 @@
         const itemContainer = document.querySelectorAll(".itemContainer")
         const itemToItemContainer  = document.querySelectorAll(".itemToItemContainer")
         const itemToMenu = document.querySelectorAll(".itemToMenu")
+        const columnHight = (columns, height) => {
+            columns.forEach(column => {
+                column.style.height = height
+            });
+        }
+        const HieghItemToMenuResize = () => {
+            if (window.innerWidth < 750){
+                columnHight(itemToMenu, 0)
+            }
+            else {
+                columnHight(itemToMenu, "auto")
+            }
+        }
         const closeItemContaer = () => {
             itemToMenu.forEach(item => {
                 item.style.height = 0
@@ -176,6 +187,9 @@
                 }
             })
         });
+        window.addEventListener('resize', (e)=>{
+            HieghItemToMenuResize()
+        })
     </script>
     <!-- header -->
     <!-- <script src = "./src/script/header.js"></script> -->

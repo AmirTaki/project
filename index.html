@@ -28,7 +28,7 @@
         .menuConatainer{
             width: 100%;
             background-color: red;
-            height: 4%;
+            height: 20%;
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
@@ -36,7 +36,7 @@
             transition: height .5s ;
         }
         .menuConatainer:hover {
-            height: 10%;
+            height: 100%;
         }
         .itemContainer{
             background-color: blue;
@@ -75,25 +75,28 @@
  
     <!-- main  -->
     <div class = "main" style="margin: 50px 0; ">
-        <div class = "menuConatainer">
-            <div class = "itemContainer">
-                <div>column</div>
-                <div class = "itemToItemContainer">
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
+        <div style="height: 300px;">
+            <div class = "menuConatainer">
+                <div class = "itemContainer">
+                    <div>column</div>
+                    <div class = "itemToItemContainer">
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                    </div>
+                
                 </div>
-              
+                <div class = "itemContainer">column</div>
+                <div class = "itemContainer">column</div>
+                <div class = "itemContainer">column</div>
             </div>
-            <div class = "itemContainer">column</div>
-            <div class = "itemContainer">column</div>
-            <div class = "itemContainer">column</div>
         </div>
+      
     </div>  
     <script>
 

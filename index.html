@@ -75,21 +75,34 @@
             .menuConatainer{
                 flex-flow: column nowrap;
                 height: auto ;
+                width: 100%;
                 overflow: hidden;
+                border-bottom: none;
             }   
             .menuConatainer:hover {
              height: auto;
             }
             .itemContainer{
-                background-color: blue;
+                background-color: transparent;
                 margin : 0;
+                padding: 10px;
+                padding-bottom: 0;
                 margin-bottom: 1%;    
                 overflow: hidden;    
             }
+            .itemToItemContainer{
+                padding : 10px 0;
+                background-color: transparent;
+            }
         
             .itemToMenu{
+                display: none;
                 height: 0;
+                margin-top: 0;
+                padding:  0;
+                padding-left: 10px;
                 transition: height .5s;
+                background-color: yellow;
             } 
             /* .itemContainer:hover .itemToItemContainer div{
                 height: 20px;
@@ -181,7 +194,7 @@
 
         const checkHeightItemContainer = (items) => {
             for(let i = 0; i < items.length; i ++){
-                if(items[i].style.height === "20px"){
+                if(items[i].style.height === "30px"){
                     return true
                 }
             }   
@@ -196,7 +209,7 @@
                     }
                     else{
                         columnHight(itemToMenu, 0)
-                        columnHight(columns, 20)
+                        columnHight(columns, 30)
                     }
                 }
             })

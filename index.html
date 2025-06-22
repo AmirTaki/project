@@ -31,7 +31,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: rgb(196, 196, 204);   
+            background-color: rgb(255, 255, 255);   
             position: relative;
         }
         .containerSliderImg{
@@ -85,6 +85,8 @@
             align-items: center;
             justify-content: center;
             flex-flow: row nowrap;
+            position: absolute;
+            bottom: 10%;
         }
         @media screen and (max-width : 750px){
             .containerSliderImg{
@@ -100,6 +102,23 @@
             .containerButtonSlider{
                 display: flex;
             }
+            .containerButtonClickColumnOne{
+                display: flex;
+                flex-flow: row nowrap;
+            }
+            .itemButtonClickColumnOne{
+                width: 20px;
+                height: 10px;
+                margin-right: 10px;
+                background-color: rgb(198, 195, 195);
+                border-radius: 10px;
+            }
+            .itemButtonClickColumnOne:nth-child(1){
+                background-color: blue;
+            }
+            .itemButtonClickColumnOne:hover {
+                cursor: pointer;
+            }
         }
         @media screen and (max-width : 500px){
             .containerSliderImg{
@@ -114,6 +133,9 @@
             }
             .containerButtonSlider{
                 display: flex;
+            }
+            .containerButtonClickColumnOne{
+                display: none
             }
         }
     </style>
@@ -197,15 +219,15 @@
             <div id = "clickLeftSlider">left</div>
             <div id = "clickRightSlider">right</div>
             <div class = "containerButtonSlider">
-                <div>
+                <div class = "containerButtonClickColumnOne">
                 <!-- foreach -->
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div class ="itemButtonClickColumnOne"></div>
+                    <div class ="itemButtonClickColumnOne"></div>
+                    <div class ="itemButtonClickColumnOne"></div>
+                    <div class ="itemButtonClickColumnOne"></div>
+                    <div class ="itemButtonClickColumnOne"></div>
+                    <div class ="itemButtonClickColumnOne"></div>
+                    <div class ="itemButtonClickColumnOne"></div>
                 </div>
             </div>
            

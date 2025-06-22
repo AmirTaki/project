@@ -67,7 +67,8 @@
             position: absolute;
             top : 50%;
             opacity: .3;
-            color:aqua
+            color:aqua;
+            transition: opacity .5s;
         } 
         #clickLeftSlider{
             left: 7%;
@@ -87,6 +88,9 @@
                 width: 48%;
                 height: 98%;
             }
+            #clickLeftSlider ,#clickRightSlider{
+                display: none !important;
+            }
         }
         @media screen and (max-width : 500px){
             .containerSliderImg{
@@ -95,6 +99,9 @@
             .itemImg{
                 width: 98%;
                 height: 98%;
+            }
+            #clickLeftSlider ,#clickRightSlider{
+                display: none !important;
             }
         }
     </style>
@@ -184,6 +191,15 @@
        const clickLeftSlider  = document.getElementById("clickLeftSlider")
        const clickRightSlider  = document.getElementById("clickRightSlider")
        const containerSliderImg = document.querySelector('.containerSliderImg')
+
+       const viewHideClickLeftRightSlider = () => {
+            setTimeout(()=>{
+                clickLeftSlider.style.display  = containerSliderImg.scrollLeft < 800 / 2 ? "none" : "block"
+                clickRightSlider.style.display = containerSliderImg.scrollLeft >= Math.round(containerSliderImg.scrollWidth) - window.innerWidth  ? "none" : "block"
+            }, 1000)
+       }
+       viewHideClickLeftRightSlider()
+
        const selectSizeContainerSliderImg = () => {
         if(window.innerWidth > 750){
             return 800
@@ -198,10 +214,12 @@
        clickLeftSlider.addEventListener("click",(e)=> {
         containerSliderImg.style.scrollBehavior = "smooth"
         containerSliderImg.scrollLeft -= selectSizeContainerSliderImg()
+        viewHideClickLeftRightSlider()
        })
        clickRightSlider.addEventListener("click",(e)=> {
         containerSliderImg.style.scrollBehavior = "smooth"
         containerSliderImg.scrollLeft += selectSizeContainerSliderImg()
+        viewHideClickLeftRightSlider()
        })
        // FUNCTION SCROLL BEHAVIOR CONATINER SLIDER IMAGE
         const scrollBehaviorContainerSliderImage = () => {
@@ -211,6 +229,7 @@
 
        window.addEventListener("resize", (e)=>{
             scrollBehaviorContainerSliderImage()
+            viewHideClickLeftRightSlider()
        })
     </script>
     <!-- header -->

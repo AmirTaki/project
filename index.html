@@ -277,8 +277,11 @@
        const clickLeftSlider  = document.getElementById("clickLeftSlider")
        const clickRightSlider  = document.getElementById("clickRightSlider")
        const containerSliderImg = document.querySelector('.containerSliderImg')
-
+       const buttonClickOne = document.querySelectorAll(".itemButtonClickColumnOne")
+       const buttonClickTwo = document.querySelectorAll(".itemButtonClickColumnTwo")
+       
        console.log(document.querySelectorAll(".itemImg").length)
+    
        const viewHideClickLeftRightSlider = () => {
             setTimeout(()=>{
                 clickLeftSlider.style.display  = containerSliderImg.scrollLeft < 800 / 2 ? "none" : "block"
@@ -298,6 +301,19 @@
             return 300
        }
 
+       const changeBackGroundColorButton = (list, color) => {
+            list.forEach((item)=>{
+                item.style.backgroundColor = color
+            })
+       }
+        buttonClickOne.forEach((button, index)=>{
+            button.addEventListener("click", (e)=>{
+                changeBackGroundColorButton(buttonClickOne, "rgb(198, 195, 195)")
+                containerSliderImg.style.scrollBehavior = "smooth"
+                containerSliderImg.scrollLeft = index * selectSizeContainerSliderImg()
+                button.style.backgroundColor = "blue"
+            })
+       })
        clickLeftSlider.addEventListener("click",(e)=> {
         containerSliderImg.style.scrollBehavior = "smooth"
         containerSliderImg.scrollLeft -= selectSizeContainerSliderImg()

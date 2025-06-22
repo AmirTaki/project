@@ -25,9 +25,14 @@
             background-color: hsl(0, 0%, 0%);
             cursor: pointer;
         }
+        .containerMenuMain{
+            height: 300px;
+            text-align: center;
+            background-color: beige;
+        }
         .menuConatainer{
             width: 100%;
-            background-color: red;
+            background-color: transparent;
             height: 20% ;
             display: flex;
             flex-flow: row nowrap;
@@ -39,14 +44,19 @@
             height: 100%;
         }
         .itemContainer{
-            background-color: blue;
+            background-color: transparent;
             /* height: 500px; */
-            margin-right: 10%;
+            margin: 0 5%;
+            font-size: large;
+            color: rgb(78, 78, 78);
         }
         .itemToItemContainer{
             background-color: green;
         }
         @media screen and (max-width : 750px) {
+            .containerMenuMain{
+                text-align: left;
+            }
             .menuConatainer{
                 flex-flow: column nowrap;
                 height: auto ;
@@ -57,7 +67,7 @@
             }
             .itemContainer{
                 background-color: blue;
-                margin-right: 0;
+                margin : 0;
                 margin-bottom: 1%;    
                 overflow: hidden;    
             }
@@ -84,7 +94,7 @@
  
     <!-- main  -->
     <div class = "main" style="margin: 50px 0; ">
-        <div style="height: 300px;">
+        <div class = "containerMenuMain">
             <div class = "menuConatainer">
                 <div class = "itemContainer">
                     <div>column</div>
@@ -161,6 +171,7 @@
                 }
             }   
         }
+
         itemContainer.forEach((item, index) => {
             item.addEventListener("click", (e)=>{
                 if(window.innerWidth < 750){
@@ -172,7 +183,6 @@
                         columnHight(itemToMenu, 0)
                         columnHight(columns, 20)
                     }
-                
                 }
             })
         });

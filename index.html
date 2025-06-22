@@ -144,24 +144,16 @@
         const itemContainer = document.querySelectorAll(".itemContainer")
         const itemToItemContainer  = document.querySelectorAll(".itemToItemContainer")
         const itemToMenu = document.querySelectorAll(".itemToMenu")
+        
         const columnHight = (columns, height) => {
             columns.forEach(column => {
                 column.style.height = height
             });
         }
         const HieghItemToMenuResize = () => {
-            if (window.innerWidth < 750){
-                columnHight(itemToMenu, 0)
-            }
-            else {
-                columnHight(itemToMenu, "auto")
-            }
+            window.innerWidth < 750 ?  columnHight(itemToMenu, 0) : columnHight(itemToMenu, "auto")
         }
-        const closeItemContaer = () => {
-            itemToMenu.forEach(item => {
-                item.style.height = 0
-            });
-        }
+
         const checkHeightItemContainer = (items) => {
             for(let i = 0; i < items.length; i ++){
                 if(items[i].style.height === "20px"){
@@ -177,9 +169,10 @@
                         columnHight(columns, 0)
                     }
                     else{
-                        closeItemContaer()
+                        columnHight(itemToMenu, 0)
                         columnHight(columns, 20)
                     }
+                
                 }
             })
         });

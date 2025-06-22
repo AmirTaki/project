@@ -25,23 +25,44 @@
             background-color: hsl(0, 0%, 0%);
             cursor: pointer;
         }
-        
         .container{
+            background-color: red;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            height: 10%;
+            overflow: hidden;
+
+        }
+        .container:hover{
+            height: 100%;
+        }
+        .item {
+            margin:0 5%;
+        }
+        @media screen and (max-width : 750px) {
+            .container{
+            display: inline;
             width: 100%;
             background-color: gray;
-            height:450px;
+            height: 300px;
+            }
+            .item{
+                margin:0 ;
+                background-color: blue;
+            }
+            .containerItem{
+                background-color: yellow;
+                height: 0;
+                overflow: hidden;
+                transition: height .5s;
+                display: flex;
+                flex-flow: column nowrap;
+            }
         }
-        .item{
-            background-color: blue;
-        }
-        .containerItem{
-            background-color: yellow;
-            height: 0;
-            overflow: hidden;
-            transition: height .5s;
-        }
+    
         /* .item:hover .containerItem{
-            height: 50%;
+            height:100%;
         } */
   </style>
     <!-- 
@@ -57,53 +78,54 @@
  
     <!-- main  -->
     <div class = "main" style="margin: 50px 0; ">
-       <div class = "container">
-            <div class = "item">
-                <div class = "column">column</div>
-                <div class = "containerItem">
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
+        <div>
+            <div class = "container">
+                <div class = "item">
+                    <div class = "column">column</div>
+                    <div class = "containerItem">
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                    </div>
+                </div>
+                <div class = "item">
+                    <div class = "column">column</div>
+                    <div class = "containerItem">
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                    </div>
+                </div>
+                <div class = "item">
+                    <div class = "column">column</div>
+                    <div class = "containerItem">
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                    </div>
                 </div>
             </div>
-            <div class = "item">
-                <div class = "column">column</div>
-                <div class = "containerItem">
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                </div>
-            </div>
-            <div class = "item">
-                <div class = "column">column</div>
-                <div class = "containerItem">
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                    <div>item</div>
-                </div>
-            </div>
-       </div>
-      
+        </div>
     </div>  
    
     <!-- header -->
@@ -124,19 +146,29 @@
                 item.style.height = 0
             })
         }
+
+        const resizeCloseOpenConatinerItem = () => {
+            if(window.innerWidth < 750){
+
+            }
+        }
+
         columns.forEach((column,index) => {
             column.addEventListener("click", (e)=>{
-                
-                if(CheckHiehtContainerItem(index)){
+                if(window.innerWidth < 750){
+                    if(CheckHiehtContainerItem(index)){
                     closeContainerItem()
+                    }
+                    else {
+                        closeContainerItem()
+                        containerItem[index].style.height = "100%"
+                    }
                 }
-                else {
-                    closeContainerItem()
-                    containerItem[index].style.height = "100%"
-                }
-                
             })            
         });
+        window.addEventListener('resize', (e)=> {
+            resizeCloseOpenConatinerItem()
+        })
     </script>
 </body>
 </html>

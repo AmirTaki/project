@@ -97,6 +97,13 @@
             containerImageAnimation.style.scrollBehavior = "smooth"
             containerImageAnimation.scrollTop += sizeContainerImageAnimation()
         })
+        const containerImageAnimationResize = () => {
+            containerImageAnimation.style.scrollBehavior = "smooth"
+            containerImageAnimation.scrollTop  = 0
+        }
+        window.addEventListener('resize', (e)=>{
+            containerImageAnimationResize()
+        })
         const animationMoveImage = () => {
             setTimeout(()=>{
                 itemImageAnimation.forEach((element, index) => {
@@ -107,6 +114,7 @@
             },1000)
         }
         animationMoveImage()
+
    </script>
     <!-- header -->
     <!-- <script src = "./src/script/header.js"></script> -->

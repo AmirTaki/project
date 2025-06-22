@@ -80,11 +80,25 @@
                 <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
             </div>
         </div>
+
+        <div id = "click">click</div>
         
     </div> 
 
    <script>
-
+        const containerImageAnimation = document.querySelector(".containerImageAnimation")
+        const itemImageAnimation = document.querySelectorAll(".itemImageAnimation")
+        const click = document.getElementById("click")
+        const animationMoveImage = () => {
+            setTimeout(()=>{
+                itemImageAnimation.forEach((element, index) => {
+                    itemImageAnimation.style.scrollBehavior = "smooth"
+                    itemImageAnimation.scrollTop = index * itemImageAnimation.scrollTop 
+                });
+                
+            },1000)
+        }
+        animationMoveImage()
    </script>
     <!-- header -->
     <!-- <script src = "./src/script/header.js"></script> -->

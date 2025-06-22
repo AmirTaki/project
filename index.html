@@ -315,6 +315,14 @@
                 button.style.backgroundColor = "blue"
             })
        })
+        buttonClickTwo.forEach((button, index)=>{
+            button.addEventListener("click", (e)=>{
+                changeBackGroundColorButton(buttonClickTwo, "rgb(198, 195, 195)")
+                containerSliderImg.style.scrollBehavior = "smooth"
+                containerSliderImg.scrollLeft = index * selectSizeContainerSliderImg()
+                button.style.backgroundColor = "red"
+            })
+       })
        clickLeftSlider.addEventListener("click",(e)=> {
         containerSliderImg.style.scrollBehavior = "smooth"
         containerSliderImg.scrollLeft -= selectSizeContainerSliderImg()
@@ -335,6 +343,7 @@
             scrollBehaviorContainerSliderImage()
             viewHideClickLeftRightSlider()
             changeBackGroundColorButton(buttonClickOne, "rgb(198, 195, 195)", "blue")
+            changeBackGroundColorButton(buttonClickTwo, "rgb(198, 195, 195)", "red")
        })
     </script>
     <!-- header -->

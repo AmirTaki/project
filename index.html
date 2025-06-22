@@ -29,9 +29,23 @@
             width: 100%;
             background-color: red;
             height: 500px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
         }
         .itemContainer{
             background-color: blue;
+            margin-right: 10%;
+        }
+        @media screen and (max-width : 750px) {
+            .menuConatainer{
+                flex-flow: column nowrap;
+            }   
+            .itemContainer{
+                background-color: blue;
+                margin-right: 0;
+                margin-bottom: 1%;
+        }
         }
     </style>
     <!-- 

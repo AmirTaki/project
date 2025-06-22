@@ -25,7 +25,30 @@
             background-color: hsl(0, 0%, 0%);
             cursor: pointer;
         }
-
+        .containerImageAnimation{
+            background-color: red;
+            width: 100%;
+            height: 600px;
+            overflow-y: scroll;
+        }
+        .containerImageAnimation::-webkit-scrollbar{
+            display: none;
+        }
+        .itemImageAnimation{
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+        }
+        .itemImageAnimation img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media screen and (max-width:750px) {
+            .containerImageAnimation{
+                height: 500px;
+            }
+        }
     </style>
     <!-- 
     
@@ -40,12 +63,28 @@
  
     <!-- main  -->
     <div class = "main" style="margin: 50px 0; ">
-  
+        <div class = "containerImageAnimation">
+            <div class = "itemImageAnimation">
+                <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
+            </div>
+            <div class = "itemImageAnimation">
+                <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
+            </div>
+            <div class = "itemImageAnimation">
+                <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-pixabay-33545.jpg" alt="">
+            </div>
+            <div class = "itemImageAnimation">
+                <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg" alt="">
+            </div>
+            <div class = "itemImageAnimation">
+                <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
+            </div>
+        </div>
         
     </div> 
 
    <script>
-    
+
    </script>
     <!-- header -->
     <!-- <script src = "./src/script/header.js"></script> -->

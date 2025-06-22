@@ -159,13 +159,13 @@
             </div>
 
         </div>
-        <div id = "left">left</div>
-        <div id = "right">right</div>
+        <div id = "clickLeftSlider">left</div>
+        <div id = "clickRightSlider">right</div>
     </div> 
 
     <script>
-       const left  = document.getElementById("left")
-       const right  = document.getElementById("right")
+       const clickLeftSlider  = document.getElementById("clickLeftSlider")
+       const clickRightSlider  = document.getElementById("clickRightSlider")
        const containerSliderImg = document.querySelector('.containerSliderImg')
        const selectSizeContainerSliderImg = () => {
         if(window.innerWidth > 750){
@@ -177,12 +177,12 @@
         else if (window.innerWidth <= 500)
             return 300
        }
-       console.log(containerSliderImg.style.width)
-       left.addEventListener("click",(e)=> {
+
+       clickLeftSlider.addEventListener("click",(e)=> {
         containerSliderImg.style.scrollBehavior = "smooth"
         containerSliderImg.scrollLeft -= selectSizeContainerSliderImg()
        })
-       right.addEventListener("click",(e)=> {
+       clickRightSlider.addEventListener("click",(e)=> {
         containerSliderImg.style.scrollBehavior = "smooth"
         containerSliderImg.scrollLeft += selectSizeContainerSliderImg()
        })

@@ -71,16 +71,20 @@
         @media screen and (max-width : 750px) {
             .containerMenuMain{
                 text-align: left;
+                /* display: flex; */
+                height: auto;
             }
             .menuConatainer{
                 flex-flow: column nowrap;
+                align-items: left   ;
+                justify-content: center;
                 height: auto ;
                 width: 100%;
                 overflow: hidden;
                 border-bottom: none;
             }   
             .menuConatainer:hover {
-             height: auto;
+                height: auto;
             }
             .itemContainer{
                 background-color: transparent;
@@ -88,25 +92,22 @@
                 padding: 10px;
                 padding-bottom: 0;
                 margin-bottom: 1%;    
+                background-color: transparent;
                 overflow: hidden;    
             }
             .itemToItemContainer{
-                padding : 10px 0;
                 background-color: transparent;
             }
         
             .itemToMenu{
-                display: none;
                 height: 0;
                 margin-top: 0;
                 padding:  0;
                 padding-left: 10px;
                 transition: height .5s;
-                background-color: yellow;
+                background-color: transparent;
             } 
-            /* .itemContainer:hover .itemToItemContainer div{
-                height: 20px;
-            } */
+          
         }
     </style>
     <!-- 
@@ -183,10 +184,11 @@
         const itemToItemContainer  = document.querySelectorAll(".itemToItemContainer")
         const itemToMenu = document.querySelectorAll(".itemToMenu")
         
-        const columnHight = (columns, height) => {
+        const columnHight = (columns, height) => {   
             columns.forEach(column => {
-                column.style.height = height
+                column.style.height = height   
             });
+            
         }
         const HieghItemToMenuResize = () => {
             window.innerWidth < 750 ?  columnHight(itemToMenu, 0) : columnHight(itemToMenu, "auto")

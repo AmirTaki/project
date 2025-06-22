@@ -45,12 +45,14 @@
         }
         .itemToItemContainer{
             background-color: green;
-            overflow: hidden;
+            /* overflow: hidden; */
+        
         }
         @media screen and (max-width : 750px) {
             .menuConatainer{
                 flex-flow: column nowrap;
                 height: auto;
+                overflow: hidden;
             }   
             .menuConatainer:hover {
              height: auto;
@@ -58,8 +60,17 @@
             .itemContainer{
                 background-color: blue;
                 margin-right: 0;
-                margin-bottom: 1%;
-        }
+                margin-bottom: 1%;    
+                overflow: hidden;    
+            }
+            .itemToItemContainer div{
+                height: 0;
+                transition: height .5s;
+             
+            }
+            .itemContainer:hover .itemToItemContainer div{
+                height: 20px;
+            }
         }
     </style>
     <!-- 
@@ -91,9 +102,42 @@
                     </div>
                 
                 </div>
-                <div class = "itemContainer">column</div>
-                <div class = "itemContainer">column</div>
-                <div class = "itemContainer">column</div>
+                <div class = "itemContainer">column
+                    <div class = "itemToItemContainer">
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                    </div>
+                </div>
+                <div class = "itemContainer">column
+                    <div class = "itemToItemContainer">
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                    </div>
+                </div>
+                <div class = "itemContainer">column
+                    <div class = "itemToItemContainer">
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                        <div>item</div>
+                    </div>
+                </div>
             </div>
         </div>
       

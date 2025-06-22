@@ -28,7 +28,7 @@
         .containerMenuMain{
             height: 300px;
             text-align: left;
-            background-color: beige;
+            background-color: transparent;
         }
         .menuConatainer{
             width: 90%;
@@ -89,11 +89,12 @@
             .itemContainer{
                 background-color: transparent;
                 margin : 0;
-                padding: 10px;
-                padding-bottom: 0;
-                margin-bottom: 1%;    
+                margin-bottom: 10px;
+                padding: .47% 2%;
                 background-color: transparent;
                 overflow: hidden;    
+                display: flex;
+                flex-flow: column nowrap;
             }
             .itemToItemContainer{
                 background-color: transparent;
@@ -105,6 +106,7 @@
                 padding:  0;
                 padding-left: 10px;
                 transition: height .5s;
+                width: 100%;
                 background-color: transparent;
             } 
           
@@ -126,7 +128,7 @@
         <div class = "containerMenuMain">
             <div class = "menuConatainer">
                 <div class = "itemContainer">
-                    <div>column</div>
+                    <div class = "itemContainerColumn">column</div>
                     <div class = "itemToItemContainer">
                         <div class= "itemToMenu">item</div>
                         <div class= "itemToMenu">item</div>
@@ -139,7 +141,8 @@
                     </div>
                 
                 </div>
-                <div class = "itemContainer">column
+                <div class = "itemContainer">
+                    <div class = "itemContainerColumn">column</div>
                     <div class = "itemToItemContainer">
                         <div class= "itemToMenu">item</div>
                         <div class= "itemToMenu">item</div>
@@ -150,8 +153,10 @@
                         <div class= "itemToMenu">item</div>
                         <div class= "itemToMenu">item</div>
                     </div>
+                
                 </div>
-                <div class = "itemContainer">column
+                <div class = "itemContainer">
+                    <div class = "itemContainerColumn">column</div>
                     <div class = "itemToItemContainer">
                         <div class= "itemToMenu">item</div>
                         <div class= "itemToMenu">item</div>
@@ -162,8 +167,10 @@
                         <div class= "itemToMenu">item</div>
                         <div class= "itemToMenu">item</div>
                     </div>
+                
                 </div>
-                <div class = "itemContainer">column
+                <div class = "itemContainer">
+                    <div class = "itemContainerColumn">column</div>
                     <div class = "itemToItemContainer">
                         <div class= "itemToMenu">item</div>
                         <div class= "itemToMenu">item</div>
@@ -174,12 +181,15 @@
                         <div class= "itemToMenu">item</div>
                         <div class= "itemToMenu">item</div>
                     </div>
+                
                 </div>
+         
             </div>
         </div>
       
     </div>  
     <script>
+        const itemContainerColumn = document.querySelectorAll('.itemContainerColumn')
         const itemContainer = document.querySelectorAll(".itemContainer")
         const itemToItemContainer  = document.querySelectorAll(".itemToItemContainer")
         const itemToMenu = document.querySelectorAll(".itemToMenu")
@@ -202,10 +212,10 @@
             }   
         }
 
-        itemContainer.forEach((item, index) => {
+        itemContainerColumn.forEach((item, index) => {
             item.addEventListener("click", (e)=>{
                 if(window.innerWidth < 750){
-                    let columns =  item.querySelectorAll(".itemToMenu")
+                    let columns =  itemContainer[index].querySelectorAll(".itemToMenu")
                     if(checkHeightItemContainer(columns)){
                         columnHight(columns, 0)
                     }
@@ -213,7 +223,7 @@
                         columnHight(itemToMenu, 0)
                         columnHight(columns, 30)
                     }
-                }
+                }    
             })
         });
         window.addEventListener('resize', (e)=>{

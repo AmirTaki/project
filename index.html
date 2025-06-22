@@ -151,14 +151,28 @@
                 item.style.height = 0
             });
         }
+        const checkHeightItemContainer = (items) => {
+            for(let i = 0; i < items.length; i ++){
+                if(items[i].style.height === "20px"){
+                    return true
+                }
+            }   
+        }
         itemContainer.forEach((item, index) => {
             item.addEventListener("click", (e)=>{
                 if(window.innerWidth < 750){
-                    closeItemContaer()
                     let columns =  item.querySelectorAll(".itemToMenu")
-                    columns.forEach(column => {
-                        column.style.height = 20
-                    });
+                    if(checkHeightItemContainer(columns)){
+                        columns.forEach(column => {
+                            column.style.height = 0
+                        });
+                    }
+                    else{
+                        closeItemContaer()
+                        columns.forEach(column => {
+                            column.style.height = 20
+                        });
+                    }
                 }
             })
         });

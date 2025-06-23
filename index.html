@@ -52,7 +52,7 @@
             justify-content: space-evenly;
             align-items: center;
         }
-        .board-yellow button{
+        .board-yellow-button button{
             padding: 20px;
             height: 50px;
             display: flex;
@@ -65,17 +65,28 @@
             font-size: large;
             box-shadow: 10px 10px 0px rgb(0 ,0, 0);
             transition: color .5s;
+            position: relative;
         }
-        .board-yellow button:hover{
+        .board-yellow-button-i{
+            transition: left 1s;
+        }
+        .board-yellow-button button:hover .board-yellow-button-i{
+            left : 95%
+        }
+        .board-yellow-button button:hover{
             cursor: pointer;
             color:wheat;
         }
+        .board-yellow-button  button i {
+            position: absolute;
+            left : 40%
+        }
         @keyframes moveFlashFooter {
             0%{
-                transform: translateX(0);
+                left : 40%
             }   
             100%{
-                transform: translateX(100%);
+                left : 100%
             }
         }
         @media screen and (max-width:700px) {
@@ -117,8 +128,8 @@
             <div>
                 <h1>JOIN OUR ADICLUB & GET 15% OFF. </h1>
             </div>
-            <div>
-                <button>SIGN UP FOR FREE <i>→</i></button>
+            <div class = "board-yellow-button">
+                <button>SIGN UP FOR FREE <i class = "board-yellow-button-i">→</i></button>
             </div>
         </div>
     </div>

@@ -26,13 +26,15 @@
             cursor: pointer;
         }
         .menuConatainer{
-            background-color: red;
+            background-color: transparent;
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
             height: 10%;
             overflow: hidden;
             transition: height .5s;
+            margin: 15px;
+            border-bottom: 1px solid rgb(224, 220, 220);
 
         }
         .menuConatainer:hover{
@@ -41,16 +43,24 @@
         .itemContainer {
             margin:0 5%;
         }
+        .itemContainerColumn{
+            color: gray;
+            background-color: transparent;
+            font-size: 18px;
+        }
+        
         @media screen and (max-width : 750px) {
             .menuConatainer{
-            display: inline;
-            width: 100%;
-            background-color: gray;
-            height: 100%;
+                display: inline;
+                width: 100%;
+                background-color: transparent;
+                height: 100%;
+                border: none;
+                margin : 0
             }
             .itemContainer{
                 margin:0 ;
-                background-color: blue;
+                background-color: transparent;
             }
             .itemToItem{
                 background-color: yellow;
@@ -59,6 +69,10 @@
                 transition: height .5s;
                 display: flex;
                 flex-flow: column nowrap;
+            }
+            .itemContainerColumn{
+                padding: 10px;
+                background-color: transparent;
             }
         }
     

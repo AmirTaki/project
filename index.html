@@ -33,7 +33,7 @@
             height: 10%;
             overflow: hidden;
             transition: height .5s;
-            margin: 15px;
+            margin: 10px 20px;
             border-bottom: 1px solid rgb(224, 220, 220);
 
         }
@@ -47,6 +47,21 @@
             color: gray;
             background-color: transparent;
             font-size: 18px;
+        }
+        .itemToItem{
+            background-color: blue;
+            padding: 10px 0;
+        }
+        .itemToMenu{
+            color: rgb(172, 172, 172);
+            padding: 10px 1px ;
+            background-color: red;
+            transition: color .5s;
+        }
+        .itemToMenu:hover {
+            color : rgb(88, 88, 88);
+            cursor: pointer;
+            text-decoration: underline;
         }
         
         @media screen and (max-width : 750px) {
@@ -96,16 +111,17 @@
 
         <div class = "containerMenuMain" style="height:500px">
             <div class = "menuConatainer">
+          
                 <!-- foreach -->
                 <div class = "itemContainer">
                     <div class = "itemContainerColumn">column</div>
                     <div class = "itemToItem">
                         <!-- foreach -->
-                        <div>item</div>
-                        <div>item</div>
-                        <div>item</div>
-                        <div>item</div>
-                        <div>item</div>
+                        <div class= "itemToMenu">item</div>
+                        <div class= "itemToMenu">item</div>
+                        <div class= "itemToMenu">item</div>
+                        <div class= "itemToMenu">item</div>
+                        <div class= "itemToMenu">item</div>
                     </div>
                 </div>
                 <!-- foreach -->
@@ -113,11 +129,11 @@
                     <div class = "itemContainerColumn">column</div>
                     <div class = "itemToItem">
                         <!-- foreach -->
-                        <div>item</div>
-                        <div>item</div>
-                        <div>item</div>
-                        <div>item</div>
-                        <div>item</div>
+                        <div class= "itemToMenu">item</div>
+                        <div class= "itemToMenu">item</div>
+                        <div class= "itemToMenu">item</div>
+                        <div class= "itemToMenu">item</div>
+                        <div class= "itemToMenu">item</div>
                     </div>
                 </div>
                 <!-- foreach -->
@@ -125,13 +141,14 @@
                     <div class = "itemContainerColumn">column</div>
                     <div class = "itemToItem">
                         <!-- foreach -->
-                        <div>item</div>
-                        <div>item</div>
-                        <div>item</div>
-                        <div>item</div>
-                        <div>item</div>
+                        <div class= "itemToMenu">item</div>
+                        <div class= "itemToMenu">item</div>
+                        <div class= "itemToMenu">item</div>
+                        <div class= "itemToMenu">item</div>
+                        <div class= "itemToMenu">item</div>
                     </div>
                 </div>
+           
             </div>
         </div>
     </div>  

@@ -46,11 +46,15 @@
         .board-yellow{
             background-color: yellow;
             width: 100%;
-            height: 400px;
+            height: 150px;
             display: flex; 
             flex-flow: row nowrap;
             justify-content: center;
             align-items: center;
+        }
+        .board-yellow-title{
+            font-size: 20px;
+            font-weight: 700;
         }
         .board-yellow-button button{
             margin-left: 30px;
@@ -59,10 +63,10 @@
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
-            width: 400px;
+            width: 300px;
             background-color: black;
             color: white;
-            font-size: large;
+            font-size: medium;
             transition: color .5s , box-shadow .5s;
             position: relative;
         }
@@ -70,7 +74,7 @@
             transition: left 1s;
         }
         .board-yellow-button button:hover .board-yellow-button-i{
-            left : 95%
+            left : 90%
         }
         .board-yellow-button button:hover{
             cursor: pointer;
@@ -79,12 +83,28 @@
         }
         .board-yellow-button  button i {
             position: absolute;
-            left : 50%
+            left : 60%
         }
+
        
-        @media screen and (max-width:700px) {
+        @media screen and (max-width:750px) {
             .board-black div{
                 width:70% ;
+                
+            }
+            .board-yellow{
+                text-align: center;
+                height: 300px;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+            }
+            .board-yellow-title{
+                font-size: 30px;
+                font-weight: 700;
+            }
+            .board-yellow-button{
+                margin: 50px 0;
             }
         }
   </style>
@@ -118,8 +138,8 @@
         </div>
         <!-- board yellow  -->
         <div class = "board-yellow">
-            <div>
-                <h1>JOIN OUR ADICLUB & GET 15% OFF. </h1>
+            <div class = "board-yellow-title">
+                <p>JOIN OUR ADICLUB & GET 15% OFF. </p>
             </div>
             <div class = "board-yellow-button">
                 <button>SIGN UP FOR FREE <i class = "board-yellow-button-i">→</i></button>

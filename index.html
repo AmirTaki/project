@@ -25,81 +25,7 @@
             background-color: hsl(0, 0%, 0%);
             cursor: pointer;
         }
-        .menuConatainer{
-            background-color: transparent;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            height: 10%;
-            overflow: hidden;
-            transition: height .5s;
-            margin: 10px 20px;
-            border-bottom: 1px solid rgb(224, 220, 220);
-
-        }
-        .menuConatainer:hover{
-            height: 100%;
-        }
-        .itemContainer {
-            margin:0 5%;
-        }
-        .itemContainerColumn{
-            color: gray;
-            background-color: transparent;
-            font-size: 18px;
-        }
-        .itemToItem{
-            background-color: transparent;
-            padding: 10px 0;
-        }
-        .itemToMenu{
-            color: rgb(172, 172, 172);
-            padding: 10px 1px ;
-            background-color: transparent;
-            transition: color .5s;
-        }
-        .itemToMenu:hover {
-            color : rgb(88, 88, 88);
-            cursor: pointer;
-            text-decoration: underline;
-        }
-        
-        @media screen and (max-width : 750px) {
-            .menuConatainer{
-                display: inline;
-                width: 100%;
-                background-color: transparent;
-                height: 100%;
-                border: none;
-                margin : 0
-            }
-            .itemContainer{
-                margin:0 ;
-                background-color: transparent;
-            }
-            .itemToItem{
-                background-color: transparent;
-                height: 0;
-                padding: 0;
-                padding-top: 10px;
-                overflow: hidden;
-                transition: height .5s;
-                display: flex;
-                flex-flow: column nowrap;
-                background-color: red;
-            }
-            .itemContainerColumn{
-                padding: 10px;
-                background-color: transparent;
-            }
-            .itemToMenu{
-                padding: 10px 30px;
-            }
-        }
-    
-        /* .item:hover .containerItem{
-            height:100%;
-        } */
+       
   </style>
     <!-- 
     
@@ -114,98 +40,22 @@
  
     <!-- main  -->
     <div class = "main" style="margin: 50px 0; ">
+   </div>  
+    <footer>
+        <div class = "row">
+            <div class = "col">
+                <img src="https://cdn.pixabay.com/photo/2017/05/31/16/39/windows-2360920_1280.png" alt="" class = "logo">
 
-        <div class = "containerMenuMain" style="height:">
-            <div class = "menuConatainer">
-                <!-- foreach -->
-                <div class = "itemContainer">
-                    <div class = "itemContainerColumn">column</div>
-                    <div class = "itemToItem">
-                        <!-- foreach -->
-                        <div class= "itemToMenu">item</div>
-                        <div class= "itemToMenu">item</div>
-                        <div class= "itemToMenu">item</div>
-                        <div class= "itemToMenu">item</div>
-                        <div class= "itemToMenu">item</div>
-                    </div>
-                </div>
-                <!-- foreach -->
-                <div class = "itemContainer">
-                    <div class = "itemContainerColumn">column</div>
-                    <div class = "itemToItem">
-                        <!-- foreach -->
-                        <div class= "itemToMenu">item</div>
-                        <div class= "itemToMenu">item</div>
-                        <div class= "itemToMenu">item</div>
-                        <div class= "itemToMenu">item</div>
-                        <div class= "itemToMenu">item</div>
-                    </div>
-                </div>
-                <!-- foreach -->
-                <div class = "itemContainer">
-                    <div class = "itemContainerColumn">column</div>
-                    <div class = "itemToItem">
-                        <!-- foreach -->
-                        <div class= "itemToMenu">item</div>
-                        <div class= "itemToMenu">item</div>
-                        <div class= "itemToMenu">item</div>
-                        <div class= "itemToMenu">item</div>
-                        <div class= "itemToMenu">item</div>
-                    </div>
-                </div>
-                <!-- foreach -->
-                <div class = "itemContainer">
-                    <div class = "itemContainerColumn">column</div>
-                    <div class = "itemToItem">
-                        <!-- foreach -->
-                        <div class= "itemToMenu">item</div>
-                        <div class= "itemToMenu">item</div>
-                        <div class= "itemToMenu">item</div>
-                        <div class= "itemToMenu">item</div>
-                        <div class= "itemToMenu">item</div>
-                    </div>
-                </div>
             </div>
         </div>
-        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse mollitia atque suscipit quidem velit qui aut dolorem animi ipsum earum voluptas, aspernatur quo? Quo, ab sapiente. Dignissimos suscipit tempore ea.</div>
-    </div>  
-   
+    </footer>
     <!-- header -->
     <!-- <script src = "./src/script/header.js"></script> -->
     <!-- main -->
     <!-- <script src = "./src/script/main.js"> </script> -->
-     
+    
     <script>
-        const itemContainerColumn = document.querySelectorAll(".itemContainerColumn")
-        const containerItem = document.querySelectorAll(".itemToItem")
-
-        const CheckHiehtContainerItem = (index) => {
-           return containerItem[index].style.height === "100%" ? true : false
-        }
-
-        const closeContainerItem = () => {
-            containerItem.forEach(item=>{
-                item.style.height = 0
-            })
-        }
-
-
-        itemContainerColumn.forEach((column,index) => {
-            column.addEventListener("click", (e)=>{
-                if(window.innerWidth < 750){
-                    if(CheckHiehtContainerItem(index)){
-                    closeContainerItem()
-                    }
-                    else {
-                        closeContainerItem()
-                        containerItem[index].style.height = "100%"
-                    }
-                }
-            })            
-        });
-        window.addEventListener('resize', (e)=> {
-            closeContainerItem()
-        })
+          
     </script>
 </body>
 </html>

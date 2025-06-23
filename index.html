@@ -54,7 +54,7 @@
         }
         .board-yellow-button button{
             margin-left: 30px;
-            padding: 20px;
+            padding: 30px 20px ;
             height: 50px;
             display: flex;
             flex-flow: row nowrap;
@@ -63,8 +63,7 @@
             background-color: black;
             color: white;
             font-size: large;
-            box-shadow: 10px 10px 0px rgb(0 ,0, 0);
-            transition: color .5s;
+            transition: color .5s , box-shadow .5s;
             position: relative;
         }
         .board-yellow-button-i{
@@ -76,10 +75,11 @@
         .board-yellow-button button:hover{
             cursor: pointer;
             color:wheat;
+            box-shadow: 10px 10px 0px rgb(0 ,0, 0);
         }
         .board-yellow-button  button i {
             position: absolute;
-            left : 40%
+            left : 50%
         }
        
         @media screen and (max-width:700px) {

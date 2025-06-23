@@ -49,13 +49,13 @@
             font-size: 18px;
         }
         .itemToItem{
-            background-color: blue;
+            background-color: transparent;
             padding: 10px 0;
         }
         .itemToMenu{
             color: rgb(172, 172, 172);
             padding: 10px 1px ;
-            background-color: red;
+            background-color: transparent;
             transition: color .5s;
         }
         .itemToMenu:hover {
@@ -78,8 +78,10 @@
                 background-color: transparent;
             }
             .itemToItem{
-                background-color: yellow;
+                background-color: transparent;
                 height: 0;
+                padding: 0;
+                padding-top: 10px;
                 overflow: hidden;
                 transition: height .5s;
                 display: flex;
@@ -88,6 +90,9 @@
             .itemContainerColumn{
                 padding: 10px;
                 background-color: transparent;
+            }
+            .itemToMenu{
+                padding: 10px 30px;
             }
         }
     

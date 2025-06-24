@@ -42,6 +42,16 @@
             position: fixed;
             top: 0;
             box-shadow: 1px 3px 40px rgb(0, 0, 0, .5);
+            animation: headerUpper .5s linear forwards;
+        }
+
+        @keyframes headerUpper {
+            0%{
+                transform: translateY(0);
+            }
+            100%{
+                transform: translateY(-100px);
+            }
         }
         .menuHeader{
             background-color: transparent;
@@ -260,7 +270,7 @@
 
             }
             else {
-                
+
             }
         })
         window.addEventListener('resize', (e)=> {

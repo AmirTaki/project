@@ -52,6 +52,15 @@
                 transform: translateY(-100px);
             }
         }
+
+        @keyframes headerDown {
+            0%{
+                transform: translateY(-100px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
         .menuHeader{
             background-color: transparent;
             display: flex;
@@ -266,12 +275,12 @@
         })
 
         const scrollHeader = () => {
-            header.style.animation =  body.scrollTop > 100 ?   "headerUpper .5s linear forwards":""
+            header.style.animation =  body.scrollTop > 100 ?   "headerUpper .5s linear forwards":"headerDown .5s linear forwards"
         }
         window.addEventListener("scroll", (e)=> {
             scrollHeader()
         })
-        console.log(header)
+        scrollHeader()
         window.addEventListener('resize', (e)=> {
             if(window.innerWidth < 750){
                 menuHeader.style.display = "none" 

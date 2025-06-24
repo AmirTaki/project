@@ -80,6 +80,9 @@
         .exitHeader{
             display: none;
         }
+        .containerProfileHeader{
+            display: none
+        }
         @media screen and (max-width:750px) {
             .header{
                 background-color: red;
@@ -104,6 +107,15 @@
                 flex-flow: column nowrap;
                 align-items: start;
                 justify-content: start;
+                animation:moveMenuHeader .5s linear forwards ;
+            }
+            @keyframes moveMenuHeader {
+                0%{
+                    transform: translateX(-800px);
+                }
+                100%{
+                    transform: translateX(0);
+                }
             }
             .menuItem{
                 background-color: transparent;

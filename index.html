@@ -227,7 +227,6 @@
                 flex-flow:column nowrap;
                 /* justify-content: space/-between; */
                 /* align-items: start; */
-                
             }
             @keyframes moveListContainer {
                 0%{
@@ -372,12 +371,23 @@
         const exitItem = document.querySelector(".exitItem")
         const header = document.querySelector(".header")
         const body = document.querySelector("body")
+        const  titleMenuItem = document.querySelectorAll(".titleMenuItem")
+        const listContainer = document.querySelectorAll(".listContainer")
+
+        titleMenuItem.forEach((title, index)=> {
+            title.addEventListener("click", (e)=>{
+                if(window.innerWidth < 750){
+                    listContainer[index].style.display = "flex"
+                    listContainer[index].style.animation = "moveListContainer .5s linear forwards"
+                }
+            })
+        })
 
         clickHeaderMenu.addEventListener("click",(e)=>{
-        menuHeader.style.display = "flex"
-        menuHeader.style.animation = "moveMenuHeader .5s linear forwards"
-        menuHeader.style.height = window.innerHeight
-        body.style.overflow = "hidden"
+            menuHeader.style.display = "flex"
+            menuHeader.style.animation = "moveMenuHeader .5s linear forwards"
+            menuHeader.style.height = window.innerHeight
+            body.style.overflow = "hidden"
         })
         const closeMenuHeader = () => {
             menuHeader.style.animation = "moveMenuHeaderReverse .5s linear forwards"  

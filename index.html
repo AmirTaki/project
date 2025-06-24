@@ -65,6 +65,9 @@
             background-color: gray;
             border-bottom: 1px solid black;
         }
+        .clickHeaderMenu{
+            display: none;
+        }
         @media screen and (max-width:750px) {
             .header{
                 background-color: red;
@@ -72,6 +75,9 @@
             }
             .menuHeader{
                 display: none;
+            }
+            .clickHeaderMenu{
+                display: flex;
             }
         }
   </style>
@@ -87,6 +93,7 @@
     <!-- header -->
     <header>
         <div class = "header">
+            <div class = "clickHeaderMenu">🎓</div>
             <div>logo</div>
             <div class = "menuHeader">
                 <div class = "menuItem">menu</div>

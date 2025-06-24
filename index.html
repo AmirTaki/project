@@ -223,10 +223,27 @@
                 background-color: rgb(0, 255, 162);
                 top:0;
                 right: 0;
-                display:  flex;
+                display:  none;
                 flex-flow:column nowrap;
                 /* justify-content: space/-between; */
                 /* align-items: start; */
+                
+            }
+            @keyframes moveListContainer {
+                0%{
+                    transform: translateX(800px);
+                }
+                100%{
+                    transform: translateX(0);
+                }
+            }
+            @keyframes moveListContainerReverse {
+                0%{
+                    transform: translateX(0);
+                }
+                100%{
+                    transform: translateX(800px);
+                }
             }
             .titleListMenu{
                 background-color: blue;

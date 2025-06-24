@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- header -->
-    <link rel="stylesheet" href="./src/styles/header.css"> 
+    <!-- <link rel="stylesheet" href="./src/styles/header.css">  -->
     <!-- main -->
     <!-- <link rel="stylesheet" href="./src/styles/main.css"> -->
     <!-- bootstarp 5 -->
@@ -25,88 +25,20 @@
             background-color: hsl(0, 0%, 0%);
             cursor: pointer;
         }
-        .board-black{
-            width: 100%;
-            background-color: black;
-            color:white;
-            padding: 50px;
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: center;
+        *{
+            padding: 0;
+            margin: 0;
         }
-        .board-black-title {
-            line-height: 35px !important;   
-        }
-        .board-black div {
-            width: 60%;
-            margin: 20px 50px;
-            line-height: 25px;
-        }
-        .board-yellow{
+        .header{
             background-color: yellow;
             width: 100%;
-            height: 150px;
-            display: flex; 
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
-        }
-        .board-yellow-title{
-            font-size: 20px;
-            font-weight: 700;
-        }
-        .board-yellow-button button{
-            margin-left: 30px;
-            padding: 30px 20px ;
             height: 50px;
             display: flex;
             flex-flow: row nowrap;
+            justify-content: space-between;
             align-items: center;
-            width: 300px;
-            background-color: black;
-            color: white;
-            font-size: medium;
-            transition: color .5s , box-shadow .5s;
-            position: relative;
         }
-        .board-yellow-button-i{
-            transition: left 1s;
-        }
-        .board-yellow-button button:hover .board-yellow-button-i{
-            left : 90%
-        }
-        .board-yellow-button button:hover{
-            cursor: pointer;
-            color:wheat;
-            box-shadow: 10px 10px 0px rgb(0 ,0, 0);
-        }
-        .board-yellow-button  button i {
-            position: absolute;
-            left : 60%
-        }
-
-       
-        @media screen and (max-width:750px) {
-            .board-black div{
-                width:70% ;
-                
-            }
-            .board-yellow{
-                text-align: center;
-                height: 300px;
-                flex-flow: column nowrap;
-                align-items: center;
-                justify-content: center;
-            }
-            .board-yellow-title{
-                font-size: 30px;
-                font-weight: 700;
-            }
-            .board-yellow-button{
-                margin: 50px 0;
-            }
-        }
+        
   </style>
     <!-- 
     
@@ -116,36 +48,18 @@
     C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg
     -->
 </head>
-<body style="height: 2000px;">
+<body>
     <!-- header -->
- 
-    <!-- main  -->
-    <div class = "main" style="margin: 50px 0; ">
-        <!-- board black -->
-        <div class = "board-black">
-            <!-- foreach -->
-            <div class = "board-black-title">
-                <h1>Sneakers, Activewear and Sporting Goods</h1>
-            </div>
+    <header>
+        <div class = "header">
+            <div>logo</div>
             <div>
-                <p>Calling all athletes. Gear up for your favorite sport with adidas sneakers and activewear for men and women. From running to soccer and the gym to the trail, performance workout clothes and shoes keep you feeling your best. Find sport-specific sneakers to support your passion, and shop versatile activewear and accessories that support everyday comfort. adidas has you covered with world-class performance, quality and unmatched comfort to fit your style. Explore the full range of adidas gear today.</p>
+                menu
             </div>
-            <div>
-                <p>
-                    Founded on performance, adidas sporting goods equipment supports athletes at all levels. Men, women and kids will find their best form in sneakers and activewear made to perform under pressure. adidas sportswear breathes, manages sweat and helps support working muscles. Explore sport-specific clothes and gear for basketball, soccer, or the yoga studio. Runners will find a range of sneakers for training, racing and trail runs. Gym users will find tops, tees and tanks that support focused efforts with adidas CLIMACOOL to feel cool and dry. Explore warm-ups featuring four-way stretch to support mobility. Find a new outdoor jacket that helps protect against wind and rain. Lace up new athletic shoes that energize every step with adidas Boost cushioning. With sizes and styles for all ages, we have sporting goods for the whole family. Dedicated training demands dedicated workout clothes. Experience the latest performance fabrics and sneaker technologies to get the most out of your next traini
-                </p>
-            </div>
+            <div>search</div>
         </div>
-        <!-- board yellow  -->
-        <div class = "board-yellow">
-            <div class = "board-yellow-title">
-                <p>JOIN OUR ADICLUB & GET 15% OFF. </p>
-            </div>
-            <div class = "board-yellow-button">
-                <button>SIGN UP FOR FREE <i class = "board-yellow-button-i">→</i></button>
-            </div>
-        </div>
-    </div>
+    </header>
+    
 
     <!-- header -->
     <!-- <script src = "./src/script/header.js"></script> -->

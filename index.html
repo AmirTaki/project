@@ -297,7 +297,7 @@
                     <div class = "listContainer">
                         <div class = "backContainer">
                             <div class ="backButtonList">back ⬅️</div>
-                            <div>corss ❌</div>
+                            <div class = "crossButtonList">corss ❌</div>
                         </div>
                         <!-- foreach -->
                         <div class = "titleListMenu">
@@ -374,7 +374,28 @@
         const  titleMenuItem = document.querySelectorAll(".titleMenuItem")
         const listContainer = document.querySelectorAll(".listContainer")
         const backButtonList = document.querySelectorAll(".backButtonList")
+        const crossButtonList = document.querySelectorAll(".crossButtonList")
 
+
+        const closeListContainer = () => {
+            listContainer.forEach((list, index)=> {
+                list.style.animation = "moveListContainerReverse .5s linear forwards"
+                // setTimeout(() => {
+                //    listContainer[index].style.display = "none"  
+                // }, 500);
+            })
+        }
+        crossButtonList.forEach((cross, index)=>{
+            cross.addEventListener("click", (e)=> {
+                listContainer[index].style.animation = "moveListContainerReverse .5s linear forwards"
+                setTimeout(()=> {
+                    listContainer[index].style.display = "none"
+                    closeMenuHeader()
+                }, 300)
+             
+                
+            })
+        })
         backButtonList.forEach((back, index)=> {
             back.addEventListener("click", (e)=> {
                 listContainer[index].style.animation = "moveListContainerReverse .5s linear forwards"

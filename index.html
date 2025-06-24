@@ -126,6 +126,9 @@
         .iconTitleMenuList{
             display: none;
         }
+        .backContainer{
+            display: none;
+        }
         @media screen and (max-width:750px) {
             .header{
                 background-color: red;
@@ -152,6 +155,7 @@
                 justify-content: start;
                 animation:moveMenuHeader .5s linear forwards ;
             }
+         
             @keyframes moveMenuHeader {
                 0%{
                     transform: translateX(-800px);
@@ -237,6 +241,15 @@
             .iconTitleMenuList{
                 display: block;
             }
+            .backContainer{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                height: 50px;
+                padding:15px  ;
+                border-bottom: 1px solid gray;
+            }
         }
   </style>
     <!-- 
@@ -266,6 +279,10 @@
                         <div class = "iconTitleMenuItem">→</div>
                     </div>
                     <div class = "listContainer">
+                        <div class = "backContainer">
+                            <div>back ⬅️</div>
+                            <div>corss ❌</div>
+                        </div>
                         <!-- foreach -->
                         <div class = "titleListMenu">
                             <div>list</div>

@@ -244,11 +244,18 @@
         menuHeader.style.display = "flex"
         menuHeader.style.animation = "moveMenuHeader .5s linear forwards"
         })
-        exitItem.addEventListener("click", (e)=>{
+        const closeMenuHeader = () => {
             menuHeader.style.animation = "moveMenuHeaderReverse .5s linear forwards"  
+            setTimeout(()=> {
+                menuHeader.style.display = "none"
+            }, 500)
+        }
+        exitItem.addEventListener("click", (e)=>{
+           closeMenuHeader()
         })
 
         window.addEventListener('resize', (e)=> {
+            closeMenuHeader()
         })
         
     </script>

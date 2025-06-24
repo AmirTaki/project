@@ -542,12 +542,22 @@
                 }
             })
         })
+        
+        const closePageProduct = () => {
+            pageProduct.forEach(page=>{
+                page.style.display = 'none'
+            })  
+        }
 
         menuItem.forEach((title, index)=> {
             title.addEventListener("mousemove", (e)=> {
                 if(window.innerWidth > 750){
                     listContainer[index].style.display = "flex"
-                    listContainer[index].style.animation = "listContainerTop .3s linear forwards" ;                 
+                    listContainer[index].style.animation = "listContainerTop .3s linear forwards" ; 
+                    const pages =  listContainer[index].querySelectorAll(".pageProduct")  
+                    pages.forEach(page => {
+                        page.style.display = "flex"
+                    });              
                 }
             })
         })
@@ -615,6 +625,7 @@
         window.addEventListener('resize', (e)=> {
             body.style.overflow = "auto"
             closeListContainer()
+            closePageProduct()
             if(window.innerWidth < 750){
                 menuHeader.style.display = "none" 
             }

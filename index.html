@@ -300,19 +300,20 @@
             .pageProduct {
                 background-color: rgb(236, 14, 103);
                 position: fixed;
-                top:0;
+                top: 0;
                 width: 100%;
                 margin: 0;
+                height: 100%;
                 display: none;
                 flex-flow: column nowrap;   
             }
             .titleProduct {
-                background-color: aqua;
+                background-color: transparent;
                 display: flex;
-                flex-flow: column nowrap;
+                flex-flow: row nowrap;
                 justify-content: space-between;
-                /* align-items: center; */
-                border: 1px solid black;
+                align-items: center;
+                /* border: 1px solid black; */
                 height: 50px;
                 width: 100%;
                 padding: 10px 
@@ -357,10 +358,13 @@
                                 <div class = "iconTitleMenuList">→</div>
                             </div>
                             <div class = "pageProduct">
+                                <div class = "backContainer">
+                                    <div class ="backButtonList">back ⬅️</div>
+                                    <div class = "crossButtonList">corss ❌</div>
+                                </div>
                                 <!-- foreach -->
                                 <div class = "titleProduct">
                                     <div>product</div>
-                                    <div>-></div>
                                 </div>
                                 <div class = "titleProduct">
                                     <div>product</div>
@@ -509,7 +513,17 @@
         const backButtonList = document.querySelectorAll(".backButtonList")
         const crossButtonList = document.querySelectorAll(".crossButtonList")
         const menuItem = document.querySelectorAll(".menuItem")
+        const titleListMenu = document.querySelectorAll(".titleListMenu")
+        const pageProduct = document.querySelectorAll('.pageProduct')
 
+        titleListMenu.forEach((list, index)=> {
+            list.addEventListener("click", (e)=> {
+                if(window.innerWidth < 750){
+                    pageProduct[index].style.display = "flex"
+                    pageProduct[index].style.animation = "moveListContainer .5s linear forwards"
+                }             
+            })
+        })
         
 
         menuItem.forEach((title, index)=> {
@@ -524,7 +538,8 @@
             title.addEventListener("mousemove", (e)=> {
                 if(window.innerWidth > 750){
                     listContainer[index].style.display = "flex"
-                    listContainer[index].style.animation = "listContainerTop .3s linear forwards" ;                 }
+                    listContainer[index].style.animation = "listContainerTop .3s linear forwards" ;                 
+                }
             })
         })
 

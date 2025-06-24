@@ -101,6 +101,16 @@
         .containerProfileHeader{
             display: none
         }
+        .listContainer{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            top:51px;
+            right: 0;
+            display: flex;
+            flex-flow: row nowrap;
+        }
         @media screen and (max-width:750px) {
             .header{
                 background-color: red;
@@ -119,7 +129,7 @@
                 width: 100%;
                 left: 0;
                 top:0;
-                height: 100%;
+                height: 100% ;
                 position: fixed;
                 display: none;
                 flex-flow: column nowrap;
@@ -213,8 +223,29 @@
                 <div class = "menuItem">
                     <div class  = "titleMenuItem">
                         <div>menu</div>
-                        <div class = "iconTitleMenuItem">¥</div>
+                        <div class = "iconTitleMenuItem">→</div>
                     </div>
+                    <div class = "listContainer">
+                        <!-- foreach -->
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div>→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div>→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div>→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div>→</div>
+                        </div>
+                       
+                    </div>
+
                 </div>
                 <div class = "menuItem">
                     <div class  = "titleMenuItem">
@@ -263,6 +294,7 @@
         clickHeaderMenu.addEventListener("click",(e)=>{
         menuHeader.style.display = "flex"
         menuHeader.style.animation = "moveMenuHeader .5s linear forwards"
+        menuHeader.style.height = window.innerHeight
         body.style.overflow = "hidden"
         })
         const closeMenuHeader = () => {
@@ -270,6 +302,7 @@
             body.style.overflow = "auto"
             setTimeout(()=> {
                 menuHeader.style.display = "none"
+                menuHeader.style.height = "100%"
             }, 500)
         }
         exitItem.addEventListener("click", (e)=>{

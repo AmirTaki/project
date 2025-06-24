@@ -179,7 +179,7 @@
     C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg
     -->
 </head>
-<body>
+<body style="height: 2000px;">
     <!-- header -->
     <header>
         <div class = "header">
@@ -254,8 +254,23 @@
            closeMenuHeader()
         })
 
+
+        window.addEventListener("scroll", (e)=> {
+            if(document.documentElement.scrollTop > 100){
+
+            }
+            else {
+                
+            }
+        })
         window.addEventListener('resize', (e)=> {
-            closeMenuHeader()
+            if(window.innerWidth < 750){
+                menuHeader.style.display = "none" 
+            }
+            else {
+                menuHeader.style.display = "flex"   
+            }
+        
         })
         
     </script>

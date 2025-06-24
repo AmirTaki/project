@@ -51,12 +51,12 @@
             align-items: center;
         }
         .menuItem{
-            background-color: blue;
+            background-color: transparent;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 10px;
-            padding: 16px;
+            margin-right: 30px;
+            padding: 16px 0;
             border-bottom: 1px solid white;
             transition:  border-bottom .5s;
         }
@@ -67,6 +67,15 @@
         }
         .clickHeaderMenu{
             display: none;
+        }
+        .titleMenuItem{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .iconTitleMenuItem{
+            display: none
         }
         @media screen and (max-width:750px) {
             .header{
@@ -97,6 +106,9 @@
                 width: 100%;
                 justify-content: space-between;
             }
+            .iconTitleMenuItem{
+                display: block
+            }
         }
   </style>
     <!-- 
@@ -114,11 +126,32 @@
             <div class = "clickHeaderMenu">🎓</div>
             <div>logo</div>
             <div class = "menuHeader">
-                <div class = "menuItem">menu</div>
-                <div class = "menuItem">menu</div>
-                <div class = "menuItem">menu</div>
-                <div class = "menuItem">menu</div>
-                <div class = "menuItem">menu</div>
+                <!-- foreach -->
+                <div class = "menuItem">
+                    <div class  = "titleMenuItem">
+                        <div>menu</div>
+                        <div class = "iconTitleMenuItem">¥</div>
+                    </div>
+                </div>
+                <div class = "menuItem">
+                    <div class  = "titleMenuItem">
+                        <div>menu</div>
+                        <div class = "iconTitleMenuItem">¥</div>
+                    </div>
+                </div>
+                <div class = "menuItem">
+                    <div class  = "titleMenuItem">
+                        <div>menu</div>
+                        <div class = "iconTitleMenuItem">¥</div>
+                    </div>
+                </div>
+                <div class = "menuItem">
+                    <div class  = "titleMenuItem">
+                        <div>menu</div>
+                        <div class = "iconTitleMenuItem">¥</div>
+                    </div>
+                </div>
+             
             </div>
             <div>search</div>
         </div>

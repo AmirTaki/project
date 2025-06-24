@@ -103,11 +103,11 @@
                 top:0;
                 height: 100%;
                 position: fixed;
-                display: flex;
+                display: none;
                 flex-flow: column nowrap;
                 align-items: start;
                 justify-content: start;
-                animation:moveMenuHeader .5s linear forwards ;
+                /* animation:moveMenuHeader .5s linear forwards ; */
             }
             @keyframes moveMenuHeader {
                 0%{
@@ -228,7 +228,12 @@
     <!-- <script src = "./src/script/main.js"> </script> -->
     
     <script>
-          
+          const clickHeaderMenu =  document.querySelector(".clickHeaderMenu")
+          const menuHeader = document.querySelector(".menuHeader")
+          clickHeaderMenu.addEventListener("click",(e)=>{
+            menuHeader.style.display = "flex"
+            menuHeader.style.animation = "moveMenuHeader .5s linear forwards"
+          })
     </script>
 </body>
 </html>

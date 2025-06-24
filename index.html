@@ -263,9 +263,11 @@
         clickHeaderMenu.addEventListener("click",(e)=>{
         menuHeader.style.display = "flex"
         menuHeader.style.animation = "moveMenuHeader .5s linear forwards"
+        body.style.overflow = "hidden"
         })
         const closeMenuHeader = () => {
             menuHeader.style.animation = "moveMenuHeaderReverse .5s linear forwards"  
+            body.style.overflow = "auto"
             setTimeout(()=> {
                 menuHeader.style.display = "none"
             }, 500)
@@ -282,6 +284,7 @@
         })
         scrollHeader()
         window.addEventListener('resize', (e)=> {
+            body.style.overflow = "auto"
             if(window.innerWidth < 750){
                 menuHeader.style.display = "none" 
             }

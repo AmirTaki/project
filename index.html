@@ -62,7 +62,7 @@
         }
         .menuItem:hover {
             cursor: pointer;
-            background-color: gray;
+            /* background-color: gray; */
             border-bottom: 1px solid black;
         }
         .clickHeaderMenu{
@@ -103,11 +103,23 @@
                 justify-content: start;
             }
             .menuItem{
+                background-color: red;
+                height: 50px;
                 width: 100%;
                 justify-content: space-between;
+                border: none;
+                padding: 10px;
+            }
+            .menuItem:hover{
+                border-bottom: none;
             }
             .iconTitleMenuItem{
                 display: block
+            }
+            .exitHeader{
+                width: 100%;
+                background-color: blue;
+                height: 50px;
             }
         }
   </style>
@@ -126,6 +138,9 @@
             <div class = "clickHeaderMenu">🎓</div>
             <div>logo</div>
             <div class = "menuHeader">
+                <div class = "exitHeader">
+
+                </div>
                 <!-- foreach -->
                 <div class = "menuItem">
                     <div class  = "titleMenuItem">

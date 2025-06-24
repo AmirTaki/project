@@ -117,6 +117,14 @@
                     transform: translateX(0);
                 }
             }
+            @keyframes moveMenuHeaderReverse {
+                0%{
+                    transform: translateX(0);
+                }
+                100%{
+                    transform: translateX(-800px);
+                }
+            }
             .menuItem{
                 background-color: transparent;
                 height: 50px;
@@ -228,12 +236,21 @@
     <!-- <script src = "./src/script/main.js"> </script> -->
     
     <script>
-          const clickHeaderMenu =  document.querySelector(".clickHeaderMenu")
-          const menuHeader = document.querySelector(".menuHeader")
-          clickHeaderMenu.addEventListener("click",(e)=>{
-            menuHeader.style.display = "flex"
-            menuHeader.style.animation = "moveMenuHeader .5s linear forwards"
-          })
+        const clickHeaderMenu =  document.querySelector(".clickHeaderMenu")
+        const menuHeader = document.querySelector(".menuHeader")
+        const exitItem = document.querySelector(".exitItem")
+
+        clickHeaderMenu.addEventListener("click",(e)=>{
+        menuHeader.style.display = "flex"
+        menuHeader.style.animation = "moveMenuHeader .5s linear forwards"
+        })
+        exitItem.addEventListener("click", (e)=>{
+            menuHeader.style.animation = "moveMenuHeaderReverse .5s linear forwards"  
+        })
+
+        window.addEventListener('resize', (e)=> {
+        })
+        
     </script>
 </body>
 </html>

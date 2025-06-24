@@ -360,7 +360,7 @@
                             <div class = "pageProduct">
                                 <div class = "backContainer">
                                     <div class ="backButtonProduct">back ⬅️</div>
-                                    <div class = "crossButtonList">corss ❌</div>
+                                    <div class = "crossButtonProduct">corss ❌</div>
                                 </div>
                                 <!-- foreach -->
                                 <div class = "titleProduct">
@@ -516,6 +516,19 @@
         const titleListMenu = document.querySelectorAll(".titleListMenu")
         const pageProduct = document.querySelectorAll('.pageProduct')
         const backButtonProduct = document.querySelectorAll('.backButtonProduct')
+        const crossButtonProduct = document.querySelectorAll('.crossButtonProduct')
+
+        crossButtonProduct.forEach((cross, index)=> {
+            cross.addEventListener("click", (e)=> {
+                pageProduct[index].style.animation = "moveListContainerReverse .5s linear forwards"  
+                setTimeout(()=> {
+                    pageProduct[index].style.display = "none"
+                    closeListContainer()
+                    closeMenuHeader()
+                }, 300)
+                
+            })
+        })
 
         backButtonProduct.forEach((back, index)=> {
             back.addEventListener('click', (e)=> {
@@ -603,6 +616,7 @@
             menuHeader.style.height = window.innerHeight
             body.style.overflow = "hidden"
         })
+        
         const closeMenuHeader = () => {
             menuHeader.style.animation = "moveMenuHeaderReverse .5s linear forwards"  
             body.style.overflow = "auto"

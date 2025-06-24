@@ -344,21 +344,121 @@
                 <div class = "menuItem">
                     <div class  = "titleMenuItem">
                         <div>menu</div>
-                        <div class = "iconTitleMenuItem">¥</div>
+                        <div class = "iconTitleMenuItem">→</div>
                     </div>
+                    <div class = "listContainer">
+                        <div class = "backContainer">
+                            <div class ="backButtonList">back ⬅️</div>
+                            <div class = "crossButtonList">corss ❌</div>
+                        </div>
+                        <!-- foreach -->
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                     
+                    </div>
+
                 </div>
                 <div class = "menuItem">
                     <div class  = "titleMenuItem">
                         <div>menu</div>
-                        <div class = "iconTitleMenuItem">¥</div>
+                        <div class = "iconTitleMenuItem">→</div>
                     </div>
+                    <div class = "listContainer">
+                        <div class = "backContainer">
+                            <div class ="backButtonList">back ⬅️</div>
+                            <div class = "crossButtonList">corss ❌</div>
+                        </div>
+                        <!-- foreach -->
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                     
+                    </div>
+
                 </div>
                 <div class = "menuItem">
                     <div class  = "titleMenuItem">
                         <div>menu</div>
-                        <div class = "iconTitleMenuItem">¥</div>
+                        <div class = "iconTitleMenuItem">→</div>
                     </div>
+                    <div class = "listContainer">
+                        <div class = "backContainer">
+                            <div class ="backButtonList">back ⬅️</div>
+                            <div class = "crossButtonList">corss ❌</div>
+                        </div>
+                        <!-- foreach -->
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                        <div class = "titleListMenu">
+                            <div>list</div>
+                            <div class = "iconTitleMenuList">→</div>
+                        </div>
+                     
+                    </div>
+
                 </div>
+           
                 <!-- div -->
                 <div class = "containerProfileHeader">
                     <div class = "itemProfileHeader">account</div>
@@ -388,9 +488,19 @@
         const listContainer = document.querySelectorAll(".listContainer")
         const backButtonList = document.querySelectorAll(".backButtonList")
         const crossButtonList = document.querySelectorAll(".crossButtonList")
+        const menuItem = document.querySelectorAll(".menuItem")
 
+        
 
-        titleMenuItem.forEach((title, index)=> {
+        menuItem.forEach((title, index)=> {
+            title.addEventListener("mouseleave", (e)=> {
+                if(window.innerWidth > 750){
+                    listContainer[index].style.display = "none"
+                }
+            })
+        })
+
+        menuItem.forEach((title, index)=> {
             title.addEventListener("mousemove", (e)=> {
                 if(window.innerWidth > 750){
                     listContainer[index].style.display = "flex"
@@ -400,10 +510,7 @@
 
         const closeListContainer = () => {
             listContainer.forEach((list, index)=> {
-                list.style.animation = "moveListContainerReverse .5s linear forwards"
-                // setTimeout(() => {
-                //    listContainer[index].style.display = "none"  
-                // }, 500);
+                list.style.display = "none"
             })
         }
         crossButtonList.forEach((cross, index)=>{
@@ -421,7 +528,7 @@
             back.addEventListener("click", (e)=> {
                 listContainer[index].style.animation = "moveListContainerReverse .5s linear forwards"
                 setTimeout(() => {
-                   listContainer[index].style.display = "flex"  
+                   listContainer[index].style.display = "none"  
                 }, 500);
   
             })
@@ -463,6 +570,7 @@
         scrollHeader()
         window.addEventListener('resize', (e)=> {
             body.style.overflow = "auto"
+            closeListContainer()
             if(window.innerWidth < 750){
                 menuHeader.style.display = "none" 
             }

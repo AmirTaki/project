@@ -30,7 +30,15 @@
             margin: 0;
             box-sizing: border-box;
         }
-        .containerRigester{}
+        .containerRigester{
+            background-color: red;
+        }
+        form{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+
+        }
   </style>
     <!-- 
     
@@ -43,7 +51,15 @@
 <body style="height: 2000px;">
 
     
-    <div class = "containerRigester"></div>
+    <div class = "containerRigester">
+        <form action="">
+            <div class = "lableInputContainer">
+                <label for="username">USERNAME</label>
+                <input type="text" id = "username">
+            </div>
+          
+        </form>
+    </div>
     <!-- header -->
     <!-- <script src = "./src/script/header.js"></script> -->
     <!-- main -->

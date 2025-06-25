@@ -260,6 +260,7 @@
     
     <script>
         const loginLabel = document.querySelector(".loginLabel")
+        const registerLabel = document.querySelector('.registerLabel')
         const containerRigester = document.querySelector(".containerRigester")
         const containerLogin = document.querySelector(".containerLogin")
         loginLabel.addEventListener("click", (e)=> {
@@ -269,6 +270,14 @@
             }, 1000);
             containerLogin.style.display = 'flex'
             containerLogin.style.animation = "containerRigesterUp 1s linear forwards"
+        })
+        registerLabel.addEventListener("click", (e)=> {
+            containerLogin.style.animation = "containerRigesterDown 1s linear forwards"
+            setTimeout(() => {
+                containerLogin.style.display = "none"
+            }, 1000);
+            containerRigester.style.display = 'flex'
+            containerRigester.style.animation = "containerRigesterUp 1s linear forwards"
         })
     </script>
 </body>

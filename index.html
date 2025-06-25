@@ -218,7 +218,7 @@
             <div class = "lableInputContainer">
                 <label for="emailRegister">EMAIL</label>
                 <input type="email" id = "emailRegister" placeholder="Enter the Email ? ">
-                <div>✅</div>
+                <span>✅</span>
                 <span>❌</span>
             </div>
             <div class = "lableInputContainer">
@@ -282,6 +282,15 @@
         const ButtonRegister = document.getElementById('ButtonRegister')
         const inputs = document.querySelectorAll('input')
         const spans = document.querySelectorAll('span')
+        const lableInputContainer = document.querySelectorAll('.lableInputContainer')
+
+        const clearSapn = (index) => {
+           let span =  lableInputContainer[index].querySelectorAll('span')
+           span.forEach(element => {
+                element.style.display = 'none'
+           });
+        }
+
 
 
         const clearError = (id) => {
@@ -290,9 +299,10 @@
         
         inputs.forEach((input, index) => {
             input.addEventListener('focus', (e)=> {
+                clearSapn(index)
                 if (input.style.color === "red"){
                     input.value = ""
-                    input.style.color = "rgb(107, 107, 107)"
+                    input.style.color = "rgb(107, 107, 107)"   
                 }
             })
         });

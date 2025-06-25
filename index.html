@@ -30,9 +30,10 @@
             margin: 0;
             box-sizing: border-box;
         }
-        .containerRigester{
+        .containerLogin{
             background-color: white;
             display: flex;
+            /* display: none; */
             flex-flow:  column nowrap;
             justify-content: center;
             align-items: start;
@@ -40,6 +41,20 @@
             margin: auto 0;
             position: fixed;
             width: 100%;
+
+        }
+        .containerRigester{
+            background-color: white;
+            /* display: flex; */
+            display: none;
+            flex-flow:  column nowrap;
+            justify-content: center;
+            align-items: start;
+            height: 100vh;
+            margin: auto 0;
+            position: fixed;
+            width: 100%;
+            z-index: 2;
             animation: comeContainerRigester 1s linear forwards ;
         }
         @keyframes comeContainerRigester{
@@ -82,13 +97,23 @@
         input:focus{
             font-size: medium;
         }
-        .lableInputContainer:nth-child(6){
+        .lableInputContainer:nth-child(6),
+        .ShowPasswordLogin
+        {
+            flex-flow: row nowrap;
+            justify-content: start;
+            align-items: center;
             background-color: transparent;
         }
-        .lableInputContainer:nth-child(6) input{
+      
+        .lableInputContainer:nth-child(6) input,
+        .ShowPasswordLogin input
+        { 
             margin-left: 0;
         }
-        .lableInputContainer:nth-child(7){
+        .lableInputContainer:nth-child(7),
+        .ButtonLogin
+        {
             margin-top: 20px;
             align-items: center;
             background-color: transparent;
@@ -188,6 +213,32 @@
             </div>
             <div class = "lableInputContainer">
                 <button>REGIESTER</button>
+            </div>
+        </form>
+    </div>
+    <div class = "containerLogin">
+          <form action="">
+            <div class = "Signlabel">
+                <label>LOGIN</label>
+            </div>
+     
+            <div class = "lableInputContainer">
+                <label for="email">EMAIL</label>
+                <input type="email" id = "email" placeholder="Enter the Email ? ">
+            </div>
+
+            <div class = "lableInputContainer">
+                <label for="password">PASSWORD </label>
+                <input type="password" id = "password" placeholder="Enter the Password confirm?">
+            </div>      
+            
+            <div class = "lableInputContainer ShowPasswordLogin">
+                <label for="show-password">Show password</label>
+                <input type="checkbox" id = "show-password">
+            </div>  
+     
+            <div class = "lableInputContainer ButtonLogin">
+                <button>LOGIN</button>
             </div>
         </form>
     </div>

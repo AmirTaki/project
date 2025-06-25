@@ -87,7 +87,13 @@
             width: 50%;
             margin: 15px auto;
             border-radius: 10px;
-
+            position: relative;
+        }
+        span {
+            position: absolute;
+            right: 20px;
+            bottom: 15px;
+            display: none;
         }
         label, input {
             margin: 10px;
@@ -206,10 +212,14 @@
             <div class = "lableInputContainer">
                 <label for="usernameRegister">USERNAME</label>
                 <input type="text" id = "usernameRegister" placeholder="Enter the name family ?" >
+                <span class = 'usernameRegisterCheck'>✅</span>
+                <span class = "usernameRegisterCross">❌</span>
             </div>
             <div class = "lableInputContainer">
                 <label for="emailRegister">EMAIL</label>
                 <input type="email" id = "emailRegister" placeholder="Enter the Email ? ">
+                <div>✅</div>
+                <span>❌</span>
             </div>
             <div class = "lableInputContainer">
                 <label for="passwordRegister">PASSWORD</label>
@@ -271,8 +281,14 @@
         const passwordRepeatRegister = document.getElementById('passwordRepeatRegister')
         const ButtonRegister = document.getElementById('ButtonRegister')
         const inputs = document.querySelectorAll('input')
+        const spans = document.querySelectorAll('span')
+
+
+        const clearError = (id) => {
+            document.querySelector(`.${id}`).style.display = "none"
+        }
         
-        inputs.forEach(input => {
+        inputs.forEach((input, index) => {
             input.addEventListener('focus', (e)=> {
                 if (input.style.color === "red"){
                     input.value = ""
@@ -281,25 +297,30 @@
             })
         });
     
-        const checkUserName = (username) => {
+        const checkUserName = (username, check, cross) => {
+            clearError(check)
+            clearError(cross)
             if(username.value.length === 0){
                 username.value = "Name is requierd"
                 username.style.color = "red"
+                document.querySelector(`.${cross}`).style.display = "flex"
                 return false;
             }
             else if (!username.value.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
                 username.value = "Write full Name"
                 username.style.color = "red"
+                document.querySelector(`.${cross}`).style.display = "flex"
                 return false
             }
             else {
                 username.style.color = "green"
+                document.querySelector(`.${check}`).style.display = "flex"
                 return true
             }
         }
         ButtonRegister.addEventListener("click", (e)=>{
             e.preventDefault()
-            checkUserName(usernameRegister, 0)
+            checkUserName(usernameRegister, 'usernameRegisterCheck',  "usernameRegisterCross", )
         })
 
         loginLabel.addEventListener("click", (e)=> {

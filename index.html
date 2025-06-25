@@ -31,11 +31,11 @@
             box-sizing: border-box;
         }
         .containerRigester{
-            background-color: red;
+            background-color: white;
             display: flex;
             flex-flow:  column nowrap;
             justify-content: center;
-            align-items: center;
+            align-items: start;
             height: 100vh;
             margin: auto 0;
         }
@@ -44,7 +44,7 @@
             display: flex;
             flex-flow: column nowrap;
             justify-content: center;
-            background-color: yellow;
+            background-color: silver;
 
         }
         .lableInputContainer{
@@ -62,15 +62,22 @@
             color : rgb(107, 107, 107)
         }
         input {
-            margin: 10px px;
+            margin: 10px 20px;
             padding: 10px 0;
             border: none;
             outline:  none;
             border-bottom: 1px solid rgb(107, 107, 107) ;
         }
+        input:focus{
+            font-size: medium;
+        }
+        .lableInputContainer:nth-child(6){
+            background-color: transparent;
+        }
         .lableInputContainer:nth-child(7){
             margin-top: 20px;
             align-items: center;
+            background-color: transparent;
         }
         button {
             padding: 10px;
@@ -97,7 +104,7 @@
             justify-content: center;
         }
         .Signlabel label {
-            color:silver;
+            color:rgb(0, 0, 0);
             font-weight: 600;
             font-size: xx-large;
             transition: color 5s;
@@ -110,6 +117,14 @@
             flex-flow: row nowrap;
             align-items: center;
             justify-content: start;
+        }
+        .loginLabel{
+            margin: 10px 30px; 
+            transition: color .5s;
+        }
+        .loginLabel:hover {
+            color: red;
+            cursor: pointer;
         }
         @media screen and (max-width : 750px) {
             .lableInputContainer{
@@ -132,6 +147,7 @@
 
     
     <div class = "containerRigester">
+        <div class = "loginLabel">Login</div>
         <form action="">
             <div class = "Signlabel">
                 <label>SING UP</label>

@@ -32,7 +32,6 @@
         }
         .containerLogin{
             background-color: white;
-            /* display: flex; */
             display: none;
             flex-flow:  column nowrap;
             justify-content: center;
@@ -46,7 +45,6 @@
         .containerRigester{
             background-color: white;
             display: flex;
-            /* display: none; */
             flex-flow:  column nowrap;
             justify-content: center;
             align-items: start;
@@ -87,7 +85,7 @@
             justify-content: center;
             background-color: rgb(255, 255, 255);
             width: 50%;
-            margin: 10px auto;
+            margin: 15px auto;
             border-radius: 10px;
 
         }
@@ -122,7 +120,7 @@
         .lableInputContainer:nth-child(7),
         .ButtonLogin
         {
-            margin-top: 20px;
+            margin-top: 10px;
             align-items: center;
             background-color: transparent;
         }
@@ -132,7 +130,7 @@
             width: 50%;
             background-color: rgb(99, 184, 253);
             color : rgb(107, 107, 107);
-            transition: color .5s, background-color .5s;
+            transition: color 1s, background-color 1s;
             border: none;
             outline: none;
         }
@@ -202,27 +200,27 @@
                 <label>SING UP</label>
             </div>
             <div class = "lableInputContainer">
-                <label for="username">USERNAME</label>
-                <input type="text" id = "username" placeholder="Enter the name family ?">
+                <label for="usernameRegister">USERNAME</label>
+                <input type="text" id = "usernameRegister" placeholder="Enter the name family ?">
             </div>
             <div class = "lableInputContainer">
-                <label for="email">EMAIL</label>
-                <input type="email" id = "email" placeholder="Enter the Email ? ">
+                <label for="emailRegister">EMAIL</label>
+                <input type="email" id = "emailRegister" placeholder="Enter the Email ? ">
             </div>
             <div class = "lableInputContainer">
-                <label for="password">PASSWORD</label>
-                <input type="password" id = "password" placeholder="Enter the Password?">
+                <label for="passwordRegister">PASSWORD</label>
+                <input type="password" id = "passwordRegister" placeholder="Enter the Password?">
             </div>
             <div class = "lableInputContainer">
-                <label for="password-repeat">PASSWORD CONFIRM</label>
-                <input type="password" id = "password-repeat" placeholder="Enter the Password confirm?">
+                <label for="passwordRepeatRegister">PASSWORD CONFIRM</label>
+                <input type="password" id = "passwordRepeatRegister" placeholder="Enter the Password confirm?">
             </div>        
             <div class = "lableInputContainer ShowPasswordRegister">
                 <label for="show-password">Show password</label>
                 <input type="checkbox" id = "show-password">
             </div>
             <div class = "lableInputContainer">
-                <button>REGIESTER</button>
+                <button id = 'ButtonRegister'>REGIESTER</button>
             </div>
         </form>
     </div>
@@ -263,6 +261,12 @@
         const registerLabel = document.querySelector('.registerLabel')
         const containerRigester = document.querySelector(".containerRigester")
         const containerLogin = document.querySelector(".containerLogin")
+        const usernameRegister = document.getElementById("usernameRegister")
+        const emailRegister = document.getElementById("emailRegister")
+        const passwordRegister = document.getElementById('passwordRegister')
+        const passwordRepeatRegister = document.getElementById('passwordRepeatRegister')
+        const ButtonRegister = document.getElementById('ButtonRegister')
+        
         loginLabel.addEventListener("click", (e)=> {
             containerRigester.style.animation = "containerRigesterDown 1s linear forwards"
             setTimeout(() => {

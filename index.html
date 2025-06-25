@@ -92,7 +92,7 @@
         span {
             position: absolute;
             right: 20px;
-            bottom: 15px;
+            bottom: 18px;
             display: none;
         }
         label, input {
@@ -212,8 +212,8 @@
             <div class = "lableInputContainer">
                 <label for="usernameRegister">USERNAME</label>
                 <input type="text" id = "usernameRegister" placeholder="Enter the name family ?" >
-                <span class = "usernameRegisterCross">❌</span>
-                <span class = 'usernameRegisterCheck'>✅</span>
+                <span>❌</span>
+                <span>✅</span>
             </div>
             <div class = "lableInputContainer">
                 <label for="emailRegister">EMAIL</label>
@@ -224,10 +224,14 @@
             <div class = "lableInputContainer">
                 <label for="passwordRegister">PASSWORD</label>
                 <input type="password" id = "passwordRegister" placeholder="Enter the Password?">
+                <span>❌</span>
+                <span>✅</span>
             </div>
             <div class = "lableInputContainer">
                 <label for="passwordRepeatRegister">PASSWORD CONFIRM</label>
                 <input type="password" id = "passwordRepeatRegister" placeholder="Enter the Password confirm?">
+                <span>❌</span>
+                <span>✅</span>
             </div>        
             <div class = "lableInputContainer ShowPasswordRegister">
                 <label for="show-password">Show password</label>
@@ -305,49 +309,75 @@
             })
         });
     
+        // CHECK USER NAME
         const checkUserName = (username, index) => {
             if(username.value.length === 0){
                 username.value = "Name is requierd"
                 username.style.color = "red"
-                showSpan(0, 0)
+                showSpan(index, 0)
                 return false;
             }
             else if (!username.value.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
                 username.value = "Write full Name"
                 username.style.color = "red"
-                showSpan(0, 0)
+                showSpan(index, 0)
                 return false
             }
             else {
                 username.style.color = "green"
-                showSpan(0, 1) 
+                showSpan(index, 1) 
                 return true
             }
         }
-
+        // CHECK EMAIL
         const checkEmail = (email, index) => {
             if(email.value.length === 0){
                 email.value = "Email is required"
                 email.style.color = "red"
-                showSpan(1, 0)
+                showSpan(index, 0)
                 return false
             }
             else if(!email.value.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
                 email.value = "Write full Email"
                 email.style.color = "red"
-                showSpan(1, 0)   
+                showSpan(index, 0)   
                 return false
             }
             else {
                 email.style.color = "green"
-                showSpan(1, 1)
+                showSpan(index, 1)
                 return true
             }
         }
+        // CHECK PASSWORD
+        const checkPassowrd = (password, index) =>{
+            if(password.value.length === 0){
+                password.value = "Password is required"
+                password.style.color = "red"
+                showSpan(index, 0)
+                return false
+            }
+            else if (!password.value.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)){
+                password.value = "Password should contain 1Uppercase, 1Lowecase, 1 Digit & 1Alphabet "
+                password.style.color = "red"
+                showSpan(index, 0)
+                return false
+            }
+            else {
+                password.style.color = "green"
+                showSpan(index, 1)
+                return true
+            }
+        }
+      
+      
+      
+      
         ButtonRegister.addEventListener("click", (e)=>{
             e.preventDefault()
             checkUserName(usernameRegister, 0 )
             checkEmail(emailRegister, 1)
+            checkPassowrd(passwordRegister, 2)
         })
 
         loginLabel.addEventListener("click", (e)=> {

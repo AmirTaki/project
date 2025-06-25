@@ -48,7 +48,7 @@
             display: flex;
             flex-flow: column nowrap;
             justify-content: center;
-            background-color: blue;
+            background-color: rgb(255, 255, 255);
             width: 50%;
             margin: auto;
         }
@@ -57,10 +57,11 @@
             color : rgb(107, 107, 107)
         }
         input {
-            padding: 10px;
+            margin: 10px px;
+            padding: 10px 0;
             border: none;
             outline:  none;
-            border-radius: 5px ;
+            border-bottom: 1px solid rgb(107, 107, 107) ;
         }
   </style>
     <!-- 
@@ -79,6 +80,14 @@
             <div class = "lableInputContainer">
                 <label for="username">USERNAME</label>
                 <input type="text" id = "username" placeholder="Enter the name family ?">
+            </div>
+            <div class = "lableInputContainer">
+                <label for="email">EMAIL</label>
+                <input type="email" id = "email" placeholder="Enter the Email ? ">
+            </div>
+            <div class = "lableInputContainer">
+                <label for="password">PASSWORD</label>
+                <input type="password" id = "password" placeholder="Enter the Password?">
             </div>
           
         </form>

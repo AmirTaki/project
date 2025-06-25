@@ -32,8 +32,8 @@
         }
         .containerLogin{
             background-color: white;
-            display: flex;
-            /* display: none; */
+            /* display: flex; */
+            display: none;
             flex-flow:  column nowrap;
             justify-content: center;
             align-items: start;
@@ -45,8 +45,8 @@
         }
         .containerRigester{
             background-color: white;
-            /* display: flex; */
-            display: none;
+            display: flex;
+            /* display: none; */
             flex-flow:  column nowrap;
             justify-content: center;
             align-items: start;
@@ -55,14 +55,22 @@
             position: fixed;
             width: 100%;
             z-index: 2;
-            animation: comeContainerRigester 1s linear forwards ;
+            animation: containerRigesterDown 1s linear forwards ;
         }
-        @keyframes comeContainerRigester{
+        @keyframes containerRigesterDown{
             0%{
                 transform: translateY(-1000px);
             }
             100%{
                 transform: translateY(0);
+            }
+        }
+        @keyframes containerRigesterUp{
+            0%{
+                transform: translateY(0);
+            }
+            100%{
+                transform: translateY(1000px);
             }
         }
         form{

@@ -297,7 +297,29 @@
 
 
         inputs.forEach((input, index) => {
-            input.addEventListener('focus', (e)=> {
+            // input.addEventListener('focus', (e)=> {
+            //     clearSapn(index)
+            //     if(showPassword.checked === false){
+            //         passwordRegister.type = "password"
+            //         passwordRepeatRegister.type = "password"
+            //     }
+            //     if (input.style.color === "red"){
+            //         input.value = vlauesInput[index]
+            //         input.style.color = "rgb(107, 107, 107)"   
+            //     }
+            // })
+            input.addEventListener('keydown', (e)=> {
+                clearSapn(index)
+                if(showPassword.checked === false){
+                    passwordRegister.type = "password"
+                    passwordRepeatRegister.type = "password"
+                }
+                if (input.style.color === "red"){
+                    input.value = vlauesInput[index]
+                    input.style.color = "rgb(107, 107, 107)"   
+                }
+            })
+            input.addEventListener('click', (e)=> {
                 clearSapn(index)
                 if(showPassword.checked === false){
                     passwordRegister.type = "password"

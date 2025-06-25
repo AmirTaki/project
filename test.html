@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .warning::placeholder {
+            color : red;
+        }
+        .good::placeholder{
+            color:green
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="enter the name" id = "name" >
+        <input type="submit" value = "send" >
+    </form>   
+</body>
+<script>
+    const name = document.querySelector("#name")
+    const form  = document.querySelector('form')
+    const values = [null]
+
+    name.addEventListener('focus', (e)=> {
+        name.value = values[0]
+    })
+    name.addEventListener('keydown', (e)=> {
+        if(name.value === "name is required"){
+            name.value = values[0]
+        }
+    
+    })
+  
+    const checkName = (name) => {
+        if(name.value.length === 0){
+            values[0] = name.value
+            name.placeholder = "name is required"
+            name.className = "warning"
+        }
+        else if (!name.value.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
+            values[0] = name.value
+            name.value = "name is required"
+            name.className = "warning"
+        }
+        else {
+            name.className = "good"
+        }
+    }
+    form.addEventListener('submit', (e)=> {
+        checkName(name)
+
+        e.preventDefault()
+    })
+    
+</script>
+</html>

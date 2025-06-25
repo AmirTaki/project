@@ -55,9 +55,9 @@
             position: fixed;
             width: 100%;
             z-index: 2;
-            animation: containerRigesterDown 1s linear forwards ;
+            animation: containerRigesterUp 1s linear forwards ;
         }
-        @keyframes containerRigesterDown{
+        @keyframes containerRigesterUp{
             0%{
                 transform: translateY(-1000px);
             }
@@ -65,7 +65,7 @@
                 transform: translateY(0);
             }
         }
-        @keyframes containerRigesterUp{
+        @keyframes containerRigesterDown{
             0%{
                 transform: translateY(0);
             }
@@ -255,6 +255,15 @@
     <!-- main -->
     <!-- <script src = "./src/script/main.js"> </script> -->
     
- 
+    <script>
+        const loginLabel = document.querySelector(".loginLabel")
+        const containerRigester = document.querySelector(".containerRigester")
+        loginLabel.addEventListener("click", (e)=> {
+            containerRigester.style.animation = "containerRigesterDown 1s linear forwards"
+            setTimeout(() => {
+                containerRigester.style.display = "none"
+            }, 1000);
+        })
+    </script>
 </body>
 </html>

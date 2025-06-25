@@ -68,7 +68,7 @@
             outline:  none;
             border-bottom: 1px solid rgb(107, 107, 107) ;
         }
-        .lableInputContainer:nth-child(5){
+        .lableInputContainer:nth-child(7){
             margin-top: 20px;
             align-items: center;
         }
@@ -76,10 +76,47 @@
             padding: 10px;
             border-radius: 5px;
             width: 50%;
+            background-color: rgb(99, 184, 253);
+            color : rgb(107, 107, 107);
+            transition: color .5s, background-color .5s;
+            border: none;
+            outline: none;
+        }
+        button:hover {
+            background-color: rgb(10, 134, 235);  
+            color:white;
+            cursor: pointer;
+        }
+        .Signlabel{
+            background-color: transparent;
+            text-align: center;
+            width: 90%;
+            display: flex;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+        }
+        .Signlabel label {
+            color:silver;
+            font-weight: 600;
+            font-size: xx-large;
+            transition: color 5s;
+        } 
+        .Signlabel label:hover {
+            color:white;
+        }
+        .ShowPasswordRegister{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: start;
         }
         @media screen and (max-width : 750px) {
             .lableInputContainer{
                 width: 90%;
+            }
+            button{
+                width: 80%;
             }
         }
   </style>
@@ -96,6 +133,9 @@
     
     <div class = "containerRigester">
         <form action="">
+            <div class = "Signlabel">
+                <label>SING UP</label>
+            </div>
             <div class = "lableInputContainer">
                 <label for="username">USERNAME</label>
                 <input type="text" id = "username" placeholder="Enter the name family ?">
@@ -111,6 +151,10 @@
             <div class = "lableInputContainer">
                 <label for="password-repeat">PASSWORD CONFIRM</label>
                 <input type="password" id = "password-repeat" placeholder="Enter the Password confirm?">
+            </div>        
+            <div class = "lableInputContainer ShowPasswordRegister">
+                <label for="show-password">Show password</label>
+                <input type="checkbox" id = "show-password">
             </div>
             <div class = "lableInputContainer">
                 <button>REGIESTER</button>

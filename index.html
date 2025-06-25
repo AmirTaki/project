@@ -235,7 +235,7 @@
             </div>        
             <div class = "lableInputContainer ShowPasswordRegister">
                 <label for="show-password">Show password</label>
-                <input type="checkbox" id = "show-password">
+                <input type="checkbox" id = "showPassword">
             </div>
             <div class = "lableInputContainer">
                 <button id = 'ButtonRegister'>REGIESTER</button>
@@ -287,6 +287,23 @@
         const inputs = document.querySelectorAll('input')
         const spans = document.querySelectorAll('span')
         const lableInputContainer = document.querySelectorAll('.lableInputContainer')
+        const showPassword  = document.getElementById('showPassword')
+
+        const showHiddenPassword = () => {
+            
+            if(showPassword.checked === true){
+                passwordRegister.type = "text"
+                passwordRepeatRegister.type = "text"
+            }
+            else {
+                passwordRegister.type = "password"
+                passwordRepeatRegister.type = "password"
+            }
+        }
+        showPassword.addEventListener("click", (e)=> {
+            showHiddenPassword()
+        })
+  
 
         const clearSapn = (index) => {
            let span =  lableInputContainer[index].querySelectorAll('span')
@@ -352,18 +369,21 @@
         // CHECK PASSWORD
         const checkPassowrd = (password, index) =>{
             if(password.value.length === 0){
+                password.type = 'text'
                 password.value = "Password is required"
                 password.style.color = "red"
                 showSpan(index, 0)
                 return false
             }
             else if (!password.value.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)){
+                password.type = 'text'
                 password.value = "Password should contain 1Uppercase, 1Lowecase, 1 Digit & 1Alphabet "
                 password.style.color = "red"
                 showSpan(index, 0)
                 return false
             }
             else {
+                password.type = 'password'
                 password.style.color = "green"
                 showSpan(index, 1)
                 return true

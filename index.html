@@ -308,8 +308,6 @@
         });
     
         const checkUserName = (username, check, cross) => {
-            clearError(check)
-            clearError(cross)
             if(username.value.length === 0){
                 username.value = "Name is requierd"
                 username.style.color = "red"

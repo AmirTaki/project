@@ -330,12 +330,24 @@
                 email.value = "Email is required"
                 email.style.color = "red"
                 showSpan(1, 0)
+                return false
             }
-            else if()
+            else if(!email.value.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
+                email.value = "Write full Email"
+                email.style.color = "red"
+                showSpan(1, 0)   
+                return false
+            }
+            else {
+                email.style.color = "green"
+                showSpan(1, 1)
+                return true
+            }
         }
         ButtonRegister.addEventListener("click", (e)=>{
             e.preventDefault()
             checkUserName(usernameRegister, 0 )
+            checkEmail(emailRegister, 1)
         })
 
         loginLabel.addEventListener("click", (e)=> {

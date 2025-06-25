@@ -36,7 +36,7 @@
             flex-flow:  column nowrap;
             justify-content: center;
             align-items: start;
-            height: 100vh;
+            /* height: 100vh; */
             margin: auto 0;
             position: fixed;
             width: 100%;
@@ -295,19 +295,9 @@
 
 
 
-
+        // INPUT 
         inputs.forEach((input, index) => {
-            // input.addEventListener('focus', (e)=> {
-            //     clearSapn(index)
-            //     if(showPassword.checked === false){
-            //         passwordRegister.type = "password"
-            //         passwordRepeatRegister.type = "password"
-            //     }
-            //     if (input.style.color === "red"){
-            //         input.value = vlauesInput[index]
-            //         input.style.color = "rgb(107, 107, 107)"   
-            //     }
-            // })
+            // KEYDOWN
             input.addEventListener('keydown', (e)=> {
                 clearSapn(index)
                 if(showPassword.checked === false){
@@ -319,6 +309,7 @@
                     input.style.color = "rgb(107, 107, 107)"   
                 }
             })
+            // CLICK FOCUS
             input.addEventListener('click', (e)=> {
                 clearSapn(index)
                 if(showPassword.checked === false){
@@ -331,8 +322,8 @@
                 }
             })
         });
+        // HIDDEN PASSWORD & SHOW PASSWORD
         const showHiddenPassword = () => {
-            
             if(showPassword.checked === true){
                 passwordRegister.type = "text"
                 passwordRepeatRegister.type = "text"
@@ -342,24 +333,21 @@
                 passwordRepeatRegister.type = "password"
             }
         }
+        // HIDDEN PASSWORD & SHOW PASSWORD
         showPassword.addEventListener("click", (e)=> {
             showHiddenPassword()
         })
-  
-
+        // CLEAR SPAN CHECK & CROSS
         const clearSapn = (index) => {
            let span =  lableInputContainer[index].querySelectorAll('span')
            span.forEach(element => {
                 element.style.display = 'none'
            });
         }
-
+        // SHOW SPAN CKECK & CROSS
         const showSpan = (input, span) => {
             lableInputContainer[input].querySelectorAll("span")[span].style.display = "flex"
         }
-        
- 
-    
         // CHECK USER NAME
         const checkUserName = (username, index) => {
             vlauesInput[index] = username.value 
@@ -424,8 +412,8 @@
                 showSpan(index, 1)
                 return true
             }
-        }
-      
+        }   
+        // CHECK CONFIRM PASSWORD
         const checkConfirmPassword = (password, indexPassword, confirm, indexConfirm) =>{
             clearSapn(indexPassword)
             clearSapn(indexConfirm)
@@ -444,29 +432,12 @@
                 
             }
         }
-      
-      
-      
+        // BUTTON REGISTER
         ButtonRegister.addEventListener("click", (e)=>{
-            
-
-            if(
-                checkUserName(usernameRegister, 0 ) && checkEmail(emailRegister, 1)  &&
-                checkPassowrd(passwordRegister, 2) &&  checkPassowrd(passwordRepeatRegister, 3)
-                    && checkConfirmPassword(passwordRegister, 2,  passwordRepeatRegister, 3)
-                
-            ) {
-                                    console.log('yor wellcome');
-
-            }
-            else {
-                            e.preventDefault()
-            }
-
-            
-        
+            const flag =  checkUserName(usernameRegister, 0 ) && checkEmail(emailRegister, 1)  && checkPassowrd(passwordRegister, 2) &&  checkPassowrd(passwordRepeatRegister, 3) && checkConfirmPassword(passwordRegister, 2,  passwordRepeatRegister, 3)
+            flag ? "" : e.preventDefault()        
         })
-
+        // LOGIN PAGE ANIMATION
         loginLabel.addEventListener("click", (e)=> {
             containerRigester.style.animation = "containerRigesterDown 1s linear forwards"
             setTimeout(() => {
@@ -475,6 +446,7 @@
             containerLogin.style.display = 'flex'
             containerLogin.style.animation = "containerRigesterUp 1s linear forwards"
         })
+        // SING UP PAGE ANIMATION
         registerLabel.addEventListener("click", (e)=> {
             containerLogin.style.animation = "containerRigesterDown 1s linear forwards"
             setTimeout(() => {

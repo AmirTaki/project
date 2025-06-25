@@ -165,11 +165,13 @@
             align-items: center;
             justify-content: start;
         }
-        .loginLabel{
+        .loginLabel,
+        .registerLabel{
             margin: 10px 30px; 
             transition: color .5s;
         }
-        .loginLabel:hover {
+        .loginLabel:hover,
+        .registerLabel:hover {
             color: red;
             cursor: pointer;
         }
@@ -225,6 +227,7 @@
         </form>
     </div>
     <div class = "containerLogin">
+        <div class = "registerLabel">Register</div>
           <form action="">
             <div class = "Signlabel">
                 <label>LOGIN</label>
@@ -258,11 +261,14 @@
     <script>
         const loginLabel = document.querySelector(".loginLabel")
         const containerRigester = document.querySelector(".containerRigester")
+        const containerLogin = document.querySelector(".containerLogin")
         loginLabel.addEventListener("click", (e)=> {
             containerRigester.style.animation = "containerRigesterDown 1s linear forwards"
             setTimeout(() => {
                 containerRigester.style.display = "none"
             }, 1000);
+            containerLogin.style.display = 'flex'
+            containerLogin.style.animation = "containerRigesterUp 1s linear forwards"
         })
     </script>
 </body>

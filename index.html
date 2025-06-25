@@ -32,16 +32,19 @@
         }
         .containerRigester{
             background-color: red;
-      
+            display: flex;
+            flex-flow:  column nowrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: auto 0;
         }
         form{
+            width: 100%;
             display: flex;
             flex-flow: column nowrap;
             justify-content: center;
-            margin: auto;
-            height: 100vh;
             background-color: yellow;
-
 
         }
         .lableInputContainer{
@@ -89,7 +92,10 @@
                 <label for="password">PASSWORD</label>
                 <input type="password" id = "password" placeholder="Enter the Password?">
             </div>
-          
+            <div class = "lableInputContainer">
+                <label for="password-repeat">PASSWORD CONFIRM</label>
+                <input type="password" id = "password-repeat" placeholder="Enter the Password confirm?">
+            </div>
         </form>
     </div>
     <!-- header -->

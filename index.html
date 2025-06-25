@@ -274,17 +274,27 @@
         
         inputs.forEach(input => {
             input.addEventListener('focus', (e)=> {
-                input.value = ""
-                input.style.color = "rgb(107, 107, 107)"
+                if (input.style.color === "red"){
+                    input.value = ""
+                    input.style.color = "rgb(107, 107, 107)"
+                }
             })
         });
     
         const checkUserName = (username) => {
-            console.log(username)
             if(username.value.length === 0){
                 username.value = "Name is requierd"
                 username.style.color = "red"
                 return false;
+            }
+            else if (!username.value.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
+                username.value = "Write full Name"
+                username.style.color = "red"
+                return false
+            }
+            else {
+                username.style.color = "green"
+                return true
             }
         }
         ButtonRegister.addEventListener("click", (e)=>{

@@ -233,9 +233,11 @@
                 <span>❌</span>
                 <span>✅</span>
             </div>        
+      
             <div class = "lableInputContainer ShowPasswordRegister">
                 <label for="show-password">Show password</label>
                 <input type="checkbox" id = "showPassword">
+                <label id = "warningPassword"></label>
             </div>
             <div class = "lableInputContainer">
                 <button id = 'ButtonRegister'>REGIESTER</button>
@@ -288,6 +290,7 @@
         const spans = document.querySelectorAll('span')
         const lableInputContainer = document.querySelectorAll('.lableInputContainer')
         const showPassword  = document.getElementById('showPassword')
+        const warningPassword = document.getElementById("warningPassword")
 
         const showHiddenPassword = () => {
             
@@ -387,21 +390,49 @@
                 return false
             }
             else {
-                // password.type = 'password'
                 password.style.color = "green"
                 showSpan(index, 1)
                 return true
             }
         }
       
+        const checkConfirmPassword = (password, indexPassword, confirm, indexConfirm) =>{
+            if(password.value === confirm.value){
+                warningPassword.innerText = ""
+                showSpan(indexPassword, 1)
+                showSpan(indexConfirm, 1)
+                return true
+            }
+            else {
+                warningPassword.style.color = "red"
+                warningPassword.innerText = "confirm not password"
+                showSpan(indexPassword, 0)
+                showSpan(indexConfirm, 0)
+                return false
+                
+            }
+        }
       
       
       
         ButtonRegister.addEventListener("click", (e)=>{
-            e.preventDefault()
-            checkUserName(usernameRegister, 0 )
-            checkEmail(emailRegister, 1)
-            checkPassowrd(passwordRegister, 2)
+            
+
+            if(
+                checkUserName(usernameRegister, 0 ) && checkEmail(emailRegister, 1)  &&
+                checkPassowrd(passwordRegister, 2) &&  checkPassowrd(passwordRepeatRegister, 3)
+                    && checkConfirmPassword(passwordRegister, 2,  passwordRepeatRegister, 3)
+                
+            ) {
+                                    console.log('yor wellcome');
+
+            }
+            else {
+                            e.preventDefault()
+            }
+
+            
+        
         })
 
         loginLabel.addEventListener("click", (e)=> {

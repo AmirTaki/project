@@ -319,6 +319,10 @@
         inputs.forEach((input, index) => {
             input.addEventListener('focus', (e)=> {
                 clearSapn(index)
+                if(showPassword.checked === false){
+                    passwordRegister.type = "password"
+                    passwordRepeatRegister.type = "password"
+                }
                 if (input.style.color === "red"){
                     input.value = ""
                     input.style.color = "rgb(107, 107, 107)"   
@@ -383,7 +387,7 @@
                 return false
             }
             else {
-                password.type = 'password'
+                // password.type = 'password'
                 password.style.color = "green"
                 showSpan(index, 1)
                 return true

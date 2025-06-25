@@ -173,6 +173,9 @@
             color: red;
             cursor: pointer;
         }
+ 
+     
+     
         @media screen and (max-width : 750px) {
             .lableInputContainer{
                 width: 90%;
@@ -180,6 +183,7 @@
             button{
                 width: 80%;
             }
+           
         }
   </style>
     <!-- 
@@ -201,7 +205,7 @@
             </div>
             <div class = "lableInputContainer">
                 <label for="usernameRegister">USERNAME</label>
-                <input type="text" id = "usernameRegister" placeholder="Enter the name family ?">
+                <input type="text" id = "usernameRegister" placeholder="Enter the name family ?" >
             </div>
             <div class = "lableInputContainer">
                 <label for="emailRegister">EMAIL</label>
@@ -266,7 +270,28 @@
         const passwordRegister = document.getElementById('passwordRegister')
         const passwordRepeatRegister = document.getElementById('passwordRepeatRegister')
         const ButtonRegister = document.getElementById('ButtonRegister')
+        const inputs = document.querySelectorAll('input')
         
+        inputs.forEach(input => {
+            input.addEventListener('focus', (e)=> {
+                input.value = ""
+                input.style.color = "rgb(107, 107, 107)"
+            })
+        });
+    
+        const checkUserName = (username) => {
+            console.log(username)
+            if(username.value.length === 0){
+                username.value = "Name is requierd"
+                username.style.color = "red"
+                return false;
+            }
+        }
+        ButtonRegister.addEventListener("click", (e)=>{
+            e.preventDefault()
+            checkUserName(usernameRegister, 0)
+        })
+
         loginLabel.addEventListener("click", (e)=> {
             containerRigester.style.animation = "containerRigesterDown 1s linear forwards"
             setTimeout(() => {

@@ -390,46 +390,46 @@
             }
         }
         // CHECK EMAIL
-        const checkEmail = (email, index, optinal = null) => {
+        const checkEmail = (email, index,) => {
             vlauesInput[index] = email.value 
             if(email.value.length === 0){
                 email.value = "Email is required"
                 email.style.color = "red"
-                optinal ? showSpan(index + 1, 0) : showSpan(index, 0) 
+                showSpan(index, 0) 
                 return false
             }
             else if(!email.value.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
                 email.value = "Write full Email"
                 email.style.color = "red"
-                optinal ? showSpan(index + 1, 0) : showSpan(index, 0) 
+                showSpan(index, 0) 
                 return false
             }
             else {
                 email.style.color = "green"
-                optinal ? showSpan(index + 1, 1) : showSpan(index, 1) 
+                showSpan(index, 1) 
                 return true
             }
         }
         // CHECK PASSWORD
-        const checkPassowrd = (password, index, optinal = null) =>{
+        const checkPassowrd = (password, index ) =>{
             vlauesInput[index] = password.value 
             if(password.value.length === 0){
                 password.type = 'text'
                 password.value = "Password is required"
                 password.style.color = "red"
-                optinal ? showSpan(index + 1, 0) : showSpan(index, 0) 
+                showSpan(index, 0) 
                 return false
             }
             else if (!password.value.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)){
                 password.type = 'text'
                 password.value = "Password should contain 1Uppercase, 1Lowecase, 1 Digit & 1Alphabet "
                 password.style.color = "red"
-                optinal ? showSpan(index + 1, 0) : showSpan(index, 0) 
+                showSpan(index, 0) 
                 return false
             }
             else {
                 password.style.color = "green"
-                optinal ? showSpan(index + 1, 1) : showSpan(index, 1) 
+                showSpan(index, 1) 
                 return true
             }
         }   
@@ -458,11 +458,26 @@
             flag ? "" : e.preventDefault()        
         })
         // BUTTON LOGIN 
+         // CHECK EMAIL lOGIN 
+        const checkEmailLogin = (email, index) => {
+            if (email.value.length === 0){
+                email.value = "Email is required"
+                email.style.color = "red"
+                showSpan(index + 1, 0) 
+                return false
+            }
+            else {
+                email.style.color = "green"
+                showSpan(index + 1, 1) 
+                return true
+            }
+        }
         ButtonLogin.addEventListener("click", (e)=> {
-            flag = checkEmail(emailLogin, 5, true) && checkPassowrd(passwordLogin, 6, true)
-            flag ? "" : e.preventDefault()
+            flag = checkEmailLogin(emailLogin, 5) 
+            // && checkPassowrd(passwordLogin, 6, true)
+            // flag ? "" : e.preventDefault()
+            e.preventDefault()
         })
-
         // LOGIN PAGE ANIMATION
         loginLabel.addEventListener("click", (e)=> {
             containerRigester.style.animation = "containerRigesterDown 1s linear forwards"

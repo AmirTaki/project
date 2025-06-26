@@ -309,6 +309,7 @@
                 if(showPassword.checked === false){
                     passwordRegister.type = "password"
                     passwordRepeatRegister.type = "password"
+                    passwordLogin.type = 'password'
                 }
                 if (input.style.color === "red"){
                     input.value = vlauesInput[index]
@@ -321,6 +322,7 @@
                 if(showPassword.checked === false){
                     passwordRegister.type = "password"
                     passwordRepeatRegister.type = "password"
+                    passwordLogin.type = 'password'
                 }
                 if (input.style.color === "red"){
                     input.value = vlauesInput[index]
@@ -343,6 +345,14 @@
         showPassword.addEventListener("click", (e)=> {
             showHiddenPassword()
         })
+        // HIDDEN & SHOW PASSWORD LOGIN  FUNCTION
+        const showHiddenPasswordLogin = ()  => {
+            showPasswordLogin =  showPasswordLogin.checked === true ? "text" : "password"
+        }
+        // HIDDEN & SHOW PASSWORD LOGIN
+        showPasswordLogin.addEventListener('click', (e)=>{
+            showHiddenPasswordLogin()
+        })        
         // CLEAR SPAN CHECK & CROSS
         const clearSapn = (index) => {
            let span =  lableInputContainer[index].querySelectorAll('span')

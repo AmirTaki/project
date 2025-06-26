@@ -347,7 +347,7 @@
         })
         // HIDDEN & SHOW PASSWORD LOGIN  FUNCTION
         const showHiddenPasswordLogin = ()  => {
-            showPasswordLogin =  showPasswordLogin.checked === true ? "text" : "password"
+            passwordLogin.type =  showPasswordLogin.checked === true ? "text" : "password"
         }
         // HIDDEN & SHOW PASSWORD LOGIN
         showPasswordLogin.addEventListener('click', (e)=>{
@@ -453,6 +453,11 @@
             const flag =  checkUserName(usernameRegister, 0 ) && checkEmail(emailRegister, 1)  && checkPassowrd(passwordRegister, 2) &&  checkPassowrd(passwordRepeatRegister, 3) && checkConfirmPassword(passwordRegister, 2,  passwordRepeatRegister, 3)
             flag ? "" : e.preventDefault()        
         })
+        // BUTTON LOGIN 
+        ButtonLogin.addEventListener("click", (e)=> {
+            
+        })
+
         // LOGIN PAGE ANIMATION
         loginLabel.addEventListener("click", (e)=> {
             containerRigester.style.animation = "containerRigesterDown 1s linear forwards"

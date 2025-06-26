@@ -252,26 +252,26 @@
             </div>
      
             <div class = "lableInputContainer">
-                <label for="email">EMAIL</label>
-                <input type="email" id = "email" placeholder="Enter the Email ? ">
+                <label for="emailLogin">EMAIL</label>
+                <input type="email" id = "emailLogin" placeholder="Enter the Email ? ">
                 <span>❌</span>
                 <span>✅</span>
             </div>
 
             <div class = "lableInputContainer">
-                <label for="password">PASSWORD </label>
-                <input type="password" id = "password" placeholder="Enter the Password confirm?">
+                <label for="passwordLogin">PASSWORD </label>
+                <input type="password" id = "passwordLogin" placeholder="Enter the Password confirm?">
                 <span>❌</span>
                 <span>✅</span>
             </div>      
             
             <div class = "lableInputContainer ShowPasswordLogin">
                 <label for="show-password">Show password</label>
-                <input type="checkbox" id = "show-password">
+                <input type="checkbox" id = "show-password-login">
             </div>  
      
             <div class = "lableInputContainer ButtonLogin">
-                <button>LOGIN</button>
+                <button id = "ButtonLogin">LOGIN</button>
             </div>
         </form>
     </div>
@@ -295,7 +295,11 @@
         const lableInputContainer = document.querySelectorAll('.lableInputContainer')
         const showPassword  = document.getElementById('showPassword')
         const warningPassword = document.getElementById("warningPassword")
-        const vlauesInput = [null, null, null, null]
+        const vlauesInput = [null, null, null, null, null, null]
+        const emailLogin = document.getElementById("emailLogin")
+        const passwordLogin = document.getElementById("passwordLogin")
+        const ButtonLogin = document.getElementById("ButtonLogin")
+        const showPasswordLogin = document.getElementById("show-password-login")
 
         // INPUT 
         inputs.forEach((input, index) => {

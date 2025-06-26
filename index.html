@@ -254,11 +254,15 @@
             <div class = "lableInputContainer">
                 <label for="email">EMAIL</label>
                 <input type="email" id = "email" placeholder="Enter the Email ? ">
+                <span>❌</span>
+                <span>✅</span>
             </div>
 
             <div class = "lableInputContainer">
                 <label for="password">PASSWORD </label>
                 <input type="password" id = "password" placeholder="Enter the Password confirm?">
+                <span>❌</span>
+                <span>✅</span>
             </div>      
             
             <div class = "lableInputContainer ShowPasswordLogin">
@@ -292,8 +296,6 @@
         const showPassword  = document.getElementById('showPassword')
         const warningPassword = document.getElementById("warningPassword")
         const vlauesInput = [null, null, null, null]
-
-
 
         // INPUT 
         inputs.forEach((input, index) => {

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+       .containerLogin{
+            background-color: white;
+            display: none;
+            flex-flow:  column nowrap;
+            justify-content: center;
+            align-items: start;
+            /* height: 100vh; */
+            margin: auto 0;
+            position: fixed;
+            width: 100%;
+
+        }
+        .containerRigester{
+            background-color: white;
+            display: flex;
+            flex-flow:  column nowrap;
+            justify-content: center;
+            align-items: start;
+            height: 100vh;
+            margin: auto 0;
+            position: fixed;
+            width: 100%;
+            z-index: 2;
+            animation: containerRigesterUp 1s linear forwards ;
+        }
+        @keyframes containerRigesterUp{
+            0%{
+                transform: translateY(-1000px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+        @keyframes containerRigesterDown{
+            0%{
+                transform: translateY(0);
+            }
+            100%{
+                transform: translateY(1000px);
+            }
+        }
+        form{
+            width: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            background-color: silver;
+
+        }
+        .lableInputContainer{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+            width: 50%;
+            margin: 15px auto;
+            border-radius: 10px;
+            position: relative;
+        }
+        span {
+            position: absolute;
+            right: 20px;
+            bottom: 18px;
+            display: none;
+        }
+        label, input {
+            margin: 10px;
+            color : rgb(107, 107, 107)
+        }
+        input {
+            margin: 10px 20px;
+            padding: 10px 0;
+            border: none;
+            outline:  none;
+            border-bottom: 1px solid rgb(107, 107, 107) ;
+        }
+        input:focus{
+            font-size: medium;
+        }
+        .lableInputContainer:nth-child(6),
+        .ShowPasswordLogin
+        {
+            flex-flow: row nowrap;
+            justify-content: start;
+            align-items: center;
+            background-color: transparent;
+        }
+      
+        .lableInputContainer:nth-child(6) input,
+        .ShowPasswordLogin input
+        { 
+            margin-left: 0;
+        }
+        .lableInputContainer:nth-child(7),
+        .ButtonLogin
+        {
+            margin-top: 10px;
+            align-items: center;
+            background-color: transparent;
+        }
+        button {
+            padding: 10px;
+            border-radius: 5px;
+            width: 50%;
+            background-color: rgb(99, 184, 253);
+            color : rgb(107, 107, 107);
+            transition: color 1s, background-color 1s;
+            border: none;
+            outline: none;
+        }
+        button:hover {
+            background-color: rgb(10, 134, 235);  
+            color:white;
+            cursor: pointer;
+        }
+        .Signlabel{
+            background-color: transparent;
+            text-align: center;
+            width: 90%;
+            display: flex;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+        }
+        .Signlabel label {
+            color:rgb(0, 0, 0);
+            font-weight: 600;
+            font-size: xx-large;
+            transition: color 5s;
+        } 
+        .Signlabel label:hover {
+            color:white;
+        }
+        .ShowPasswordRegister{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: start;
+        }
+        .loginLabel,
+        .registerLabel{
+            margin: 10px 30px; 
+            transition: color .5s;
+        }
+        .loginLabel:hover,
+        .registerLabel:hover {
+            color: red;
+            cursor: pointer;
+        }
+ 
+     
+     
+        @media screen and (max-width : 750px) {
+            .lableInputContainer{
+                width: 90%;
+            }
+            button{
+                width: 80%;
+            }
+           
+        }
+    </style>
+</head>
+<body>
+        <div class = "containerRigester">
+        <div class = "loginLabel">Login</div>
+        <form action="">
+            <div class = "Signlabel">
+                <label>SING UP</label>
+            </div>
+            <div class = "lableInputContainer">
+                <label for="usernameRegister">USERNAME</label>
+                <input type="text" id = "usernameRegister" placeholder="Enter the name family ?" >
+                <span>❌</span>
+                <span>✅</span>
+            </div>
+            <div class = "lableInputContainer">
+                <label for="emailRegister">EMAIL</label>
+                <input type="email" id = "emailRegister" placeholder="Enter the Email ? ">
+                <span>❌</span>
+                <span>✅</span>
+            </div>
+            <div class = "lableInputContainer">
+                <label for="passwordRegister">PASSWORD</label>
+                <input type="password" id = "passwordRegister" placeholder="Enter the Password?">
+                <span>❌</span>
+                <span>✅</span>
+            </div>
+            <div class = "lableInputContainer">
+                <label for="passwordRepeatRegister">PASSWORD CONFIRM</label>
+                <input type="password" id = "passwordRepeatRegister" placeholder="Enter the Password confirm?">
+                <span>❌</span>
+                <span>✅</span>
+            </div>        
+      
+            <div class = "lableInputContainer ShowPasswordRegister">
+                <label for="show-password">Show password</label>
+                <input type="checkbox" id = "showPassword">
+                <label id = "warningPassword"></label>
+            </div>
+            <div class = "lableInputContainer">
+                <button id = 'ButtonRegister'>REGIESTER</button>
+            </div>
+        </form>
+    </div>
+    <div class = "containerLogin">
+        <div class = "registerLabel">Register</div>
+          <form action="">
+            <div class = "Signlabel">
+                <label>LOGIN</label>
+            </div>
+     
+            <div class = "lableInputContainer">
+                <label for="emailLogin">EMAIL</label>
+                <input type="email" id = "emailLogin" placeholder="Enter the Email ? ">
+                <span>❌</span>
+                <span>✅</span>
+            </div>
+
+            <div class = "lableInputContainer">
+                <label for="passwordLogin">PASSWORD </label>
+                <input type="password" id = "passwordLogin" placeholder="Enter the Password confirm?">
+                <span>❌</span>
+                <span>✅</span>
+            </div>      
+            
+            <div class = "lableInputContainer ShowPasswordLogin">
+                <label for="show-password">Show password</label>
+                <input type="checkbox" id = "show-password-login">
+            </div>  
+     
+            <div class = "lableInputContainer ButtonLogin">
+                <button id = "ButtonLogin">LOGIN</button>
+            </div>
+        </form>
+    </div>
+</body>
+    <script>
+        const loginLabel = document.querySelector(".loginLabel")
+        const registerLabel = document.querySelector('.registerLabel')
+        const containerRigester = document.querySelector(".containerRigester")
+        const containerLogin = document.querySelector(".containerLogin")
+        const usernameRegister = document.getElementById("usernameRegister")
+        const emailRegister = document.getElementById("emailRegister")
+        const passwordRegister = document.getElementById('passwordRegister')
+        const passwordRepeatRegister = document.getElementById('passwordRepeatRegister')
+        const ButtonRegister = document.getElementById('ButtonRegister')
+        const inputs = document.querySelectorAll('input')
+        const spans = document.querySelectorAll('span')
+        const lableInputContainer = document.querySelectorAll('.lableInputContainer')
+        const showPassword  = document.getElementById('showPassword')
+        const warningPassword = document.getElementById("warningPassword")
+        const vlauesInput = [null, null, null, null, null, null, null]
+        const emailLogin = document.getElementById("emailLogin")
+        const passwordLogin = document.getElementById("passwordLogin")
+        const ButtonLogin = document.getElementById("ButtonLogin")
+        const showPasswordLogin = document.getElementById("show-password-login")
+
+        // INPUT 
+        inputs.forEach((input, index) => {
+            // KEYDOWN
+            input.addEventListener('keydown', (e)=> {
+                clearSapn(index)
+                if(showPassword.checked === false){
+                    passwordRegister.type = "password"
+                    passwordRepeatRegister.type = "password"
+                }
+                if(showPasswordLogin.checked === false){
+                    passwordLogin.type = "password"
+                }
+                if (input.style.color === "red"){
+                    input.value = vlauesInput[index]
+                    input.style.color = "rgb(107, 107, 107)"   
+                }
+            })
+            // CLICK FOCUS
+            input.addEventListener('click', (e)=> {
+                clearSapn(index)
+                if(showPassword.checked === false){
+                    passwordRegister.type = "password"
+                    passwordRepeatRegister.type = "password"
+                }
+                if(showPasswordLogin.checked === false){
+                    passwordLogin.type = "password"
+                }
+                if (input.style.color === "red"){
+                    input.value = vlauesInput[index]
+                    input.style.color = "rgb(107, 107, 107)"   
+                }
+            })
+        });
+        // HIDDEN PASSWORD & SHOW PASSWORD
+        const showHiddenPassword = () => {
+            if(showPassword.checked === true){
+                passwordRegister.type = "text"
+                passwordRepeatRegister.type = "text"
+            }
+            else {
+                passwordRegister.type = "password"
+                passwordRepeatRegister.type = "password"
+            }
+        }
+        // HIDDEN PASSWORD & SHOW PASSWORD
+        showPassword.addEventListener("click", (e)=> {
+            showHiddenPassword()
+        })
+        // HIDDEN & SHOW PASSWORD LOGIN  FUNCTION
+        const showHiddenPasswordLogin = ()  => {
+            passwordLogin.type =  showPasswordLogin.checked === true ? "text" : "password"
+        }
+        // HIDDEN & SHOW PASSWORD LOGIN
+        showPasswordLogin.addEventListener('click', (e)=>{
+            showHiddenPasswordLogin()
+        })        
+        // CLEAR SPAN CHECK & CROSS
+        const clearSapn = (index) => {
+           let span =  lableInputContainer[index].querySelectorAll('span')
+           span.forEach(element => {
+                element.style.display = 'none'
+           });
+        }
+        // SHOW SPAN CKECK & CROSS
+        const showSpan = (input, span) => {
+            lableInputContainer[input].querySelectorAll("span")[span].style.display = "flex"
+        }
+        // CHECK USER NAME
+        const checkUserName = (username, index) => {
+            vlauesInput[index] = username.value 
+            if(username.value.length === 0){
+                username.value = "Name is requierd"
+                username.style.color = "red"
+                showSpan(index, 0)
+                return false;
+            }
+            else if (!username.value.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
+                username.value = "Write full Name"
+                username.style.color = "red"
+                showSpan(index, 0)
+                return false
+            }
+            else {
+                username.style.color = "green"
+                showSpan(index, 1) 
+                return true
+            }
+        }
+        // CHECK EMAIL
+        const checkEmail = (email, index, optinal = null) => {
+            vlauesInput[index] = email.value 
+            if(email.value.length === 0){
+                email.value = "Email is required"
+                email.style.color = "red"
+                optinal ? showSpan(index + 1, 0) : showSpan(index, 0) 
+                return false
+            }
+            else if(!email.value.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
+                email.value = "Write full Email"
+                email.style.color = "red"
+                optinal ? showSpan(index + 1, 0) : showSpan(index, 0) 
+                return false
+            }
+            else {
+                email.style.color = "green"
+                optinal ? showSpan(index + 1, 1) : showSpan(index, 1) 
+                return true
+            }
+        }
+        // CHECK PASSWORD
+        const checkPassowrd = (password, index, optinal = null) =>{
+            vlauesInput[index] = password.value 
+            if(password.value.length === 0){
+                password.type = 'text'
+                password.value = "Password is required"
+                password.style.color = "red"
+                optinal ? showSpan(index + 1, 0) : showSpan(index, 0) 
+                return false
+            }
+            else if (!password.value.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)){
+                password.type = 'text'
+                password.value = "Password should contain 1Uppercase, 1Lowecase, 1 Digit & 1Alphabet "
+                password.style.color = "red"
+                optinal ? showSpan(index + 1, 0) : showSpan(index, 0) 
+                return false
+            }
+            else {
+                password.style.color = "green"
+                optinal ? showSpan(index + 1, 1) : showSpan(index, 1) 
+                return true
+            }
+        }   
+        // CHECK CONFIRM PASSWORD
+        const checkConfirmPassword = (password, indexPassword, confirm, indexConfirm) =>{
+            clearSapn(indexPassword)
+            clearSapn(indexConfirm)
+            if(password.value === confirm.value){
+                warningPassword.innerText = ""
+                showSpan(indexPassword, 1)
+                showSpan(indexConfirm, 1)
+                return true
+            }
+            else {
+                warningPassword.style.color = "red"
+                warningPassword.innerText = "confirm not password"
+                showSpan(indexPassword, 0)
+                showSpan(indexConfirm, 0)
+                return false
+                
+            }
+        }
+        // BUTTON REGISTER
+        ButtonRegister.addEventListener("click", (e)=>{
+            const flag =  checkUserName(usernameRegister, 0 ) && checkEmail(emailRegister, 1)  && checkPassowrd(passwordRegister, 2) &&  checkPassowrd(passwordRepeatRegister, 3) && checkConfirmPassword(passwordRegister, 2,  passwordRepeatRegister, 3)
+            flag ? "" : e.preventDefault()        
+        })
+        // BUTTON LOGIN 
+        ButtonLogin.addEventListener("click", (e)=> {
+            flag = checkEmail(emailLogin, 5, true) && checkPassowrd(passwordLogin, 6, true)
+            flag ? "" : e.preventDefault()
+        })
+
+        // LOGIN PAGE ANIMATION
+        loginLabel.addEventListener("click", (e)=> {
+            containerRigester.style.animation = "containerRigesterDown 1s linear forwards"
+            setTimeout(() => {
+                containerRigester.style.display = "none"
+            }, 1000);
+            containerLogin.style.display = 'flex'
+            containerLogin.style.animation = "containerRigesterUp 1s linear forwards"
+        })
+        // SING UP PAGE ANIMATION
+        registerLabel.addEventListener("click", (e)=> {
+            containerLogin.style.animation = "containerRigesterDown 1s linear forwards"
+            setTimeout(() => {
+                containerLogin.style.display = "none"
+            }, 1000);
+            containerRigester.style.display = 'flex'
+            containerRigester.style.animation = "containerRigesterUp 1s linear forwards"
+        })
+    </script>
+</html>

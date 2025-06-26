@@ -459,9 +459,8 @@
         })
         // BUTTON LOGIN 
         ButtonLogin.addEventListener("click", (e)=> {
-            checkEmail(emailLogin, 5, true)
-            checkPassowrd(passwordLogin, 6, true)
-            e.preventDefault()
+            flag = checkEmail(emailLogin, 5, true) && checkPassowrd(passwordLogin, 6, true)
+            flag ? "" : e.preventDefault()
         })
 
         // LOGIN PAGE ANIMATION

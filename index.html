@@ -295,7 +295,7 @@
         const lableInputContainer = document.querySelectorAll('.lableInputContainer')
         const showPassword  = document.getElementById('showPassword')
         const warningPassword = document.getElementById("warningPassword")
-        const vlauesInput = [null, null, null, null, null, null]
+        const vlauesInput = [null, null, null, null, null, null, null]
         const emailLogin = document.getElementById("emailLogin")
         const passwordLogin = document.getElementById("passwordLogin")
         const ButtonLogin = document.getElementById("ButtonLogin")
@@ -310,6 +310,9 @@
                     passwordRegister.type = "password"
                     passwordRepeatRegister.type = "password"
                 }
+                if(showPasswordLogin.checked === false){
+                    passwordLogin.type = "password"
+                }
                 if (input.style.color === "red"){
                     input.value = vlauesInput[index]
                     input.style.color = "rgb(107, 107, 107)"   
@@ -321,6 +324,9 @@
                 if(showPassword.checked === false){
                     passwordRegister.type = "password"
                     passwordRepeatRegister.type = "password"
+                }
+                if(showPasswordLogin.checked === false){
+                    passwordLogin.type = "password"
                 }
                 if (input.style.color === "red"){
                     input.value = vlauesInput[index]

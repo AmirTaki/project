@@ -457,9 +457,9 @@
             const flag =  checkUserName(usernameRegister, 0 ) && checkEmail(emailRegister, 1)  && checkPassowrd(passwordRegister, 2) &&  checkPassowrd(passwordRepeatRegister, 3) && checkConfirmPassword(passwordRegister, 2,  passwordRepeatRegister, 3)
             flag ? "" : e.preventDefault()        
         })
-        // BUTTON LOGIN 
-         // CHECK EMAIL lOGIN 
+        // CHECK EMAIL lOGIN 
         const checkEmailLogin = (email, index) => {
+            vlauesInput[index] = email.value
             if (email.value.length === 0){
                 email.value = "Email is required"
                 email.style.color = "red"
@@ -472,11 +472,27 @@
                 return true
             }
         }
+        // CHECK PASSWORD LOGIN
+        const checkPasswordLogin = (password, index) => {
+            vlauesInput[index] = password.value 
+            if(password.value.length === 0){
+                password.type = 'text'
+                password.value = "Password is required"
+                password.style.color = "red"
+                showSpan(index + 1, 0) 
+                return false
+            }
+            else {
+                password.style.color = "green"
+                showSpan(index + 1, 1) 
+                return true
+            }
+        }
+        // BUTTON LOGIN 
         ButtonLogin.addEventListener("click", (e)=> {
-            flag = checkEmailLogin(emailLogin, 5) 
-            // && checkPassowrd(passwordLogin, 6, true)
-            // flag ? "" : e.preventDefault()
-            e.preventDefault()
+            flag = checkEmailLogin(emailLogin, 5) && checkPasswordLogin(passwordLogin, 6)
+            flag ? "" : e.preventDefault()
+
         })
         // LOGIN PAGE ANIMATION
         loginLabel.addEventListener("click", (e)=> {

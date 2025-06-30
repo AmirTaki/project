@@ -34,6 +34,7 @@
         .background {
             width: 100%;
             height: 700px;
+            background-size: cover;
         }
         .background img {
             width: 100%;
@@ -50,8 +51,13 @@
 </head>
 <body style="height:auto;">
 
-    <div class = "background">
-        <img src="./src/images/Image Slider using HTML CSS and JavaScript.png" alt="">
+    <div class = "background" >
+        <div class = 'sliderImage'>
+            <img src="./src/images/img1.jpg" alt="">
+            <img src="./src/images/img2.jpg" alt="">
+            <img src="./src/images/img3.jpg" alt="">
+            <img src="./src/images/img4.jpg" alt="">
+        </div>
     </div>
     
 
@@ -62,7 +68,8 @@
     
     <script>
        const background = document.querySelector('.background')
-       background.style.backgroundImage = "url(./src/images/Image\ Slider\ using\ HTML\ CSS\ and\ JavaScript.png)"
+       background.style.backgroundImage = "url('./src/images/img1.jpg')";
+
     </script>
 </body>
 </html>

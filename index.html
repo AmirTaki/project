@@ -51,6 +51,14 @@
         .containerSlider img {
             width: 150px;
             height: 200px;
+            
+        }
+        @keyframes up {
+            100%{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
         }
   </style>
     <!-- 
@@ -82,7 +90,7 @@
         const images = document.querySelectorAll(".containerSlider img")
         images.forEach(image => {
             image.addEventListener("click", (e)=> {
-                
+
             })
         })
     </script>

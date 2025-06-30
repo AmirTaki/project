@@ -106,6 +106,7 @@
    
     <div class = "background">
         <img src="./src/images/Image Slider using HTML CSS and JavaScript.png" alt=""  class = "imgBackground">
+        
         <div class = "containerSlider" >
             <img src="./src/images/img1.jpg" alt="">
         </div>
@@ -163,8 +164,8 @@
                 element.style.animation = "identifier .5s linear forwards"
                 setTimeout(() => {    
                     element.style.animation = 'none'
-                    const background = document.querySelector('.background')
-                    background.style.backgroundImage = `url(${imageSlider[index].src})`
+                    const background = document.querySelector('.imgBackground')
+                    background.src =imageSlider[index].src
                     backContainer()
                     leftContainer()
                     zIndex()

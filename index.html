@@ -36,7 +36,8 @@
             height: 600px;
             background-color: gray;
             position: relative;
-   
+            background-image: url('./src/images/Image\ Slider\ using\ HTML\ CSS\ and\ JavaScript.png');
+            background-size:contain;
         }
         .containerSlider{
             width: 10%;
@@ -98,6 +99,7 @@
 <body style="height:auto;">
    
     <div class = "background">
+    
         <div class = "containerSlider" >
             <img src="./src/images/img1.jpg" alt="">
         </div>
@@ -146,7 +148,8 @@
        
         const view = () => {
             const containerSlider = document.querySelectorAll(".containerSlider")
-            containerSlider.forEach(element => {
+            const imageSlider = document.querySelectorAll(".containerSlider img")
+            containerSlider.forEach((element, index) => {
                 element.addEventListener("click", (e)=> {
             
                 zIndex()
@@ -155,9 +158,10 @@
                 setTimeout(() => {    
                     element.style.animation = 'none'
                     const background = document.querySelector('.background')
-                    background.style.backgroundColor = changeColor()
+                    background.style.backgroundImage = `url(${imageSlider[index].src})`
                     backContainer()
                     leftContainer()
+                    zIndex()
                 }, 1000);
             console.log(element)
             })

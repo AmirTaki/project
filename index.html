@@ -48,7 +48,7 @@
             align-items: center;
             gap: 10px;
             position: absolute;
-            z-index: 2;
+           
         }
        
         @keyframes identifier {
@@ -75,8 +75,8 @@
 <body style="height:auto;">
    
     <div class = "background">
-        <div class = "containerSlider" style="z-index: 1;"></div>
-        <div class = "containerSlider" style="background-color: red; "></div>
+        <div class = "containerSlider" ></div>
+        <div class = "containerSlider" style="background-color: red;left:40px "></div>
         <div class = "containerSlider" style="background-color: blue; ;"></div>
         <div class = "containerSlider" style="background-color: greenyellow;"></div>
     </div>
@@ -85,13 +85,17 @@
         const zIndex = () => {
             const containerSlider = document.querySelectorAll(".containerSlider")
             containerSlider.forEach(element => {
-                element.style.zIndex = 1
+               element.style.zIndex = "1"
+               
             })
         }
         const containerSlider = document.querySelectorAll(".containerSlider")
         containerSlider.forEach(element => {
             element.addEventListener("click", (e)=> {
+            zIndex()
+             element.style.zIndex = "2"
             element.style.animation = "identifier .5s linear forwards"
+           
              })
         });
 

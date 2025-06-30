@@ -33,7 +33,7 @@
         }
         .background{
             width: 100%;
-            height: 600px;
+            height: 100%;
             background-color: gray;
             position: relative;
             /* background-image: url('./src/images/Image\ Slider\ using\ HTML\ CSS\ and\ JavaScript.png');
@@ -46,8 +46,8 @@
             position: absolute;
         }
         .containerSlider{
-            width: 10%;
-            height: 20%;
+            width: 200px;
+            height: 30%;
             background-color: yellow;
             display: flex;
             flex-flow: row nowrap;
@@ -55,9 +55,8 @@
             align-items: center;
             gap: 10px;
             position: absolute;
-            /* animation:identifierback .5s linear forwards ; */
             bottom: 20px;
-            right: 0;
+            /* right: 20px; */
             border-radius: 20px;
             overflow: hidden;
         }
@@ -74,6 +73,7 @@
                 bottom: 0;
                 width: 100%;
                 height: 100%;
+                border-radius: 0;
             }
         }
         @keyframes identifierback {
@@ -88,7 +88,7 @@
                 top:0;
                 left:0;
                 width: 10%;
-                height: 20%;
+                height: 30%;
             }
         }
   </style>
@@ -127,10 +127,10 @@
     <script>
         const leftContainer = () => {
             const containerSlider = document.querySelectorAll(".containerSlider")
-            let left = 0;
+            let right = 5;
             containerSlider.forEach(element => {
-               element.style.right = left;
-               left += 100
+               element.style.right = `${right}%`;
+               right += 10
             });   
         }
         leftContainer()

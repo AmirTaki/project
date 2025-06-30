@@ -45,7 +45,9 @@
             width: 200px;
             height: 200px;
             position: absolute;
-            top: 20px
+            top: 20px;
+            z-index: 2;
+            
            
         }
         @keyframes identifier {
@@ -53,7 +55,10 @@
                 width: 100%;
                 height: 100%;
                 top : 0;
-                left:0
+                left:0;
+                z-index: 1;
+            
+
             }
         }
         .imgSelect:nth-child(1){
@@ -120,8 +125,13 @@
 
         imgSelect.forEach((item,index) => {
             item.addEventListener("click", (e)=>{
-                backgroundSlider.style.scrollBehavior = "smooth"
-                backgroundSlider.scrollLeft = index * window.innerWidth 
+                item.style.animation = "identifier 1s linear forwards"
+                setTimeout(()=> {
+                    item.style.animation = ""
+                    // backgroundSlider.style.scrollBehavior = "smooth"
+                    backgroundSlider.scrollLeft = index * window.innerWidth 
+                }, 1000)
+       
              
             })
         })

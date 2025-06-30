@@ -68,6 +68,13 @@
         .imgSelect:nth-child(4){
             left:200px
         }
+        .background-slider{
+            width: 100%;
+            height: 700px;
+            overflow-x: scroll;
+            display: flex;
+            flex-flow: row nowrap;
+        }
   </style>
     <!-- 
     
@@ -80,6 +87,12 @@
 <body style="height:auto;">
 
     <div class = "background" >
+        <div class = "background-slider">
+            <img  src="./src/images/img1.jpg" alt="">
+            <img  src="./src/images/img2.jpg" alt="">
+            <img  src="./src/images/img3.jpg" alt="">
+            <img  src="./src/images/img4.jpg" alt="">
+        </div>
         <div class = 'sliderImage'>
             <img  class = "imgSelect"src="./src/images/img1.jpg" alt="">
             <img  class = "imgSelect"src="./src/images/img2.jpg" alt="">
@@ -97,13 +110,19 @@
     <script>
        const background = document.querySelector('.background')
        const imgSelect = document.querySelectorAll('.imgSelect')
+       const sliderImage = document.querySelector(".sliderImage")
        background.style.backgroundImage = "url('./src/images/img1.jpg')";
         imgSelect.forEach(item => {
             item.addEventListener("click", (e)=>{
                 
                 item.style.animation =  "identifier 1s linear forwards"
+             
                 setTimeout(()=> {
-                    // item.remove()
+                    item.remove()
+                    const newImge = document.createElement('IMG')
+                    newImge.classList.add = "imgSelect"
+                    newImge.src = item.src
+                    sliderImage.append(newImge)
                     // background.style.backgroundImage = `url(${item.src})`;
                 }, 1000)
             })

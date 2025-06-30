@@ -51,6 +51,11 @@
             /* animation:identifierback .5s linear forwards ; */
            
         }
+        .containerSlider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
        
         @keyframes identifier {
             100%{
@@ -93,10 +98,18 @@
 <body style="height:auto;">
    
     <div class = "background">
-        <div class = "containerSlider" ></div>
-        <div class = "containerSlider" style="background-color: red;"></div>
-        <div class = "containerSlider" style="background-color: blue; ;"></div>
-        <div class = "containerSlider" style="background-color: greenyellow;"></div>
+        <div class = "containerSlider" >
+            <img src="./src/images/img1.jpg" alt="">
+        </div>
+        <div class = "containerSlider" style="background-color: red;">
+            <img src="./src/images/img2.jpg" alt="">
+        </div>
+        <div class = "containerSlider" style="background-color: blue; ;">
+            <img src="./src/images/img3.jpg" alt="">
+        </div>
+        <div class = "containerSlider" style="background-color: greenyellow;">
+            <img src="./src/images/img4.jpg" alt="">
+        </div>
     </div>
 
     <script>

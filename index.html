@@ -39,8 +39,8 @@
    
         }
         .containerSlider{
-            width: 60%;
-            height: 250px;
+            width: 10%;
+            height: 20%;
             background-color: yellow;
             display: flex;
             flex-flow: row nowrap;
@@ -50,11 +50,7 @@
             position: absolute;
             z-index: 2;
         }
-        .itemSlider{
-            width: 100px;
-            height: 100px;
-          
-        }
+       
         @keyframes identifier {
             100%{
                 position: absolute;
@@ -80,16 +76,14 @@
    
     <div class = "background">
         <div class = "containerSlider">
-            <div class = "itemSlider" style = "background-color: aqua;"></div>
-            <div class = "itemSlider" style = "background-color: red;"></div>
-            <div class = "itemSlider" style = "background-color: rgb(3, 25, 187);"></div>
-            <div class = "itemSlider" style = "background-color: rgb(178, 3, 53);"></div>
         </div>
     </div>
 
     <script>
         const containerSlider = document.querySelector(".containerSlider")
-       
+       containerSlider.addEventListener("click", (e)=> {
+        containerSlider.style.animation = "identifier .5s linear forwards"
+       })
     </script>
 </body>
 </html>

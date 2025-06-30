@@ -120,7 +120,7 @@
         const backContainer = () => {
             const containerSlider = document.querySelectorAll(".containerSlider")
             containerSlider.forEach(element => {        
-                element.style.animation = "identifierback .5s linear forwards"
+                element.style.left = "0";
 
             })
               
@@ -132,13 +132,14 @@
             zIndex()
             element.style.zIndex = "1"
             element.style.animation = "identifier .5s linear forwards"
-            setTimeout(() => {
-                    
-                       element.remove()
+            setTimeout(() => {    
+                element.remove()
+                backContainer()
+                leftContainer()
             }, 1000);
-         
            
-             })
+        })
+
         });
 
     </script>

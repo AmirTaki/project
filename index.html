@@ -44,6 +44,7 @@
             display: flex;
             flex-flow: row nowrap;
             gap: 10px;
+            z-index: 2;
             right: 10px ;
             bottom: 10px;
 
@@ -51,14 +52,20 @@
         .containerSlider img {
             width: 150px;
             height: 200px;
+        
             
         }
         @keyframes up {
             100%{
-                position: absolute;
-                width: 100%;
-                height: 100%;
+                scale : 5
             }
+        }
+        .select{
+            width: 150px;
+            height: 200px;
+            position: absolute;
+            bottom: 10px;
+            left:18%
         }
   </style>
     <!-- 
@@ -70,8 +77,9 @@
     -->
 </head>
 <body style="height:auto;">
-
+   
     <div class = "background" >
+         <img class = "select" src="./src/images/img1.jpg" alt="">
         <div class = "containerSlider">
             <img src="./src/images/img1.jpg" alt="">
             <img src="./src/images/img2.jpg" alt="">
@@ -90,7 +98,7 @@
         const images = document.querySelectorAll(".containerSlider img")
         images.forEach(image => {
             image.addEventListener("click", (e)=> {
-
+                image.style.animation = "up 1s linear forwards"
             })
         })
     </script>

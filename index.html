@@ -54,6 +54,8 @@
         @keyframes identifier {
             100%{
                 position: absolute;
+                top:0;
+                left:0;
                 width: 100%;
                 height: 100%;
             }
@@ -76,16 +78,26 @@
    
     <div class = "background">
         <div class = "containerSlider" ></div>
-        <div class = "containerSlider" style="background-color: red;left:40px "></div>
+        <div class = "containerSlider" style="background-color: red;"></div>
         <div class = "containerSlider" style="background-color: blue; ;"></div>
         <div class = "containerSlider" style="background-color: greenyellow;"></div>
     </div>
 
     <script>
+        const leftContainer = () => {
+            const containerSlider = document.querySelectorAll(".containerSlider")
+            let left = 0;
+            containerSlider.forEach(element => {
+               element.style.left = left;
+               left += 50
+            });   
+        }
+        leftContainer()
         const zIndex = () => {
             const containerSlider = document.querySelectorAll(".containerSlider")
             containerSlider.forEach(element => {
-               element.style.zIndex = "1"
+               element.style.zIndex = "2"
+               console.log(element)
                
             })
         }
@@ -93,7 +105,7 @@
         containerSlider.forEach(element => {
             element.addEventListener("click", (e)=> {
             zIndex()
-             element.style.zIndex = "2"
+            element.style.zIndex = "1"
             element.style.animation = "identifier .5s linear forwards"
            
              })

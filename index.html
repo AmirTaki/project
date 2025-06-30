@@ -132,8 +132,11 @@
         }
         const create = () => {
            const div =  document.createElement("DIV")
+           const background = document.querySelector('.background')
            div.className = "containerSlider"
-           div.style.backgroundColor = 
+           div.style.backgroundColor = changeColor()
+           background.append(div)
+
         }
         const containerSlider = document.querySelectorAll(".containerSlider")
         containerSlider.forEach(element => {
@@ -144,6 +147,7 @@
             element.style.animation = "identifier .5s linear forwards"
             setTimeout(() => {    
                 element.remove()
+                create()
                 backContainer()
                 leftContainer()
             }, 1000);

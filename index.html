@@ -31,46 +31,12 @@
             box-sizing: border-box;
             
         }
-        .background {
+        .background{
             width: 100%;
-            height: 700px;
-            background-size: cover;
-            position: relative;
-            background-color: blue;
+            height: 600px;
+            background-color: gray;
         }
 
-        .containerSlider{
-            position: absolute;
-            display: flex;
-            flex-flow: row nowrap;
-            gap: 10px;
-            z-index: 2;
-            right: 10px ;
-            bottom: 10px;
-
-        }
-        .containerSlider img {
-            width: 150px;
-            height: 200px;
-            z-index: 1;
-            
-        }
-        @keyframes up {
-            100%{
-                width: 100%;
-                height: 100%;
-                left: 0;
-                bottom: 0
-            }
-        }
-        .select{
-            width: 150px;
-            height: 200px;
-            position: absolute;
-            bottom: 10px;
-            left:18%;
-            z-index: 2 !important;
-        }
   </style>
     <!-- 
     
@@ -79,35 +45,20 @@
     C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-pixabay-33545.jpg
     C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg
     -->
+    <!-- 
+    https://github.com/HoanghoDev/slider_3
+    
+    https://www.youtube.com/watch?v=hfGz5AgHT-E&list=PLe28tn1x4EIZE0Rp8xakXrvPY7m63_6Oc&index=4
+    -->
 </head>
 <body style="height:auto;">
    
-    <div class = "background" >
-         <img class = "select" src="./src/images/img1.jpg" alt="">
-        <div class = "containerSlider">
-            <img src="./src/images/img1.jpg" alt="">
-            <img src="./src/images/img2.jpg" alt="">
-            <img src="./src/images/img3.jpg" alt="">
-            <img src="./src/images/img4.jpg" alt=""> 
-        </div>
+    <div class = "background">
+        
     </div>
-    
 
-    <!-- header -->
-    <!-- <script src = "./src/script/header.js"></script> -->
-    <!-- main -->
-    <!-- <script src = "./src/script/main.js"> </script> -->
-    
     <script>
-        const images = document.querySelectorAll(".containerSlider img")
-        const select = document.querySelector(".select")
-        const background = document.querySelector(".background")
-        images.forEach(image => {
-            image.addEventListener("click", (e)=> {
-                select.style.animation = "up linear forwards 1s"
-                background.style.backgroundImage = `url(${select.src})`      
-            })
-        })
+ 
     </script>
 </body>
 </html>

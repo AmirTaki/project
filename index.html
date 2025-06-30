@@ -29,8 +29,16 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            
         }
-  
+        .background {
+            width: 100%;
+            height: 700px;
+        }
+        .background img {
+            width: 100%;
+            height: 100%;
+        }
   </style>
     <!-- 
     
@@ -42,6 +50,9 @@
 </head>
 <body style="height:auto;">
 
+    <div class = "background">
+        <img src="./src/images/Image Slider using HTML CSS and JavaScript.png" alt="">
+    </div>
     
 
     <!-- header -->
@@ -50,8 +61,8 @@
     <!-- <script src = "./src/script/main.js"> </script> -->
     
     <script>
-       
-  
+       const background = document.querySelector('.background')
+       background.style.backgroundImage = "url(./src/images/Image\ Slider\ using\ HTML\ CSS\ and\ JavaScript.png)"
     </script>
 </body>
 </html>

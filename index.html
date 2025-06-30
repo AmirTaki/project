@@ -130,31 +130,28 @@
             let random = Math.floor(Math.random() * 6 ) + 1;
             return colors[random]
         }
-        const create = () => {
-           const div =  document.createElement("DIV")
-           const background = document.querySelector('.background')
-           div.className = "containerSlider"
-           div.style.backgroundColor = changeColor()
-           background.append(div)
+       
+        const view = () => {
+            const containerSlider = document.querySelectorAll(".containerSlider")
+            containerSlider.forEach(element => {
+                element.addEventListener("click", (e)=> {
+            
+                zIndex()
+                element.style.zIndex = "1"
+                element.style.animation = "identifier .5s linear forwards"
+                setTimeout(() => {    
+                    element.style.animation = 'none'
+                    const background = document.querySelector('.background')
+                    background.style.backgroundColor = changeColor()
+                    backContainer()
+                    leftContainer()
+                }, 1000);
+            console.log(element)
+            })
 
+            });
         }
-        const containerSlider = document.querySelectorAll(".containerSlider")
-        containerSlider.forEach(element => {
-            element.addEventListener("click", (e)=> {
-          
-            zIndex()
-            element.style.zIndex = "1"
-            element.style.animation = "identifier .5s linear forwards"
-            setTimeout(() => {    
-                element.remove()
-                create()
-                backContainer()
-                leftContainer()
-            }, 1000);
-           
-        })
-
-        });
+       view()
 
     </script>
 </body>

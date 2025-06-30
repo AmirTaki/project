@@ -40,6 +40,10 @@
             width: 100%;
             height: 100%;
         }
+        .sliderImage img{
+            width: 200px;
+            height: 200px;
+        }
   </style>
     <!-- 
     
@@ -53,10 +57,10 @@
 
     <div class = "background" >
         <div class = 'sliderImage'>
-            <img src="./src/images/img1.jpg" alt="">
-            <img src="./src/images/img2.jpg" alt="">
-            <img src="./src/images/img3.jpg" alt="">
-            <img src="./src/images/img4.jpg" alt="">
+            <img  class = "imgSelect"src="./src/images/img1.jpg" alt="">
+            <img  class = "imgSelect"src="./src/images/img2.jpg" alt="">
+            <img  class = "imgSelect"src="./src/images/img3.jpg" alt="">
+            <img  class = "imgSelect"src="./src/images/img4.jpg" alt="">
         </div>
     </div>
     
@@ -68,8 +72,13 @@
     
     <script>
        const background = document.querySelector('.background')
+       const imgSelect = document.querySelectorAll('.imgSelect')
        background.style.backgroundImage = "url('./src/images/img1.jpg')";
-
+        imgSelect.forEach(item => {
+            item.addEventListener("click", (e)=>{
+                background.style.backgroundImage = `url(${item.src})`;
+            })
+        })
     </script>
 </body>
 </html>

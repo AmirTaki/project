@@ -76,12 +76,18 @@
    
     <div class = "background">
         <div class = "containerSlider" style="z-index: 1;"></div>
-        <div class = "containerSlider" style="background-color: red; left:100px; z-index: 2;"></div>
-        <div class = "containerSlider" style="background-color: blue; z-index: 1;"></div>
-        <div class = "containerSlider" style="background-color: greenyellow; z-index: 1;"></div>
+        <div class = "containerSlider" style="background-color: red; "></div>
+        <div class = "containerSlider" style="background-color: blue; ;"></div>
+        <div class = "containerSlider" style="background-color: greenyellow;"></div>
     </div>
 
     <script>
+        const zIndex = () => {
+            const containerSlider = document.querySelectorAll(".containerSlider")
+            containerSlider.forEach(element => {
+                element.style.zIndex = 1
+            })
+        }
         const containerSlider = document.querySelectorAll(".containerSlider")
         containerSlider.forEach(element => {
             element.addEventListener("click", (e)=> {

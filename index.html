@@ -56,7 +56,10 @@
             gap: 10px;
             position: absolute;
             /* animation:identifierback .5s linear forwards ; */
-           
+            bottom: 20px;
+            right: 0;
+            border-radius: 20px;
+            overflow: hidden;
         }
         .containerSlider img {
             width: 100%;
@@ -67,16 +70,16 @@
         @keyframes identifier {
             100%{
                 position: absolute;
-                top:0;
-                left:0;
+                right: 0;
+                bottom: 0;
                 width: 100%;
                 height: 100%;
             }
         }
         @keyframes identifierback {
             0%{
-                top:0;
-                left:0;
+                /* top:0;
+                left:0; */
                 width: 100%;
                 height: 100%;
             }
@@ -126,8 +129,8 @@
             const containerSlider = document.querySelectorAll(".containerSlider")
             let left = 0;
             containerSlider.forEach(element => {
-               element.style.left = left;
-               left += 50
+               element.style.right = left;
+               left += 100
             });   
         }
         leftContainer()
@@ -142,7 +145,7 @@
         const backContainer = () => {
             const containerSlider = document.querySelectorAll(".containerSlider")
             containerSlider.forEach(element => {        
-                element.style.left = "0";
+                element.style.right = "0";
 
             })
               

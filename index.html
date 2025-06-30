@@ -60,6 +60,15 @@
                 height: 100%;
             }
         }
+        @keyframes identifierback {
+            100%{
+                position: absolute;
+                top:0;
+                left:0;
+                width: 10%;
+                height: 20%;
+            }
+        }
   </style>
     <!-- 
     
@@ -97,13 +106,21 @@
             const containerSlider = document.querySelectorAll(".containerSlider")
             containerSlider.forEach(element => {
                element.style.zIndex = "2"
-               console.log(element)
+    
                
+            })
+        }
+        const backContainer = () => {
+            const containerSlider = document.querySelectorAll(".containerSlider")
+            containerSlider.forEach(element => {
+                element.style.animation = "identifierback .5s linear forwards"
+                leftContainer()
             })
         }
         const containerSlider = document.querySelectorAll(".containerSlider")
         containerSlider.forEach(element => {
             element.addEventListener("click", (e)=> {
+            backContainer()
             zIndex()
             element.style.zIndex = "1"
             element.style.animation = "identifier .5s linear forwards"

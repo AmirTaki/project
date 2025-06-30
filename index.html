@@ -119,25 +119,24 @@
         }
         const backContainer = () => {
             const containerSlider = document.querySelectorAll(".containerSlider")
-            containerSlider.forEach(element => {
-                if(element.style.width === "100%"){
-                    element.style.animation = "identifierback .5s linear forwards"
+            containerSlider.forEach(element => {        
+                element.style.animation = "identifierback .5s linear forwards"
 
-                }
-              
             })
-              leftContainer()
+              
         }
         const containerSlider = document.querySelectorAll(".containerSlider")
         containerSlider.forEach(element => {
             element.addEventListener("click", (e)=> {
-            backContainer()
+          
             zIndex()
             element.style.zIndex = "1"
+            element.style.animation = "identifier .5s linear forwards"
             setTimeout(() => {
-                    element.style.animation = "identifier .5s linear forwards"
-            }, 10);
-        
+                    
+                       element.remove()
+            }, 1000);
+         
            
              })
         });

@@ -75,17 +75,20 @@
 <body style="height:auto;">
    
     <div class = "background">
-        <div class = "containerSlider"></div>
-        <div class = "containerSlider" style="background-color: red;"></div>
-        <div class = "containerSlider" style="background-color: blue;"></div>
-        <div class = "containerSlider" style="background-color: greenyellow;"></div>
+        <div class = "containerSlider" style="z-index: 1;"></div>
+        <div class = "containerSlider" style="background-color: red; left:100px; z-index: 2;"></div>
+        <div class = "containerSlider" style="background-color: blue; z-index: 1;"></div>
+        <div class = "containerSlider" style="background-color: greenyellow; z-index: 1;"></div>
     </div>
 
     <script>
-        const containerSlider = document.querySelector(".containerSlider")
-       containerSlider.addEventListener("click", (e)=> {
-        containerSlider.style.animation = "identifier .5s linear forwards"
-       })
+        const containerSlider = document.querySelectorAll(".containerSlider")
+        containerSlider.forEach(element => {
+            element.addEventListener("click", (e)=> {
+            element.style.animation = "identifier .5s linear forwards"
+             })
+        });
+
     </script>
 </body>
 </html>

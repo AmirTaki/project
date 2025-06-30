@@ -125,6 +125,16 @@
             })
               
         }
+        const changeColor = () => {
+            colors = ["red", "blue", "brown", "green", "white", "yellow"];
+            let random = Math.floor(Math.random() * 6 ) + 1;
+            return colors[random]
+        }
+        const create = () => {
+           const div =  document.createElement("DIV")
+           div.className = "containerSlider"
+           div.style.backgroundColor = 
+        }
         const containerSlider = document.querySelectorAll(".containerSlider")
         containerSlider.forEach(element => {
             element.addEventListener("click", (e)=> {

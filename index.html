@@ -116,20 +116,13 @@
        const background = document.querySelector('.background')
        const imgSelect = document.querySelectorAll('.imgSelect')
        const sliderImage = document.querySelector(".sliderImage")
-       background.style.backgroundImage = "url('./src/images/img1.jpg')";
-        imgSelect.forEach(item => {
+       const backgroundSlider = document.querySelector('.background-slider')
+
+        imgSelect.forEach((item,index) => {
             item.addEventListener("click", (e)=>{
-                
-                item.style.animation =  "identifier 1s linear forwards"
+                backgroundSlider.style.scrollBehavior = "smooth"
+                backgroundSlider.scrollLeft = index * window.innerWidth 
              
-                setTimeout(()=> {
-                    item.remove()
-                    const newImge = document.createElement('IMG')
-                    newImge.classList.add = "imgSelect"
-                    newImge.src = item.src
-                    sliderImage.append(newImge)
-                    // background.style.backgroundImage = `url(${item.src})`;
-                }, 1000)
             })
         })
     </script>
